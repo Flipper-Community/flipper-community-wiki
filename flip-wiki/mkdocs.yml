@@ -1,0 +1,22 @@
+site_name: Flip Wiki
+site_description: Project documentation with Markdown.
+site_author: MkDocs Team
+#site_url: https://www.mkdocs.org/
+theme: readthedocs
+copyright: All Flipper artwork is attributed to <a href="https://flipperdevices.com">Flipper Devices</a> unless otherwise stated.
+markdown_extensions:
+  - toc:
+      permalink: true
+
+nav:
+  - Getting Started:
+     - The Basics: getting-started.md
+
+  - Subsystems:
+    - NFC: nfc.md
+    - 125 KHz RFID: 125khz-rfid.md
+
+  - Site Info:
+    - About: about.md
+    - Contributing: contributing.md
+
