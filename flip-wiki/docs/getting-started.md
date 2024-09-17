@@ -1,7 +1,7 @@
 # Table of Contents
 [TOC]
 
-# Getting Started
+## Getting Started
 After getting your flipper:
 
 - <H1>[**Read the official docs**](https://docs.flipper.net)</H1>
@@ -10,5 +10,5 @@ After getting your flipper:
     - Do you know how ***cool*** reading them makes you?!
 
 
-# Getting Help
+## Getting Help
 - Join the [**Flipper Discord**](https://flipperzero.one/discord)

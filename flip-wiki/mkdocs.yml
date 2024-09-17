@@ -27,7 +27,8 @@ nav:
     - NFC:
       - Overview: nfc.md
       - Arcade Cards: arcadecards.md
-    - 125 KHz RFID: 125khz-rfid.md
+    - 125 KHz RFID:
+      - Overview: 125khz-rfid.md
 
   - Site Info:
     - About: about.md
