@@ -25,6 +25,7 @@ nav:
 
   - Subsystems:
     - NFC:
+      - Overview: nfc.md
       - Arcade Cards: arcadecards.md
     - 125 KHz RFID: 125khz-rfid.md
 
