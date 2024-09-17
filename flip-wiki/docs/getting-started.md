@@ -1,7 +1,4 @@
-# Table of Contents
-[TOC]
-
-## Getting Started
+# Getting Started
 After getting your flipper:
 
 - <H1>[**Read the official docs**](https://docs.flipper.net)</H1>

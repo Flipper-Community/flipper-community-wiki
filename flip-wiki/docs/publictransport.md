@@ -1,8 +1,6 @@
-# Table of Contents
-[TOC]
+# Public Transport Cards
+**<p style="text-align:center;color:red">NOTE: The below information is for educational purposes only, and is <b><u>NOT</u></b> designed to facilitate fare evasion.</p>**
 
-> [!IMPORTANT]
-> ***The below information is for educational purposes only, and is __not__ designed to facilitate fare evasion.***
 
 ## Resources
 - [MetroDroid](https://github.com/metrodroid/metrodroid)
