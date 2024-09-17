@@ -5,15 +5,15 @@
 > [!NOTE]
 > There are five main arcade data cards that are used in arcades; they are:
 > 
-> - Andamiro's `AM.Pass` [ISO15693-3 SLI/SLIX/SLIX2];
+> - Andamiro's [AM.PASS](https://am-pass.net/) [ISO15693-3 SLI/SLIX/SLIX2];
 > 
-> - Bandai Namco's `Bandai Namco Passport` *fka Banapassport* [MIFARE Classic];
+> - Bandai Namco's [Bandai Namco Passport](https://banapass.net/setlocale/en) *fka Banapassport* [MIFARE Classic];
 > 
-> - Konami's `e-amusement pass` [ISO15693-3 SLI/SLIX/SLIX2];
+> - Konami's [e-amusement pass](https://p.eagate.573.jp/index.html) [ISO15693-3 SLI/SLIX/SLIX2];
 > 
-> - Sega's `Aime Card` [MIFARE Classic]; and,
+> - Sega's [Aime Card](https://my-aime.net/en/) [MIFARE Classic]; and,
 > 
-> - Taito's `NESiCA` [MIFARE Ultralight].
+> - Taito's [NESiCA](https://nesica.net/) [MIFARE Ultralight].
 
 If you are after the `Sega Aime Card` or `Bandai Namco Passport` access keys, then they are included in the system dictionary as of OFW 0.98.2, with the `Sega Aime Card` having a parser that reveals your access code; you may want to copy/paste the access keys into your user dictionary *if you frequently find yourself using them*.
 
