@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Flipper Community" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Arcade Cards - Flipper Community Wiki</title>
+    <title>Public Transport - Flipper Community Wiki</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Arcade Cards";
-        var mkdocs_page_input_path = "arcadecards.md";
+        var mkdocs_page_name = "Public Transport";
+        var mkdocs_page_input_path = "publictransport.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -50,15 +50,17 @@
     <ul class="current">
                 <li class="toctree-l2"><a class="reference internal" href="../nfc/">Overview</a>
                 </li>
-                <li class="toctree-l2 current"><a class="reference internal current" href="#">Arcade Cards</a>
+                <li class="toctree-l2"><a class="reference internal" href="../arcadecards/">Arcade Cards</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Public Transport</a>
     <ul class="current">
-    <li class="toctree-l3"><a class="reference internal" href="#arcade-data-cards">Arcade Data Cards</a>
+    <li class="toctree-l3"><a class="reference internal" href="#resources">Resources</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#arcade-payment-cards">Arcade Payment Cards</a>
+    <li class="toctree-l3"><a class="reference internal" href="#mifare-classic">MIFARE Classic</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#mifare-desfire">MIFARE DESFire</a>
     </li>
     </ul>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../publictransport/">Public Transport</a>
                 </li>
     </ul>
                   </li>
@@ -94,7 +96,7 @@
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">Subsystems</li>
           <li class="breadcrumb-item">NFC</li>
-      <li class="breadcrumb-item active">Arcade Cards</li>
+      <li class="breadcrumb-item active">Public Transport</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -107,44 +109,39 @@
 <div class="toc">
 <ul>
 <li><a href="#table-of-contents">Table of Contents</a><ul>
-<li><a href="#arcade-data-cards">Arcade Data Cards</a></li>
-<li><a href="#arcade-payment-cards">Arcade Payment Cards</a></li>
+<li><a href="#resources">Resources</a></li>
+<li><a href="#mifare-classic">MIFARE Classic</a></li>
+<li><a href="#mifare-desfire">MIFARE DESFire</a></li>
 </ul>
 </li>
 </ul>
 </div>
-<h2 id="arcade-data-cards">Arcade Data Cards<a class="headerlink" href="#arcade-data-cards" title="Permanent link">&para;</a></h2>
 <blockquote>
-<p>[!NOTE]
-There are five main arcade data cards that are used in arcades; they are:</p>
+<p>[!IMPORTANT]
+<strong><em>The below information is for educational purposes only, and is <strong>not</strong> designed to facilitate fare evasion.</em></strong></p>
+</blockquote>
+<h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h2>
 <ul>
-<li>
-<p>Andamiro's <a href="https://am-pass.net/">AM.PASS</a> [ISO15693-3 SLI/SLIX/SLIX2];</p>
-</li>
-<li>
-<p>Bandai Namco's <a href="https://banapass.net/setlocale/en">Bandai Namco Passport</a> <em>fka Banapassport</em> [MIFARE Classic];</p>
-</li>
-<li>
-<p>Konami's <a href="https://p.eagate.573.jp/index.html">e-amusement pass</a> [ISO15693-3 SLI/SLIX/SLIX2];</p>
-</li>
-<li>
-<p>Sega's <a href="https://my-aime.net/en/">Aime Card</a> [MIFARE Classic]; and,</p>
-</li>
-<li>
-<p>Taito's <a href="https://nesica.net/">NESiCA</a> [MIFARE Ultralight].</p>
-</li>
+<li><a href="https://github.com/metrodroid/metrodroid">MetroDroid</a></li>
+<li><a href="https://play.google.com/store/apps/details?id=com.nxp.taginfolite">NXP TagInfo by NXP: Google Play</a></li>
+<li><a href="https://apps.apple.com/us/app/nfc-taginfo-by-nxp/id1246143596">NXP TagInfo by NXP: App Store</a></li>
 </ul>
-</blockquote>
-<p>If you are after the <code>Sega Aime Card</code> or <code>Bandai Namco Passport</code> access keys, then they are included in the system dictionary as of OFW 0.98.2, with the <code>Sega Aime Card</code> having a parser that reveals your access code; you may want to copy/paste the access keys into your user dictionary <em>if you frequently find yourself using them</em>.</p>
-<p>The latter four companies have cards endorsed with the <code>Amusement IC Card [AIC]</code> logo; these cards are FeliCa, and are interoperable with each others' games.</p>
-<p>The Flipper Zero has expanded its <em>FeliCa</em> emulation support as of OFW 0.103.1; however, <code>Bandai Namco Passport</code> readers do not recognise the emulated AIC Card and <code>Sega Aime Card</code> readers fail to read the AIC Card.</p>
-<h2 id="arcade-payment-cards">Arcade Payment Cards<a class="headerlink" href="#arcade-payment-cards" title="Permanent link">&para;</a></h2>
-<blockquote>
-<p>[!WARNING]
-<strong><em>You <strong>should not</strong> be using your Flipper Zero to emulate your arcade payment card.</em></strong></p>
-</blockquote>
-<p>If you are wanting to emulate your cashless pre-paid arcade payment card, then please check whether your arcade uses <code>Embed</code>; if they do, they may already have the <code>MobileWallet</code> module provisioned, meaning you may be able to legitimately add it to your <code>Apple Wallet</code> / <code>Google Wallet</code> via the arcade's Member Portal or App <em>provided your phone/watch/device is able to emulate NFC cards</em>.</p>
-<p>If your arcade otherwise uses <code>InterCard</code>, <code>Sacoa</code>, <code>Amusement Connect</code>, <code>Semnox</code>, <code>RFPay</code>, <code>Tigapo</code>, or another cashless arcade payment system, then please read the above warning.</p>
+<h2 id="mifare-classic">MIFARE Classic<a class="headerlink" href="#mifare-classic" title="Permanent link">&para;</a></h2>
+<p>If your transit agency is using MIFARE Classic, then follow <a href="https://gist.github.com/noproto/63f5dea3f77cae4393a4aa90fc8ef427">this awesome guide</a>.</p>
+<h2 id="mifare-desfire">MIFARE DESFire<a class="headerlink" href="#mifare-desfire" title="Permanent link">&para;</a></h2>
+<p>If your transit agency is using MIFARE DESFire, then use either your Flipper Zero or the <code>MetroDroid</code> app to see if your transit card has any unlocked applications/files that reveal information such as:
+- Card name;
+- Card number;
+- Fare type;
+- Product type;
+- Machine code;
+- Current balance;
+- Last/recent transaction date[s]/time[s];
+- Vehicle type;
+- Weekly journeys;
+- Transaction counter</p>
+<p>If the card is fully-locked, then the only valuable piece of information would be the six hexadecimal Application IDs; these may be found by looking at the Flipper Zero <code>.nfc</code> file or by scanning your card via the <code>NXP TagInfo by NXP</code> app.</p>
+<p>Feel free to discuss public transport in <a href="https://discord.com/channels/740930220399525928/95442271613867625">#nfc</a>.</p>
               
             </div>
           </div><footer>
@@ -170,10 +167,10 @@ There are five main arcade data cards that are used in arcades; they are:</p>
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../nfc/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../arcadecards/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../publictransport/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../125khz-rfid/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
