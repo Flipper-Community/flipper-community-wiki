@@ -1,7 +1,7 @@
 ### Site Settings ###
 site_name: Flipper Community Wiki
 site_description: Project documentation with Markdown.
-site_author: MkDocs Team
+site_author: Flipper Community
 
 ### Theme settings ###
 theme:
@@ -10,7 +10,8 @@ theme:
   navigation_depth: 4 ## how many nested levels we can have for nav
 
 ### Copyright footer info ###
-copyright: All Flipper artwork is attributed to <a href="https://flipperdevices.com">Flipper Devices</a> unless otherwise stated.
+copyright: All Flipper artwork is attributed to <a href="https://flipperdevices.com">Flipper Devices</a> unless otherwise stated. 
+  <div>All trademarks are the property of their respective owners and are used in this document for descriptive purposes only, without any intention of infringement.
 
 ### MkDoc extension loading ###
 markdown_extensions:
