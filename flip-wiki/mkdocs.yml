@@ -28,6 +28,7 @@ nav:
     - NFC:
       - Overview: nfc.md
       - Arcade Cards: arcadecards.md
+      - Public Transport: publictransport.md
     - 125 KHz RFID:
       - Overview: 125khz-rfid.md
 
