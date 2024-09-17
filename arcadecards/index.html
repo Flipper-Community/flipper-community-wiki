@@ -52,11 +52,19 @@
                 </li>
                 <li class="toctree-l2 current"><a class="reference internal current" href="#">Arcade Cards</a>
     <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#arcade-data-cards">Arcade Data Cards</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#arcade-payment-cards">Arcade Payment Cards</a>
+    </li>
     </ul>
                 </li>
     </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../125khz-rfid/">125 KHz RFID</a>
+                  <li class="toctree-l1"><a class="reference internal" >125 KHz RFID</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../125khz-rfid/">Overview</a>
+                </li>
+    </ul>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Site Info</span></p>
@@ -96,15 +104,17 @@
                 <h1 id="table-of-contents">Table of Contents<a class="headerlink" href="#table-of-contents" title="Permanent link">&para;</a></h1>
 <div class="toc">
 <ul>
-<li><a href="#table-of-contents">Table of Contents</a></li>
+<li><a href="#table-of-contents">Table of Contents</a><ul>
 <li><a href="#arcade-data-cards">Arcade Data Cards</a></li>
 <li><a href="#arcade-payment-cards">Arcade Payment Cards</a></li>
 </ul>
+</li>
+</ul>
 </div>
-<h1 id="arcade-data-cards">Arcade Data Cards<a class="headerlink" href="#arcade-data-cards" title="Permanent link">&para;</a></h1>
+<h2 id="arcade-data-cards">Arcade Data Cards<a class="headerlink" href="#arcade-data-cards" title="Permanent link">&para;</a></h2>
 <p>If you are after <em>Sega Aime Card</em> or <em>Bandai Namco Passport</em> access keys, then they are included in the system dictionary as of OFW 0.98.2; you may want to copy/paste them into your user dictionary <em>if you frequently find yourself using those access keys</em>.</p>
 <p>The Flipper Zero has expanded its <em>FeliCa</em> emulation support as of OFW 0.103.1; however, <em>Bandai Namco Passport</em> readers do not recognise the emulated AmIC Card and <em>Sega Aime</em> readers fail to read the AmiC Card**.</p>
-<h1 id="arcade-payment-cards">Arcade Payment Cards<a class="headerlink" href="#arcade-payment-cards" title="Permanent link">&para;</a></h1>
+<h2 id="arcade-payment-cards">Arcade Payment Cards<a class="headerlink" href="#arcade-payment-cards" title="Permanent link">&para;</a></h2>
 <p>If you are wanting to emulate your cashless pre-paid arcade payment card, then please check whether your arcade uses <em>Embed</em>; if they do, they may already have the <em>MobileWallet</em> module provisioned, meaning you may be able to legitimately add it to your <em>Apple Wallet</em> / <em>Google Wallet</em> via the arcade's Member Portal <em>provided your phone/watch/device is able to emulate NFC cards</em>.</p>
 <p>If your arcade otherwise uses <em>InterCard</em>, <em>Sacoa</em>, <em>Amusement Connect</em>, <em>Semnox</em>, <em>RFPay</em>, or another cashless arcade payment system, then</p>
 <p><strong>You <strong>should not</strong> be using your Flipper Zero to emulate your arcade payment card.</strong></p>
