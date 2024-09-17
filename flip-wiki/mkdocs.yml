@@ -1,22 +1,35 @@
-site_name: Flip Wiki
+### Site Settings ###
+site_name: Flipper Community Wiki
 site_description: Project documentation with Markdown.
 site_author: MkDocs Team
-#site_url: https://www.changeme.org/
-theme: readthedocs
+
+### Theme settings ###
+theme:
+  name: readthedocs
+  prev_next_buttons_location: none
+  navigation_depth: 4 ## how many nested levels we can have for nav
+
+### Copyright footer info ###
 copyright: All Flipper artwork is attributed to <a href="https://flipperdevices.com">Flipper Devices</a> unless otherwise stated.
+
+### MkDoc extension loading ###
 markdown_extensions:
   - toc:
       permalink: true
 
+### Navigation Heirarchy ###
+### Add your .md files in this section ###
 nav:
   - Getting Started:
      - The Basics: getting-started.md
 
   - Subsystems:
-    - NFC: nfc.md
+    - NFC:
+      - Arcade Cards: arcadecards.md
     - 125 KHz RFID: 125khz-rfid.md
 
   - Site Info:
     - About: about.md
     - Contributing: contributing.md
+    - Github: 'https://github.com/Flipper-Community/flipper-community-wiki'
 

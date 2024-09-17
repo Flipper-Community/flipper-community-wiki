@@ -1,3 +1,6 @@
+# Table of Contents
+[TOC]
+
 # Getting Started
 After getting your flipper:
 
