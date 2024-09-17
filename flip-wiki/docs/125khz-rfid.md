@@ -9,11 +9,9 @@
 - low frequency credentials are read only memory. you cannot overwrite them. to create a copy of a low frequency credential you have, you will need to purchase T5577 credentials. these are chips that can pretend to be other chips 
 
 # HID/Iclass
-- Picopass iclass can be read using the picopass reader plugin 
-- 26bit picopass can be downgraded to H10301 RFID credentials (note, it is not guaranteed to work if the reader is not configured to read low frequency)
-- SEOS/SE/ELITE are not able to be read in detail yet due to unavailable keying
-- Emulation for picopass is halted. read bettses pinned in <#954422716138676254> 
-- write support for personalisation mode cards is in the pipeline
+- Technically 13.56mhz like NFC, but most people see "HID" and think LF RFID
+- Standard and some Elite keyed iClass fobs/cards can be read with [Picopass](https://lab.flipper.net/apps/picopass) app.
+- Standard keyed iClass SE can be read with [Seader](https://lab.flipper.net/apps/seader) + some hardware.
 
 # Anything else/unknown tags
 - if its not scanning and doesnt have any visible branding mentioned aboved (eg iclass) it means the type of card is not yet supported by the firmware. the devs are working their asses off to meet the hype and expectations so be patient
