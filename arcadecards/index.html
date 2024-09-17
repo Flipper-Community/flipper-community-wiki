@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="MkDocs Team" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>125 KHz RFID - Flipper Community Wiki</title>
+    <title>Arcade Cards - Flipper Community Wiki</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "125 KHz RFID";
-        var mkdocs_page_input_path = "125khz-rfid.md";
+        var mkdocs_page_name = "Arcade Cards";
+        var mkdocs_page_input_path = "arcadecards.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -46,15 +46,15 @@
               </ul>
               <p class="caption"><span class="caption-text">Subsystems</span></p>
               <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" >NFC</a>
-    <ul>
-                <li class="toctree-l2"><a class="reference internal" href="../arcadecards/">Arcade Cards</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" >NFC</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Arcade Cards</a>
+    <ul class="current">
+    </ul>
                 </li>
     </ul>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">125 KHz RFID</a>
-    <ul class="current">
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../125khz-rfid/">125 KHz RFID</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Site Info</span></p>
@@ -81,7 +81,8 @@
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">Subsystems</li>
-      <li class="breadcrumb-item active">125 KHz RFID</li>
+          <li class="breadcrumb-item">NFC</li>
+      <li class="breadcrumb-item active">Arcade Cards</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -90,28 +91,21 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="low-frequency-rfid">Low Frequency (RFID)<a class="headerlink" href="#low-frequency-rfid" title="Permanent link">&para;</a></h1>
+                <h1 id="table-of-contents">Table of Contents<a class="headerlink" href="#table-of-contents" title="Permanent link">&para;</a></h1>
+<div class="toc">
 <ul>
-<li>the only currently supported formats are:
-    ioprox
-    hid prox 26 (37 coming soon)
-    indala raw 26
-    em4100</li>
-<li>low frequency credentials are read only memory. you cannot overwrite them. to create a copy of a low frequency credential you have, you will need to purchase T5577 credentials. these are chips that can pretend to be other chips </li>
+<li><a href="#table-of-contents">Table of Contents</a></li>
+<li><a href="#arcade-data-cards">Arcade Data Cards</a></li>
+<li><a href="#arcade-payment-cards">Arcade Payment Cards</a></li>
 </ul>
-<h1 id="hidiclass">HID/Iclass<a class="headerlink" href="#hidiclass" title="Permanent link">&para;</a></h1>
-<ul>
-<li>Picopass iclass can be read using the picopass reader plugin </li>
-<li>26bit picopass can be downgraded to H10301 RFID credentials (note, it is not guaranteed to work if the reader is not configured to read low frequency)</li>
-<li>SEOS/SE/ELITE are not able to be read in detail yet due to unavailable keying</li>
-<li>Emulation for picopass is halted. read bettses pinned in &lt;#954422716138676254&gt; </li>
-<li>write support for personalisation mode cards is in the pipeline</li>
-</ul>
-<h1 id="anything-elseunknown-tags">Anything else/unknown tags<a class="headerlink" href="#anything-elseunknown-tags" title="Permanent link">&para;</a></h1>
-<ul>
-<li>if its not scanning and doesnt have any visible branding mentioned aboved (eg iclass) it means the type of card is not yet supported by the firmware. the devs are working their asses off to meet the hype and expectations so be patient</li>
-<li>the flipper is a good tool but it is not perfect and there will be things it can never do. if you are interested in researching more into RFID feel free to ping or dm me for more info on tech to look into and the RfidResearchgroup discord.</li>
-</ul>
+</div>
+<h1 id="arcade-data-cards">Arcade Data Cards<a class="headerlink" href="#arcade-data-cards" title="Permanent link">&para;</a></h1>
+<p>If you are after <em>Sega Aime Card</em> or <em>Bandai Namco Passport</em> access keys, then they are included in the system dictionary as of OFW 0.98.2; you may want to copy/paste them into your user dictionary <em>if you frequently find yourself using those access keys</em>.</p>
+<p>The Flipper Zero has expanded its <em>FeliCa</em> emulation support as of OFW 0.103.1; however, <em>Bandai Namco Passport</em> readers do not recognise the emulated AmIC Card and <em>Sega Aime</em> readers fail to read the AmiC Card**.</p>
+<h1 id="arcade-payment-cards">Arcade Payment Cards<a class="headerlink" href="#arcade-payment-cards" title="Permanent link">&para;</a></h1>
+<p>If you are wanting to emulate your cashless pre-paid arcade payment card, then please check whether your arcade uses <em>Embed</em>; if they do, they may already have the <em>MobileWallet</em> module provisioned, meaning you may be able to legitimately add it to your <em>Apple Wallet</em> / <em>Google Wallet</em> via the arcade's Member Portal <em>provided your phone/watch/device is able to emulate NFC cards</em>.</p>
+<p>If your arcade otherwise uses <em>InterCard</em>, <em>Sacoa</em>, <em>Amusement Connect</em>, <em>Semnox</em>, <em>RFPay</em>, or another cashless arcade payment system, then</p>
+<p><strong>You <strong>should not</strong> be using your Flipper Zero to emulate your arcade payment card.</strong></p>
               
             </div>
           </div><footer>
@@ -137,10 +131,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../arcadecards/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../getting-started/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../about/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../125khz-rfid/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
