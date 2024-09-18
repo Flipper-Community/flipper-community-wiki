@@ -3,7 +3,7 @@ This is the repo for the [Flipper community wiki](https://flipper-community.gith
 If you'd like to contribute to this wiki, you may fork the repo and offer your changes as a pull request
 
 # Technical docs
-This wiki is built using the mkdocs builder
+This wiki is built using the mkdocs builder using the material theme
 
 # tl;dr How to Guides
 
@@ -18,4 +18,4 @@ This wiki is built using the mkdocs builder
 1. once done, add them to the `flip-wiki/mkdocs.yml`, following the pattern of the other `.md` files.
 1. if the preview looks good when using `mkdocs serve`, submit a pull request. 
 
-for more in depth features, see the [MkDocs official getting started guide](https://www.mkdocs.org/getting-started/)
+for more in depth features, see the [MkDocs-material guide](https://squidfunk.github.io/mkdocs-material/reference/)

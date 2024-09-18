@@ -45,6 +45,34 @@ print("Multi line codeblock")
 print("with lang specific syntax highlighting")
 ```
 
+### Material Theme Extended Markdown
+The material theme provides extended features for markdown.
+See the [official reference page](https://squidfunk.github.io/mkdocs-material/reference/) for extended examples. 
+
+Current enabled Modules: Admonitions, Diagrams
+
+!!! note "note admonition"
+    sample note
+    with helpful info
+
+??? note "collapsable note admonition"
+    sample note
+    with helpful info
+
+!!! warning "warning admonitions"
+    sample warning
+
+
+Diagram using Mermaid syntax
+``` mermaid
+graph LR
+  A[Start] --> B{Did you read docs?};
+  B -->|No| C[Hmm...];
+  C --> D[read again];
+  D --> B;
+  B ---->|Yes| E[Yay!];
+```
+
 
 ### HTML
 MkDocs supports basic HTML tag formatters as an alternative to markdown. Markdown cannot be used inside of an HTML tag block, only on the outside. 
