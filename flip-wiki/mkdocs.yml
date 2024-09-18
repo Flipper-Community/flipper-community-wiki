@@ -5,18 +5,39 @@ site_author: Flipper Community
 
 ### Theme settings ###
 theme:
-  name: readthedocs
-  prev_next_buttons_location: none
-  navigation_depth: 4 ## how many nested levels we can have for nav
+  name: material
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/lightbulb-auto
+        name: Switch to Light Mode
+
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep orange
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to Dark Mode
+
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep orange
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to Auto
+
+
 
 ### Copyright footer info ###
 copyright: All Flipper artwork is attributed to <a href="https://flipperdevices.com">Flipper Devices</a> unless otherwise stated. 
   <div>All trademarks are the property of their respective owners and are used in this document for descriptive purposes only, without any intention of infringement.
 
+
 ### MkDoc extension loading ###
 markdown_extensions:
   - toc:
       permalink: true
+
 
 ### Navigation Heirarchy ###
 ### Add your .md files in this section ###
