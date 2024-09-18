@@ -10,7 +10,7 @@ This wiki is built using the mkdocs builder
 ## Adding New Pages
 1. clone/fork this repo
 1. optionally install mkdocs if you dont have it to preview pages
-    - python: `pip install mkdocs`
+    - python: `pip install mkdocs-material`
     - to preview, `cd` to `flip-wiki` and run `mkdocs serve` and open the localhost link given
     - any changes you make to files while doing this will be auto added live
 1. enter the `flip-wiki/docs` folder
