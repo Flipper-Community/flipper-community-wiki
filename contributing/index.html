@@ -646,6 +646,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#material-theme-extended-markdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      Material Theme Extended Markdown
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#html" class="md-nav__link">
     <span class="md-ellipsis">
       HTML
@@ -751,6 +760,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#material-theme-extended-markdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      Material Theme Extended Markdown
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#html" class="md-nav__link">
     <span class="md-ellipsis">
       HTML
@@ -823,12 +841,37 @@
 </tbody>
 </table>
 <p><code>single code line</code></p>
-<pre><code>multi line
+<div class="highlight"><pre><span></span><code>multi line
 codeblock
-</code></pre>
-<pre><code class="language-python">print(&quot;Multi line codeblock&quot;)
-print(&quot;with lang specific syntax highlighting&quot;)
-</code></pre>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Multi line codeblock&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;with lang specific syntax highlighting&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="material-theme-extended-markdown">Material Theme Extended Markdown<a class="headerlink" href="#material-theme-extended-markdown" title="Permanent link">&para;</a></h3>
+<p>The material theme provides extended features for markdown.
+See the <a href="https://squidfunk.github.io/mkdocs-material/reference/">official reference page</a> for extended examples. </p>
+<p>Current enabled Modules: Admonitions, Diagrams</p>
+<div class="admonition note">
+<p class="admonition-title">note admonition</p>
+<p>sample note
+with helpful info</p>
+</div>
+<details class="note">
+<summary>collapsable note admonition</summary>
+<p>sample note
+with helpful info</p>
+</details>
+<div class="admonition warning">
+<p class="admonition-title">warning admonitions</p>
+<p>sample warning</p>
+</div>
+<p>Diagram using Mermaid syntax
+<pre class="mermaid"><code>graph LR
+  A[Start] --&gt; B{Did you read docs?};
+  B --&gt;|No| C[Hmm...];
+  C --&gt; D[read again];
+  D --&gt; B;
+  B ----&gt;|Yes| E[Yay!];</code></pre></p>
 <h3 id="html">HTML<a class="headerlink" href="#html" title="Permanent link">&para;</a></h3>
 <p>MkDocs supports basic HTML tag formatters as an alternative to markdown. Markdown cannot be used inside of an HTML tag block, only on the outside. </p>
 <p><strong><p style="text-align:center">Notice: Notice text example</p></strong></p>
