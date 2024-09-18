@@ -100,35 +100,61 @@
             <div class="section" itemprop="articleBody">
               
                 <h2 id="arcade-data-cards">Arcade Data Cards<a class="headerlink" href="#arcade-data-cards" title="Permanent link">&para;</a></h2>
-<p>There are five main arcade data cards that are used in arcades; they are:</p>
 <blockquote>
-<ul>
-<li>
-<p>Andamiro's <a href="https://am-pass.net/">AM.PASS</a> [ISO15693-3 SLI/SLIX/SLIX2];</p>
-</li>
-<li>
-<p>Bandai Namco's <a href="https://banapass.net/setlocale/en">Bandai Namco Passport</a> <em>fka Banapassport</em> [MIFARE Classic]</p>
-</li>
-<li>
-<p>Konami's <a href="https://p.eagate.573.jp/index.html">e-amusement pass</a> [ISO15693-3 SLI/SLIX/SLIX2]</p>
-</li>
-<li>
-<p>Sega's <a href="https://my-aime.net/en/">Aime Card</a> [MIFARE Classic]</p>
-</li>
-<li>
-<p>Taito's <a href="https://nesica.net/">NESiCA</a> [MIFARE Ultralight]</p>
-</li>
-</ul>
+<p>⚠️ <strong><em>You <strong>should not</strong> be using your Flipper Zero to emulate your arcade data card.</em></strong> ⚠️</p>
 </blockquote>
-<p>If you are after the <code>Sega Aime Card</code> or <code>Bandai Namco Passport</code> access keys, then they are included in the Flipper Zero's system dictionary as of OFW 0.98.2, with the <code>Sega Aime Card</code> having a parser that reveals your access code; you may want to copy/paste the access keys into your user dictionary <em>if you frequently find yourself using them</em>.</p>
-<p>The latter four companies have cards endorsed with the <code>Amusement IC Card [AIC]</code> logo; these cards are FeliCa, and are interoperable with each others' games.</p>
-<p>The Flipper Zero has expanded its <em>FeliCa</em> emulation support as of OFW 0.103.1; however, <code>Bandai Namco Passport</code> readers do not recognise the emulated AIC Card and <code>Sega Aime Card</code> readers fail to read the AIC Card.</p>
+<p>There are five main arcade data cards that are used in arcades; they are:</p>
+<table>
+<thead>
+<tr>
+<th>Company</th>
+<th>Card</th>
+<th>Chip</th>
+<th>Notable Games</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Andamiro</strong></td>
+<td><a href="https://am-pass.net/">AM.PASS</a></td>
+<td>ICODE SLI/SLIX/SLIX2</td>
+<td><a href="https://chrono-circle.com/">Chrono Circle</a> / <a href="https://piugame.com/">PIU</a></td>
+</tr>
+<tr>
+<td><strong>Bandai Namco</strong></td>
+<td><a href="https://banapass.net/setlocale/en/">Bandai Namco Passport</a></td>
+<td>MIFARE Classic</td>
+<td><a href="https://donderhiroba.jp/login.php">Taiko</a> / <a href="https://wanganmaxi-official.com/wanganmaxi6rr/en/">WM6RR</a></td>
+</tr>
+<tr>
+<td><strong>Konami</strong></td>
+<td><a href="https://p.eagate.573.jp/index.html">e-amusement pass</a></td>
+<td>ICODE SLI/SLIX/SLIX2</td>
+<td><a href="https://p.eagate.573.jp/game/ddr/ddrworld/top/index.html">DDR</a> / <a href="https://p.eagate.573.jp/game/sdvx/vi/">SDVX</a></td>
+</tr>
+<tr>
+<td><strong>Sega</strong></td>
+<td><a href="https://my-aime.net/en/">Aime</a></td>
+<td>MIFARE Classic</td>
+<td><a href="https://initiald.sega.jp/inidac/">IDAC</a> / <a href="https://maimai.sega.com/">maimai</a></td>
+</tr>
+<tr>
+<td><strong>Taito</strong></td>
+<td><a href="https://nesica.net/">NESiCA</a></td>
+<td>MIFARE Ultralight</td>
+<td><a href="https://musicdiver.jp/index.html">MUSiCDiVER</a> / <a href="https://sf6ta.jp/">SF6TA</a></td>
+</tr>
+</tbody>
+</table>
+<p>If you are after the <code>Sega Aime</code> or <code>Bandai Namco Passport</code> access keys, then they are included in the Flipper Zero's system dictionary as of OFW 0.98.2, with the <code>Sega Aime</code> having a parser that reveals your access code; you may want to copy/paste the access keys into your user dictionary <em>if you frequently find yourself using them</em>.</p>
+<p>The latter four companies have cards endorsed with the <code>Amusement IC Card [AIC]</code> logo; these cards are <code>FeliCa</code>, and are <em>generally</em> compatible with each others' games.</p>
+<p>The Flipper Zero has expanded its <code>FeliCa</code> emulation support as of OFW 0.103.1; however, <code>Bandai Namco Passport</code> readers do not recognise the emulated <code>AIC Card</code>, and <code>Sega Aime Card</code> readers fail to read the <code>AIC Card</code>.</p>
 <h2 id="arcade-payment-cards">Arcade Payment Cards<a class="headerlink" href="#arcade-payment-cards" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>⚠️ <strong><em>You <strong>should not</strong> be using your Flipper Zero to emulate your arcade payment card.</em></strong> ⚠️</p>
 </blockquote>
-<p>If you are wanting to emulate your cashless pre-paid arcade payment card, then please check whether your arcade uses <code>Embed</code>; if they do, they may already have the <code>MobileWallet</code> module provisioned, meaning you may be able to legitimately add it to your <code>Apple Wallet</code> / <code>Google Wallet</code> via the arcade's Member Portal or App <em>provided your phone/watch/device is able to emulate NFC cards</em>.</p>
-<p>If your arcade otherwise uses <code>InterCard</code>, <code>Sacoa</code>, <code>Amusement Connect</code>, <code>Semnox</code>, <code>RFPay</code>, <code>Tigapo</code>, or another cashless arcade payment system, then please read the above warning.</p>
+<p>If you are wanting to emulate your cashless pre-paid arcade payment card, then please check whether your arcade uses <code>Embed</code>; if they do, they may already have the <code>MobileWallet</code> module provisioned, meaning you may be able to legitimately add your card to your <code>Apple Wallet</code> / <code>Google Wallet</code> via the arcade's Member Portal or App <em>provided your phone/watch/device is able to emulate NFC cards</em>.</p>
+<p>If your arcade otherwise uses <code>Amusement Connect</code>, <code>InterCard</code>, <code>RFPay</code>, <code>Sacoa</code>, <code>Semnox</code>, <code>Tigapo</code>, or another cashless arcade payment system, then please read the above warning.</p>
               
             </div>
           </div><footer>
