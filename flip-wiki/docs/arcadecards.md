@@ -29,9 +29,9 @@ flowchart TD
     C -->|Apple Wallet| E[My Arcade Uses...]
     C -->|Google Wallet| E
     E -->|Embed| F(Login to Arcade's App/Member Portal.)
-    F -->|Add Card to Wallet| G[Emulate Card via Wallet.]
+    F -->|Add Card to Wallet| G{Emulate Card via Wallet.}
     E -->|Other| H(Which System?)
-    B -->|No| I[PHONE EMULATION NOT POSSIBLE. DO NOT USE YOUR FLIPPER ZERO.]
+    B -->|No| I{PHONE EMULATION NOT POSSIBLE. DO NOT USE YOUR FLIPPER ZERO.}
     C -->|Other Wallet| I
     H -->|Amusement Connect| I
     H -->|InterCard| I
