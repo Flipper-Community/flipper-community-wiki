@@ -1,0 +1,21 @@
+:root {
+  --md-primary-fg-color:        #FF8200;
+  /* --md-primary-bg-color:        #800505; */
+}
+
+.md-header__topic {
+  font-family: "Gravity8";
+  /* letter-spacing:0.4em; */
+}
+
+.md-header__button.md-logo img, .md-header__button.md-logo svg {
+  transform: scale(2);
+}
+
+
+@font-face {
+  font-family: 'Gravity8';
+  src: url('../assets/fonts/GravityBold8.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
