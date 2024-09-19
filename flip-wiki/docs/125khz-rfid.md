@@ -14,4 +14,4 @@ These are EM4305, but show up looking like EM4100.  You can't fully emulate or c
 
 ## Anything else/unknown tags
 - if its not scanning and doesnt have any visible branding mentioned aboved (eg iclass) it means the type of card is not yet supported by the firmware. the devs are working their asses off to meet the hype and expectations so be patient
-- the flipper is a good tool but it is not perfect and there will be things it can never do. if you are interested in researching more into RFID feel free to ping or dm me for more info on tech to look into and the RfidResearchgroup discord.
+- the flipper is a good tool but it is not perfect and there will be things it can never do. if you are interested in researching more into RFID feel free to join the Flipper discord and engage with the `#NFC` channel. 
