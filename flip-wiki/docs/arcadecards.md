@@ -28,15 +28,16 @@ flowchart TD
     D -->|NFC Enabled| C
     C -->|Apple Wallet| E[My Arcade Uses...]
     C -->|Google Wallet| E
-    E -->|Embed| H(Login to Arcade's App/Member Portal.)
-    H -->|Add Card to Wallet| I[Emulate Card via Wallet.]
-    B -->|No| Z[PHONE EMULATION NOT POSSIBLE. DO NOT USE YOUR FLIPPER ZERO.]
-    C -->|Other Wallet| Z
-    E -->|Amusement Connect| Z
-    E -->|InterCard| Z
-    E -->|RFPay| Z
-    E -->|Sacoa| Z
-    E -->|Semnox| Z
-    E -->|Tigapo| Z
-    E -->|Other| Z
+    E -->|Embed| F(Login to Arcade's App/Member Portal.)
+    F -->|Add Card to Wallet| G[Emulate Card via Wallet.]
+    E -->|Other| H(Which System?)
+    B -->|No| I[PHONE EMULATION NOT POSSIBLE. DO NOT USE YOUR FLIPPER ZERO.]
+    C -->|Other Wallet| I
+    H -->|Amusement Connect| I
+    H -->|InterCard| I
+    H -->|RFPay| I
+    H -->|Sacoa| I
+    H -->|Semnox| I
+    H -->|Tigapo| I
+    H -->|Other| I
 ```
