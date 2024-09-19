@@ -1,12 +1,11 @@
 # Overview
 
 ## Low Frequency (RFID)
-- the only currently supported formats are:
-    ioprox
-    hid prox 26 (37 coming soon)
-    indala raw 26
-    em4100
-- low frequency credentials are read only memory. you cannot overwrite them. to create a copy of a low frequency credential you have, you will need to purchase T5577 credentials. these are chips that can pretend to be other chips 
+- Don't expect to edit/rewrite low frequency credentials.  They are generally read only, passworded, or a type of tag the flipper zero doesn't work with.  To create a copy of a low frequency credential you have, you will need to purchase T5577 credentials. these are chips that can pretend to be other chips.
+
+## Kyber crystals
+
+These are EM4305, but show up looking like EM4100.  You can't fully emulate or clone them.
 
 ## HID/Iclass
 - Technically 13.56mhz like NFC, but most people see "HID" and think LF RFID
