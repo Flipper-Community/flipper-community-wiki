@@ -1,17 +1,24 @@
 # Contributing To The Wiki
 
-## Guidelines
+The underlying Github repo can be [located here](https://github.com/Flipper-Community/flipper-community-wiki). 
+
+## Contributer Guidelines
 The following guidelines should be kept in mind when submitting changes:
 
 - This wiki may grow to support other Flipper items beyond just the Flipper zero, so be precise about which device you reference. 
 - Our audience is international based, so use clear and precise language, avoiding slang or acronyms without explanation.
-- Do not provide guides to facilitate illegal activity or custom device firmwares that allow the enablement of illegal activity
+- Do not provide guides to facilitate illegal activity.
     - This includes but is not restricted to: jamming, illegal radio transmitting, defeating regional frequency locks, and fraud
+- Do not provide direct links to firmwares that allow the enablement of illegal activity or defeating radio transmission region locks
 - Keep your writing tone non-biased and professional.
 
 
 ## Text Formatting Examples
 ### Markdown
+
+[link to another wiki page](about.md)
+
+[link to another page and section](about.md#about-this-site)
 
 *Italic*
 
