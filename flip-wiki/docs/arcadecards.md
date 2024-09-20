@@ -27,8 +27,7 @@ flowchart TD
     B -->|Yes: Disabled| D(Enable NFC.)
     D -->|NFC Enabled| C
     B -->|Yes: Enabled| C[I Use...]
-    C -->|Apple Wallet| E[My Arcade Uses...]
-    C -->|Google Wallet| E
+    C -->|Apple Wallet / Google Wallet| E[My Arcade Uses...]
     C -->|Other Wallet| H
     E -->|Embed| F(Login to Arcade's App/Member Portal.)
     F -->|Add Card to Wallet| G{Emulate Card via Wallet.}
