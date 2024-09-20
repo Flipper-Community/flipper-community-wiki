@@ -61,12 +61,14 @@ nav:
      - Troubleshooting: troubleshooting.md
 
   - Subsystems:
+    - 125 KHz RFID:
+      - Overview: 125khz-rfid-overview.md
     - NFC:
-      - Overview: nfc.md
+      - Overview: nfc-overview.md
       - Arcade Cards: arcadecards.md
       - Public Transport: publictransport.md
-    - 125 KHz RFID:
-      - Overview: 125khz-rfid.md
+    - GPIO: 
+      - Overview: gpio-overview.md
 
   - Site Info:
     - About: about.md
