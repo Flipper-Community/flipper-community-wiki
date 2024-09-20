@@ -13,10 +13,10 @@
       
       
       
-        <link rel="prev" href="../nfc-overview/">
+        <link rel="prev" href="../125khz-rfid-overview/">
       
       
-        <link rel="next" href="../publictransport/">
+        <link rel="next" href="../arcadecards/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Arcade Cards - Flipper Community Wiki</title>
+        <title>Overview - Flipper Community Wiki</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#arcade-data-cards" class="md-skip">
+        <a href="#nfc" class="md-skip">
           Skip to content
         </a>
       
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Arcade Cards
+              Overview
             
           </span>
         </div>
@@ -460,27 +460,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../nfc-overview/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Overview
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -490,12 +469,14 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
   <span class="md-ellipsis">
-    Arcade Cards
+    Overview
   </span>
   
 
@@ -506,7 +487,7 @@
         
   
   <span class="md-ellipsis">
-    Arcade Cards
+    Overview
   </span>
   
 
@@ -518,6 +499,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -526,18 +509,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#arcade-data-cards" class="md-nav__link">
+  <a href="#mifare-classic" class="md-nav__link">
     <span class="md-ellipsis">
-      Arcade Data Cards
+      Mifare Classic
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#arcade-payment-cards" class="md-nav__link">
+  <a href="#hid-seosdesfire" class="md-nav__link">
     <span class="md-ellipsis">
-      Arcade Payment Cards
+      HID Seos/Desfire
     </span>
   </a>
   
@@ -547,6 +530,27 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arcadecards/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arcade Cards
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -774,6 +778,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -782,18 +788,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#arcade-data-cards" class="md-nav__link">
+  <a href="#mifare-classic" class="md-nav__link">
     <span class="md-ellipsis">
-      Arcade Data Cards
+      Mifare Classic
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#arcade-payment-cards" class="md-nav__link">
+  <a href="#hid-seosdesfire" class="md-nav__link">
     <span class="md-ellipsis">
-      Arcade Payment Cards
+      HID Seos/Desfire
     </span>
   </a>
   
@@ -814,79 +820,16 @@
                   
 
 
-  <h1>Arcade Cards</h1>
-
-<h2 id="arcade-data-cards">Arcade Data Cards<a class="headerlink" href="#arcade-data-cards" title="Permanent link">&para;</a></h2>
-<div class="admonition warning">
-<p class="admonition-title"><strong>WARNING</strong></p>
-<p><em>You <strong>should not</strong> be using your Flipper Zero to emulate your arcade data card.</em></p>
-</div>
-<p>The five main arcade data cards are:</p>
-<table>
-<thead>
-<tr>
-<th>Company</th>
-<th>Card</th>
-<th>Chip</th>
-<th>Notable Games</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Andamiro</strong></td>
-<td><a href="https://am-pass.net/">AM.PASS</a></td>
-<td>ICODE SLI/SLIX/SLIX2</td>
-<td><a href="https://chrono-circle.com/">Chrono Circle</a> / <a href="https://piugame.com/">PIU</a></td>
-</tr>
-<tr>
-<td><strong>Bandai Namco</strong></td>
-<td><a href="https://banapass.net/setlocale/en/">Bandai Namco Passport</a></td>
-<td>MIFARE Classic</td>
-<td><a href="https://donderhiroba.jp/login.php">Taiko</a> / <a href="https://wanganmaxi-official.com/wanganmaxi6rr/en/">WM6RR</a></td>
-</tr>
-<tr>
-<td><strong>Konami</strong></td>
-<td><a href="https://p.eagate.573.jp/index.html">e-amusement pass</a></td>
-<td>ICODE SLI</td>
-<td><a href="https://p.eagate.573.jp/game/ddr/ddrworld/top/index.html">DDR</a> / <a href="https://p.eagate.573.jp/game/sdvx/vi/">SDVX</a></td>
-</tr>
-<tr>
-<td><strong>Sega</strong></td>
-<td><a href="https://my-aime.net/en/">Aime</a></td>
-<td>MIFARE Classic</td>
-<td><a href="https://initiald.sega.jp/inidac/">IDAC</a> / <a href="https://maimai.sega.com/">maimai</a></td>
-</tr>
-<tr>
-<td><strong>Taito</strong></td>
-<td><a href="https://nesica.net/">NESiCA</a></td>
-<td>MIFARE Ultralight</td>
-<td><a href="https://musicdiver.jp/index.html">MUSiCDiVER</a> / <a href="https://sf6ta.jp/">SF6TA</a></td>
-</tr>
-</tbody>
-</table>
-<p>The Flipper Zero includes the <code>Sega Aime</code> and <code>Bandai Namco Passport</code> access keys in the system dictionary as of OFW 0.98.2, with the <code>Sega Aime</code> parser for revealing the corresponding access code.</p>
-<p>The latter four companies have cards endorsed with the <code>Amusement IC Card [AIC]</code> logo; these cards instead use <code>FeliCa</code> chips, and are <em>generally</em> compatible for use with each others' games.</p>
-<p>The Flipper Zero has expanded its <code>FeliCa</code> emulation support as of OFW 0.103.1; however: <code>Bandai Namco Passport</code> readers do not recognise the emulated <code>AIC Card</code>, and <code>Sega Aime Card</code> readers fail to read the <code>AIC Card</code>.</p>
-<h2 id="arcade-payment-cards">Arcade Payment Cards<a class="headerlink" href="#arcade-payment-cards" title="Permanent link">&para;</a></h2>
-<div class="admonition warning">
-<p class="admonition-title"><strong>WARNING</strong></p>
-<p><em>You <strong>should not</strong> be using your Flipper Zero to emulate your arcade data card.</em></p>
-</div>
-<pre class="mermaid"><code>flowchart TD
-    A[I Want to Emulate my Cashless Pre-Paid Arcade Payment Card.] --&gt;|Check Phone| B[NFC-Capable Phone?]
-    B --&gt;|No| H{PHONE EMULATION NOT POSSIBLE. DO NOT USE YOUR FLIPPER ZERO.}
-    B --&gt;|Yes: Disabled| D(Enable NFC.)
-    D --&gt;|NFC Enabled| C
-    B --&gt;|Yes: Enabled| C[I Use...]
-    C --&gt;|Apple/Google Wallet| E[My Arcade Uses...]
-    C --&gt;|Other Wallet| H
-    E --&gt;|Embed| F(Login to Arcade's App/Member Portal.)
-    F --&gt;|Add Card to Wallet| G{Emulate Card via Wallet.}
-    E --&gt;|Other System| H</code></pre>
-<div class="admonition note">
-<p class="admonition-title"><strong>LIST OF OTHER CASHLESS PRE-PAID ARCADE PAYMENT CARDS</strong></p>
-<p>Amusement Connect; intercard; Parafait; RFpay; Sacoa; Tigapo </p>
-</div>
+<h1 id="nfc">NFC<a class="headerlink" href="#nfc" title="Permanent link">&para;</a></h1>
+<h2 id="mifare-classic">Mifare Classic<a class="headerlink" href="#mifare-classic" title="Permanent link">&para;</a></h2>
+<ul>
+<li>See our <a href="https://gist.github.com/noproto/63f5dea3f77cae4393a4aa90fc8ef427"><strong>awesome guide</strong></a></li>
+<li>For making copies of mifare classic, refer to the <a href="https://docs.flipper.net/nfc/magic-cards">documentation</a> </li>
+</ul>
+<h2 id="hid-seosdesfire">HID Seos/Desfire<a class="headerlink" href="#hid-seosdesfire" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Standard keyed can be read with <a href="https://lab.flipper.net/apps/seader">Seader</a></li>
+</ul>
 
 
 
