@@ -753,10 +753,11 @@
   <h1>Arcade Cards</h1>
 
 <h2 id="arcade-data-cards">Arcade Data Cards<a class="headerlink" href="#arcade-data-cards" title="Permanent link">&para;</a></h2>
-<blockquote>
-<p>⚠️ <strong><em>You <strong>should not</strong> be using your Flipper Zero to emulate your arcade data card.</em></strong> ⚠️</p>
-</blockquote>
-<p>There are five main arcade data cards that are used in arcades; they are:</p>
+<div class="admonition warning">
+<p class="admonition-title"><strong>WARNING</strong></p>
+<p><em>You <strong>should not</strong> be using your Flipper Zero to emulate your arcade data card.</em></p>
+</div>
+<p>The five main arcade data cards are:</p>
 <table>
 <thead>
 <tr>
@@ -782,7 +783,7 @@
 <tr>
 <td><strong>Konami</strong></td>
 <td><a href="https://p.eagate.573.jp/index.html">e-amusement pass</a></td>
-<td>ICODE SLI/SLIX/SLIX2</td>
+<td>ICODE SLI</td>
 <td><a href="https://p.eagate.573.jp/game/ddr/ddrworld/top/index.html">DDR</a> / <a href="https://p.eagate.573.jp/game/sdvx/vi/">SDVX</a></td>
 </tr>
 <tr>
@@ -799,15 +800,29 @@
 </tr>
 </tbody>
 </table>
-<p>If you are after the <code>Sega Aime</code> or <code>Bandai Namco Passport</code> access keys, then they are included in the Flipper Zero's system dictionary as of OFW 0.98.2, with the <code>Sega Aime</code> having a parser that reveals your access code; you may want to copy/paste the access keys into your user dictionary <em>if you frequently find yourself using them</em>.</p>
-<p>The latter four companies have cards endorsed with the <code>Amusement IC Card [AIC]</code> logo; these cards are <code>FeliCa</code>, and are <em>generally</em> compatible with each others' games.</p>
-<p>The Flipper Zero has expanded its <code>FeliCa</code> emulation support as of OFW 0.103.1; however, <code>Bandai Namco Passport</code> readers do not recognise the emulated <code>AIC Card</code>, and <code>Sega Aime Card</code> readers fail to read the <code>AIC Card</code>.</p>
+<p>The Flipper Zero includes the <code>Sega Aime</code> and <code>Bandai Namco Passport</code> access keys in the system dictionary as of OFW 0.98.2, with the <code>Sega Aime</code> parser for revealing the corresponding access code.</p>
+<p>The latter four companies have cards endorsed with the <code>Amusement IC Card [AIC]</code> logo; these cards instead use <code>FeliCa</code> chips, and are <em>generally</em> compatible for use with each others' games.</p>
+<p>The Flipper Zero has expanded its <code>FeliCa</code> emulation support as of OFW 0.103.1; however: <code>Bandai Namco Passport</code> readers do not recognise the emulated <code>AIC Card</code>, and <code>Sega Aime Card</code> readers fail to read the <code>AIC Card</code>.</p>
 <h2 id="arcade-payment-cards">Arcade Payment Cards<a class="headerlink" href="#arcade-payment-cards" title="Permanent link">&para;</a></h2>
-<blockquote>
-<p>⚠️ <strong><em>You <strong>should not</strong> be using your Flipper Zero to emulate your arcade payment card.</em></strong> ⚠️</p>
-</blockquote>
-<p>If you are wanting to emulate your cashless pre-paid arcade payment card, then please check whether your arcade uses <code>Embed</code>; if they do, they may already have the <code>MobileWallet</code> module provisioned, meaning you may be able to legitimately add your card to your <code>Apple Wallet</code> / <code>Google Wallet</code> via the arcade's Member Portal or App <em>provided your phone/watch/device is able to emulate NFC cards</em>.</p>
-<p>If your arcade otherwise uses <code>Amusement Connect</code>, <code>InterCard</code>, <code>RFPay</code>, <code>Sacoa</code>, <code>Semnox</code>, <code>Tigapo</code>, or another cashless arcade payment system, then please read the above warning.</p>
+<div class="admonition warning">
+<p class="admonition-title"><strong>WARNING</strong></p>
+<p><em>You <strong>should not</strong> be using your Flipper Zero to emulate your arcade data card.</em></p>
+</div>
+<pre class="mermaid"><code>flowchart TD
+    A[I Want to Emulate my Cashless Pre-Paid Arcade Payment Card.] --&gt;|Check Phone| B[NFC-Capable Phone?]
+    B --&gt;|No| H{PHONE EMULATION NOT POSSIBLE. DO NOT USE YOUR FLIPPER ZERO.}
+    B --&gt;|Yes: Disabled| D(Enable NFC.)
+    D --&gt;|NFC Enabled| C
+    B --&gt;|Yes: Enabled| C[I Use...]
+    C --&gt;|Apple/Google Wallet| E[My Arcade Uses...]
+    C --&gt;|Other Wallet| H
+    E --&gt;|Embed| F(Login to Arcade's App/Member Portal.)
+    F --&gt;|Add Card to Wallet| G{Emulate Card via Wallet.}
+    E --&gt;|Other System| H</code></pre>
+<div class="admonition note">
+<p class="admonition-title"><strong>LIST OF OTHER CASHLESS PRE-PAID ARCADE PAYMENT CARDS</strong></p>
+<p>Amusement Connect; intercard; Parafait; RFpay; Sacoa; Tigapo </p>
+</div>
 
 
 
