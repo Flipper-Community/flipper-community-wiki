@@ -1,5 +1,5 @@
 # Flipper Community wiki
-This is the repo for the [Flipper community wiki](https://flipper-community.github.io/flipper-community-wiki/).
+This is the repo for the [Flipper community wiki](https://flipper.wiki).
 If you'd like to contribute to this wiki, you may fork the repo and offer your changes as a pull request
 
 # Technical docs
