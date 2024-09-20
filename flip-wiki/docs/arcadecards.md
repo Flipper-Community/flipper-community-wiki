@@ -23,21 +23,16 @@ The Flipper Zero has expanded its `FeliCa` emulation support as of OFW 0.103.1; 
 ``` mermaid
 flowchart TD
     A[I Want to Emulate my Cashless Pre-Paid Arcade Payment Card.] -->|Check Phone| B[NFC-Capable Phone?]
-    B -->|No| I{PHONE EMULATION NOT POSSIBLE. DO NOT USE YOUR FLIPPER ZERO.}
+    B -->|No| H{PHONE EMULATION NOT POSSIBLE. DO NOT USE YOUR FLIPPER ZERO.}
     B -->|Yes: Disabled| D(Enable NFC.)
     D -->|NFC Enabled| C
     B -->|Yes: Enabled| C[I Use...]
     C -->|Apple Wallet| E[My Arcade Uses...]
     C -->|Google Wallet| E
-    C -->|Other Wallet| I
+    C -->|Other Wallet| H
     E -->|Embed| F(Login to Arcade's App/Member Portal.)
     F -->|Add Card to Wallet| G{Emulate Card via Wallet.}
-    E -->|Other| H(Which System?)
-    H -->|Amusement Connect| I
-    H -->|intercard| I
-    H -->|Parafait| I
-    H -->|RFpay| I
-    H -->|Sacoa| I
-    H -->|Tigapo| I
-    H -->|Other| I
+    E -->|Other| H
 ```
+!!! note "**LIST OF OTHER CASHLESS PRE-PAID ARCADE PAYMENT CARDS**"
+    Amusement Connect; intercard; Parafait; RFpay; Sacoa; Tigapo 
