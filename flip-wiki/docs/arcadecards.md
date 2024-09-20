@@ -32,7 +32,7 @@ flowchart TD
     C -->|Other Wallet| H
     E -->|Embed| F(Login to Arcade's App/Member Portal.)
     F -->|Add Card to Wallet| G{Emulate Card via Wallet.}
-    E -->|Other| H
+    E -->|Other System| H
 ```
 !!! note "**LIST OF OTHER CASHLESS PRE-PAID ARCADE PAYMENT CARDS**"
     Amusement Connect; intercard; Parafait; RFpay; Sacoa; Tigapo 
