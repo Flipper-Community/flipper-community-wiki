@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.35">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.36">
     
     
       
@@ -30,7 +30,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.35f28582.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.06209087.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -141,7 +141,7 @@
     <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="deep-orange"  aria-label="Switch to Dark Mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to Dark Mode" for="__palette_2" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9z"/></svg>
       </label>
     
   
@@ -420,6 +420,15 @@
   
     <nav class="md-nav" aria-label="Flipper Zero">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flipper-zero-is-experiencing-lag-or-behaving-slow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flipper Zero is experiencing lag or behaving slow
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#infrared-or-subghz-does-not-appear-to-be-working" class="md-nav__link">
@@ -944,6 +953,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#flipper-zero-is-experiencing-lag-or-behaving-slow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flipper Zero is experiencing lag or behaving slow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#infrared-or-subghz-does-not-appear-to-be-working" class="md-nav__link">
     <span class="md-ellipsis">
       Infrared or SubGHz does not appear to be working
@@ -1053,6 +1071,21 @@
 <h1 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h1>
 <p>For guides to troubleshoot some of the more obscure Flipper Zero issues, see the items below.</p>
 <h2 id="flipper-zero">Flipper Zero<a class="headerlink" href="#flipper-zero" title="Permanent link">&para;</a></h2>
+<h3 id="flipper-zero-is-experiencing-lag-or-behaving-slow">Flipper Zero is experiencing lag or behaving slow<a class="headerlink" href="#flipper-zero-is-experiencing-lag-or-behaving-slow" title="Permanent link">&para;</a></h3>
+<p>This is an issue that is most commonly caused by certain development features being enabled and putting strain on the CPU of the flipper. 
+To fix this, run through the following steps:</p>
+<ol>
+<li>Press the center button on your flipper</li>
+<li>navigate to *<em>Settings</em></li>
+<li>Scroll down and select <strong>System</strong></li>
+<li>Scroll down again and check that the following options are set:<ul>
+<li><strong>Log Level</strong>: <code>Default</code></li>
+<li><strong>Debug</strong>: <code>OFF</code></li>
+<li><strong>Heap Trace</strong>: <code>None</code></li>
+</ul>
+</li>
+</ol>
+<p>After these are set, press back and leave the menu. Reboot your flipper. The issue should not be gone. </p>
 <h3 id="infrared-or-subghz-does-not-appear-to-be-working">Infrared or SubGHz does not appear to be working<a class="headerlink" href="#infrared-or-subghz-does-not-appear-to-be-working" title="Permanent link">&para;</a></h3>
 <p>This is an issue that <em>can</em> occur from switching between firmwares. To fix this, try the following:</p>
 <ol>
