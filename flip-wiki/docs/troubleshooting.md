@@ -4,6 +4,20 @@ For guides to troubleshoot some of the more obscure Flipper Zero issues, see the
 
 ## Flipper Zero
 
+### Flipper Zero is experiencing lag or behaving slow
+This is an issue that is most commonly caused by certain development features being enabled and putting strain on the CPU of the flipper. 
+To fix this, run through the following steps:
+
+1. Press the center button on your flipper
+1. navigate to **Settings*
+1. Scroll down and select **System**
+1. Scroll down again and check that the following options are set:
+    - **Log Level**: `Default`
+    - **Debug**: `OFF`
+    - **Heap Trace**: `None`
+
+After these are set, press back and leave the menu. Reboot your flipper. The issue should not be gone. 
+
 ### Infrared or SubGHz does not appear to be working
 This is an issue that *can* occur from switching between firmwares. To fix this, try the following:
 

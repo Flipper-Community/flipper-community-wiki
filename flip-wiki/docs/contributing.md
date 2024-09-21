@@ -51,6 +51,14 @@ codeblock
 print("Multi line codeblock")
 print("with lang specific syntax highlighting")
 ```
+Local Image Embed
+
+![Flipper logo white](assets/images/white_dolph_transparent.png)
+
+Remote Image Embed with scaling
+
+![Flipper logo black](https://flipperzero.one/img/tild6562-3063-4231-b864-663634333031__black.svg){ width="200" }
+
 
 ### Material Theme Extended Markdown
 The material theme provides extended features for markdown.

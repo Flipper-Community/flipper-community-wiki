@@ -22,7 +22,7 @@ theme:
       primary: custom
       accent: deep orange
       toggle:
-        icon: material/lightbulb-outline
+        icon: material/lightbulb
         name: Switch to Dark Mode
 
     - media: "(prefers-color-scheme: dark)"
@@ -44,6 +44,8 @@ copyright: All Flipper artwork is attributed to <a href="https://flipperdevices.
 
 ### MkDoc extension loading ###
 markdown_extensions:
+  - attr_list
+  - md_in_html
   - admonition
   - tables
   - pymdownx.details
