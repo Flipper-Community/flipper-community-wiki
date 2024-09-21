@@ -1,4 +1,4 @@
-# Welcome to Flip wiki
+# Welcome to the Flipper Community Wiki
 This site contains the unofficial community driven knowledge base for the [Flipper Zero](https://flipperzero.one). 
 
 **Ready to continue onwards?**
