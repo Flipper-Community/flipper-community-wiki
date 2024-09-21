@@ -4,6 +4,16 @@ This page aims to collect frequent or common questions people may have related t
 
 ## Flipper Zero
 
+### Is the Flipper Zero sold on Amazon or AliExpress?
+
+**No**. 
+
+<u>Those shops are run by scalpers/unauthorized resellers</u>, so you will be charged more money than the device is worth or potentially scammed. 
+
+Additionally, you **will lose your year long warranty** by buying from these shops. 
+
+See the **[offical flipper zero how to buy site](https://flipperzero.one/how-to-buy)** for trusted sellers. 
+
 ### What can the Flipper Zero do?
 All of the cool things the device can do are nicely laid out in the [**official docs**](https://docs.flipper.net)!
 
@@ -54,7 +64,7 @@ Maybe! Refer to the chart below:
 ``` mermaid
 graph LR
   A[Start] --> B{is the remote using a supported frequency? * };
-  B --> |Yes| C{Is it using a rolling code?};
+  B --> |Yes| C{Is it using a rolling code system?};
   B --> |No| D[You cannot copy the remote.];
   C --> |No| F[You can likely copy the remote!];
   C --> |Yes| E{Is your rolling code supported? **};
