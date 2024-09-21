@@ -7,6 +7,15 @@ This page aims to collect frequent or common questions people may have related t
 ### What can the Flipper Zero do?
 All of the cool things the device can do are nicely laid out in the [**official docs**](https://docs.flipper.net)!
 
+### Will this device make me a super cool hacker so I can hack my entire city?
+**No.** This devices is geared for educational use to learn about tech, not for you to be a menace to society. TikTok and Instagram videos love to lie about its features, so you will be disappointed if you're buying based on that. 
+
+**Go and re-read [what flipper zero can do](https://docs.flipper.net)**.
+
+Also keep this in mind:
+
+![CFAA Law Image](assets/images/CFAA.jpg){ width="600" }
+
 ### Can I take my Flipper Zero on an airplane?
 It's completely fine to travel with your Flipper Zero to any country the device is sold in. In case you are going on an airplane and through security, here's a few tips on what you should do:
 
