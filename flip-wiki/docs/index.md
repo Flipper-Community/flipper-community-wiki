@@ -3,7 +3,8 @@ This site contains the unofficial community driven knowledge base for the [Flipp
 
 **Ready to continue onwards?**
 
-Check out the [Getting Started guide](getting-started.md)!
+- Check out the [Getting Started guide](getting-started.md)!
+- Read through the [Frequently Asked Questions](faq-general.md)!
 
 **Looking to contribute?**
 

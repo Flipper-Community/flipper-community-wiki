@@ -2,6 +2,7 @@
 Per the [Flipper official documentation](https://docs.flipper.net/gpio-and-modules), GPIO modules allow you to extend the Flipper Zero's capabilities with addon modules. 
 
 ## Popular modules
+The below is NOT a complete list, and only lists a few of the popular avaliable modules for the Flipper Zero.
 
 ### CC1101
 !!! warning

@@ -6,6 +6,7 @@
     - **Seriously**, Read them!
     - Have we mentioned how ***great*** they are?!
     - Do you know how ***cool*** reading them makes you?!
+- Read our [**very cool FAQ!**](faq-general.md)
 
 ## What Not To Do
 
