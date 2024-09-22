@@ -40,6 +40,13 @@ A lot of people have flown with and passed security checks with Flippers on them
 
 While the Flipper Zero used to show some public details of the card in release 0.81.1, this was later removed due to confusion from both people and companies that caused them to think the Flipper Zero might be able to 'skim' bank cards. The information the device was reading was just the unencrypted part of the card. All actual payment related functions are encrypted on the card and are impossible for the Flipper Zero to read. 
 
+### Can Flipper Zero copy Travel passes / Bus passes?
+**<p style="color:red">DO NOT ATTEMPT. This will likely be considered FRAUD!</p>** 
+
+**Do not try to copy/emulate a transport card!** This is a good way to end up with at *minimum* being banned from a transportation service, or at worst <u>criminal charges</u>. 
+
+All it takes is a single report to authorities and you will have *massive* problems. 
+
 ### What cool modules should I buy with my Flipper Zero. 
 
 It's typically recommended to just stick with the basics (Flipper Zero + optional Wi-Fi development board) until you learn what you're doing and what things you *want* your device to do. 
