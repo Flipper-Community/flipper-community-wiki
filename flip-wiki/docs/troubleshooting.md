@@ -4,6 +4,12 @@ For guides to troubleshoot some of the more obscure Flipper Zero issues, see the
 
 ## Flipper Zero
 
+### Forgotton/unknown Flipper Zero PIN
+[See the official docs page for PIN reset instructions.](https://docs.flipper.net/basics/control#c_9ya)
+
+If you are still having problems, browse your MicroSD card and delete the hidden `.int` folder and try the above steps in the docs again. 
+
+
 ### Flipper Zero is experiencing lag or behaving slow
 This is an issue that is most commonly caused by certain development features being enabled and putting strain on the CPU of the flipper. 
 To fix this, run through the following steps:
