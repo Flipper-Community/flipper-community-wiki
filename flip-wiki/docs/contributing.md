@@ -64,7 +64,7 @@ Remote Image Embed with scaling
 The material theme provides extended features for markdown.
 See the [official reference page](https://squidfunk.github.io/mkdocs-material/reference/) for extended examples. 
 
-Current enabled Modules: Admonitions, Diagrams
+Current enabled Modules: Admonitions, Diagrams, Social
 
 !!! note "note admonition"
     sample note

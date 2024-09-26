@@ -41,6 +41,10 @@ extra_css:
 copyright: All Flipper artwork is attributed to <a href="https://flipperdevices.com">Flipper Devices</a> unless otherwise stated. 
   <div>All trademarks are the property of their respective owners and are used in this document for descriptive purposes only, without any intention of infringement.
 
+### Plugin loading
+plugins:
+  - social
+
 
 ### MkDoc extension loading ###
 markdown_extensions:
