@@ -38,16 +38,14 @@ extra_css:
 
 
 ### Copyright footer info ###
-copyright: All Flipper artwork is attributed to <a href="https://flipperdevices.com">Flipper Devices</a> unless otherwise stated. 
+copyright: The content of this wiki is created and maintained by the community and does not represent the official views, statements, or endorsements of Flipper Devices.
+  <div>All Flipper artwork is attributed to <a href="https://flipperdevices.com">Flipper Devices</a> unless otherwise stated. 
   <div>All trademarks are the property of their respective owners and are used in this document for descriptive purposes only, without any intention of infringement.
 
 ### Plugin loading
-plugins:
-  - social:
-      cards_layout_options:
-        background_color: "#FF8200"
-        color: "#000000"
-        font_family: VT323
+# plugins:
+#### social plugin disabled for now, revisit if the free version ever gets better customizability
+#   - social:
 
 
 ### MkDoc extension loading ###

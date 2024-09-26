@@ -24,7 +24,7 @@ jobs:
         with:
           python-version: 3.11
       - run: pip install \
-            mkdocs-material mkdocs-material[imaging]
+            mkdocs-material
       - run: mkdocs gh-deploy --config-file flip-wiki/mkdocs.yml --force
  
   deploy_mkdocs:

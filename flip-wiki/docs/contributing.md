@@ -12,7 +12,6 @@ The following guidelines should be kept in mind when submitting changes:
 - Do not provide direct links to firmwares that allow the enablement of illegal activity or defeating radio transmission region locks
 - Keep your writing tone non-biased and professional.
 
-
 ## Text Formatting Examples
 ### Markdown
 
@@ -64,7 +63,6 @@ Remote Image Embed with scaling
 The material theme provides extended features for markdown.
 See the [official reference page](https://squidfunk.github.io/mkdocs-material/reference/) for extended examples. 
 
-Current enabled Modules: Admonitions, Diagrams, Social
 
 !!! note "note admonition"
     sample note
