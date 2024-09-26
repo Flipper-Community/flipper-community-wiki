@@ -43,7 +43,11 @@ copyright: All Flipper artwork is attributed to <a href="https://flipperdevices.
 
 ### Plugin loading
 plugins:
-  - social
+  - social:
+      cards_layout_options:
+        background_color: "#FF8200"
+        color: "#000000"
+        font_family: VT323
 
 
 ### MkDoc extension loading ###
