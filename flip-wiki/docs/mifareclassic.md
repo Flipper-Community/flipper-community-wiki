@@ -21,12 +21,6 @@ Q: **When I read the card in the NFC app, it says "(Hard)" at the top. How do I 
 
 A: You need to perform a Hardnested attack using the nonces your Flipper Zero saved when reading the card. TBC
 
-**TODO**
-
-KDF attack (https://github.com/noproto/flipper_kdf): You can use KDF plugins to instantly crack keys for [certain brands](https://github.com/noproto/flipper_kdf/wiki/List). Visit <https://github.com/noproto/flipper_kdf/releases/latest>, download the latest plugins.zip file, extract the plugin files (.fal) to your SD card (ext) at /apps_data/nfc/plugins/, and finally try to scan your card using the NFC app again. If it finds 32/32 keys (or 80/80) with 16/16 sectors (or 40/40), congratulations and [proceed to "Emulation"](mifareclassic.md#emulation).
-
-If you have completed all of the above steps and do not have all of the keys, return to step 2 (Mfkey32). If Mfkey32 no longer finds new keys, there is no known process to crack the remaining keys to your card at this time.
-
 ## Emulation
 
 ![Emulation](https://gist.githubusercontent.com/noproto/2ee35c1916b358924c08f77645a46d81/raw/c4f19920a2ccbe4c66998476a3d4d76c2f98ad78/emulation.png "Emulation")
