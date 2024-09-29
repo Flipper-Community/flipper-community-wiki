@@ -82,6 +82,10 @@ nav:
       - Public Transport: publictransport.md
     - GPIO: 
       - Overview: gpio-overview.md
+  - Development:
+    - Overview: development-overview.md
+#    - Guides & Tutorials:
+#      - tutorialHere: placeholder.md
 
   - Site Info:
     - About: about.md
