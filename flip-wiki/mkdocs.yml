@@ -68,6 +68,7 @@ markdown_extensions:
 ### Add your .md files in this section ###
 nav:
   - Home: index.md
+
   - Getting Started:
      - The Basics: getting-started.md
      - FAQ: faq-general.md
@@ -82,10 +83,13 @@ nav:
       - Public Transport: publictransport.md
     - GPIO: 
       - Overview: gpio-overview.md
+
   - Development:
     - Overview: development-overview.md
-#    - Guides & Tutorials:
-#      - tutorialHere: placeholder.md
+
+  - Guides & Tutorials:
+    - Development:
+      - Designing Custom Fonts: tutorials/f0_fonts_guide/guide.md
 
   - Site Info:
     - About: about.md
