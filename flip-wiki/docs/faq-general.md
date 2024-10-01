@@ -26,6 +26,14 @@ Also keep this in mind:
 
 ![CFAA Law Image](assets/images/CFAA.jpg){ width="600" }
 
+### Where Do I Get Cool Stuff for my Flipper Zero?
+Nearly anything for the device is available on Github. 
+
+* The [Awesome Flipper repo on Github](https://github.com/djsime1/awesome-flipperzero/tree/main) has a huge amount of links and info.
+* [UberGuidoZ](https://github.com/UberGuidoZ/Flipper) has a number of random signal recordings.
+* The [IRDB repo](https://github.com/Lucaslhm/Flipper-IRDB) contains a large assortment of infrared remotes.
+
+
 ### Can I take my Flipper Zero on an airplane?
 It's completely fine to travel with your Flipper Zero to any country the device is sold in. In case you are going on an airplane and through security, here's a few tips on what you should do:
 
