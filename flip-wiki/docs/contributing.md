@@ -11,6 +11,7 @@ The following guidelines should be kept in mind when submitting changes:
     - This includes but is not restricted to: jamming, illegal radio transmitting, defeating regional frequency locks, and fraud
 - Do not provide direct links to firmwares that allow the enablement of illegal activity or defeating radio transmission region locks
 - Keep your writing tone non-biased and professional.
+- if you upload any images, please try to keep them below 2 Megabytes in size. 
 
 ## Text Formatting Examples
 ### Markdown
