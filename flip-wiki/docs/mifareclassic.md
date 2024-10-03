@@ -18,7 +18,7 @@ When the cracking process is complete, the number of new user keys (or candidate
 
 Q: **When I read the card in the NFC app, it says "(Hard)" at the top. How do I find new keys?**
 
-A: You need to perform a Hardnested attack using the nonces your Flipper Zero saved when reading the card. A process will be made available soon.
+A: You need to perform a Hardnested attack using the nonces your Flipper Zero saved when reading the card. Follow the guide to run HardnestedRecovery [here](https://github.com/noproto/HardnestedRecovery#usage).
 
 ## Emulation
 
