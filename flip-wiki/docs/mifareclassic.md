@@ -5,7 +5,7 @@ Here are the steps to follow in order to read your cards. Your goal is to find a
 
 Steps:
 
-1. **Read from NFC app**: Try to scan your MIFARE Classic card with NFC -> Read. It will try a dictionary attack of default keys to unlock your card, as well as any keys you may have found through other methods. If it finds 32/32 keys (or 80/80) with 16/16 sectors (or 40/40), congratulations and [proceed to "Emulation"](mifareclassic.md#emulation). If not, wait for nonce collection to complete (be patient!) and continue to step 2.
+1. **Read from NFC app**: Try to scan your MIFARE Classic card with NFC -> Read. It will try a dictionary (and KDF) attack of default keys to unlock your card, as well as any keys you may have found through other methods. If it finds 32/32 keys (or 80/80) with 16/16 sectors (or 40/40), congratulations and [proceed to "Emulation"](mifareclassic.md#emulation). If not, wait for nonce collection to complete (be patient!) and continue to step 2.
 2. **Crack with MFKey app**: From the NFC app, select the option to crack the remaining keys with MFKey. Do not interrupt the cracking process, it may take a while! When the cracking process is complete, the number of new user keys (or candidate keys) that are found will be shown. If more than zero keys are found, return to step 1 and repeat the process.
 
 ## Troubleshooting
