@@ -7,7 +7,7 @@ The five main arcade data cards are:
 | Company | FeliCa<br>AIC | Card | Chip | Notable Games |
 | ----------- | ---------- | ------------ | ----------- | ----------- |
 | **Andamiro** | - | [AM.PASS](https://am-pass.net/) | ICODE SLI<br>ICODE SLIX<br>ICODE SLIX2 | [Chrono Circle](https://chrono-circle.com/)<br>[PIU](https://piugame.com/) |
-| **Bandai Namco** | X | [Bandai Namco Passport](https://banapas`s.net/setlocale/en/) | MIFARE Classic | [Taiko](https://donderhiroba.jp/login.php)<br>[WM6RR](https://wanganmaxi-official.com/wanganmaxi6rr/en/) |
+| **Bandai Namco** | X | [Bandai Namco Passport](https://banapass.net/setlocale/en/) | MIFARE Classic | [Taiko](https://donderhiroba.jp/login.php)<br>[WM6RR](https://wanganmaxi-official.com/wanganmaxi6rr/en/) |
 | **Konami** | X | [e-amusement pass](https://p.eagate.573.jp/index.html)| ICODE SLI | [DDR](https://p.eagate.573.jp/game/ddr/ddrworld/top/index.html)<br>[SDVX](https://p.eagate.573.jp/game/sdvx/vi/) |
 | **Sega** | X | [Aime](https://my-aime.net/en/) | MIFARE Classic | [IDAC](https://initiald.sega.jp/inidac/)<br>[maimai](https://maimai.sega.com/) |
 | **Taito** | X | [NESiCA](https://nesica.net/) | MIFARE Ultralight | [MUSiCDiVER](https://musicdiver.jp/index.html)<br>[SF6TA](https://sf6ta.jp/) |
