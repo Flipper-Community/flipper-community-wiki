@@ -27,19 +27,19 @@ The latter four companies have FeliCa card variants endorsed with the `Amusement
 | NESiCA | MFU | - | - | - | - | - |
 
 ### Arcade Data Card Emulation Compatibility Notes
-    - If FeliCa emulation does not work, you may need to:
-        1) Back up your microSD card;
-        2) Synchronise your Flipper Zero with your Mobile App;
-        3) Factory reset your Flipper Zero;
-        4) Format your microSD card; then,
-        5) Update to the latest OFW Version.
-    - There is an issue that prevents the Flipper Zero from emulating:
-        1) FeliCa Amusement IC Cards on Sega games;
-        2) ICODE SLI e-amusement passes on Konami games;
-        3) MFC Aime Cards on Sega games; and,
-        4) MFC Bandai Namco Passports on Sega games.
-    - Emulation compatibility cannot be tested for Taito games without assistance from Members located within Japan.
-    - The ICODE SLI `e-amusement pass` cards are not compatible with Andamiro games.
+- If FeliCa emulation does not work, you may need to:
+    1) Back up your microSD card;
+    2) Synchronise your Flipper Zero with your Mobile App;
+    3) Factory reset your Flipper Zero;
+    4) Format your microSD card; then,
+    5) Update to the latest OFW Version.
+- There is an issue that prevents the Flipper Zero from emulating:
+    1) FeliCa `Amusement IC Cards` on `Sega` games;
+    2) ICODE SLI `e-amusement pass` cards on `Konami` games;
+    3) MFC `Aime` cards on `Sega` games; and,
+    4) MFC `Bandai Namco Passport` cards on `Sega` games.
+- Emulation compatibility cannot be tested for `Taito` games without assistance from Members located within Japan.
+- The ICODE SLI `e-amusement pass` cards are not compatible with `Andamiro` games.
 
 ## Arcade Payment Cards
 !!! warning "**WARNING**"
