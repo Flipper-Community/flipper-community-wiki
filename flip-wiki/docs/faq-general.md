@@ -12,7 +12,7 @@ This page aims to collect frequent or common questions people may have related t
 
 Additionally, you **will lose your year long warranty** by buying from these shops. 
 
-See the **[offical flipper zero how to buy site](https://flipperzero.one/how-to-buy)** for trusted sellers. 
+See the **[offical Flipper Zero how to buy site](https://flipperzero.one/how-to-buy)** for trusted sellers. 
 
 ### What can the Flipper Zero do?
 All of the cool things the device can do are nicely laid out in the [**official docs**](https://docs.flipper.net)!
@@ -27,9 +27,9 @@ Also keep this in mind:
 ![CFAA Law Image](assets/images/CFAA.jpg){ width="600" }
 
 ### Where Do I Get Cool Stuff for my Flipper Zero?
-Nearly anything for the device is available on Github. 
+Nearly anything for the device is available on GitHub. 
 
-* The [Awesome Flipper repo on Github](https://github.com/djsime1/awesome-flipperzero/tree/main) has a huge amount of links and info.
+* The [Awesome Flipper repo on GitHub](https://github.com/djsime1/awesome-flipperzero/tree/main) has a huge amount of links and info.
 * [UberGuidoZ](https://github.com/UberGuidoZ/Flipper) has a number of random signal recordings.
 * The [IRDB repo](https://github.com/Lucaslhm/Flipper-IRDB) contains a large assortment of infrared remotes.
 
@@ -39,7 +39,7 @@ It's completely fine to travel with your Flipper Zero to any country the device 
 
 * Turn the device off and treat it like any other electronic device in your carry-on bag.
 * If asked, do not lie. Tell them that the device is an electronic multi-tool.
-* After landing and before using your Flipper Zero in your destination country, make sure to update via Qflipper. That way, the frequency restrictions will be updated to that country's laws and regulations.
+* After landing and before using your Flipper Zero in your destination country, make sure to update via qFlipper. That way, the frequency restrictions will be updated to that country's laws and regulations.
 
 A lot of people have flown with and passed security checks with Flippers on them before, there haven't been any reported incidents. 
 
@@ -58,7 +58,7 @@ All it takes is a single report to authorities and you will have *massive* probl
 ### What cool modules should I buy with my Flipper Zero. 
 
 It's typically recommended to just stick with the basics (Flipper Zero + optional Wi-Fi development board) until you learn what you're doing and what things you *want* your device to do. 
-Otherwise, its likely that whatever you buy will just end up in a drawer gathering dust after a few days because you dont have any good uses, or worse: because you don't know how to set up the module. 
+Otherwise, its likely that whatever you buy will just end up in a drawer gathering dust after a few days because you don't have any good uses, or worse: because you don't know how to set up the module. 
 
 If you know what you want, a few popular module overviews are listed in the [GPIO page](gpio-overview.md#popular-modules)
 

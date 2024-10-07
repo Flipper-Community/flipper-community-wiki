@@ -4,7 +4,7 @@ For guides to troubleshoot some of the more obscure Flipper Zero issues, see the
 
 ## Flipper Zero
 
-### Forgotton/unknown Flipper Zero PIN
+### Forgotten/unknown Flipper Zero PIN
 [See the official docs page for PIN reset instructions.](https://docs.flipper.net/basics/control#c_9ya)
 
 If you are still having problems, browse your MicroSD card and delete the hidden `.int` folder and try the above steps in the docs again. 
@@ -28,18 +28,18 @@ After these are set, press back and leave the menu. Reboot your flipper. The iss
 This is an issue that *can* occur from switching between firmwares. To fix this, try the following:
 
 1. Connect your flipper to your PC
-1. Open Up Qflipper
+1. Open Up qFlipper
 1. go to your SD card files
 1. make sure **Show Hidden Files** is enabled
 1. on your SD card, locate and delete the `/.int` folder
     - This will delete out the old misconfigured settings from past firmwares.
-1. Go back to Qflipper, and reinstall the latest firmware
+1. Go back to qFlipper, and reinstall the latest firmware
 1. Unplug and try using your Flipper Zero again to verify the device works as expected.
 
 ## Windows
 
 !!! Note
-    Try the [Official Qflipper Troubleshooting Guide](https://docs.flipper.net/qflipper/windows-debug) **FIRST!**
+    Try the [Official qFlipper Troubleshooting Guide](https://docs.flipper.net/qFlipper/windows-debug) **FIRST!**
     
     If those steps did not help, you may continue below.
 
@@ -52,31 +52,31 @@ If you are attempting to use either badusb in bluetooth mode or the remote funct
 
 Your Flipper Zero should now be discoverable. 
 
-### DFU mode is not being recognized by Qflipper
+### DFU mode is not being recognized by qFlipper
 This commonly occurs when a driver is conflicting with the DFU driver.
 To remedy this, follow the steps below:
 
 1. download the [Zadig driver tool](https://github.com/pbatard/libwdi/releases/)
 1. With you Flipper Zero unplugged, do the steps necessary to put your Flipper Zero into DFU mode
-1. open the Zadig tool
-1. in the zadig tool, choose `Options`, then `List all devices`
-1. choose the `DFU in FS mode` item
-1. make sure the winusb driver is selected, then press `Reinstall driver`
+1. Open the Zadig tool
+1. In the Zadig tool, choose `Options`, then `List all devices`
+1. Choose the `DFU in FS mode` item
+1. Make sure the winusb driver is selected, then press `Reinstall driver`
 
-Close the tool out, unplug your Flipper Zero and plug it back in. Qflipper should now recognize your flipper.
+Close the tool out, unplug your Flipper Zero and plug it back in. qFlipper should now recognize your flipper.
 
 ## Linux
 
-### Flipper Zero not recognized by Qflipper
+### Flipper Zero not recognized by qFlipper
 Typically this issues is the result of not installing the udev rules. To fix this, follow the steps below:
 
-1. open a terminal and `cd` to the directory of your qflipper appimage
+1. open a terminal and `cd` to the directory of your qFlipper appimage
 1. run `./qFlipper-x86_64.AppImage rules install `
 1. once this reports it installed successfully, reboot your pc
 
-Alternatively, you may try running qflipper with `sudo`, however this is not ideal and has security implications. 
+Alternatively, you may try running qFlipper with `sudo`, however this is not ideal and has security implications. 
 
-### Fedora Qflipper not detecting Flipper Zero
+### Fedora qFlipper not detecting Flipper Zero
 First, verify you installed the udev rules from the steps detailed in this page.
 If it still is not detected, you may be experiencing a known conflict between the udev rules of Flipper Zero and the udev rules of the `sysdemd-udev`package.
 This will require you to manually apply a fix related to one of the udev rules.

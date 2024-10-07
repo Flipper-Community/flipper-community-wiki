@@ -18,7 +18,7 @@ ESP32's are a microcontroller that can include Wi-Fi as well as Bluetooth or Zig
 - ESP32-S2-WROVER
 - ESP32-S3
 
-They can act as standalone devices and/or connect to the Flipper Zero's GPIO in order to provide communication between the devices. All ESP32 devices require firmware to run. This can either be pre-flashed by the seller or it can be left to the buyer as a task to do. Current Popular firmwares:
+They can act as standalone devices and/or connect to the Flipper Zero's GPIO in order to provide communication between the devices. All ESP32 devices require firmware to run. This can either be pre-flashed by the seller or it can be left to the buyer as a task to do. Current popular firmwares:
 
 - [Black Magic](https://github.com/flipperdevices/blackmagic-esp32-s2): This firmware is geared for debugging Flipper Zero applications. Intended for the official Wi-Fi development board, but can be run on other equivalent ESP32 models with the proper pinouts.
 - [Marauder](https://github.com/justcallmekoko/ESP32Marauder): This firmware will work on most ESP32's and enables them to perform **2.4 GHz only** Wi-Fi offensive and defensive tests. It also includes select bluetooth features as well on specific ESP32 boards that are bluetooth capable. 

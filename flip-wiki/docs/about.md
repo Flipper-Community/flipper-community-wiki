@@ -15,3 +15,5 @@ No copyright or trademark infringement is intended in using Flipper Devices cont
 Site logo artwork is attributed to [Flipper Devices](https://flipperdevices.com). "Flipper Zero" and other trademarks and artwork are wholly-owned by Flipper Devices. 
 
 The content of this wiki is created and maintained by the community and does not represent the official views, statements, or endorsements of Flipper Devices. Flipper Devices is not responsible for the accuracy, completeness, or reliability of the information provided on this wiki. All contributions are made voluntarily by individual users and do not reflect the opinions or policies of Flipper Devices, its affiliates, or representatives.
+
+Information contributed to the Flipper Wiki is licensed under [**CC BY-NC-SA 4.0**](https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1)
