@@ -15,7 +15,7 @@ This is an issue that is most commonly caused by certain development features be
 To fix this, run through the following steps:
 
 1. Press the center button on your flipper
-1. navigate to **Settings*
+1. navigate to **Settings**
 1. Scroll down and select **System**
 1. Scroll down again and check that the following options are set:
     - **Log Level**: `Default`
@@ -56,7 +56,7 @@ Your Flipper Zero should now be discoverable.
 This commonly occurs when a driver is conflicting with the DFU driver.
 To remedy this, follow the steps below:
 
-1. download the [Zadig driver tool](https://github.com/pbatard/libwdi/releases/)
+1. Download the [Zadig driver tool](https://github.com/pbatard/libwdi/releases/)
 1. With you Flipper Zero unplugged, do the steps necessary to put your Flipper Zero into DFU mode
 1. Open the Zadig tool
 1. In the Zadig tool, choose `Options`, then `List all devices`
