@@ -81,6 +81,8 @@ nav:
       - Overview: nfc-overview.md
       - Arcade Cards: arcadecards.md
       - Public Transport: publictransport.md
+    - SubGHz:
+      - Overview: subghz-overview.md
     - GPIO: 
       - Overview: gpio-overview.md
 
