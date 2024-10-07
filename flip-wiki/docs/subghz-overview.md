@@ -1,9 +1,9 @@
 # Flipper Zero Sub-GHz Overview
-The Flipper Zero, according to the [official documentation](https://docs.flipper.net/sub-ghz#kfpN7) has the following hardware setup: 
+The Flipper Zero, according to the [official documentation](https://docs.flipper.net/sub-ghz#kfpN7), has the following hardware setup: 
 
 > Flipper Zero has a built-in sub-1 GHz module based on a [CC1101 transceiver](https://www.ti.com/lit/ds/symlink/cc1101.pdf) and a radio antenna (the maximum range is 50 meters). Both the CC1101 chip and the antenna are designed to operate at frequencies in the 300-348 MHz, 387-464 MHz, and 779-928 MHz bands.
 
-Upon your first firmware update, the associated official app used to update your Flipper Zero will automatically set your region. By doing so, the device will automatically prevent your from transmitting on frequencies that civilians do not have a license for, preventing you from accidentally interfering with other radio items such as emergency services, aircraft transmissions, or other items used by the government. It will also automatically set the appropriate transmit strength for your country so that you avoid any legal penalties for high powered transmitting.
+Upon your first firmware update, the associated official app used to update your Flipper Zero will automatically set your region. By doing so, the device will automatically prevent you from transmitting on frequencies that civilians do not have a license for. This by extension will prevent you from accidentally interfering with radio items such as emergency services, aircraft transmissions, or other items used by the government. It will also automatically set the appropriate transmit strength for your country so that you avoid any legal penalties for high powered transmitting.
 [comment]: <> (TODO: Verify that flipper zero will actually change transmit power based on country)
 
 ## Sub-GHz File Formats
