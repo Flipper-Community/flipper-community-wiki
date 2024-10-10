@@ -33,6 +33,21 @@ Nearly anything for the device is available on GitHub.
 * [UberGuidoZ](https://github.com/UberGuidoZ/Flipper) has a number of random signal recordings.
 * The [IRDB repo](https://github.com/Lucaslhm/Flipper-IRDB) contains a large assortment of infrared remotes.
 
+### How can I make NFC files with links or other things?
+You have three options to create a NTAG type card with this info:
+
+#### Web Based
+
+- [Flipper Tools](https://nfc.flippertools.net/)
+- [Flipper Maker](https://flippermaker.github.io)
+
+#### App based
+If your phone supports NFC, you can use the NFC Tools app on [Android](https://play.google.com/store/apps/details?id=com.wakdev.wdnfc&hl=en_US) & [IOS](https://apps.apple.com/us/app/nfc-tools/id1252962749).
+
+This app can allow you to create all manner of records for the NTAG NFC file. 
+
+To use it, create a new blank NTAG on your Flipper Zero, emulate the blank tag, then have your phone write to that tag. 
+
 
 ### Can I take my Flipper Zero on an airplane?
 It's completely fine to travel with your Flipper Zero to any country the device is sold in. In case you are going on an airplane and through security, here's a few tips on what you should do:
