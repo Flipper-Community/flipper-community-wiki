@@ -67,6 +67,13 @@ Close the tool out, unplug your Flipper Zero and plug it back in. qFlipper shoul
 
 ## Linux
 
+### Error while loading shared libraries: 1ibOpenGL.so.0
+This error most commonly occurs on Debian, but can occur on some other distros as well. 
+To fix this, you will need to install the `libopengl0` package.
+
+On Debian, this can be done via `sudo apt install libopengl0`. 
+
+
 ### Flipper Zero not recognized by qFlipper
 Typically this issues is the result of not installing the udev rules. To fix this, follow the steps below:
 
