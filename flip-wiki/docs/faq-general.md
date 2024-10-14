@@ -10,7 +10,7 @@ This page aims to collect frequent or common questions people may have related t
 
 <u>Those shops are run by scalpers/unauthorized resellers</u>, so you will be charged more money than the device is worth or potentially scammed. 
 
-Additionally, you **will lose your year long warranty** by buying from these shops. 
+Additionally, you **will lose your device's warranty** by buying from these shops. 
 
 See the **[offical Flipper Zero how to buy site](https://flipperzero.one/how-to-buy)** for trusted sellers. 
 
