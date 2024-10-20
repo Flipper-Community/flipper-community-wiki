@@ -1,36 +1,53 @@
-## Preparation
-
-Please select your firmware:
-
-<details>
-  <summary><img src="https://cdn.flipperzero.one/favicon-16x16.png"/> Official firmware (OFW)</summary>
-
-  Upgrade to [this experimental build](https://github.com/noproto/xero-firmware/releases/download/1.1.0-rc-xero/flipper-z-f7-update-local.tgz) in order to follow this guide. When you finish the steps, restore the original firmware on the Flipper Zero. When this badge is purple with the text "merged", you may skip this step: [![Status](https://img.shields.io/github/pulls/detail/state/flipperdevices/flipperzero-firmware/3822?label=Status&style=flat-square)](https://github.com/flipperdevices/flipperzero-firmware/pull/3822)
-
-</details>
-<details>
-    
-  <summary>Custom firmware (CFW)</summary>
-  <details>
-  <summary><img src="https://flipperunleashed.com/images/favicon-16x16.png"/> Unleashed</summary>
-    Detail
-  </details>
-  <details>
-  <summary><img src="https://momentum-fw.dev/favicon-16x16.png"/> Momentum</summary>
-    Detail
-  </details>
-  <details>
-  <summary><img src="https://gist.github.com/user-attachments/assets/be6c2b30-a0ad-4b84-8db7-531d24d40068"/> RogueMaster</summary>
-    Detail
-  </details>
-  <details>
-  <summary><img src="https://gist.github.com/user-attachments/assets/34a7178b-e570-4514-bbc3-f06fb002a1a1"/> Xero</summary>
-    Detail
-  </details>
-</details>
-
 # MIFARE Classic
 Here are the steps to follow in order to read your cards. Your goal is to find as many keys as possible. The keys unlock sections of your card for the Flipper to read them - you must have a card. Once you read enough sections, you can use an emulated or cloned card at the original card reader to unlock it (sometimes even without finding all of the keys!).
+
+> [!TIP]
+> The features described in this guide are currently under development. Please select your firmware below for the relevant preparation instructions:
+
+<table><tr><td>
+<details>
+  <summary><img src="https://cdn.flipperzero.one/favicon-16x16.png"/> Official firmware (OFW)</summary>
+  Upgrade to [this experimental build](https://github.com/noproto/xero-firmware/releases/download/1.1.0-rc-xero/flipper-z-f7-update-local.tgz) in order to follow this guide. When you finish the steps, restore the original firmware on the Flipper Zero. When this badge is purple with the text "merged", you may skip this step: [![Status](https://img.shields.io/github/pulls/detail/state/flipperdevices/flipperzero-firmware/3822?label=Status&style=flat-square)](https://github.com/flipperdevices/flipperzero-firmware/pull/3822)
+</details>
+</td></tr></table>
+
+<table><tr><td>
+<details>
+  <summary>Custom firmware (CFW)</summary>
+  <table>
+    <tr>
+        <td><details>
+        <summary><img src="https://flipperunleashed.com/images/favicon-16x16.png"/> Unleashed</summary>
+          Detail
+        </details></td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+        <td><details>
+        <summary><img src="https://momentum-fw.dev/favicon-16x16.png"/> Momentum</summary>
+          Detail
+        </details></td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+        <td><details>
+        <summary><img src="https://i.imgur.com/Of1QdI1.png"/> RogueMaster</summary>
+          Detail
+        </details></td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+        <td><details>
+        <summary><img src="https://i.imgur.com/vUvGNJ7.png"/> Xero</summary>
+          Detail
+        </details></td>
+    </tr>
+  </table>
+</details>
+</td></tr></table>
 
 ## Reading the card
 
