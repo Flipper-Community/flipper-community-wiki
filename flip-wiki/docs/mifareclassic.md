@@ -16,25 +16,25 @@ Flash [this experimental build](https://github.com/noproto/xero-firmware/release
 <table><tr><td><details>
 <summary> <a href="#"><img src="https://flipperunleashed.com/images/favicon-16x16.png"/></a>&nbsp; Unleashed</summary><br>
 
-Detail
+A version incorporating all changes has not yet been released. In the meantime, try the [latest dev build (1064)](https://unleashedflip.com/fw/dev/flipper-z-f7-update-1064.tgz).
 
 </details></td></tr></table>
 <table><tr><td><details>
 <summary> <a href="#"><img src="https://momentum-fw.dev/favicon-16x16.png"/></a>&nbsp; Momentum</summary><br>
 
-Detail
+Update to [mntm-dev-2e3c6d32](https://up.momentum-fw.dev/firmware/dev/flipper-z-f7-update-mntm-dev-2e3c6d32.tgz) (released on Oct 18) or later.
 
 </details></td></tr></table>
 <table><tr><td><details>
 <summary> <a href="#"><img src="https://i.imgur.com/Of1QdI1.png"/></a>&nbsp; RogueMaster</summary><br>
 
-Detail
+Update to [RM1019-1748-0.420.0-81df18a](https://github.com/RogueMaster/flipperzero-firmware-wPlugins/releases/tag/RM1019-1748-0.420.0-81df18a) (released to subscribers on Oct 18, public on Oct 19) or later.
 
 </details></td></tr></table>
 <table><tr><td><details>
 <summary> <a href="#"><img src="https://i.imgur.com/vUvGNJ7.png"/></a>&nbsp; Xero</summary><br>
 
-Install [1.1.0-rc-xero](https://github.com/noproto/xero-firmware/releases/tag/1.1.0-rc-xero) or later.
+Update to [1.1.0-rc-xero](https://github.com/noproto/xero-firmware/releases/tag/1.1.0-rc-xero) (released on Oct 18) or later.
 
 </details></td></tr></table>
 </details></td></tr></table>
