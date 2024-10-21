@@ -8,7 +8,7 @@
 - [NXP TagInfo by NXP: App Store](https://apps.apple.com/us/app/nfc-taginfo-by-nxp/id1246143596)
 
 ## MIFARE Classic
-If your transit agency is using MIFARE Classic, then follow [this awesome guide](https://gist.github.com/noproto/63f5dea3f77cae4393a4aa90fc8ef427).
+If your transit agency is using MIFARE Classic, then follow [the MIFARE Classic guide](mifareclassic.md).
 
 ## MIFARE DESFire
 If your transit agency is using MIFARE DESFire, then use either your Flipper Zero or the `MetroDroid` app to see if your transit card has any unlocked applications/files that reveal information such as:
