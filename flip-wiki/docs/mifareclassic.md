@@ -1,13 +1,13 @@
 # MIFARE Classic
 Here are the steps to follow in order to read your cards. Your goal is to find as many keys as possible. The keys unlock sections of your card for the Flipper to read them - you must have a card. Once you read enough sections, you can use an emulated or cloned card at the original card reader to unlock it (sometimes even without finding all of the keys!).
 
-> [!TIP]
-> The features described in this guide are currently under development. Please select your firmware below for the relevant preparation instructions:
+> [!IMPORTANT]
+> The features described in this guide are not yet officially released. Please select your firmware below for the relevant preparation instructions:
 
 <table><tr><td><details>
 <summary> <a href="#"><img src="https://cdn.flipperzero.one/favicon-16x16.png"/></a>&nbsp; Official firmware (OFW)</summary><br>
 
-Upgrade to [this experimental build](https://github.com/noproto/xero-firmware/releases/download/1.1.0-rc-xero/flipper-z-f7-update-local.tgz) in order to follow this guide. When you finish the steps, restore the original firmware on the Flipper Zero. When this badge is purple with the text "merged", you may skip this step: [![Status](https://img.shields.io/github/pulls/detail/state/flipperdevices/flipperzero-firmware/3822?label=Status&style=flat-square)](https://github.com/flipperdevices/flipperzero-firmware/pull/3822)
+Flash [this experimental build](https://github.com/noproto/xero-firmware/releases/download/1.1.0-rc-xero/flipper-z-f7-update-local.tgz) to follow this guide. When you complete all of the steps, restore the latest official firmware on the Flipper Zero. You may skip this step when this status badge is purple with the text "merged": [![Status](https://img.shields.io/github/pulls/detail/state/flipperdevices/flipperzero-firmware/3822?label=Status&style=flat-square)](https://github.com/flipperdevices/flipperzero-firmware/pull/3822)
 
 </details></td></tr></table>
 
@@ -44,13 +44,13 @@ Install [1.1.0-rc-xero](https://github.com/noproto/xero-firmware/releases/tag/1.
 Steps:
 
 1. **Read from NFC app**: Try to scan your MIFARE Classic card with NFC -> Read. It will try a dictionary (and KDF) attack of default keys to unlock your card, as well as any keys you may have found through other methods. If it finds 32/32 keys (or 80/80) with 16/16 sectors (or 40/40), congratulations and [proceed to "Emulation"](mifareclassic.md#emulation). If not, wait for nonce collection to complete (be patient!) and continue to step 2.
-2. **Crack with MFKey app**: Main Menu -> Applications -> NFC -> MFKey, press OK to run. Do not interrupt the cracking process, it may take a while! When the cracking process is complete, the number of new user keys (or candidate keys) that are found will be shown. If more than zero keys are found, return to step 1 and repeat the process.
+2. **Crack with MFKey app**: Navigate to Main Menu -> Applications -> NFC -> MFKey, press OK to run. Do not interrupt the cracking process, it may take a while! When the cracking process is complete, the number of new user keys (or candidate keys) that are found will be shown. If more than zero keys are found, return to step 1 and repeat the process.
 
 ## Troubleshooting
 
 Q: **I have zero keys, how do I find more?**
 
-A: You can find more keys from the card reader (the same one you would normally tap your card against) using the Mfkey32 attack. Navigate to NFC -> Extract MF Keys and hold the Flipper Zero up to the reader. If the reader unlocks during this process, it is using the UID of the card and is highly insecure. Otherwise, it'll collect "nonces" from the reader. You can crack the nonces to find the reader keys by running MFKey following Extract MF Keys (Main Menu -> Applications -> NFC -> MFKey, press OK to run).
+A: You can find more keys from the card reader (the same one you would normally tap your card against) using the Mfkey32 attack. Navigate to NFC -> Extract MF Keys and hold the Flipper Zero up to the reader. If the reader unlocks during this process, it is using the UID of the card and is highly insecure. Otherwise, it'll collect "nonces" from the reader. You can crack the nonces to find the reader keys by running MFKey following Extract MF Keys (navigate to Main Menu -> Applications -> NFC -> MFKey, press OK to run).
 
 When the cracking process is complete, the number of new user keys (or candidate keys) that are found will be shown. If more than zero keys are found, return to step 1 of [Reading the card](#reading-the-card) and repeat the process.
 
