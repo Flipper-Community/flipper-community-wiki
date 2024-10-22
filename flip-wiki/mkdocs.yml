@@ -79,6 +79,7 @@ nav:
       - Overview: 125khz-rfid-overview.md
     - NFC:
       - Overview: nfc-overview.md
+      - MIFARE Classic: mifareclassic.md
       - Arcade Cards: arcadecards.md
       - Public Transport: publictransport.md
     - SubGHz:
