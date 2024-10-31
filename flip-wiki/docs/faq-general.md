@@ -26,6 +26,10 @@ Also keep this in mind:
 
 ![CFAA Law Image](assets/images/CFAA.jpg){ width="600" }
 
+### Can I use a Flipper Zero if I have a Chromebook?
+Yes, however you will be limited to only using [Flipper Lab](https://lab.flipper.net) due to the security restrictions chromebooks have. qFlipper, and by extension the DFU recovery process, will *not* be avaliable on a chromebook. 
+See this [troubleshooting article](troubleshooting.md#qflipper-returns-permission-denied) for more info. 
+
 ### Where Do I Get Cool Stuff for my Flipper Zero?
 Nearly anything for the device is available on GitHub. 
 
