@@ -98,3 +98,12 @@ This is likely due to a missing library.
 1. make sure your appimage is set as executable
 
 The appimage should now run. 
+
+## ChromeOS
+
+### qFlipper returns permission denied
+ChromeOS users will have to only utilize [Flipper Lab](https://lab.flipper.net), no other option is currently possible for ChromeOS. 
+
+While ChromeOS does allow USB devices to access Linux environments via `Settings > Linux > USB preferences`, the security hardening features of ChromeOS 
+prevent udev scripts from applying the `uaccess` property to the device within the context of the secure linux container, which is needed for qFlipper to properly access the Flipper Zero. Attempting to run qFlipper with `sudo -E` is also fruitless.
+This roadblock lies firmly on the ChromeOS side for the time being. While Flipper Labs is nearly at feature parity with qFlipper, it cannot perform a DFU recovery. Should such a need arise, you will need temporary access to a non ChromeOS based PC. 
