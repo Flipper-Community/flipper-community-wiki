@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#disclaimer-preview" class="md-skip">
+        <a href="#mifare-classic" class="md-skip">
           Skip to content
         </a>
       
@@ -557,6 +557,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -585,6 +587,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -593,25 +597,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#disclaimer-preview" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
-      ⚠️ Disclaimer: Preview
+      Prerequisites
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#mifare-classic" class="md-nav__link">
-    <span class="md-ellipsis">
-      MIFARE Classic
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="MIFARE Classic">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#reading-the-card" class="md-nav__link">
     <span class="md-ellipsis">
       Reading the card
@@ -619,8 +613,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#troubleshooting" class="md-nav__link">
     <span class="md-ellipsis">
       Troubleshooting
@@ -628,18 +622,13 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#emulation" class="md-nav__link">
     <span class="md-ellipsis">
       Emulation
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1128,6 +1117,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1136,25 +1127,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#disclaimer-preview" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
-      ⚠️ Disclaimer: Preview
+      Prerequisites
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#mifare-classic" class="md-nav__link">
-    <span class="md-ellipsis">
-      MIFARE Classic
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="MIFARE Classic">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#reading-the-card" class="md-nav__link">
     <span class="md-ellipsis">
       Reading the card
@@ -1162,8 +1143,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#troubleshooting" class="md-nav__link">
     <span class="md-ellipsis">
       Troubleshooting
@@ -1171,18 +1152,13 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#emulation" class="md-nav__link">
     <span class="md-ellipsis">
       Emulation
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1204,10 +1180,10 @@
   
 
 
-<h3 id="disclaimer-preview">⚠️ Disclaimer: Preview<a class="headerlink" href="#disclaimer-preview" title="Permanent link">&para;</a></h3>
-<p>The features described in this guide are not yet officially released. Flash <a href="https://github.com/noproto/xero-firmware/releases/download/1.1.0-rc-xero/flipper-z-f7-update-local.tgz">this experimental build</a> to follow this guide. When you complete all of the steps, restore the latest official firmware on the Flipper Zero. You may skip this step when this status badge is lit purple with the text "merged": <a href="https://github.com/flipperdevices/flipperzero-firmware/pull/3822"><img alt="Status" src="https://img.shields.io/github/pulls/detail/state/flipperdevices/flipperzero-firmware/3822?label=&amp;style=flat-square" /></a></p>
 <h1 id="mifare-classic">MIFARE Classic<a class="headerlink" href="#mifare-classic" title="Permanent link">&para;</a></h1>
 <p>Here are the steps to follow in order to read your cards. Your goal is to find as many keys as possible. The keys unlock sections of your card for the Flipper to read them - you must have a card. Once you read enough sections, you can use an emulated or cloned card at the original card reader to unlock it (sometimes even without finding all of the keys!).</p>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<p>You must update your firmware (<a href="https://docs.flipper.net/basics/firmware-update">how-to</a>) to the latest official firmware (OFW) release (<a href="https://lab.flipper.net/?url=https://update.flipperzero.one/builds/firmware/1.1.2-rc/flipper-z-f7-update-1.1.2-rc.tgz&amp;channel=release-candidate&amp;version=1.1.2-rc">version 1.1.2-rc</a> or later). You must also install the <a href="https://lab.flipper.net/apps/mfkey">MFKey app</a> (version 3.0 or later).</p>
 <h2 id="reading-the-card">Reading the card<a class="headerlink" href="#reading-the-card" title="Permanent link">&para;</a></h2>
 <p>Steps:</p>
 <ol>
