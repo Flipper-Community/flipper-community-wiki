@@ -1,9 +1,10 @@
-### ⚠️ Disclaimer: Preview
-
- The features described in this guide are not yet officially released. Flash [this experimental build](https://github.com/noproto/xero-firmware/releases/download/1.1.0-rc-xero/flipper-z-f7-update-local.tgz) to follow this guide. When you complete all of the steps, restore the latest official firmware on the Flipper Zero. You may skip this step when this status badge is lit purple with the text "merged": [![Status](https://img.shields.io/github/pulls/detail/state/flipperdevices/flipperzero-firmware/3822?label=&style=flat-square)](https://github.com/flipperdevices/flipperzero-firmware/pull/3822)
-
 # MIFARE Classic
 Here are the steps to follow in order to read your cards. Your goal is to find as many keys as possible. The keys unlock sections of your card for the Flipper to read them - you must have a card. Once you read enough sections, you can use an emulated or cloned card at the original card reader to unlock it (sometimes even without finding all of the keys!).
+
+## Prerequisites
+
+You must update your firmware ([how-to](https://docs.flipper.net/basics/firmware-update)) to the latest official firmware (OFW) release ([version 1.1.2-rc](https://lab.flipper.net/?url=https://update.flipperzero.one/builds/firmware/1.1.2-rc/flipper-z-f7-update-1.1.2-rc.tgz&channel=release-candidate&version=1.1.2-rc) or later). You must also install the [MFKey app](https://lab.flipper.net/apps/mfkey) (version 3.0 or later).
+
 
 ## Reading the card
 
