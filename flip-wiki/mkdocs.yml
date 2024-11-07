@@ -89,6 +89,7 @@ nav:
       - Overview: subghz-overview.md
     - GPIO: 
       - Overview: gpio-overview.md
+      - Wi-Fi Devboard: wifi-devboard.md
 
   - Development:
     - Firmware:

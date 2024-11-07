@@ -22,7 +22,7 @@ For convenience, a basic list of supported keys can be found below:
 - F1-F12 keys
 - Arrow keys
 
-## Javascript utilization
+## Javascript Utilization
 BadUSB scripts are very basic and simply go down the list of commands sequentially, offering no execution order control. 
 
 With the introduction of javascript and the BadUSB module included as part of the javascript implementation, one can begin to add more advanced logic to BadUSB scripts such as loops, conditionals, GUI menus, and other items. 

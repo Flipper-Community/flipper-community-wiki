@@ -1,4 +1,4 @@
-# About This site
+# About This Site
 This site is an unofficial non-commercial wiki run by Flipper Zero community members in effort to gather information in one local place.
 
 ## Disclaimer
