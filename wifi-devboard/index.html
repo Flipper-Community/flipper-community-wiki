@@ -12,22 +12,28 @@
         <meta name="author" content="Flipwiki Unofficial Community">
       
       
+        <link rel="canonical" href="https://flipper.wiki/wifi-devboard/">
       
       
+        <link rel="prev" href="../gpio-overview/">
       
-      <link rel="icon" href="/assets/images/favicon.png">
+      
+        <link rel="next" href="../development-overview/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.44">
     
     
       
-        <title>Flipper Community Wiki</title>
+        <title>Wi-Fi Devboard - Flipper Community Wiki</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.0253249f.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,9 +52,9 @@
       
     
     
-      <link rel="stylesheet" href="/stylesheets/extra.css">
+      <link rel="stylesheet" href="../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -73,6 +79,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#official-wi-fi-development-board" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -85,9 +96,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="Flipper Community Wiki" class="md-header__button md-logo" aria-label="Flipper Community Wiki" data-md-component="logo">
+    <a href=".." title="Flipper Community Wiki" class="md-header__button md-logo" aria-label="Flipper Community Wiki" data-md-component="logo">
       
-  <img src="/assets/images/white_dolph_transparent.png" alt="logo">
+  <img src="../assets/images/white_dolph_transparent.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -104,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Wi-Fi Devboard
             
           </span>
         </div>
@@ -227,9 +238,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="Flipper Community Wiki" class="md-nav__button md-logo" aria-label="Flipper Community Wiki" data-md-component="logo">
+    <a href=".." title="Flipper Community Wiki" class="md-nav__button md-logo" aria-label="Flipper Community Wiki" data-md-component="logo">
       
-  <img src="/assets/images/white_dolph_transparent.png" alt="logo">
+  <img src="../assets/images/white_dolph_transparent.png" alt="logo">
 
     </a>
     Flipper Community Wiki
@@ -256,7 +267,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -311,7 +322,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/getting-started/" class="md-nav__link">
+      <a href="../getting-started/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -332,7 +343,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/faq-general/" class="md-nav__link">
+      <a href="../faq-general/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -353,7 +364,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/troubleshooting/" class="md-nav__link">
+      <a href="../troubleshooting/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -378,17 +389,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -402,7 +415,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Subsystems
@@ -451,7 +464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/125khz-rfid-overview/" class="md-nav__link">
+      <a href="../125khz-rfid-overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -515,7 +528,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/badusb-overview/" class="md-nav__link">
+      <a href="../badusb-overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -579,7 +592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/nfc-overview/" class="md-nav__link">
+      <a href="../nfc-overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -600,7 +613,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mifareclassic/" class="md-nav__link">
+      <a href="../mifareclassic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -621,7 +634,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/arcadecards/" class="md-nav__link">
+      <a href="../arcadecards/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -642,7 +655,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/publictransport/" class="md-nav__link">
+      <a href="../publictransport/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -706,7 +719,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/subghz-overview/" class="md-nav__link">
+      <a href="../subghz-overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -732,17 +745,19 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" checked>
         
           
           <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
@@ -756,7 +771,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_5">
             <span class="md-nav__icon md-icon"></span>
             GPIO
@@ -770,7 +785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/gpio-overview/" class="md-nav__link">
+      <a href="../gpio-overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -788,10 +803,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/wifi-devboard/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Wi-Fi Devboard
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -800,6 +835,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#official-purpose-of-the-wi-fi-development-board" class="md-nav__link">
+    <span class="md-ellipsis">
+      Official Purpose Of The Wi-Fi Development Board
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#community-uses-for-the-board" class="md-nav__link">
+    <span class="md-ellipsis">
+      Community Uses For The Board
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useful-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      Useful Links
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -897,7 +979,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/development-overview/" class="md-nav__link">
+      <a href="../development-overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -961,7 +1043,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/javascript-overview/" class="md-nav__link">
+      <a href="../javascript-overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1067,7 +1149,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tutorials/f0_fonts_guide/guide/" class="md-nav__link">
+      <a href="../tutorials/f0_fonts_guide/guide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1138,7 +1220,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/about/" class="md-nav__link">
+      <a href="../about/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1159,7 +1241,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/contributing/" class="md-nav__link">
+      <a href="../contributing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1218,6 +1300,43 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#official-purpose-of-the-wi-fi-development-board" class="md-nav__link">
+    <span class="md-ellipsis">
+      Official Purpose Of The Wi-Fi Development Board
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#community-uses-for-the-board" class="md-nav__link">
+    <span class="md-ellipsis">
+      Community Uses For The Board
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useful-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      Useful Links
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1229,8 +1348,43 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+  
+  
+
+
+<h1 id="official-wi-fi-development-board">Official Wi-Fi Development Board.<a class="headerlink" href="#official-wi-fi-development-board" title="Permanent link">&para;</a></h1>
+<p>The official WiFi development board sold by Flipper Devices is at it's core an ESP32-S2, which can be technically be flashed with any firmware that supports the ESP32. While the board does support Wi-Fi, the S2 model <strong>does not support Bluetooth.</strong></p>
+<h2 id="official-purpose-of-the-wi-fi-development-board">Official Purpose Of The Wi-Fi Development Board<a class="headerlink" href="#official-purpose-of-the-wi-fi-development-board" title="Permanent link">&para;</a></h2>
+<p>The official Wi-Fi development board sold by Flipper Devices is geared primarily for debugging firmware and application for the Flipper Zero. Due to this, it arrives pre-flashed with the <a href="https://github.com/flipperdevices/blackmagic-esp32-s2">BlackMagic</a> firmware to enable both wired and wireless debugging. </p>
+<p>Documentation for how to begin debugging with the board can be found in the <a href="https://developer.flipper.net/flipperzero/doxygen/dev_board_get_started.html">official flipper zero documentation</a>. </p>
+<h2 id="community-uses-for-the-board">Community Uses For The Board<a class="headerlink" href="#community-uses-for-the-board" title="Permanent link">&para;</a></h2>
+<p>If one does not desire to do development with the board or wants to try a different use for the board, it is possible to flash the Wi-Fi board with alternate firmware to try new functions. </p>
+<p>The following is a partial list of a few popular community firmware that one may use for the board that also have companion apps for the Flipper Zero:</p>
+<ul>
+<li><a href="https://github.com/justcallmekoko/ESP32Marauder/wiki/flipper-zero">Marauder</a>, an offensive security testing platform for ESP32 based devices, featuring both Wi-Fi tools and Bluetooth tools for hardware supporting bluetooth. </li>
+<li><a href="https://github.com/jblanked/FlipperHTTP">FlipperHTTP</a>, a multi-purpose firmware for pulling in info from the web for easy viewing on your flipper, as well as making social posts on the FlipSocial platform.</li>
+<li><a href="https://github.com/Spooks4576/Ghost_ESP">GhostESP</a>, a firmware that provides tools to perform comprehensive WiFi and Bluetooth Low Energy (BLE) analysis, execute targeted wireless tests, and explore dynamic wireless environments.</li>
+</ul>
+<h2 id="useful-links">Useful Links<a class="headerlink" href="#useful-links" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://fzeeflasher.com">FZEE flasher</a>, an easy web based ESP flasher for installing popular firmware with only a few clicks. </li>
+<li><a href="https://esp.huhn.me">EspWebTool</a>, a more manual and general purpose web flasher tool for all ESP32 devices, requires having pre-built firmware binaries. </li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -1268,10 +1422,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "/", "features": [], "search": "/assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="/assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
       
     
   </body>
