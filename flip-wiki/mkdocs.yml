@@ -77,6 +77,8 @@ nav:
   - Subsystems:
     - 125 KHz RFID:
       - Overview: 125khz-rfid-overview.md
+    - BadUSB:
+      - Overview: badusb-overview.md
     - NFC:
       - Overview: nfc-overview.md
       - MIFARE Classic: mifareclassic.md
@@ -88,7 +90,10 @@ nav:
       - Overview: gpio-overview.md
 
   - Development:
-    - Overview: development-overview.md
+    - Firmware:
+      - Overview: development-overview.md
+    - Javascript:
+      - Overview: javascript-overview.md
 
   - Guides & Tutorials:
     - Development:
