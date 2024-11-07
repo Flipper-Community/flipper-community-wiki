@@ -27,3 +27,4 @@ As linked in the official development docs, a few sample applications can be fou
 
 * [Flipper zero dev tutorials from Derek Jamison](https://github.com/jamisonderek/flipper-zero-tutorials/wiki)
     * Associated [Youtube Channel](https://www.youtube.com/@MrDerekJamison/featured)
+* [Lopaka](https://lopaka.app/sandbox), a web based GUI editor to build UI layouts for Flipper Zero and other embedded platform displays. 
