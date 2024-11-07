@@ -8,7 +8,7 @@ This page aims to collect frequent or common questions people may have related t
 
 **No**. 
 
-<u>Those shops are run by scalpers/unauthorized resellers</u>, so you will be charged more money than the device is worth or potentially scammed. 
+^^Those shops are run by scalpers/unauthorized resellers^^, so you will be charged more money than the device is worth or potentially scammed. 
 
 Additionally, you **will lose your device's warranty** by buying from these shops. 
 
@@ -16,6 +16,12 @@ See the **[offical Flipper Zero how to buy site](https://flipperzero.one/how-to-
 
 ### What can the Flipper Zero do?
 All of the cool things the device can do are nicely laid out in the [**official docs**](https://docs.flipper.net)!
+
+### Should I ask ChatGPT or other AI tools about Flipper Zero?
+**Please do not ask AI tools about the Flipper Zero or development on it**. Due to the fact that the Flipper zero is such a unique device, these tools ^^***almost always are guaranteed to get the information wrong***^^. In our extensive testing it ***CANNOT*** be relied on for any information, whether thats seller information or development information or code. Please instead seek information from the [official product site](https://flipperzero.one).
+
+??? tip "protip" 
+    chatgpt is cringe bro. Do your own research fr.
 
 ### Will this device make me a super cool hacker so I can hack my entire city?
 **No.** This devices is geared for educational use to learn about tech, not for you to be a menace to society. TikTok and Instagram videos love to lie about its features, so you will be disappointed if you're buying based on that. 

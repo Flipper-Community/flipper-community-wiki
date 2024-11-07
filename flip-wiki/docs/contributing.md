@@ -26,7 +26,7 @@ The following guidelines should be kept in mind when submitting changes:
 
 ***Bold Italic***
 
-__Underlined__
+^^Underlined^^
 
 > Quote Indent
 
