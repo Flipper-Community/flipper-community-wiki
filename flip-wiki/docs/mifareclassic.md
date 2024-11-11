@@ -3,7 +3,7 @@ Here are the steps to follow in order to read your cards. Your goal is to find a
 
 ## Prerequisites
 
-You must update your firmware ([how-to](https://docs.flipper.net/basics/firmware-update)) to the latest official firmware (OFW) release ([version 1.1.2-rc](https://lab.flipper.net/?url=https://update.flipperzero.one/builds/firmware/1.1.2-rc/flipper-z-f7-update-1.1.2-rc.tgz&channel=release-candidate&version=1.1.2-rc) or later). You must also install the [MFKey app](https://lab.flipper.net/apps/mfkey) (version 3.0 or later).
+You must update your firmware ([how-to](https://docs.flipper.net/basics/firmware-update)) to the latest official firmware (OFW) release (version 1.1.2 or later). You must also install the [MFKey app](https://lab.flipper.net/apps/mfkey) (version 3.0 or later).
 
 
 ## Reading the card
