@@ -36,10 +36,17 @@ This is an issue that *can* occur from switching between firmwares. To fix this,
 1. Go back to qFlipper, and reinstall the latest firmware
 1. Unplug and try using your Flipper Zero again to verify the device works as expected.
 
+### After firmware downgrade the battery status does not work
+It is recommended [that you do not downgrade below version 1.1.2](https://github.com/flipperdevices/flipperzero-firmware/releases/tag/1.1.2) due to a total rework of [how the battery gauge works](https://github.com/flipperdevices/flipperzero-firmware/pull/3912) as well as a rework of the internal clock. If for some reason you do need to downgrade, you will need to do the following **prior to downgrading below 1.1.2 version:**
+
+- Turn off any alarm settings under **Settings -> Clocks & Alarms**
+- compile and run the [battery gauge tool](https://github.com/skotopes/flipperzero_gauge_tool) to unseal security settings on the battery gauge
+
+
 ## Windows
 
 !!! Note
-    Try the [Official qFlipper Troubleshooting Guide](https://docs.flipper.net/qFlipper/windows-debug) **FIRST!**
+    Before trying Windows troubleshooting, try the [Official qFlipper Troubleshooting Guide](https://docs.flipper.net/qFlipper/windows-debug) **FIRST!**
     
     If those steps did not help, you may continue below.
 

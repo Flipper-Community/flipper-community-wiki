@@ -18,8 +18,9 @@ Car remotes use rolling code to prevent copying. Any attempts may cause the remo
 
 See the [FAQ on this](faq-general.md#can-flipper-zero-copy-car-remotes) for more info. 
 
-
-
+### Do Not Downgrade Below 1.1.2
+If you have updated your Flipper Zero to version 1.1.2, do not try downgrading later to an older version unless you know what you are doing. 
+Changes have been made that can now cause weirdness on previous firmware versions. See [this page for more info](troubleshooting.md#after-firmware-downgrade-the-battery-status-does-not-work)
 
 ## Getting Help
 - Check out the [troubleshoot guide](troubleshooting.md)
