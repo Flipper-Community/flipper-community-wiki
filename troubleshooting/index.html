@@ -448,6 +448,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#after-firmware-downgrade-the-battery-status-does-not-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      After firmware downgrade the battery status does not work
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1467,6 +1476,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#after-firmware-downgrade-the-battery-status-does-not-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      After firmware downgrade the battery status does not work
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1633,10 +1651,16 @@ To fix this, run through the following steps:</p>
 <li>Go back to qFlipper, and reinstall the latest firmware</li>
 <li>Unplug and try using your Flipper Zero again to verify the device works as expected.</li>
 </ol>
+<h3 id="after-firmware-downgrade-the-battery-status-does-not-work">After firmware downgrade the battery status does not work<a class="headerlink" href="#after-firmware-downgrade-the-battery-status-does-not-work" title="Permanent link">&para;</a></h3>
+<p>It is recommended <a href="https://github.com/flipperdevices/flipperzero-firmware/releases/tag/1.1.2">that you do not downgrade below version 1.1.2</a> due to a total rework of <a href="https://github.com/flipperdevices/flipperzero-firmware/pull/3912">how the battery gauge works</a> as well as a rework of the internal clock. If for some reason you do need to downgrade, you will need to do the following <strong>prior to downgrading below 1.1.2 version:</strong></p>
+<ul>
+<li>Turn off any alarm settings under <strong>Settings -&gt; Clocks &amp; Alarms</strong></li>
+<li>compile and run the <a href="https://github.com/skotopes/flipperzero_gauge_tool">battery gauge tool</a> to unseal security settings on the battery gauge</li>
+</ul>
 <h2 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Try the <a href="https://docs.flipper.net/qFlipper/windows-debug">Official qFlipper Troubleshooting Guide</a> <strong>FIRST!</strong></p>
+<p>Before trying Windows troubleshooting, try the <a href="https://docs.flipper.net/qFlipper/windows-debug">Official qFlipper Troubleshooting Guide</a> <strong>FIRST!</strong></p>
 <p>If those steps did not help, you may continue below.</p>
 </div>
 <h3 id="flipper-zero-not-appearing-under-bluetooth-in-windows-11">Flipper Zero not appearing under Bluetooth in Windows 11<a class="headerlink" href="#flipper-zero-not-appearing-under-bluetooth-in-windows-11" title="Permanent link">&para;</a></h3>
