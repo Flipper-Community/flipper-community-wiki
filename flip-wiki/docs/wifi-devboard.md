@@ -18,4 +18,5 @@ The following is a partial list of a few popular community firmware that one may
 
 ## Useful Links
 - [FZEE flasher](https://fzeeflasher.com), an easy web based ESP flasher for installing popular firmware with only a few clicks. 
-- [EspWebTool](https://esp.huhn.me), a more manual and general purpose web flasher tool for all ESP32 devices, requires having pre-built firmware binaries. 
+- [EspWebTool](https://esp.huhn.me), a more manual and general purpose web flasher tool for all ESP32 devices, requires having pre-built firmware binaries.
+- [Ghost ESP Flasher](https://flasher.spookytools.com), Online flasher for flashing GhostESP to supported ESP32 devices.  
