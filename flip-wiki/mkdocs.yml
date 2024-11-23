@@ -94,6 +94,8 @@ nav:
   - Development:
     - Firmware:
       - Overview: development-overview.md
+    - Hardware:
+      - Overview: hardware-overview.md
     - Javascript:
       - Overview: javascript-overview.md
 
