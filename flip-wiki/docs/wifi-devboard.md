@@ -12,7 +12,7 @@ If one does not desire to do development with the board or wants to try a differ
 The following is a partial list of a few popular community firmware that one may use for the board that also have companion apps for the Flipper Zero:
 
 - [Marauder](https://github.com/justcallmekoko/ESP32Marauder/wiki/flipper-zero), an offensive security testing platform for ESP32 based devices, featuring both Wi-Fi tools and Bluetooth tools for hardware supporting bluetooth. 
-- [FlipperHTTP](https://github.com/jblanked/FlipperHTTP), a multi-purpose firmware for pulling in info from the web for easy viewing on your flipper, as well as making social posts on the FlipSocial platform.
+- [FlipperHTTP](https://github.com/jblanked/FlipperHTTP), a multi-purpose firmware that uses HTTP requests to retrieve information from websites, download applications from the catalog, connect with users on social media platforms, and extract data from APIs.
 - [GhostESP](https://github.com/Spooks4576/Ghost_ESP), a firmware that provides tools to perform comprehensive WiFi and Bluetooth Low Energy (BLE) analysis, execute targeted wireless tests, and explore dynamic wireless environments.
 
 
