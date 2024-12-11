@@ -90,6 +90,7 @@ nav:
     - GPIO: 
       - Overview: gpio-overview.md
       - Wi-Fi Devboard: wifi-devboard.md
+      - Video Game Module: video-game-module.md
 
   - Development:
     - Firmware:
