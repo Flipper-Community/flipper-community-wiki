@@ -24,7 +24,8 @@ When the cracking process is complete, the number of new user keys (or candidate
 Q: **When I read the card in the NFC app, it says "(Hard)" at the top, and when I use MFKey it errors with "No nonces found". How do I find new keys?**
 
 A: You need to perform a Hardnested attack using the nonces your Flipper Zero saved when reading the card. You have two options:
-* Follow the guide to run HardnestedRecovery [here](https://github.com/noproto/HardnestedRecovery#usage)
+
+* Follow the guide to run HardnestedRecovery [here](https://github.com/noproto/HardnestedRecovery#usage).
 * Upload the .nested.log from your device (nfc/.nested.log on your SD card) to [this website](https://flipperzero.club/hardnested/) and copy any found keys back to your user dictionary (nfc/assets/mf_classic_dict_user.nfc on your SD card). You can also manually add new keys on the Flipper by navigating to Main Menu -> NFC -> Extra Actions -> MIFARE Classic Keys -> Add.
 
 ## Emulation
