@@ -1472,9 +1472,11 @@
 <p>A: You can find more keys from the card reader (the same one you would normally tap your card against) using the Mfkey32 attack. Navigate to NFC -&gt; Extract MF Keys and hold the Flipper Zero up to the reader. If the reader unlocks during this process, it is using the UID of the card and is highly insecure. Otherwise, it'll collect "nonces" from the reader. You can crack the nonces to find the reader keys by running MFKey following Extract MF Keys (navigate to Main Menu -&gt; Applications -&gt; NFC -&gt; MFKey, press OK to run).</p>
 <p>When the cracking process is complete, the number of new user keys (or candidate keys) that are found will be shown. If more than zero keys are found, return to step 1 of <a href="#reading-the-card">Reading the card</a> and repeat the process.</p>
 <p>Q: <strong>When I read the card in the NFC app, it says "(Hard)" at the top, and when I use MFKey it errors with "No nonces found". How do I find new keys?</strong></p>
-<p>A: You need to perform a Hardnested attack using the nonces your Flipper Zero saved when reading the card. You have two options:
-* Follow the guide to run HardnestedRecovery <a href="https://github.com/noproto/HardnestedRecovery#usage">here</a>
-* Upload the .nested.log from your device (nfc/.nested.log on your SD card) to <a href="https://flipperzero.club/hardnested/">this website</a> and copy any found keys back to your user dictionary (nfc/assets/mf_classic_dict_user.nfc on your SD card). You can also manually add new keys on the Flipper by navigating to Main Menu -&gt; NFC -&gt; Extra Actions -&gt; MIFARE Classic Keys -&gt; Add.</p>
+<p>A: You need to perform a Hardnested attack using the nonces your Flipper Zero saved when reading the card. You have two options:</p>
+<ul>
+<li>Follow the guide to run HardnestedRecovery <a href="https://github.com/noproto/HardnestedRecovery#usage">here</a>.</li>
+<li>Upload the .nested.log from your device (nfc/.nested.log on your SD card) to <a href="https://flipperzero.club/hardnested/">this website</a> and copy any found keys back to your user dictionary (nfc/assets/mf_classic_dict_user.nfc on your SD card). You can also manually add new keys on the Flipper by navigating to Main Menu -&gt; NFC -&gt; Extra Actions -&gt; MIFARE Classic Keys -&gt; Add.</li>
+</ul>
 <h2 id="emulation">Emulation<a class="headerlink" href="#emulation" title="Permanent link">&para;</a></h2>
 <p><img alt="Emulation" src="https://gist.githubusercontent.com/noproto/2ee35c1916b358924c08f77645a46d81/raw/c4f19920a2ccbe4c66998476a3d4d76c2f98ad78/emulation.png" title="Emulation" /></p>
 <p>Go to NFC -&gt; Saved -&gt; (The name you assigned your card) -&gt; Emulate and hold it up to the reader. Try various angles to find the correct positioning.</p>
