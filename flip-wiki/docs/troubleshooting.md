@@ -22,7 +22,7 @@ To fix this, run through the following steps:
     - **Debug**: `OFF`
     - **Heap Trace**: `None`
 
-After these are set, press back and leave the menu. Reboot your flipper. The issue should not be gone. 
+After these are set, press back and leave the menu. Reboot your flipper. The issue should now be gone. 
 
 ### Infrared or SubGHz does not appear to be working
 This is an issue that *can* occur from switching between firmwares. To fix this, try the following:
