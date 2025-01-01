@@ -24,7 +24,7 @@ The latter four companies have FeliCa card variants endorsed with the `Amusement
 | AM.PASS | ICODE | X | - | - | - | - |  
 | Banapass | MFC | - | X | - | - | - |
 | e-amuse | ICODE | - | - | - | - | - |
-| NESiCA | MFU | - | - | - | - | - |
+| NESiCA | MFU | - | - | - | - | X |
 
 ### Arcade Data Card Emulation Compatibility Notes
 - If FeliCa emulation does not work, you may need to:
@@ -38,7 +38,7 @@ The latter four companies have FeliCa card variants endorsed with the `Amusement
     1. ICODE SLI `e-amusement pass` cards on `Konami` games;
     1. MFC `Aime` cards on `Sega` games; and,
     1. MFC `Bandai Namco Passport` cards on `Sega` games.
-- Emulation compatibility cannot be tested for `Taito` games without assistance from Members located within Japan.
+- Emulation compatibility cannot be tested for `Taito` games without further assistance from Members located within Japan.
 - The ICODE SLI `e-amusement pass` cards are not compatible with `Andamiro` games.
 
 ## Arcade Payment Cards
