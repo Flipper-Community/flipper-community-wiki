@@ -12,28 +12,28 @@
         <meta name="author" content="Flipwiki Unofficial Community">
       
       
-        <link rel="canonical" href="https://flipper.wiki/125khz-rfid-overview/">
+        <link rel="canonical" href="https://flipper.wiki/tutorials/beginner_guide_fw/guide/">
       
       
-        <link rel="prev" href="../troubleshooting/">
+        <link rel="prev" href="../../../javascript-overview/">
       
       
-        <link rel="next" href="../badusb-overview/">
+        <link rel="next" href="../../f0_fonts_guide/guide/">
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
       
-        <title>Overview - Flipper Community Wiki</title>
+        <title>Basics of Building Firmware & Apps - Flipper Community Wiki</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.6f8fc17f.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6f8fc17f.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -52,9 +52,9 @@
       
     
     
-      <link rel="stylesheet" href="../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overview" class="md-skip">
+        <a href="#beginners-guide-to-building-firmware-flipper-zero-applications" class="md-skip">
           Skip to content
         </a>
       
@@ -96,9 +96,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Flipper Community Wiki" class="md-header__button md-logo" aria-label="Flipper Community Wiki" data-md-component="logo">
+    <a href="../../.." title="Flipper Community Wiki" class="md-header__button md-logo" aria-label="Flipper Community Wiki" data-md-component="logo">
       
-  <img src="../assets/images/white_dolph_transparent.png" alt="logo">
+  <img src="../../../assets/images/white_dolph_transparent.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              Basics of Building Firmware & Apps
             
           </span>
         </div>
@@ -238,9 +238,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Flipper Community Wiki" class="md-nav__button md-logo" aria-label="Flipper Community Wiki" data-md-component="logo">
+    <a href="../../.." title="Flipper Community Wiki" class="md-nav__button md-logo" aria-label="Flipper Community Wiki" data-md-component="logo">
       
-  <img src="../assets/images/white_dolph_transparent.png" alt="logo">
+  <img src="../../../assets/images/white_dolph_transparent.png" alt="logo">
 
     </a>
     Flipper Community Wiki
@@ -267,7 +267,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -322,7 +322,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/" class="md-nav__link">
+      <a href="../../../getting-started/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -343,7 +343,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../faq-general/" class="md-nav__link">
+      <a href="../../../faq-general/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -364,7 +364,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../troubleshooting/" class="md-nav__link">
+      <a href="../../../troubleshooting/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -389,19 +389,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -415,7 +413,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Subsystems
@@ -426,19 +424,17 @@
                 
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
         
           
           <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
@@ -452,7 +448,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_1">
             <span class="md-nav__icon md-icon"></span>
             125 KHz RFID
@@ -463,30 +459,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Overview
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../125khz-rfid-overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -495,62 +471,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#low-frequency-rfid" class="md-nav__link">
-    <span class="md-ellipsis">
-      Low Frequency (RFID)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#kyber-crystals" class="md-nav__link">
-    <span class="md-ellipsis">
-      Kyber crystals
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hidiclass" class="md-nav__link">
-    <span class="md-ellipsis">
-      HID/Iclass
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#anything-elseunknown-tags" class="md-nav__link">
-    <span class="md-ellipsis">
-      Anything else/unknown tags
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -606,7 +526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../badusb-overview/" class="md-nav__link">
+      <a href="../../../badusb-overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -670,7 +590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../infrared-overview/" class="md-nav__link">
+      <a href="../../../infrared-overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -734,7 +654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../nfc-overview/" class="md-nav__link">
+      <a href="../../../nfc-overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -755,7 +675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mifareclassic/" class="md-nav__link">
+      <a href="../../../mifareclassic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -776,7 +696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../arcadecards/" class="md-nav__link">
+      <a href="../../../arcadecards/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -797,7 +717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../publictransport/" class="md-nav__link">
+      <a href="../../../publictransport/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -861,7 +781,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../subghz-overview/" class="md-nav__link">
+      <a href="../../../subghz-overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -925,7 +845,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../gpio-overview/" class="md-nav__link">
+      <a href="../../../gpio-overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -946,7 +866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../wifi-devboard/" class="md-nav__link">
+      <a href="../../../wifi-devboard/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -967,7 +887,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../video-game-module/" class="md-nav__link">
+      <a href="../../../video-game-module/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1073,7 +993,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../development-overview/" class="md-nav__link">
+      <a href="../../../development-overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1137,7 +1057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../hardware-overview/" class="md-nav__link">
+      <a href="../../../hardware-overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1201,7 +1121,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../javascript-overview/" class="md-nav__link">
+      <a href="../../../javascript-overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1234,17 +1154,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -1258,7 +1180,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Guides & Tutorials
@@ -1269,17 +1191,19 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" checked>
         
           
           <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
@@ -1293,7 +1217,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_1">
             <span class="md-nav__icon md-icon"></span>
             Development Tutorials
@@ -1304,10 +1228,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../tutorials/beginner_guide_fw/guide/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Basics of Building Firmware & Apps
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1316,6 +1260,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-your-first-firmware" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building Your First Firmware
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-your-first-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building Your First Application
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1328,7 +1319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorials/f0_fonts_guide/guide/" class="md-nav__link">
+      <a href="../../f0_fonts_guide/guide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1399,7 +1390,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../about/" class="md-nav__link">
+      <a href="../../../about/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1420,7 +1411,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../contributing/" class="md-nav__link">
+      <a href="../../../contributing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1489,36 +1480,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#low-frequency-rfid" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
-      Low Frequency (RFID)
+      Prerequisites
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#kyber-crystals" class="md-nav__link">
+  <a href="#building-your-first-firmware" class="md-nav__link">
     <span class="md-ellipsis">
-      Kyber crystals
+      Building Your First Firmware
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#hidiclass" class="md-nav__link">
+  <a href="#building-your-first-application" class="md-nav__link">
     <span class="md-ellipsis">
-      HID/Iclass
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#anything-elseunknown-tags" class="md-nav__link">
-    <span class="md-ellipsis">
-      Anything else/unknown tags
+      Building Your First Application
     </span>
   </a>
   
@@ -1542,35 +1524,75 @@
   
 
 
-<h1 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h1>
-<h2 id="low-frequency-rfid">Low Frequency (RFID)<a class="headerlink" href="#low-frequency-rfid" title="Permanent link">&para;</a></h2>
+<h1 id="beginners-guide-to-building-firmware-flipper-zero-applications">Beginner's Guide to Building Firmware &amp; Flipper Zero Applications<a class="headerlink" href="#beginners-guide-to-building-firmware-flipper-zero-applications" title="Permanent link">&para;</a></h1>
+<p>This guide aims to introduce one to building and installing a release version of the firmware, as well as how to build one application from source using the Flipper Build Tool.</p>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<p>This guide assumes you have the following:</p>
 <ul>
-<li>
-<p>Don't expect to edit/rewrite low frequency credentials.  They are generally read only, passworded, or a type of tag the flipper zero doesn't work with.  To create a copy of a low frequency credential you have, you will need to purchase T5577 credentials. these are chips that can pretend to be other chips. </p>
-<ul>
-<li>
-<blockquote>
-<p>"I was able to write the ID on it but when i try another file it says error"</p>
-</blockquote>
-<p>You aren't writing anything. Writing the content that was already on the chip, to the chip, makes the flipper thinks it was successful in it's write when it performs a read to validate the <code>new</code> ID is on the chip, which it is because it was already there. </p>
-<p>When purchasing T5577s, try to buy from listings that only mention T5577, if you buy from a listing that says T5577/EM4305 you may receive EM4305s and those cant be written to by the flipper.</p>
-</li>
+<li>Knowledge of how to navigate files and folders using <code>cd</code> in the command line</li>
+<li>A working install of <a href="https://git-scm.com/downloads">Git</a></li>
+<li>About 2 gigabytes of free space</li>
+<li>Access to the <a href="https://github.com/flipperdevices/flipperzero-firmware">Flipper Zero Firmware github page</a></li>
+</ul>
+<h2 id="building-your-first-firmware">Building Your First Firmware<a class="headerlink" href="#building-your-first-firmware" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Create a folder on your PC where you will store the firmware<ul>
+<li>Ideally the path to this folder should have no spaces in the name to avoid any issues (I.E. <code>C:\Users\yourname\Desktop\myfirmware\</code>)</li>
 </ul>
 </li>
+<li>Open up command prompt or powershell and <code>cd</code> into this directory</li>
+<li>Clone the firmware down to this folder using <code>git clone --recursive https://github.com/flipperdevices/flipperzero-firmware.git</code> (this will take a few minutes)</li>
+<li><code>cd</code> into the resulting <code>flipperzero-firmware</code> directory git created.</li>
+<li>
+<p>Once git has finished, we can now select a firmware version to check out. As of writing, 1.1.2 is the latest, so we can do <code>git checkout 1.1.2</code>. This will switch the code to the point 1.1.2 was released.</p>
+<p><strong>Note:</strong> <em>Should you need to see what list of version tags are available, you can do <code>git tag --list</code> and scroll to the bottom by holding the Page Down key.</em></p>
+<p><strong>Note 2:</strong> <strong><em><a href="https://github.com/flipperdevices/flipperzero-firmware/releases/tag/1.1.2">DO NOT DOWNGRADE BELOW VERSION 1.1.2</a></em></strong>, <em>as this can create issues with the alarm and battery meter.</em></p>
+</li>
+<li>
+<p>We are now prepared to build the firmware with the <a href="https://developer.flipper.net/flipperzero/doxygen/fbt.html">Flipper Build Tool</a> that is included with the firmware.</p>
+</li>
+<li>To create a Flipper Zero firmware update package using the Flipper Build Tool, simply run <code>./fbt updater_package</code> and wait a few minutes. </li>
+<li>If all went well, the command should have finished without any errors. It should have also created a folder inside the <code>flipperzero-firmware</code> directory called <code>dist</code> and reported at the end that update files were placed in this folder. </li>
+<li>Navigate into the <code>flipperzero-firmware</code> directory and go to the <code>dist/f7-D/</code> folder. There are two items of interest in this folder, <ins>depending on which update method you want to do</ins>:<ul>
+<li><code>flipper-z-f7-update-local.tgz</code>: This is a compressed archive ready to be given to qFlipper to with the <ins>Install From File</ins> button, or via <a href="https://lab.flipper.net">Flipper Lab</a> by connecting and going to Settings -&gt; enable Third Party fw and then choosing <em>INSTALL FROM FILE</em></li>
+<li><code>f7-update-local/</code>: This folder contains uncompressed update files ready to be used directly on your Flipper Zero. Simply copy this folder to your Flipper Zero under the <code>SD Card/Update/</code> folder. Then on your Flipper Zero, use the file browser and go inside the folder to run the <code>update</code> file within the <code>f7-update-local/</code> folder you copied over.</li>
 </ul>
-<h2 id="kyber-crystals">Kyber crystals<a class="headerlink" href="#kyber-crystals" title="Permanent link">&para;</a></h2>
-<p>These are EM4305, but show up looking like EM4100 because EM4305 are emulator chips and they've been pre-configured with the kyber crystal ID.  You can't fully emulate or clone them, emulation is known to work with the holocron but not with the sabers themselves. You cant clone these to T5577s like most other LF RFID chips due to the sabers checking the EM4305 memory pages with specific commands the T5577 doesnt comply with. The flipper does not (currently) support writing to EM4305s, it is currently thought to be impossible with the flipper's hardware but the impossible has been overcome before so who knows if we will see it in the future. </p>
-<h2 id="hidiclass">HID/Iclass<a class="headerlink" href="#hidiclass" title="Permanent link">&para;</a></h2>
+</li>
+</ol>
+<p>Congratulations! You have now built and installed your own firmware!</p>
+<div class="admonition note">
+<p class="admonition-title">Protips</p>
 <ul>
-<li>Technically 13.56mhz like NFC, but many people see "HID" and think LF RFID</li>
-<li>Standard and some Elite keyed iClass fobs/cards can be read with <a href="https://lab.flipper.net/apps/picopass">Picopass</a> app.</li>
-<li>Standard keyed iClass SE can be read with <a href="https://lab.flipper.net/apps/seader">Seader</a> + some hardware.</li>
+<li>If you want a more streamlined way of updating your firmware changes, you can use <code>./fbt flash_usb_full</code> to build AND install the firmware to the device all in one go!</li>
+<li>To clear out build files and ensure you have a clean build directory if you make changes or want to switch versions, run <code>./fbt -c</code> to remove any old build files. Then build the firmware as normal.</li>
+<li>If you have no idea what you were doing and want to undo ALL changes made since the last commit as well as delete any random files not tracked by git, you can these commands in order: <code>git clean -dxf</code> &amp; <code>git reset --hard</code> </li>
 </ul>
-<h2 id="anything-elseunknown-tags">Anything else/unknown tags<a class="headerlink" href="#anything-elseunknown-tags" title="Permanent link">&para;</a></h2>
-<ul>
-<li>If its not scanning and doesnt have any visible branding mentioned aboved (eg iclass) and you have also had no success reading it with the NFC or <a href="https://lab.flipper.net/apps/picopass">Picopass</a> app, it means the type of card is not yet supported by the firmware. the devs are working their asses off to meet the hype and expectations so be patient; you can aide in bringing attention to this lack of support by filing a <a href="https://github.com/flipperdevices/flipperzero-firmware/issues">github issue</a> including as much information as you have regarding the credential and reader including make &amp; model &amp; brand, filing a github issue does not ensure the support will be added quickly it just brings it to the attention of the devs &amp; community developers who may be able to assist. </li>
-<li>The flipper is a good tool but it is not perfect and there will be things it can never do. If you are interested in researching more into RFID feel free to join the Flipper discord and engage with the <code>#125khz-rfid</code> channel. </li>
+</div>
+<h2 id="building-your-first-application">Building Your First Application<a class="headerlink" href="#building-your-first-application" title="Permanent link">&para;</a></h2>
+<p>This part of the guide assumes that you were able to complete the above steps for the firmware build successfully.</p>
+<p>Similar to building firmware, applications can be built using the Flipper Build Tool as well. Additionally, Flipper Zero applications must be built for the <ins><strong>same</strong></ins> firmware version your Flipper Zero has installed. </p>
+<p>To demonstrate building an application, we will use the <a href="https://github.com/evillero/fortune_cookie">Fortune Cookie app.</a></p>
+<ol>
+<li>In your <code>Flipperzero-firmware</code> directory, there should be a folder called <code>applications_user</code>, this is the folder we will be placing apps we want to build into. </li>
+<li><code>cd</code> into this directory.</li>
+<li>Run <code>git clone https://github.com/evillero/fortune_cookie.git</code> to copy down the fortune cookie app. You should now have a folder called <code>fortune_cookie</code> in your <code>applications_user</code> directory.</li>
+<li>Inside that folder, open up the <code>application.fam</code> file in your text editor of choice. Note the category name after <code>fap_category</code>, in this case <code>Games</code>. We will need this info for later. You may close your text editor out.</li>
+<li><code>cd</code> back to your <code>flipperzero-firmware</code> directory. </li>
+<li>Run <code>./fbt fap_dist</code> to build the code of all apps in the <code>applications_user</code> directory. </li>
+<li>Assuming fbt did not report any errors, the app should now be built<ul>
+<li>If you did hit errors, you'll need to contact the application author and ask them to fix it, or fix it yourself. As of v1.1.2 the Flipper Zero does not have a stable API, so applications <em>can</em> break with each update.  </li>
 </ul>
+</li>
+<li>Go in to the <code>dist/F7-D/</code> directory. You will notice a new <code>apps/</code> folder here. Go into this folder</li>
+<li>Remembering the <code>fap_category</code> value from the prior steps was <code>Games</code> from our notes earlier, we now know that we can go into the <code>Games</code> folder thats inside the <code>apps</code> folder.</li>
+<li>Here you will find <code>fortune_cookie.fap</code> as well as any other items categorized as games. These are ready to use.</li>
+<li>Open up qFlipper or Flipper lab, and copy <code>fortune_cookie.fap</code> into <code>SD Card/apps/Games</code>, creating the <code>Games</code> folder if you do not have one. </li>
+<li>On your Flipper Zero, go to Apps -&gt; Games, and your Fortune cookie app should be there. Simply click it and run it!</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Protip</p>
+<p>If you grab the <code>appid</code> from the <code>application.fam</code> file, you can build, upload, and launch this app to the Flipper Zero all in one step! Simply do <code>./fbt launch APPSRC=fortune_cookie</code></p>
+</div>
 
 
 
@@ -1621,10 +1643,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
     
   </body>
