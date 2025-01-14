@@ -80,6 +80,8 @@ nav:
       - Overview: 125khz-rfid-overview.md
     - BadUSB:
       - Overview: badusb-overview.md
+    - Infrared:
+      - Overview: infrared-overview.md
     - NFC:
       - Overview: nfc-overview.md
       - MIFARE Classic: mifareclassic.md
