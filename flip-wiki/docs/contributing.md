@@ -13,6 +13,17 @@ The following guidelines should be kept in mind when submitting changes:
 - Keep your writing tone non-biased and professional.
 - if you upload any images, please try to keep them below 2 Megabytes in size. 
 
+## Wiki Structure
+The General structure of this wiki is detailed below:
+
+- **Getting Started:** contains basic info for using the device as well as commonly asked questions. 
+- **Subsystems:** contains general and technical information of the different device subsystems not related to any one specific project. Guides/Tutorials should NOT go here. 
+- **Development:** contains general and technical development information not related to any one specific project. Guides/Tutorials should NOT go here. 
+- **Guides & Tutorials:** Contains guides, tutorials, walkthroughs for any item related to the Flipper Zero. 
+    - If you are making a guide or tutorial for a category, you will want to include it here. 
+
+
+
 ## Text Formatting Examples
 ### Markdown
 
