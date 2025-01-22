@@ -1,4 +1,7 @@
 # Overview
+The Flipper Zero supports reading a limited number of 125 kHz RFID protocols.
+The [official Flipper Zero docs](https://docs.flipper.net/rfid/read) detail what protocols are supported. 
+
 
 ## Low Frequency (RFID)
 - Don't expect to edit/rewrite low frequency credentials.  They are generally read only, passworded, or a type of tag the flipper zero doesn't work with.  To create a copy of a low frequency credential you have, you will need to purchase T5577 credentials. these are chips that can pretend to be other chips. 

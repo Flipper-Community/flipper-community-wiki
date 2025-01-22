@@ -43,6 +43,15 @@ Nearly anything for the device is available on GitHub.
 * [UberGuidoZ](https://github.com/UberGuidoZ/Flipper) has a number of random signal recordings.
 * The [IRDB repo](https://github.com/Lucaslhm/Flipper-IRDB) contains a large assortment of infrared remotes.
 
+### Can the Flipper Zero copy any RFID card?
+
+No. NFC/RFID is a broad and more complex topic. There are different card/tag types and Flipper can not read or emulate all of them. Some are protected with passwords. Some can be cracked, some can't. Some cards can only be read partially. Emulating partial info may not result in the reader accepting the signal.
+
+The supported types and what can be read can be found in the docs: 
+
+  - [https://docs.flipper.net/nfc/](https://docs.flipper.net/nfc/)
+  - [https://docs.flipper.net/rfid](https://docs.flipper.net/rfid)
+
 ### How can I make NFC files with links or other things?
 You have three options to create a NTAG type card with this info:
 
