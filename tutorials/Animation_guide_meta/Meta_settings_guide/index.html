@@ -1,0 +1,2333 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Flipper Zero Unofficial Community Wiki">
+      
+      
+        <meta name="author" content="Flipwiki Unofficial Community">
+      
+      
+        <link rel="canonical" href="https://flipper.wiki/tutorials/Animation_guide_meta/Meta_settings_guide/">
+      
+      
+        <link rel="prev" href="../../beginner_guide_fw/guide/">
+      
+      
+        <link rel="next" href="../../f0_fonts_guide/guide/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.50">
+    
+    
+      
+        <title>Animation - Meta.txt in-depth Guide - Flipper Community Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.a40c8224.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#flipper-animation-guide-metatxt-settings" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Flipper Community Wiki" class="md-header__button md-logo" aria-label="Flipper Community Wiki" data-md-component="logo">
+      
+  <img src="../../../assets/images/white_dolph_transparent.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Flipper Community Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Animation - Meta.txt in-depth Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to Light Mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to Light Mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 2C5.13 2 2 5.13 2 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.87-3.13-7-7-7M6 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H6zm13-8h-2l-3.2 9h1.9l.7-2h3.2l.7 2h1.9zm-2.15 5.65L18 15l1.15 3.65z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="deep-orange"  aria-label="Switch to Dark Mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to Dark Mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="deep-orange"  aria-label="Switch to Auto"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to Auto" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Flipper-Community/flipper-community-wiki" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Flipper Community Wiki
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Flipper Community Wiki" class="md-nav__button md-logo" aria-label="Flipper Community Wiki" data-md-component="logo">
+      
+  <img src="../../../assets/images/white_dolph_transparent.png" alt="logo">
+
+    </a>
+    Flipper Community Wiki
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Flipper-Community/flipper-community-wiki" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Flipper Community Wiki
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Basics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faq-general/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../troubleshooting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Subsystems
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Subsystems
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    125 KHz RFID
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            125 KHz RFID
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../125khz-rfid-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    BadUSB
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            BadUSB
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../badusb-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Infrared
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Infrared
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../infrared-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    NFC
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            NFC
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../nfc-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../mifareclassic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MIFARE Classic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../arcadecards/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arcade Cards
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../publictransport/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Public Transport
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    SubGHz
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            SubGHz
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../subghz-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    GPIO
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            GPIO
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gpio-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../wifi-devboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wi-Fi Devboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../video-game-module/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Video Game Module
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Development
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Development
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Firmware
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Firmware
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../development-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Hardware
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Hardware
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hardware-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Javascript
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Javascript
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../javascript-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Guides & Tutorials
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Guides & Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Development Tutorials
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            Development Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../beginner_guide_fw/guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basics of Building Firmware & Apps
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Animation - Meta.txt in-depth Guide
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Animation - Meta.txt in-depth Guide
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#metatxt-content-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      📄 meta.txt : content overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flipper-zero-official-documentation-metatxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐬 Flipper Zero official documentation : meta.txt
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#animation-meta-main-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎬 ANIMATION : Meta Main settings
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎬 ANIMATION : Meta Main settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#frame-dimensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔸 Frame dimensions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passive-active-frames-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔸 Passive &amp; Active Frames : definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frames-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔸 Frames Order
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#active-cycles" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔸 Active Cycles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frame-rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔸 Frame rate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#duration" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔸 Duration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#active-cooldown" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔸 Active cooldown
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bubble-slots" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔸 Bubble slots
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#animation-design-insight-samples" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔸 Animation design : insight samples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bubbles-in-depth-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      💬 BUBBLES : in-depth guide
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💬 BUBBLES : in-depth guide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bubbles-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔸 Bubbles : Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bubble-slot" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔸 Bubble slot
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bubble-placement" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔸 Bubble placement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bubble-text-line" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔸 Bubble text line
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bubble-tail-positioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔸 Bubble tail positioning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bubble-coordinates-tail-positioning-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔸 Bubble coordinates &amp; Tail positioning issues
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-end-frame" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔸 Start &amp; End Frame
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../f0_fonts_guide/guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Designing Custom Fonts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Site Info
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Site Info
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contributing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contributing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/Flipper-Community/flipper-community-wiki/issues" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Report An Issue!
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#metatxt-content-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      📄 meta.txt : content overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flipper-zero-official-documentation-metatxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐬 Flipper Zero official documentation : meta.txt
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#animation-meta-main-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎬 ANIMATION : Meta Main settings
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎬 ANIMATION : Meta Main settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#frame-dimensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔸 Frame dimensions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passive-active-frames-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔸 Passive &amp; Active Frames : definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frames-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔸 Frames Order
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#active-cycles" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔸 Active Cycles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frame-rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔸 Frame rate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#duration" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔸 Duration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#active-cooldown" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔸 Active cooldown
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bubble-slots" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔸 Bubble slots
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#animation-design-insight-samples" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔸 Animation design : insight samples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bubbles-in-depth-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      💬 BUBBLES : in-depth guide
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💬 BUBBLES : in-depth guide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bubbles-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔸 Bubbles : Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bubble-slot" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔸 Bubble slot
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bubble-placement" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔸 Bubble placement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bubble-text-line" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔸 Bubble text line
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bubble-tail-positioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔸 Bubble tail positioning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bubble-coordinates-tail-positioning-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔸 Bubble coordinates &amp; Tail positioning issues
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-end-frame" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔸 Start &amp; End Frame
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="flipper-animation-guide-metatxt-settings">Flipper Animation Guide : meta.txt settings<a class="headerlink" href="#flipper-animation-guide-metatxt-settings" title="Permanent link">&para;</a></h1>
+<p>Guide credited to Kuronons</p>
+<p><em>"I got myself a Flipper Zero to learn coding... and ended up making pixel-art. Life... ya never know..."</em></p>
+<p>Indepth guide to the meta.txt file settings which is used to set all the parameters of a Flipper Zero animation. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For better visualization and understanding, I am using a custom firmware that allows to hide the top status bar border as well as top status icons to provide suitable screenshots.</p>
+</div>
+<h2 id="metatxt-content-overview">📄 meta.txt : content overview<a class="headerlink" href="#metatxt-content-overview" title="Permanent link">&para;</a></h2>
+<p>Below an example of a meta.txt file content. (from Flipper Zero <a href="https://github.com/flipperdevices/flipperzero-firmware/tree/dev/assets/dolphin/external/L1_Cry_128x64">L1_Cry_128x64</a> animation)<BR>
+Meta is pure text file (.txt) and can be opened/edited via any text editor (such as <em>Notepad</em>).</p>
+<p>I colored in purple the part that is mandatory, in green what is optional (only applies if <strong>bubbles</strong> are used) and in white the data filled by the user.</p>
+<p><img alt="01-meta-overview" src="../01-meta-overview.png" /></p>
+<h2 id="flipper-zero-official-documentation-metatxt">🐬 Flipper Zero official documentation : meta.txt<a class="headerlink" href="#flipper-zero-official-documentation-metatxt" title="Permanent link">&para;</a></h2>
+<p><em>Flipper Devices</em> provides basic information about meta file in their Github repo.
+The following (here collapsible) content can be found in <a href="https://github.com/flipperdevices/flipperzero-firmware/blob/dev/assets/dolphin/ReadMe.md#file-metatxt">flipperzero-firmware/assets/dolphin/readme.md</a></p>
+<details class="quote">
+<summary>🔹 Definition &amp; Header settings</summary>
+<ul>
+<li>meta.txt : Flipper Format File with ordered keys.</li>
+<li>Header:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>Filetype: Flipper Animation
+Version: 1
+</code></pre></div>
+</details>
+<details class="quote">
+<summary>🔹 Animation dimensions settings</summary>
+<ul>
+<li><code>Width</code> - animation width in px (&lt;= 128)</li>
+<li><code>Height</code> - animation height in px (&lt;= 64)</li>
+</ul>
+</details>
+<details class="quote">
+<summary>🔹 Frames ordering</summary>
+<ul>
+<li><code>Passive frames</code> - number of bitmap frames for passive animation state</li>
+<li><code>Active frames</code> - number of bitmap frames for active animation state (can be 0)</li>
+<li><code>Frames order</code> - order of bitmap frames where first N frames are passive and following M are active. Each X number in order refers to bitmap frame, with name frame_X.bm. This file must exist. Any X number can be repeated to refer same frame in animation.</li>
+</ul>
+</details>
+<details class="quote">
+<summary>🔹 Animation settings</summary>
+<ul>
+<li><code>Active cycles</code> - cycles to repeat of N active frames for full active period. E.g. if frames for active cycles are 6 and 7, and active cycles is 3, so full active period plays 6 7 6 7 6 7. Full period of passive + active period are called <em>total period</em>.</li>
+<li><code>Frame rate</code> - number of frames to play for 1 second.</li>
+<li><code>Duration</code> - total amount of seconds to play 1 animation.</li>
+<li><code>Active cooldown</code> - amount of seconds (after passive mode) to pass before entering next active mode.</li>
+</ul>
+</details>
+<details class="quote">
+<summary>🔹 Bubbles settings</summary>
+<ul>
+<li><code>Bubble slots</code> - amount of bubble sequences.</li>
+<li>
+<p>Any bubble sequence plays whole sequence during active mode.<BR>
+  There can be many bubble sequences and bubbles inside it.<BR>
+  Bubbles in 1 bubble sequence have to reside in 1 slot.<BR>
+  Bubbles order in 1 bubble sequence is determined by occurrence in file.<BR>
+  As soon as frame index goes out of EndFrame index of bubble - next animation bubble is chosen.<BR>
+  There can also be free of bubbles frames between 2 bubbles.</p>
+</li>
+<li>
+<p><code>Slot</code> - number to unite bubbles for same sequence.</p>
+</li>
+<li><code>X</code>, <code>Y</code> - are coordinates of left top corner of bubble.</li>
+<li><code>Text</code> - text in bubble. New line is <code>\n</code></li>
+<li><code>AlignH</code> - horizontal place of bubble corner (Left, Center, Right)</li>
+<li><code>AlignV</code> - vertical place of bubble corner (Top, Center, Bottom)</li>
+<li><code>StartFrame</code>, <code>EndFrame</code> - frame index range inside whole period to show bubble.</li>
+</ul>
+</details>
+<details class="quote">
+<summary>🔹 Frame indexes vizualisation</summary>
+<ul>
+<li>Understanding of frame indexes</li>
+</ul>
+<p>For example we have</p>
+<div class="highlight"><pre><span></span><code>Passive frames: 6
+Active frames: 2
+Frames order: 0 1 2 3 4 5 6 7
+Active cycles: 4
+</code></pre></div>
+<p>Then we have indexes</p>
+<div class="highlight"><pre><span></span><code>                        passive(6)            active (2 * 4)
+Real frames order:   0  1  2  3  4  5     6  7  6  7  6  7  6  7
+Frames indexes:      0  1  2  3  4  5     6  7  8  9  10 11 12 13
+</code></pre></div>
+</details>
+<h2 id="animation-meta-main-settings">🎬 ANIMATION : Meta Main settings<a class="headerlink" href="#animation-meta-main-settings" title="Permanent link">&para;</a></h2>
+<h3 id="frame-dimensions">🔸  Frame dimensions<a class="headerlink" href="#frame-dimensions" title="Permanent link">&para;</a></h3>
+<p>The first two settings listed in meta.txt are :<BR>
+- <code>Width:</code> being the frame measurement on the <strong><em>X</em></strong> axis, horizontal.<BR>
+- <code>Height:</code> being the frame measurement on the <strong><em>Y</em></strong> axis, vertical.</p>
+<p>Values ​​are in pixels and must strictly match the dimensions of the animation frames.<BR>
+Since the Flipper screen can display 128x64 pixels, these would therefore be the max values.</p>
+<p><img alt="02-W H" src="../02-W%26H.png" /></p>
+<p>While most animations (from official Flipper Devices or custom makers) are made, for convenience mainly, on this frame size, one can choose to make an animation with smaller frames.</p>
+<p>Official <strong><em>Flipper Devices</em></strong> firmware contains a bunch of animations that aren't 128x64px with values such as 128x51px or 128x49px.<BR>
+Most of those are stored in flash memory (<strong><em>internal</em></strong> &amp; <strong><em>blocked</em></strong> anims) which makes sense in saving as much octets as possible due to the very low internal storage capacity. But even within the official <strong><em>external</em></strong> animations (those saved on SD), we can notice 3 (as of Nov. 24) that also use a reduced frame format.</p>
+<p>For instance, the first frame of <a href="https://github.com/flipperdevices/flipperzero-firmware/tree/dev/assets/dolphin/external/L1_Laptop_128x51">L1_Laptop_128x51</a>, is (as its name specifies) only 51px high and will leave a 13px high unanimated area on top of the screen (blue-colored here) :</p>
+<p><img alt="03-Blue-Zone" src="../03-Blue-Zone.png" /></p>
+<p>Frames are aligned on the BOTTOM LEFT corner without option to change that.<BR>
+While it is not an issue at all when it comes to height (as the upper part of screen is mostly displaying the status bar and icons), it should be kept in mind when setting a width inferior to 128 as animation will be left-aligned.</p>
+<p>For example, 64x32px frame position on screen :</p>
+<p><img alt="04-64x32px_frame" src="../04-64x32px_frame.png" /></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Setting dimensions different from the actual bitmap image, while not causing the animation to fail, will result in a distorted display.<BR>
+Note that this will occur when compiling an animation with faulty meta values, but also when later editing the meta of an animation previously compiled with correct values.<BR>
+For instance, the very same 64x32px bitmap frame wrongly set to <code>Width:54</code> &amp; <code>Height 22</code> and then to <code>Width:74</code> &amp; <code>Height 42</code> :</p>
+</div>
+<p><img alt="05-64x32px_frame-wrong_meta_size" src="../05-64x32px_frame-wrong_meta_size.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>➤ Animation frame must be set up to 128x64px.<BR>
+➤ Width &amp; Height values must match the pixel dimensions of the frames.<BR>
+➤ Those being defined in the meta, all frames of one animation must have the same dimensions.<BR>
+➤ Frames are bottom-left aligned.<BR>
+➤ Using frames of dimensions inferior to 128x64px makes only sense when editing an animation meant to be put in Flipper's internal memory. There would not be any significant impact for the ones stored on SD.</p>
+</div>
+<h3 id="passive-active-frames-definition">🔸  Passive &amp; Active Frames : definition<a class="headerlink" href="#passive-active-frames-definition" title="Permanent link">&para;</a></h3>
+<p>Animation frames can be of 2 kinds : passive or active.</p>
+<p><strong><em>Passive frames</em></strong> are the ones that are played in loop on Flipper idle screen.<BR>
+An animation requires at least 1 passive frame to work.<BR>
+Therefore, minimum value could never go under <strong><em>1</em></strong>.<BR>
+<code>Passive frames:</code> value defines the passive sequence by the number of frames that will be picked up from the ones listed in <strong><em>Frames order</em></strong>.</p>
+<p><strong><em>Active frames</em></strong> are the ones that are played once triggered/activated.<BR>
+They have 2 possible triggers : Hitting the <strong><em>back</em></strong> button or coming back to animation screen from any other menu.<BR>
+Once triggered the active sequence will start to play. (ie. It won't wait for the passive sequence to end)</p>
+<p>An animation does <strong>NOT</strong> require active frame(s) to work.<BR>
+If no active frame, value must be set to <strong><em>0</em></strong>.<BR>
+<code>Active frames:</code> value defines the activable sequence by the number of frames that will be picked up from the ones listed in <strong><em>Frames order</em></strong>.</p>
+<p>The sum of values of <code>Passive frames:</code> and <code>Active frames:</code> must equal to the number of frames listed in <strong><em>Frames Order</em></strong>.</p>
+<p>The use of active frames is of maker's choice. It provides to the user a basic level of interraction and can be designed in many artistic or playful ways.</p>
+<h3 id="frames-order">🔸  Frames Order<a class="headerlink" href="#frames-order" title="Permanent link">&para;</a></h3>
+<p><code>Frames order:</code> is used to define the sequences of passive and active frames.<BR>
+It lists the frames by calling the bitmap files via their designed number. (ie the number between <strong><em>frame_</em></strong> and <strong><em>.bm</em></strong> in the file name : <em>frame_12.bm</em> = <em>12</em>)</p>
+<p>Passive frames are always listed first. Active frames (if any) comes after.<BR>
+As said, the total of inputs must be equal to the sum of <code>Passive frames:</code> &amp; <code>Active frames:</code> values.</p>
+<p>On top of that, each bitmap file must be listed at least once by its number.<BR>
+As well, every listed input must refer to an existing bitmap file.</p>
+<p>In the following example (simple passive/active animation with no frame repetition), we have 10 .bm frames numbered frame_0.bm to frame_9.bm.<BR>
+6 first frames (0 to 5) are set are the <em>passive</em> ones while the 4 remaining ones (6 to 9) are set to <em>active</em>.</p>
+<p><img alt="06-Frames_order_1" src="../06-Frames_order_1.png" /></p>
+<p>A bitmap file can be listed multiple times, and be counted multiple times in passive and/or active frames.<BR>
+The frames order being the sequence(s) of bitmap displayed following maker's choice, it does <strong>NOT</strong> require to be a logical numerary suite (such as 1 2 3 4...) as long as it follows the requirements mentioned above.</p>
+<p>Next example shows those. It uses frame repetitions in an animation built on only 5 .bm frames numbered frame_0.bm to frame_4.bm, without listing the frames in a "logical" numerical order.
+We emphasize here that the number of active/passive frames is not related to the number of bitmap images, but rather to the number of calls of these in their respective sequences.</p>
+<p><img alt="07-Frames_order_2" src="../07-Frames_order_2.png" /></p>
+<p>Still, trying to stick as much as possible to numeral order when it comes to name the bitmap files, accordingly to the position they should play within the animation, will greatly help building the <strong><em>frames order</em></strong> or editing it later (especially on long <em>frames order</em> listing 100+ inputs).</p>
+<p>Labelling of bitmap files requiring the first frame to be named <strong><em>frame_0.bm</em></strong>, the minimum input value in <code>Frames order:</code> is <strong><em>0</em></strong> in the case of a 1 only passive frame animation.</p>
+<h3 id="active-cycles">🔸  Active Cycles<a class="headerlink" href="#active-cycles" title="Permanent link">&para;</a></h3>
+<p><code>Active cycles:</code> value determines the number of time the active frames sequence will play in a row once triggered.</p>
+<p>Once the the active period (ie the number of cycles of the active sequence) is over, animation will revert to passive one.</p>
+<p><strong><em>Active cycles</em></strong> is a choice of design to limit the number of inputs listed in <strong><em>Frame order</em></strong>.</p>
+<p>If animation has no active frames (ie <code>Active frames: 0</code>), <code>Active cycles:</code> should be set to <code>0</code> too.<BR>
+As well if animation contains active frames, <code>Active cycles:</code> should be set to at least <code>1</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If those values are not set accordingly, compiling the animation via <code>./fbt</code> (to make .png frames into .bm ones) <strong>will definitely fail</strong>.</p>
+</div>
+<p><img alt="08-FBT_error-Active_Cycles" src="../08-FBT_error-Active_Cycles.png" /></p>
+<p>However, and against all odds (and logics), an already compiled animation <strong><em>should</em></strong> still be able to play on Flipper without failure.<BR>
+For instance, <code>Active frames: 1</code> while there is <strong>no</strong> active frames : no noticeable consequences.<BR>
+<strong>But</strong>, having <code>Active frames: 0</code> when there are active frames will make the animation unable to trigger the active sequence : only passive frames will play in loop even if the <strong><em>back</em></strong> button is pushed.</p>
+<p>The number of frames that make up the <strong><em>active cycles</em></strong> above the first one are not counted as it in <strong><em>Active frames</em></strong> but will however be counted when it comes to <strong><em>bubbles</em></strong>.</p>
+<h3 id="frame-rate">🔸  Frame rate<a class="headerlink" href="#frame-rate" title="Permanent link">&para;</a></h3>
+<p><code>Frame rate:</code> is the well known <strong><em>fps</em></strong> : Frames Per Second.<BR>
+It defines how many frames will be played during 1 second.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Historically, theatre movie standard fps was set on 24.<BR>
+Drawn-animation however had usually a fps set to 12 and even lower (mainly due to production costs) such as 6 or 8 when it came to <em>Saturday Morning Cartoons</em> type animations.</p>
+</div>
+<p>Flipper will not be able to handle very high fps mainly due to hardware limitation (RAM size and display capability).<BR>
+Flipper screen refresh rate being what it is, flickering or ghosting effect will occur if fps is set too high.<BR>
+As well, Flipper firmware may crash on high <strong><em>frame rate</em></strong> if RAM is oversatured.</p>
+<p>The usual working range of fps is 1-12, but it's not really recommended to have a frame rate above 8.<BR>
+All original Flipper animations (external, internal, blocked and event the level-up ones) have their <strong><em>frame rate</em></strong> set to 2.</p>
+<p><code>Frame rate:</code> value must be an integer (number without decimal) and therefore cannot be less than 1.
+As consequence, the slowest animation would be of 1 frame per second.<BR>
+Only way to have one frame to play longer on screen is to double its input in <strong><em>Frames order</em></strong>.<BR>
+The time each frame will play on screen is then calculated as follow : <strong><em>1 second divided by frame rate</em></strong>.
+For instance, a frame rate of 4 will make each frame play 0.25 second on screen.<BR>
+Adjusting frame rate and playing with the inputs in Frames order makes visual acceleration or slow-down effects possible.</p>
+<h3 id="duration">🔸  Duration<a class="headerlink" href="#duration" title="Permanent link">&para;</a></h3>
+<p><code>Duration:</code> is used to determine the period of time one animation will run until it switches to the next random one.<BR>
+Duration values are seconds.</p>
+<p>By default, most animations have a duration value of 3600 which equals to 1 hour.</p>
+<p>Duration is an underestimated setting that can be used to polish transitions in a suite of animations.</p>
+<p>For example, having a total of 60 inputs in <strong><em>frames order</em></strong> and 2 as <strong><em>frame rate</em></strong> would result in a 30 seconds animation.
+In order to play this animation 5 times entirely before it switches to the next, <code>Duration:</code> would be set to <code>150</code>.
+This way, the switching will occur at the very end of the passive sequence instead of cutting it somewhere in the middle.</p>
+<p><strong><em>Duration</em></strong> can also add some game aspect to a suite of animations.<BR>
+It can be used with passive/active animations having identical passive frames but different active sequences.<BR>
+Setting a duration of 10mn (600) for example will make the user curious about what will be revealed if he presses back as, whatever the animation of the set is playing, it would always be the same passive sequence looping on the screen.</p>
+<h3 id="active-cooldown">🔸  Active cooldown<a class="headerlink" href="#active-cooldown" title="Permanent link">&para;</a></h3>
+<p><code>Active cooldown:</code> is a delay, set in seconds, that will apply once an active period ends and during which the active sequence is not triggerable.<BR>
+It forces passive frames to play during the defined time, temporarily disabling the back-button <em>active</em> trigger.</p>
+<p>As well as for <strong><em>Active cycles</em></strong>, if animation has no active frames (ie <code>Active frames: 0</code>), <code>Active cooldown:</code> should be set to <code>0</code> too.<BR>
+As well if animation contains active frames, <code>Active cooldown:</code> should be set to at least <code>1</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If those values are not set accordingly, compiling the animation via <code>./fbt</code> (to make .png frames into .bm ones) <strong>will definitely fail</strong>.</p>
+</div>
+<p><img alt="09-FBT_error-Active_Cooldown" src="../09-FBT_error-Active_Cooldown.png" /></p>
+<p>However, same as for <strong><em>Active cycles</em></strong>, an already compiled animation <strong><em>should</em></strong> still be able to play on Flipper without failure.<BR>
+For instance, <code>Active cooldown: 1</code> while there is no active frames : no consequences.<BR>
+And same goes with <code>Active cooldown: 0</code> while there are active frames.</p>
+<h3 id="bubble-slots">🔸  Bubble slots<a class="headerlink" href="#bubble-slots" title="Permanent link">&para;</a></h3>
+<p><code>Bubble slots:</code> value indicates the number of bubbles "suites" that are listed to be randomly used during the active sequence of the animation.<BR>
+<strong>It is not to be confused with the number of bubbles.</strong> A slot can have many bubbles within.<BR>
+If there are multiple slots, each time active sequence is triggered, a slot will be randomly chosen and its bubbles sequence will be played.<BR>
+Otherwise, if only if <code>Bubble slots:</code> is set to <code>1</code>, the suite will always play on active sequence.<BR>
+If animation is not using any bubble, value must be set to <code>0</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><code>Bubble slots:</code> value <strong>MUST</strong> be set accordingly to the defined number of slots set below. Animation will fail otherwise and Flipper would most likely crash !</p>
+</div>
+<p>Since <strong><em>Bubbles</em></strong> is a complex subject in itself, its aspects will be reviewed in detail in the <a href="#bubbles-in-depth-guide">dedicated section</a> below.</p>
+<h3 id="animation-design-insight-samples">🔸  Animation design : insight samples<a class="headerlink" href="#animation-design-insight-samples" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>The one-only frame "animation"</strong><BR>
+1 bitmap frame (frame_0.bm) set as 1 passive with only its input once in <strong><em>Frames order</em></strong>.<BR>
+All active settings as well as bubble ones set to <strong>0</strong>. <strong><em>Frame rate</em></strong> set to minimum <strong>1</strong> as there is no meaning to have faster fps.
+As a result we get an <em>unanimated animation</em>.<BR>
+For those who want to have a static background image that will remain on screen as long as defined in <strong><em>Duration</em></strong>.</li>
+</ul>
+<p><img alt="10-Sample_1_only_frame" src="../10-Sample_1_only_frame.gif" /></p>
+<ul>
+<li><strong>Passive-only animation</strong><BR>
+This format is probably the most used by those who make custom animations by converting existing gif, movie or anime excerpt.<BR>
+It will result in an only passive-framed animation that will play in loop until its <strong><em>duration</em></strong> ends.<BR>
+One of the clever uses of this design is to create a seamless looping animation.<BR>
+<strong>Wr3nch</strong>'s <a href="https://github.com/wrenchathome/flip0anims/tree/main/Animations/Flipper/X_X_F0Pattern">X_X_F0Pattern</a> (inspired by the interior design of the Flipper Zero carton box) is a perfect example: it seamlessly plays 11 passive frames (numbered 0-10) in a loop.</li>
+</ul>
+<p><img alt="11-Sample_Passive_Only" src="../11-Sample_Passive_Only.gif" /></p>
+<ul>
+<li><strong>Passive/active animation : simple design</strong><BR>
+Official <a href="https://github.com/flipperdevices/flipperzero-firmware/tree/dev/assets/dolphin/external/L1_Recording_128x51">L1_Recording_128x51</a> is a good example of a basic passive/active animation.<BR>
+Here we have a total of 12 bitmap frames (numbered 0 to 11).<BR>
+They're listed in numerical order and only once in <strong><em>Frames order</em></strong>.<BR>
+The 6 first ones (0-5) are set as passive and the 6 others (6-11) as active with only 1 active cycle.</li>
+</ul>
+<p><img alt="12-Sample_AP_simple" src="../12-Sample_AP_simple.gif" /></p>
+<ul>
+<li><strong>Passive/active animation : complex design</strong><BR>
+Official <a href="https://github.com/flipperdevices/flipperzero-firmware/tree/dev/assets/dolphin/external/L1_Painting_128x64">L1_Painting_128x64</a> is a more sophisticated passive/active animation.<BR>
+While still having only 1 <strong><em>active cycle</em></strong>, this animation is however using <strong><em>bubbles</em></strong> (2 on one slot).<BR>
+This design allows an animation to extend its duration by using single bitmaps more than once.
+With only 12 bitmap files, we end up with 22 inputs total in <strong><em>Frames order</em></strong>.<BR>
+It may be noted that creators of OFW animations usually have dedicated bitmaps for active and passive frames (here, respectively 0-5 and 6-11). This is not at all mandatory and is more of a design choice.</li>
+</ul>
+<p><img alt="13-Sample_AP_complex" src="../13-Sample_AP_complex.gif" /></p>
+<h2 id="bubbles-in-depth-guide">💬 BUBBLES : in-depth guide<a class="headerlink" href="#bubbles-in-depth-guide" title="Permanent link">&para;</a></h2>
+<h3 id="bubbles-definition">🔸  Bubbles : Definition<a class="headerlink" href="#bubbles-definition" title="Permanent link">&para;</a></h3>
+<p>Bubbles are text inputs that will display as an additional layer above an animation, enclosed in coded-drawn lines in the spirit of comic book speech bubble.<BR>
+It's important to mention that <strong><em>bubbles</em></strong> were originally designed to be used only in an active sequence.</p>
+<h3 id="bubble-slot">🔸  Bubble slot<a class="headerlink" href="#bubble-slot" title="Permanent link">&para;</a></h3>
+<p>As previously mentioned, slots are suites of bubbles meant to randomly play during the active sequence of the animation.<BR>
+<code>Slot:</code> value indicates which slot the bubble will be part of.<BR>
+For instance, if slot #2 is randomly selected, only the bubbles being set to <code>Slot: 2</code> will play in the actual active sequence.<BR>
+Next time the active sequence will be triggered, another slot will be randomly chosen.</p>
+<p>As for frames, first slot is numbered <code>0</code>.</p>
+<p>A slot can have multiple bubbles within so every bubble of the same sequence must share the same <code>Slot:</code> value.<BR>
+Having only 1 bubbles slot (that will be labelled as <strong>0</strong>) will logically cut the random process and the bubbles sequence will always play when active one is triggered.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>➤ All bubbles inside a same slot must be listed together in a row, one after another before listing the next slot bubbles.<BR>
+➤ Only bubbles listed in a row under the same slot will display.<BR>
+ie. if you define Slot 0, first bubble, then Slot 1 first bubble and only then Slot 0, second bubble, this last one will not show up when Slot 0 will be randomly selected.</p>
+</div>
+<p><img alt="14-Slot_order" src="../14-Bubble_Slot_order.png" /></p>
+<h3 id="bubble-placement">🔸  Bubble placement<a class="headerlink" href="#bubble-placement" title="Permanent link">&para;</a></h3>
+<p>Bubble placement on screen is defined by its upper-left corner coordinates.<BR>
+Screen is  128x64px. First column (X - from left) as well as first line (Y - from top) are designed by <strong>0</strong>.<BR>
+Coordinates will be set as :<BR>
+- <code>X:</code> = horizontal coordinate (values range = <code>0</code> to <code>127</code>)<BR>
+- <code>Y:</code> = vertical coordinate (values range = <code>0</code> to <code>63</code>)</p>
+<p><img alt="15-Bubble_placement" src="../15-Bubble_placement.png" /></p>
+<p>We will note that the bubble layer is not dependent of the animation frames size.<BR>
+Bubble sticks to its screen coordinates and won't be affected in any way when displayed out the animation frames area as the following test shows (64x32px frames anim) :</p>
+<p><img alt="16-Bubble_out_of_frame" src="../16-Bubble_out_of_frame.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The placement being only defined by the upper-left corner of the bubble, it must be thought in regards of those 3 factors :<BR>
+➤ Lenght of the longest text line for the X value.<BR>
+➤ Number of text lines for the Y one.<BR>
+➤ Postion of the <a href="#bubble-tail-positioning">bubble tail</a></p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>A <strong>negative value in X or Y</strong> will result of a <strong><em>furi_hal error</em></strong> and would most likely put your Flipper in an <strong>endless restart-loop !!</strong><BR>
+If it happens, just get the SD out and fix the meta by entering a positive value.<BR>
+If you don't have an SD card reader, take the SD card out and re-insert it again without passing the SD welcome splash-screen.<BR>
+It will allow you to overwrite the non-functioning meta via qFlipper files management.</p>
+</div>
+<h3 id="bubble-text-line">🔸  Bubble text line<a class="headerlink" href="#bubble-text-line" title="Permanent link">&para;</a></h3>
+<p>The displayed text of the bubble is defined by the eponymous function :<BR>
+- <code>Text:</code> followed by the text to display. Note that the part of the text lenght that would be out of the screen will not be visible anyhow.</p>
+<p><img alt="17-Bubble_ABCD" src="../17-Bubble_ABCD.png" /></p>
+<p>We see that a bubble can barely fit the 26 lowercase letters of the alphabet.<BR>
+Depending on text input, it's a matter of testing to check if it fits or not.</p>
+<p>To have multiple lines within the same bubble, <code>\n</code> can be used to define <strong>newline</strong>.<BR>
+Next line first word should be written directly after the function. (no space in between).</p>
+<p>An input such as <code>Text: First line\nSecond line\nThird line\nForth line\nFifth line</code> would render as :</p>
+<p><img alt="18-Bubble_5LINES_1" src="../18-Bubble_5LINES_1.png" /></p>
+<p>We note that we can only have <strong>up to 5 lines</strong> that would properly show on screen.<BR>
+Of course, this will be dependent of the bubble placement and some lines can be displayed out of screen depending on <code>Y</code> value.
+(<code>Y</code> must be set between 0 and 5 to be able to have 5 lines of text as well as the bubble outline in its whole displayed)</p>
+<p><img alt="19-Bubble_5LINES_2" src="../19-Bubble_5LINES_2.png" /></p>
+<p>Same goes with too many lines. Only fully displayable lines are shown.<BR>
+If we set the <code>Y</code> at its minimum value (0) and set the text on 6 lines :<BR>
+<code>Text: First line\nSecond line\nThird line\nForth line\nFifth line\nSixth Line</code><BR>
+we end up with this result :</p>
+<p><img alt="20-Bubble_6LINES" src="../20-Bubble_6LINES.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>➤ A maximum of 5 lines of text in a bubble using the <code>\n</code> function.<BR>
+➤ A maximum of 20-30 characters (spaces included) on a line.</p>
+</div>
+<h3 id="bubble-tail-positioning">🔸  Bubble tail positioning<a class="headerlink" href="#bubble-tail-positioning" title="Permanent link">&para;</a></h3>
+<p>The positioning of the tail (the bubble pointer) is set by those 2 functions and their applicable options :<BR>
+- <code>AlignH:</code> = <strong>H</strong>orizontal <strong>Align</strong>ment (Options = <code>Left</code>, <code>Center</code>, <code>Right</code>)<BR>
+- <code>AlignV:</code> = <strong>V</strong>ertical <strong>Align</strong>ment (Options = <code>Top</code>, <code>Center</code>, <code>Bottom</code>)</p>
+<p>As a result we have 9 (3x3) possible placement of the tail : </p>
+<p><img alt="21-Bubble_Tails_POS" src="../21-Bubble_Tails_POS.png" /></p>
+<p>We note that having both <code>AlignH</code> &amp; <code>AlignV</code> set to <code>Center</code> results in hiding the tail.</p>
+<p>The coded outline of the bubble is not dependent of the animation background and will remain black even on top of a black background, and as consequence will not be visible :</p>
+<p><img alt="22-Bubble_Tails_NEG" src="../22-Bubble_Tails_NEG.png" /></p>
+<p>It then renders slightly more squared as the rounded-angles of the outline are not visible.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Use <code>AlignH: Center</code> <strong>+</strong> <code>AlignV: Center</code> to have no bubble tail.</p>
+</div>
+<h3 id="bubble-coordinates-tail-positioning-issues">🔸  Bubble coordinates &amp; Tail positioning issues<a class="headerlink" href="#bubble-coordinates-tail-positioning-issues" title="Permanent link">&para;</a></h3>
+<p>Here comes the tricky part :<BR>
+If you set a tail to be visible, in order to be correctly displayed on screen, its design <strong><em>in its whole</em></strong> must be set to fit on the screen. Otherwise, you will face some strange behaviours.</p>
+<p>Tails are adding a 4 pixels design on the edge of the bubble they're placed on.</p>
+<p><img alt="23-Tail_px_size" src="../23-Tail_px_size.png" /></p>
+<p>To allow a tailed-bubble to be displayed on screen without issue, bubble coordinates values must be set taking into account those additionnal 4 pixels.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Issue will occur if there are less than 4 pixels between the screen's <strong>left</strong> or <strong>top</strong> border and the tail.</p>
+</div>
+<p>Since a picture is worth a thousand words, let's see how it behaves if we define a bubble with insufficient space on the edges for its tail to be displayed correctly.<BR>
+In the following tests, we will set different bubble coordinates so that it lacks 1 single pixel to allow the tail to be fully displayed.
+Again we will test with both white (orange) and black backgrounds as it helps to understand what is drawn on screen.</p>
+<p><img alt="24-Bubble Tails_POS" src="../24-Bubble%26Tails_POS.png" /></p>
+<p>It enlights that issues occur when there is not enough space on TOP and/or LEFT screen sides to display the tail, creating some <em>backdraft</em> tail that displays over the text.<BR>
+We note that, apart for just displaying what fits the screen, there is no particular issue with BOTTOM or RIGHT sides of the screen.<BR>
+We will also note that, despite there is no tail to be meant to be shown on middle screenshot (<code>AlignH</code> &amp; <code>AlignV</code> both set to <code>Center</code>), it still creates, for some reason, a single and unwanted pixel dot in the upper-left corner.</p>
+<p><img alt="25-Bubble Tails_NEG" src="../25-Bubble%26Tails_NEG.png" /></p>
+<p>Black background allows to enlight that the tails themselves are correctly drawn and that the issue is only on their outlines.</p>
+<p>Testing on a single-line bubble makes even weirder result 👀 :</p>
+<p><img alt="26-Bubble Tails_singleline" src="../26-Bubble%26Tails_singleline.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It's important to mention that those strange artifacts are just visual bugs and won't make Flipper to crash.<BR>
+One could decide to use those strange tail behaviours in some artistic way... </p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>When <strong><em>bubble</em></strong> is a layer above the <strong><em>animation</em></strong> one, main screen <strong><em>status bar</em></strong> and <strong><em>icons/battery</em></strong> are on layers above bubble one.<BR>
+➤ That must be taken into consideration to avoid having text partially covered by those.<BR>
+Ensure safe bubble coordinates and tail position accordingly.<BR>
+➤ It's safer/easier to set your bubble <code>X:</code> &amp; <code>Y:</code> to at least <code>4</code> to ensure avoiding issue with tail.<BR>
+➤ If possible, set your tail position to the sides (or center) of the bubble that are furthest from the edge of the screen.</p>
+</div>
+<h3 id="start-end-frame">🔸  Start &amp; End Frame<a class="headerlink" href="#start-end-frame" title="Permanent link">&para;</a></h3>
+<p>To define when a particular bubble is meant to play within a slot sequence, the following functions are used :<BR>
+<code>StartFrame:</code> sets on which frame bubble starts playing<BR>
+<code>EndFrame:</code> sets the last frame bubble is playing</p>
+<p>Each value corresponds to the position of the frame on the total <em>Passive + Active cycles</em> sequence.<BR>
+It means that it takes into consideration not only the frames listed in <strong><em>Frames order</em></strong> but also counts the possible remaining <strong><em>Active cycle(s)</em></strong> that come after.<BR>
+➤ As consequence a bubble can be set starting on an active cycle and ending on another.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>While it wasn't designed for, a bubble can be set to play during the passive cycle.<BR>
+➤ However passive cycle will only play the first bubble of the slot and this one only even if additional ones have been set.<BR>
+➤ If multiple slots, passive cycle bubble will randomly change slot only when active cycle is triggered. It would remain on the same slot in loop otherwise.<BR>
+➤ If the <code>EndFrame</code> value is set incorrectly beyond the passive cycle last frame, it has no real consequence : bubble will stop playing on last passive frame. For instance if passive cycle contains 8 frames (0 to 7) and bubble is set to play from 5 to 12, it will only be played on frames 5 to 7.<BR>
+➤ It behaves exactly the same way on active cycle, bubble would play until last active frame.</p>
+</div>
+<p>As example, following animation has 8 passive frames (0-7) followed by 8 active ones (8-15) with a <em>passive</em> bubble (slot 0) set to display beyond passive cycle and an <em>active</em> bubble (slot 1) set to play beyond active cycle :</p>
+<p><img alt="27-Bubble_Out_of_range_Endframe" src="../27-Bubble_Out_of_range_Endframe.gif" /></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>A slot with a bubble set in passive cycle <strong>will not</strong> play the following bubbles even if set in active cycle.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>To have passive + active bubbles playing along, you must set those on different slots.<BR>
+For instance you can use slots 0 &amp; 1 for passive and slots 2 &amp; 3 for active.<BR>
+The limitation in this pattern is that you can't force a logical suite between passive and active cycle bubbles if you have more than one slot defined for each cycle.</p>
+</div>
+<p><strong>O_oV</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      The content of this wiki is created and maintained by the community and does not represent the official views, statements, or endorsements of Flipper Devices. <div>All Flipper artwork is attributed to <a href="https://flipperdevices.com">Flipper Devices</a> unless otherwise stated. <div>All trademarks are the property of their respective owners and are used in this document for descriptive purposes only, without any intention of infringement.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.60a45f97.min.js"></script>
+      
+    
+  </body>
+</html>
