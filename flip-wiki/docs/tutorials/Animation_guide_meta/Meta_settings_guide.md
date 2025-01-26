@@ -11,7 +11,7 @@ Indepth guide to the meta.txt file settings which is used to set all the paramet
 
 
 ## 📄 meta.txt : content overview
-Below an example of a meta.txt file content. (from Flipper Zero [L1_Cry_128x64](https://github.com/flipperdevices/flipperzero-firmware/tree/dev/assets/dolphin/external/L1_Cry_128x64) animation)
+Below an example of a meta.txt file content. (from Flipper Zero [L1_Cry_128x64](https://github.com/flipperdevices/flipperzero-firmware/tree/dev/assets/dolphin/external/L1_Cry_128x64) animation)<BR>
 Meta is pure text file (.txt) and can be opened/edited via any text editor (such as *Notepad*).
 
 I colored in purple the part that is mandatory, in green what is optional (only applies if **bubbles** are used) and in white the data filled by the user.
@@ -136,7 +136,8 @@ Therefore, minimum value could never go under ***1***.<BR>
 
 ***Active frames*** are the ones that are played once triggered/activated.<BR>
 They have 2 possible triggers : Hitting the ***back*** button or coming back to animation screen from any other menu.<BR>
-Once triggered the active sequence will start to play. (ie. It won't wait for the passive sequence to end)<BR>
+Once triggered the active sequence will start to play. (ie. It won't wait for the passive sequence to end)
+
 An animation does **NOT** require active frame(s) to work.<BR>
 If no active frame, value must be set to ***0***.<BR>
 `Active frames:` value defines the activable sequence by the number of frames that will be picked up from the ones listed in ***Frames order***.
@@ -209,9 +210,10 @@ As well, Flipper firmware may crash on high ***frame rate*** if RAM is oversatur
 The usual working range of fps is 1-12, but it's not really recommended to have a frame rate above 8.<BR>
 All original Flipper animations (external, internal, blocked and event the level-up ones) have their ***frame rate*** set to 2.
 
-`Frame rate:` value must be an integer (number without decimal) and therefore cannot be less than 1.<BR>
-As consequence, the slowest animation would be of 1 frame per second. Only way to have one frame to play longer on screen is to double its input in ***Frames order***.<BR>
-The time each frame will play on screen is then calculated as follow : ***1 second divided by frame rate***.<BR>
+`Frame rate:` value must be an integer (number without decimal) and therefore cannot be less than 1.
+As consequence, the slowest animation would be of 1 frame per second.<BR>
+Only way to have one frame to play longer on screen is to double its input in ***Frames order***.<BR>
+The time each frame will play on screen is then calculated as follow : ***1 second divided by frame rate***.
 For instance, a frame rate of 4 will make each frame play 0.25 second on screen.<BR>
 Adjusting frame rate and playing with the inputs in Frames order makes visual acceleration or slow-down effects possible.
 
@@ -222,9 +224,10 @@ Duration values are seconds.
 
 By default, most animations have a duration value of 3600 which equals to 1 hour.
 
-Duration is an underestimated setting that can be used to polish transitions in a suite of animations.<BR>
-For example, having a total of 60 inputs in ***frames order*** and 2 as ***frame rate*** would result in a 30 seconds animation.<BR>
-In order to play this animation 5 times entirely before it switches to the next, `Duration:` would be set to `150`.<BR>
+Duration is an underestimated setting that can be used to polish transitions in a suite of animations.
+
+For example, having a total of 60 inputs in ***frames order*** and 2 as ***frame rate*** would result in a 30 seconds animation.
+In order to play this animation 5 times entirely before it switches to the next, `Duration:` would be set to `150`.
 This way, the switching will occur at the very end of the passive sequence instead of cutting it somewhere in the middle.
 
 ***Duration*** can also add some game aspect to a suite of animations.<BR>
@@ -250,7 +253,7 @@ And same goes with `Active cooldown: 0` while there are active frames.
 
 ### 🔸  Bubble slots
 `Bubble slots:` value indicates the number of bubbles "suites" that are listed to be randomly used during the active sequence of the animation.<BR>
-It is not to be confused with the number of bubbles. A slot can have many bubbles within.<BR>
+**It is not to be confused with the number of bubbles.** A slot can have many bubbles within.<BR>
 If there are multiple slots, each time active sequence is triggered, a slot will be randomly chosen and its bubbles sequence will be played.<BR>
 Otherwise, if only if `Bubble slots:` is set to `1`, the suite will always play on active sequence.<BR>
 If animation is not using any bubble, value must be set to `0`.
@@ -263,7 +266,7 @@ Since ***Bubbles*** is a complex subject in itself, its aspects will be reviewed
 ### 🔸  Animation design : insight samples
 * **The one-only frame "animation"**<BR>
 1 bitmap frame (frame_0.bm) set as 1 passive with only its input once in ***Frames order***.<BR>
-All active settings as well as bubble ones set to **0**. ***Frame rate*** set to minimum **1** as there is no meaning to have faster fps.<BR>
+All active settings as well as bubble ones set to **0**. ***Frame rate*** set to minimum **1** as there is no meaning to have faster fps.
 As a result we get an *unanimated animation*.<BR>
 For those who want to have a static background image that will remain on screen as long as defined in ***Duration***.
 
@@ -291,7 +294,7 @@ The 6 first ones (0-5) are set as passive and the 6 others (6-11) as active with
 * **Passive/active animation : complex design**<BR>
 Official [L1_Painting_128x64](https://github.com/flipperdevices/flipperzero-firmware/tree/dev/assets/dolphin/external/L1_Painting_128x64) is a more sophisticated passive/active animation.<BR>
 While still having only 1 ***active cycle***, this animation is however using ***bubbles*** (2 on one slot).<BR>
-This design allows an animation to extend its duration by using single bitmaps more than once.<BR>
+This design allows an animation to extend its duration by using single bitmaps more than once.
 With only 12 bitmap files, we end up with 22 inputs total in ***Frames order***.<BR>
 It may be noted that creators of OFW animations usually have dedicated bitmaps for active and passive frames (here, respectively 0-5 and 6-11). This is not at all mandatory and is more of a design choice.
 
@@ -367,7 +370,7 @@ An input such as `Text: First line\nSecond line\nThird line\nForth line\nFifth l
 ![18-Bubble_5LINES_1](18-Bubble_5LINES_1.png)
 
 We note that we can only have **up to 5 lines** that would properly show on screen.<BR>
-Of course, this will be dependent of the bubble placement and some lines can be displayed out of screen depending on `Y` value.<BR>
+Of course, this will be dependent of the bubble placement and some lines can be displayed out of screen depending on `Y` value.
 (`Y` must be set between 0 and 5 to be able to have 5 lines of text as well as the bubble outline in its whole displayed)
 
 ![19-Bubble_5LINES_2](19-Bubble_5LINES_2.png)
@@ -418,7 +421,7 @@ To allow a tailed-bubble to be displayed on screen without issue, bubble coordin
     Issue will occur if there are less than 4 pixels between the screen's **left** or **top** border and the tail.
 
 Since a picture is worth a thousand words, let's see how it behaves if we define a bubble with insufficient space on the edges for its tail to be displayed correctly.<BR>
-In the following tests, we will set different bubble coordinates so that it lacks 1 single pixel to allow the tail to be fully displayed.<BR>
+In the following tests, we will set different bubble coordinates so that it lacks 1 single pixel to allow the tail to be fully displayed.
 Again we will test with both white (orange) and black backgrounds as it helps to understand what is drawn on screen.
 
 ![24-Bubble Tails_POS](24-Bubble&Tails_POS.png)
