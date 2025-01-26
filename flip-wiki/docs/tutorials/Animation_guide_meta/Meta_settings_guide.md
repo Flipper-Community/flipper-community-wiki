@@ -119,11 +119,11 @@ For example, 64x32px frame position on screen :
 ![05-64x32px_frame-wrong_meta_size](05-64x32px_frame-wrong_meta_size.png)
 
 !!! tip
-    ⮚ Animation frame must be set up to 128x64px.<BR>
-    ⮚ Width & Height values must match the pixel dimensions of the frames.<BR>
-    ⮚ Those being defined in the meta, all frames of one animation must have the same dimensions.<BR>
-    ⮚ Frames are bottom-left aligned.<BR>
-    ⮚ Using frames of dimensions inferior to 128x64px makes only sense when editing an animation meant to be put in Flipper's internal memory. There would not be any significant impact for the ones stored on SD.
+    ➤ Animation frame must be set up to 128x64px.<BR>
+    ➤ Width & Height values must match the pixel dimensions of the frames.<BR>
+    ➤ Those being defined in the meta, all frames of one animation must have the same dimensions.<BR>
+    ➤ Frames are bottom-left aligned.<BR>
+    ➤ Using frames of dimensions inferior to 128x64px makes only sense when editing an animation meant to be put in Flipper's internal memory. There would not be any significant impact for the ones stored on SD.
 
 
 ### 🔸  Passive & Active Frames : definition
@@ -319,8 +319,8 @@ As for frames, first slot is numbered `0`.
 A slot can have multiple bubbles within so every bubble of the same sequence must share the same `Slot:` value.<BR>
 Having only 1 bubbles slot (that will be labelled as **0**) will logically cut the random process and the bubbles sequence will always play when active one is triggered.
 !!! warning
-    ⮚ All bubbles inside a same slot must be listed together in a row, one after another before listing the next slot bubbles.<BR>
-    ⮚ Only bubbles listed in a row under the same slot will display.<BR>
+    ➤ All bubbles inside a same slot must be listed together in a row, one after another before listing the next slot bubbles.<BR>
+    ➤ Only bubbles listed in a row under the same slot will display.<BR>
     ie. if you define Slot 0, first bubble, then Slot 1 first bubble and only then Slot 0, second bubble, this last one will not show up when Slot 0 will be randomly selected.
 
 ![14-Slot_order](14-Bubble_Slot_order.png)
@@ -342,9 +342,9 @@ Bubble sticks to its screen coordinates and won't be affected in any way when di
 
 !!! tip
     The placement being only defined by the upper-left corner of the bubble, it must be thought in regards of those 3 factors :<BR>
-    ⮚ Lenght of the longest text line for the X value.<BR>
-    ⮚ Number of text lines for the Y one.<BR>
-    ⮚ Postion of the [bubble tail](#bubble-tail-positioning)
+    ➤ Lenght of the longest text line for the X value.<BR>
+    ➤ Number of text lines for the Y one.<BR>
+    ➤ Postion of the [bubble tail](#bubble-tail-positioning)
 
 !!! warning
     A **negative value in X or Y** will result of a ***furi_hal error*** and would most likely put your Flipper in an **endless restart-loop !!**<BR>
@@ -383,8 +383,8 @@ we end up with this result :
 ![20-Bubble_6LINES](20-Bubble_6LINES.png)
 
 !!! tip
-    ⮚ A maximum of 5 lines of text in a bubble using the `\n` function.<BR>
-    ⮚ A maximum of 20-30 characters (spaces included) on a line.
+    ➤ A maximum of 5 lines of text in a bubble using the `\n` function.<BR>
+    ➤ A maximum of 20-30 characters (spaces included) on a line.
 
 
 ### 🔸  Bubble tail positioning
@@ -444,10 +444,10 @@ Testing on a single-line bubble makes even weirder result 👀 :
 
 !!! tip
     When ***bubble*** is a layer above the ***animation*** one, main screen ***status bar*** and ***icons/battery*** are on layers above bubble one.<BR>
-    ⮚ That must be taken into consideration to avoid having text partially covered by those.<BR>
+    ➤ That must be taken into consideration to avoid having text partially covered by those.<BR>
     Ensure safe bubble coordinates and tail position accordingly.<BR>
-    ⮚ It's safer/easier to set your bubble `X: ` & `Y: ` to at least `4` to ensure avoiding issue with tail.<BR>
-    ⮚ If possible, set your tail position to the sides (or center) of the bubble that are furthest from the edge of the screen.
+    ➤ It's safer/easier to set your bubble `X: ` & `Y: ` to at least `4` to ensure avoiding issue with tail.<BR>
+    ➤ If possible, set your tail position to the sides (or center) of the bubble that are furthest from the edge of the screen.
 
 
 ### 🔸  Start & End Frame
@@ -457,13 +457,13 @@ To define when a particular bubble is meant to play within a slot sequence, the 
 
 Each value corresponds to the position of the frame on the total *Passive + Active cycles* sequence.<BR>
 It means that it takes into consideration not only the frames listed in ***Frames order*** but also counts the possible remaining ***Active cycle(s)*** that come after.<BR>
-⮚ As consequence a bubble can be set starting on an active cycle and ending on another.
+➤ As consequence a bubble can be set starting on an active cycle and ending on another.
 !!! note
     While it wasn't designed for, a bubble can be set to play during the passive cycle.<BR>
-    ⮚ However passive cycle will only play the first bubble of the slot and this one only even if additional ones have been set.<BR>
-    ⮚ If multiple slots, passive cycle bubble will randomly change slot only when active cycle is triggered. It would remain on the same slot in loop otherwise.<BR>
-    ⮚ If the `EndFrame` value is set incorrectly beyond the passive cycle last frame, it has no real consequence : bubble will stop playing on last passive frame. For instance if passive cycle contains 8 frames (0 to 7) and bubble is set to play from 5 to 12, it will only be played on frames 5 to 7.<BR>
-    ⮚ It behaves exactly the same way on active cycle, bubble would play until last active frame.
+    ➤ However passive cycle will only play the first bubble of the slot and this one only even if additional ones have been set.<BR>
+    ➤ If multiple slots, passive cycle bubble will randomly change slot only when active cycle is triggered. It would remain on the same slot in loop otherwise.<BR>
+    ➤ If the `EndFrame` value is set incorrectly beyond the passive cycle last frame, it has no real consequence : bubble will stop playing on last passive frame. For instance if passive cycle contains 8 frames (0 to 7) and bubble is set to play from 5 to 12, it will only be played on frames 5 to 7.<BR>
+    ➤ It behaves exactly the same way on active cycle, bubble would play until last active frame.
 
 As example, following animation has 8 passive frames (0-7) followed by 8 active ones (8-15) with a *passive* bubble (slot 0) set to display beyond passive cycle and an *active* bubble (slot 1) set to play beyond active cycle :
 
