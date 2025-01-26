@@ -16,62 +16,62 @@ I colored in purple the part that is mandatory, in green what is optional (only 
 ## 🐬 Flipper Zero official documentation : meta.txt
 *Flipper Devices* provides basic information about meta file in their Github repo.<BR> 
 The following (here collapsible) content can be found in [flipperzero-firmware/assets/dolphin/readme.md](https://github.com/flipperdevices/flipperzero-firmware/blob/dev/assets/dolphin/ReadMe.md#file-metatxt)<BR>
-<details><summary>🔹 Definition & Header settings</summary>
+??? quote "🔹 Definition & Header settings"
   
-- meta.txt : Flipper Format File with ordered keys.<BR>
-- Header:
+    - meta.txt : Flipper Format File with ordered keys.<BR>
+    - Header:
 
-```
-Filetype: Flipper Animation
-Version: 1
-```
-</details><details><summary>🔹 Animation dimensions settings</summary>
+    ```
+    Filetype: Flipper Animation
+    Version: 1
+    ```
+??? quote "🔹 Animation dimensions settings"
   
-- `Width` - animation width in px (<= 128)
-- `Height` - animation height in px (<= 64)
-</details><details><summary>🔹 Frames ordering</summary>
+    - `Width` - animation width in px (<= 128)
+    - `Height` - animation height in px (<= 64)
+??? quote "🔹 Frames ordering"
 
-- `Passive frames` - number of bitmap frames for passive animation state
-- `Active frames` - number of bitmap frames for active animation state (can be 0)
-- `Frames order` - order of bitmap frames where first N frames are passive and following M are active. Each X number in order refers to bitmap frame, with name frame\_X.bm. This file must exist. Any X number can be repeated to refer same frame in animation.
-</details><details><summary>🔹 Animation settings</summary>
+    - `Passive frames` - number of bitmap frames for passive animation state
+    - `Active frames` - number of bitmap frames for active animation state (can be 0)
+    - `Frames order` - order of bitmap frames where first N frames are passive and following M are active. Each X number in order refers to bitmap frame, with name frame\_X.bm. This file must exist. Any X number can be repeated to refer same frame in animation.
+??? quote "🔹 Animation settings"
   
-- `Active cycles` - cycles to repeat of N active frames for full active period. E.g. if frames for active cycles are 6 and 7, and active cycles is 3, so full active period plays 6 7 6 7 6 7. Full period of passive + active period are called *total period*.
-- `Frame rate` - number of frames to play for 1 second.
-- `Duration` - total amount of seconds to play 1 animation.
-- `Active cooldown` - amount of seconds (after passive mode) to pass before entering next active mode.
-</details><details><summary>🔹 Bubbles settings</summary>
+    - `Active cycles` - cycles to repeat of N active frames for full active period. E.g. if frames for active cycles are 6 and 7, and active cycles is 3, so full active period plays 6 7 6 7 6 7. Full period of passive + active period are called *total period*.
+    - `Frame rate` - number of frames to play for 1 second.
+    - `Duration` - total amount of seconds to play 1 animation.
+    - `Active cooldown` - amount of seconds (after passive mode) to pass before entering next active mode.
+??? quote "🔹 Bubbles settings"
   
-- `Bubble slots` - amount of bubble sequences.
-- Any bubble sequence plays whole sequence during active mode. There can be many bubble sequences and bubbles inside it. Bubbles in 1 bubble sequence have to reside in 1 slot. Bubbles order in 1 bubble sequence is determined by occurrence in file. As soon as frame index goes out of EndFrame index of bubble - next animation bubble is chosen. There can also be free of bubbles frames between 2 bubbles.
+    - `Bubble slots` - amount of bubble sequences.
+    - Any bubble sequence plays whole sequence during active mode. There can be many bubble sequences and bubbles inside it. Bubbles in 1 bubble sequence have to reside in 1 slot. Bubbles order in 1 bubble sequence is determined by occurrence in file. As soon as frame index goes out of EndFrame index of bubble - next animation bubble is chosen. There can also be free of bubbles frames between 2 bubbles.
 
-- `Slot` - number to unite bubbles for same sequence.
-- `X`, `Y` - are coordinates of left top corner of bubble.
-- `Text` - text in bubble. New line is `\n`
-- `AlignH` - horizontal place of bubble corner (Left, Center, Right)
-- `AlignV` - vertical place of bubble corner (Top, Center, Bottom)
-- `StartFrame`, `EndFrame` - frame index range inside whole period to show bubble.
-</details><details><summary>🔹 Frame indexes vizualisation</summary>
-  
-- Understanding of frame indexes
-
-For example we have
-
-```
-Passive frames: 6
-Active frames: 2
-Frames order: 0 1 2 3 4 5 6 7
-Active cycles: 4
-```
-
-Then we have indexes
-
-```
-                        passive(6)            active (2 * 4)
-Real frames order:   0  1  2  3  4  5     6  7  6  7  6  7  6  7
-Frames indexes:      0  1  2  3  4  5     6  7  8  9  10 11 12 13
-```
-</details><BR>
+    - `Slot` - number to unite bubbles for same sequence.
+    - `X`, `Y` - are coordinates of left top corner of bubble.
+    - `Text` - text in bubble. New line is `\n`
+    - `AlignH` - horizontal place of bubble corner (Left, Center, Right)
+    - `AlignV` - vertical place of bubble corner (Top, Center, Bottom)
+    - `StartFrame`, `EndFrame` - frame index range inside whole period to show bubble.
+??? quote "🔹 Frame indexes vizualisation"
+      
+    - Understanding of frame indexes
+    
+    For example we have
+    
+    ```
+    Passive frames: 6
+    Active frames: 2
+    Frames order: 0 1 2 3 4 5 6 7
+    Active cycles: 4
+    ```
+    
+    Then we have indexes
+    
+    ```
+                            passive(6)            active (2 * 4)
+    Real frames order:   0  1  2  3  4  5     6  7  6  7  6  7  6  7
+    Frames indexes:      0  1  2  3  4  5     6  7  8  9  10 11 12 13
+    ```
+<BR>
 
 ## 🎬 ANIMATION : Meta Main settings<BR>
 ### 🔸  Frame dimensions
