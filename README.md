@@ -74,7 +74,7 @@ This method with directly install MkDocs to whatever python version you are runn
 1. `cd` to the directory you cloned the `flipper-community-wiki` folder and enter it. 
 1. `cd` into the `flip-wiki` folder
 1. run `python -m mkdocs serve`
-1. MkDocs will begin running at `http://127/0.0.1:8000`, browse to this in your browser
+1. MkDocs will begin running at `http://127.0.0.1:8000`, browse to this in your browser
 1. Verify the wiki appears and the changes you made to the wiki appear as expected. 
 
 ----
@@ -94,7 +94,7 @@ This method uses a built in feature of Python called a *virtual environment*, wh
 1. run `python -m pip install mkdocs-material` and wait for the install to finish. 
 1. cd into the `flip-wiki
 1. once complete, run `python -m mkdocs serve` to start
-1. MkDocs will begin running at `http://127/0.0.1:8000`, browse to this in your browser
+1. MkDocs will begin running at `http://127.0.0.1:8000`, browse to this in your browser
 1. Verify the wiki appears and the changes you made to the wiki appear as expected. 
 
 When done, you can close out the virtual environment by typing `deactivate` in your terminal. If you need to re-activate it again later, just run the "Activate the virtual environment" steps above again. 
