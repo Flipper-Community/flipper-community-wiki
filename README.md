@@ -16,7 +16,7 @@ You will then need to fork this repo using the fork button on this Github page t
 First, clone your forked copy to your local computer so that you can make changes to it.
 Once you have completed that, you can move to setting up MkDocs-Material locally using one of the options below for your platform. 
 
-The [Python virtual environment method](#Method-2:-Install-using-a-Python-virtual-environment) is HIGHLY recommended, however not everyone will feel comfortable with using python directly to install things. For that, alternate instructions are provided for convenience. 
+The [Python virtual environment method](#Method-2-Install-using-a-Python-virtual-environment) is HIGHLY recommended, however not everyone will feel comfortable with using python directly to install things. For that, alternate instructions are provided for convenience. 
 
 
 ## Operating system install directions
