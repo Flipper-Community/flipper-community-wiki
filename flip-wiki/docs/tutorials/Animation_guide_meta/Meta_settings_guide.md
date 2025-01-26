@@ -2,20 +2,20 @@
 
 !!! note
     For better visualization and understanding, I am using a custom firmware that allows to hide the top status bar border as well as top status icons to provide suitable screenshots.
-<BR>
+
 
 ## 📄 meta.txt : content overview
-Below an example of a meta.txt file content. (from Flipper Zero [L1_Cry_128x64](https://github.com/flipperdevices/flipperzero-firmware/tree/dev/assets/dolphin/external/L1_Cry_128x64) animation)<BR>
-Meta is pure text file (.txt) and can be opened/edited via any text editor (such as *Notepad*).<BR><BR>
-I colored in purple the part that is mandatory, in green what is optional (only applies if **bubbles** are used) and in white the data filled by the user.<BR>
+Below an example of a meta.txt file content. (from Flipper Zero [L1_Cry_128x64](https://github.com/flipperdevices/flipperzero-firmware/tree/dev/assets/dolphin/external/L1_Cry_128x64) animation)
+Meta is pure text file (.txt) and can be opened/edited via any text editor (such as *Notepad*).
+
+I colored in purple the part that is mandatory, in green what is optional (only applies if **bubbles** are used) and in white the data filled by the user.
 
 ![01-meta-overview](01-meta-overview.png)
 
-<BR>
 
 ## 🐬 Flipper Zero official documentation : meta.txt
-*Flipper Devices* provides basic information about meta file in their Github repo.<BR> 
-The following (here collapsible) content can be found in [flipperzero-firmware/assets/dolphin/readme.md](https://github.com/flipperdevices/flipperzero-firmware/blob/dev/assets/dolphin/ReadMe.md#file-metatxt)<BR>
+*Flipper Devices* provides basic information about meta file in their Github repo.
+The following (here collapsible) content can be found in [flipperzero-firmware/assets/dolphin/readme.md](https://github.com/flipperdevices/flipperzero-firmware/blob/dev/assets/dolphin/ReadMe.md#file-metatxt)
 ??? quote "🔹 Definition & Header settings"
   
     - meta.txt : Flipper Format File with ordered keys.<BR>
@@ -73,7 +73,7 @@ The following (here collapsible) content can be found in [flipperzero-firmware/a
     ```
 <BR>
 
-## 🎬 ANIMATION : Meta Main settings<BR>
+## 🎬 ANIMATION : Meta Main settings
 ### 🔸  Frame dimensions
 The first two settings listed in meta.txt are :<BR>
 - `Width:` being the frame measurement on the ***X*** axis, horizontal.<BR>
@@ -105,11 +105,11 @@ For example, 64x32px frame position on screen :
 ![05-64x32px_frame-wrong_meta_size](05-64x32px_frame-wrong_meta_size.png)
 
 !!! tip
-    Animation frame must be set up to 128x64px<BR>
-    Width & Height values must match the pixel dimensions of the frames.<BR>
-    Those being defined in the meta, all frames of one animation must have the same dimensions.<BR>
-    Frames are bottom-left aligned.<BR>
-    Using frames of dimensions inferior to 128x64px makes only sense when editing an animation meant to be put in Flipper's internal memory. There would not be any significant impact for the ones stored on SD.
+    ⮚ Animation frame must be set up to 128x64px<BR>
+    ⮚ Width & Height values must match the pixel dimensions of the frames.<BR>
+    ⮚ Those being defined in the meta, all frames of one animation must have the same dimensions.<BR>
+    ⮚ Frames are bottom-left aligned.<BR>
+    ⮚ Using frames of dimensions inferior to 128x64px makes only sense when editing an animation meant to be put in Flipper's internal memory. There would not be any significant impact for the ones stored on SD.
 <BR>
 
 ### 🔸  Passive & Active Frames : definition
@@ -232,6 +232,7 @@ As a result we get an *unanimated animation*.<BR>
 For those who want to have a static background image that will remain on screen as long as defined in ***Duration***.<BR><BR>
 ![10-Sample_1_only_frame](10-Sample_1_only_frame.gif)
 
+
 * **Passive-only animation**<BR>
 This format is probably the most used by those who make custom animations by converting existing gif, movie or anime excerpt.<BR>
 It will result in an only passive-framed animation that will play in loop until its ***duration*** ends.<BR>
@@ -239,12 +240,14 @@ One of the clever uses of this design is to create a seamless looping animation.
 **Wr3nch**'s [X_X_F0Pattern](https://github.com/wrenchathome/flip0anims/tree/main/Animations/Flipper/X_X_F0Pattern) (inspired by the interior design of the Flipper Zero carton box) is a perfect example: it seamlessly plays 11 passive frames (numbered 0-10) in a loop.<BR><BR>
 ![11-Sample_Passive_Only](11-Sample_Passive_Only.gif)
 
+
 * **Passive/active animation : simple design**<BR>
 Official [L1_Recording_128x51](https://github.com/flipperdevices/flipperzero-firmware/tree/dev/assets/dolphin/external/L1_Recording_128x51) is a good example of a basic passive/active animation.<BR>
 Here we have a total of 12 bitmap frames (numbered 0 to 11).<BR>
 They're listed in numerical order and only once in ***Frames order***.<BR>
 The 6 first ones (0-5) are set as passive and the 6 others (6-11) as active with only 1 active cycle.<BR><BR>
 ![12-Sample_AP_simple](12-Sample_AP_simple.gif)
+
 
 * **Passive/active animation : complex design**<BR>
 Official [L1_Painting_128x64](https://github.com/flipperdevices/flipperzero-firmware/tree/dev/assets/dolphin/external/L1_Painting_128x64) is a more sophisticated passive/active animation.<BR>
@@ -254,9 +257,8 @@ With only 12 bitmap files, we end up with 22 inputs total in ***Frames order***.
 It may be noted that creators of OFW animations usually have dedicated bitmaps for active and passive frames (here, respectively 0-5 and 6-11). This is not at all mandatory and is more of a design choice.<BR><BR>
 ![13-Sample_AP_complex](13-Sample_AP_complex.gif)
 
-<BR>
 
-## 💬 BUBBLES : in-depth guide<BR>
+## 💬 BUBBLES : in-depth guide
 ‎
 ### 🔸  Bubbles : Definition
 Bubbles are text inputs that will display as an additional layer above an animation, enclosed in coded-drawn lines in the spirit of comic book speech bubble.<BR>
@@ -271,8 +273,8 @@ As for frames, first slot is numbered `0`.<BR>
 A slot can have multiple bubbles within so every bubble of the same sequence must share the same `Slot:` value.<BR>
 Having only 1 bubbles slot (that will be labelled as **0**) will logically cut the random process and the bubbles sequence will always play when active one is triggered.<BR>
 > [!WARNING]
-> All bubbles inside a same slot must be listed together in a row, one after another before listing the next slot bubbles.<BR>
-> Only bubbles listed in a row under the same slot will display.<BR>
+> ⮚ All bubbles inside a same slot must be listed together in a row, one after another before listing the next slot bubbles.<BR>
+> ⮚ Only bubbles listed in a row under the same slot will display.<BR>
 > ie. if you define Slot 0, first bubble, then Slot 1 first bubble and only then Slot 0, second bubble, this last one will not show up when Slot 0 will be randomly selected.
 
 ![14-Slot_order](14-Bubble_Slot_order.png)
@@ -289,7 +291,7 @@ Coordinates will be set as :
 ![15-Bubble_placement](15-Bubble_placement.png)
 
 We will note that the bubble layer is not dependent of the animation frames size.<BR>
-Bubble sticks to its screen coordinates and won't be affected in any way when displayed out the animation frames area as the following test shows (64x32px frames anim) :<BR>
+Bubble sticks to its screen coordinates and won't be affected in any way when displayed out the animation frames area as the following test shows (64x32px frames anim) :
 
 ![16-Bubble_out_of_frame](16-Bubble_out_of_frame.png)
 
@@ -334,8 +336,8 @@ we end up with this result :
 ![20-Bubble_6LINES](20-Bubble_6LINES.png)
 
 !!! tip
-    A maximum of 5 lines of text in a bubble using the `\n` function.<BR>
-    A maximum of 20-30 characters (spaces included) on a line.
+    ⮚ A maximum of 5 lines of text in a bubble using the `\n` function.<BR>
+    ⮚ A maximum of 20-30 characters (spaces included) on a line.
 <BR>
 
 ### 🔸  Bubble tail positioning
@@ -417,7 +419,7 @@ As example, following animation has 8 passive frames (0-7) followed by 8 active 
 
 
 !!! warning
-    ⮚ A slot with a bubble set in passive cycle **will not** play the following bubbles even if set in active cycle.
+    A slot with a bubble set in passive cycle **will not** play the following bubbles even if set in active cycle.
 
 !!! tip
     To have passive + active bubbles playing along, you must set those on different slots.<BR>
