@@ -105,6 +105,7 @@ nav:
   - Guides & Tutorials:
     - Development Tutorials:
       - Basics of Building Firmware & Apps: tutorials/beginner_guide_fw/guide.md
+      - Animation Guide: tutorials/Animation_guide_meta/Meta_settings_guide.md
       - Designing Custom Fonts: tutorials/f0_fonts_guide/guide.md
 
   - Site Info:
