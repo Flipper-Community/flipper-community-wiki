@@ -49,7 +49,12 @@ The following (here collapsible) content can be found in [flipperzero-firmware/a
 ??? quote "🔹 Bubbles settings"
   
     - `Bubble slots` - amount of bubble sequences.
-    - Any bubble sequence plays whole sequence during active mode. There can be many bubble sequences and bubbles inside it. Bubbles in 1 bubble sequence have to reside in 1 slot. Bubbles order in 1 bubble sequence is determined by occurrence in file. As soon as frame index goes out of EndFrame index of bubble - next animation bubble is chosen. There can also be free of bubbles frames between 2 bubbles.
+    - Any bubble sequence plays whole sequence during active mode.<BR>
+      There can be many bubble sequences and bubbles inside it.<BR>
+      Bubbles in 1 bubble sequence have to reside in 1 slot.<BR>
+      Bubbles order in 1 bubble sequence is determined by occurrence in file.<BR>
+      As soon as frame index goes out of EndFrame index of bubble - next animation bubble is chosen.<BR>
+      There can also be free of bubbles frames between 2 bubbles.
 
     - `Slot` - number to unite bubbles for same sequence.
     - `X`, `Y` - are coordinates of left top corner of bubble.
@@ -81,25 +86,25 @@ The following (here collapsible) content can be found in [flipperzero-firmware/a
 
 ## 🎬 ANIMATION : Meta Main settings
 ### 🔸  Frame dimensions
-The first two settings listed in meta.txt are :
-- `Width:` being the frame measurement on the ***X*** axis, horizontal.
+The first two settings listed in meta.txt are :<BR>
+- `Width:` being the frame measurement on the ***X*** axis, horizontal.<BR>
 - `Height:` being the frame measurement on the ***Y*** axis, vertical.
 
-Values ​​are in pixels and must strictly match the dimensions of the animation frames.
+Values ​​are in pixels and must strictly match the dimensions of the animation frames.<BR>
 Since the Flipper screen can display 128x64 pixels, these would therefore be the max values.
 
 ![02-W H](02-W&H.png)
 
 While most animations (from official Flipper Devices or custom makers) are made, for convenience mainly, on this frame size, one can choose to make an animation with smaller frames.
 
-Official ***Flipper Devices*** firmware contains a bunch of animations that aren't 128x64px with values such as 128x51px or 128x49px.
+Official ***Flipper Devices*** firmware contains a bunch of animations that aren't 128x64px with values such as 128x51px or 128x49px.<BR>
 Most of those are stored in flash memory (***internal*** & ***blocked*** anims) which makes sense in saving as much octets as possible due to the very low internal storage capacity. But even within the official ***external*** animations (those saved on SD), we can notice 3 (as of Nov. 24) that also use a reduced frame format.
 
 For instance, the first frame of [L1_Laptop_128x51](https://github.com/flipperdevices/flipperzero-firmware/tree/dev/assets/dolphin/external/L1_Laptop_128x51), is (as its name specifies) only 51px high and will leave a 13px high unanimated area on top of the screen (blue-colored here) :
 
 ![03-Blue-Zone](03-Blue-Zone.png)
 
-Frames are aligned on the BOTTOM LEFT corner without option to change that.
+Frames are aligned on the BOTTOM LEFT corner without option to change that.<BR>
 While it is not an issue at all when it comes to height (as the upper part of screen is mostly displaying the status bar and icons), it should be kept in mind when setting a width inferior to 128 as animation will be left-aligned.
 
 For example, 64x32px frame position on screen :
@@ -124,16 +129,16 @@ For example, 64x32px frame position on screen :
 ### 🔸  Passive & Active Frames : definition
 Animation frames can be of 2 kinds : passive or active.
 
-***Passive frames*** are the ones that are played in loop on Flipper idle screen.
-An animation requires at least 1 passive frame to work.
-Therefore, minimum value could never go under ***1***.
+***Passive frames*** are the ones that are played in loop on Flipper idle screen.<BR>
+An animation requires at least 1 passive frame to work.<BR>
+Therefore, minimum value could never go under ***1***.<BR>
 `Passive frames:` value defines the passive sequence by the number of frames that will be picked up from the ones listed in ***Frames order***.
 
-***Active frames*** are the ones that are played once triggered/activated.
-They have 2 possible triggers : Hitting the ***back*** button or coming back to animation screen from any other menu.
-Once triggered the active sequence will start to play. (ie. It won't wait for the passive sequence to end)
-An animation does **NOT** require active frame(s) to work.
-If no active frame, value must be set to ***0***.
+***Active frames*** are the ones that are played once triggered/activated.<BR>
+They have 2 possible triggers : Hitting the ***back*** button or coming back to animation screen from any other menu.<BR>
+Once triggered the active sequence will start to play. (ie. It won't wait for the passive sequence to end)<BR>
+An animation does **NOT** require active frame(s) to work.<BR>
+If no active frame, value must be set to ***0***.<BR>
 `Active frames:` value defines the activable sequence by the number of frames that will be picked up from the ones listed in ***Frames order***.
 
 The sum of values of `Passive frames:` and `Active frames:` must equal to the number of frames listed in ***Frames Order***.
@@ -142,21 +147,21 @@ The use of active frames is of maker's choice. It provides to the user a basic l
 
 
 ### 🔸  Frames Order
-`Frames order:` is used to define the sequences of passive and active frames.
+`Frames order:` is used to define the sequences of passive and active frames.<BR>
 It lists the frames by calling the bitmap files via their designed number. (ie the number between ***frame_*** and ***.bm*** in the file name : *frame_12.bm* = *12*)
 
-Passive frames are always listed first. Active frames (if any) comes after.
+Passive frames are always listed first. Active frames (if any) comes after.<BR>
 As said, the total of inputs must be equal to the sum of `Passive frames:` & `Active frames:` values.
 
-On top of that, each bitmap file must be listed at least once by its number.
+On top of that, each bitmap file must be listed at least once by its number.<BR>
 As well, every listed input must refer to an existing bitmap file.
 
-In the following example (simple passive/active animation with no frame repetition), we have 10 .bm frames numbered frame_0.bm to frame_9.bm.
+In the following example (simple passive/active animation with no frame repetition), we have 10 .bm frames numbered frame_0.bm to frame_9.bm.<BR>
 6 first frames (0 to 5) are set are the *passive* ones while the 4 remaining ones (6 to 9) are set to *active*.
 
 ![06-Frames_order_1](06-Frames_order_1.png)
 
-A bitmap file can be listed multiple times, and be counted multiple times in passive and/or active frames.
+A bitmap file can be listed multiple times, and be counted multiple times in passive and/or active frames.<BR>
 The frames order being the sequence(s) of bitmap displayed following maker's choice, it does **NOT** require to be a logical numerary suite (such as 1 2 3 4...) as long as it follows the requirements mentioned above.
 
 Next example shows those. It uses frame repetitions in an animation built on only 5 .bm frames numbered frame_0.bm to frame_4.bm, without listing the frames in a "logical" numerical order.
@@ -176,78 +181,78 @@ Once the the active period (ie the number of cycles of the active sequence) is o
 
 ***Active cycles*** is a choice of design to limit the number of inputs listed in ***Frame order***.
 
-If animation has no active frames (ie `Active frames: 0`), `Active cycles:` should be set to `0` too.
+If animation has no active frames (ie `Active frames: 0`), `Active cycles:` should be set to `0` too.<BR>
 As well if animation contains active frames, `Active cycles:` should be set to at least `1`.
 !!! warning
     If those values are not set accordingly, compiling the animation via `./fbt` (to make .png frames into .bm ones) **will definitely fail**.
 
 ![08-FBT_error-Active_Cycles](08-FBT_error-Active_Cycles.png)
 
-However, and against all odds (and logics), an already compiled animation ***should*** still be able to play on Flipper without failure.
-For instance, `Active frames: 1` while there is **no** active frames : no noticeable consequences.
+However, and against all odds (and logics), an already compiled animation ***should*** still be able to play on Flipper without failure.<BR>
+For instance, `Active frames: 1` while there is **no** active frames : no noticeable consequences.<BR>
 **But**, having `Active frames: 0` when there are active frames will make the animation unable to trigger the active sequence : only passive frames will play in loop even if the ***back*** button is pushed.
 
 The number of frames that make up the ***active cycles*** above the first one are not counted as it in ***Active frames*** but will however be counted when it comes to ***bubbles***.
 
 
 ### 🔸  Frame rate
-`Frame rate:` is the well known ***fps*** : Frames Per Second.
+`Frame rate:` is the well known ***fps*** : Frames Per Second.<BR>
 It defines how many frames will be played during 1 second.
 !!! note
     Historically, theatre movie standard fps was set on 24.<BR>
     Drawn-animation however had usually a fps set to 12 and even lower (mainly due to production costs) such as 6 or 8 when it came to *Saturday Morning Cartoons* type animations.
 
-Flipper will not be able to handle very high fps mainly due to hardware limitation (RAM size and display capability).
-Flipper screen refresh rate being what it is, flickering or ghosting effect will occur if fps is set too high.
+Flipper will not be able to handle very high fps mainly due to hardware limitation (RAM size and display capability).<BR>
+Flipper screen refresh rate being what it is, flickering or ghosting effect will occur if fps is set too high.<BR>
 As well, Flipper firmware may crash on high ***frame rate*** if RAM is oversatured.
 
-The usual working range of fps is 1-12, but it's not really recommended to have a frame rate above 8.
+The usual working range of fps is 1-12, but it's not really recommended to have a frame rate above 8.<BR>
 All original Flipper animations (external, internal, blocked and event the level-up ones) have their ***frame rate*** set to 2.
 
-`Frame rate:` value must be an integer (number without decimal) and therefore cannot be less than 1.
-As consequence, the slowest animation would be of 1 frame per second. Only way to have one frame to play longer on screen is to double its input in ***Frames order***.
-The time each frame will play on screen is then calculated as follow : ***1 second divided by frame rate***.
-For instance, a frame rate of 4 will make each frame play 0.25 second on screen.
+`Frame rate:` value must be an integer (number without decimal) and therefore cannot be less than 1.<BR>
+As consequence, the slowest animation would be of 1 frame per second. Only way to have one frame to play longer on screen is to double its input in ***Frames order***.<BR>
+The time each frame will play on screen is then calculated as follow : ***1 second divided by frame rate***.<BR>
+For instance, a frame rate of 4 will make each frame play 0.25 second on screen.<BR>
 Adjusting frame rate and playing with the inputs in Frames order makes visual acceleration or slow-down effects possible.
 
 
 ### 🔸  Duration
-`Duration:` is used to determine the period of time one animation will run until it switches to the next random one.
+`Duration:` is used to determine the period of time one animation will run until it switches to the next random one.<BR>
 Duration values are seconds.
 
 By default, most animations have a duration value of 3600 which equals to 1 hour.
 
-Duration is an underestimated setting that can be used to polish transitions in a suite of animations.
-For example, having a total of 60 inputs in ***frames order*** and 2 as ***frame rate*** would result in a 30 seconds animation.
-In order to play this animation 5 times entirely before it switches to the next, `Duration:` would be set to `150`.
+Duration is an underestimated setting that can be used to polish transitions in a suite of animations.<BR>
+For example, having a total of 60 inputs in ***frames order*** and 2 as ***frame rate*** would result in a 30 seconds animation.<BR>
+In order to play this animation 5 times entirely before it switches to the next, `Duration:` would be set to `150`.<BR>
 This way, the switching will occur at the very end of the passive sequence instead of cutting it somewhere in the middle.
 
-***Duration*** can also add some game aspect to a suite of animations.
-It can be used with passive/active animations having identical passive frames but different active sequences.
+***Duration*** can also add some game aspect to a suite of animations.<BR>
+It can be used with passive/active animations having identical passive frames but different active sequences.<BR>
 Setting a duration of 10mn (600) for example will make the user curious about what will be revealed if he presses back as, whatever the animation of the set is playing, it would always be the same passive sequence looping on the screen.
 
 
 ### 🔸  Active cooldown
-`Active cooldown:` is a delay, set in seconds, that will apply once an active period ends and during which the active sequence is not triggerable.
+`Active cooldown:` is a delay, set in seconds, that will apply once an active period ends and during which the active sequence is not triggerable.<BR>
 It forces passive frames to play during the defined time, temporarily disabling the back-button *active* trigger.
 
-As well as for ***Active cycles***, if animation has no active frames (ie `Active frames: 0`), `Active cooldown:` should be set to `0` too.
+As well as for ***Active cycles***, if animation has no active frames (ie `Active frames: 0`), `Active cooldown:` should be set to `0` too.<BR>
 As well if animation contains active frames, `Active cooldown:` should be set to at least `1`.
 !!! warning
     If those values are not set accordingly, compiling the animation via `./fbt` (to make .png frames into .bm ones) **will definitely fail**.
 
 ![09-FBT_error-Active_Cooldown](09-FBT_error-Active_Cooldown.png)
 
-However, same as for ***Active cycles***, an already compiled animation ***should*** still be able to play on Flipper without failure.
-For instance, `Active cooldown: 1` while there is no active frames : no consequences.
+However, same as for ***Active cycles***, an already compiled animation ***should*** still be able to play on Flipper without failure.<BR>
+For instance, `Active cooldown: 1` while there is no active frames : no consequences.<BR>
 And same goes with `Active cooldown: 0` while there are active frames.
 
 
 ### 🔸  Bubble slots
-`Bubble slots:` value indicates the number of bubbles "suites" that are listed to be randomly used during the active sequence of the animation.
-It is not to be confused with the number of bubbles. A slot can have many bubbles within.
-If there are multiple slots, each time active sequence is triggered, a slot will be randomly chosen and its bubbles sequence will be played.
-Otherwise, if only if `Bubble slots:` is set to `1`, the suite will always play on active sequence.
+`Bubble slots:` value indicates the number of bubbles "suites" that are listed to be randomly used during the active sequence of the animation.<BR>
+It is not to be confused with the number of bubbles. A slot can have many bubbles within.<BR>
+If there are multiple slots, each time active sequence is triggered, a slot will be randomly chosen and its bubbles sequence will be played.<BR>
+Otherwise, if only if `Bubble slots:` is set to `1`, the suite will always play on active sequence.<BR>
 If animation is not using any bubble, value must be set to `0`.
 !!! warning
     `Bubble slots:` value **MUST** be set accordingly to the defined number of slots set below. Animation will fail otherwise and Flipper would most likely crash !
