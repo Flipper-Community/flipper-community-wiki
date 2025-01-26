@@ -66,8 +66,8 @@ MkDocs-Material is built entirely on the Python platform, and can be installed o
 
 **There are two methods** you can opt to install this, depending on preference:
 
-### Method 1: Install Directly to Python
-This method with directly install MkDocs to whatever python version you are running. It is not the cleanest way to do this, but it is the simplest. 
+### Method 1: Install Directly using Python
+This method wil directly install MkDocs into whatever python version you are running. It is not the cleanest way to do this, but it is the simplest. 
 
 1. run `pip install mkdocs-material`
 1. wait for the setup to complete. 
