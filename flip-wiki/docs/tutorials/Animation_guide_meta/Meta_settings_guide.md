@@ -20,7 +20,6 @@
     - **[Bubble tail positioning](Meta_settings_guide.md#--bubble-tail-positioning)**<BR>
     - **[Bubble coordinates & Tail positioning issues](Meta_settings_guide.md#--bubble-coordinates--tail-positioning-issues)**<BR>
     - **[Start & End Frame](Meta_settings_guide.md#--start--end-frame)**<BR>
-    - **[Bubble design : insight samples](Meta_settings_guide.md#--bubble-design--insight-samples)**<BR>
 > [!NOTE]
 > For better visualization and understanding, I am using a custom firmware that allows to hide the top status bar border as well as top status icons to provide suitable screenshots.
 <BR>
@@ -30,7 +29,7 @@ Below an example of a meta.txt file content. (from Flipper Zero [L1_Cry_128x64](
 Meta is pure text file (.txt) and can be opened/edited via any text editor (such as *Notepad*).<BR><BR>
 I colored in purple the part that is mandatory, in green what is optional (only applies if **bubbles** are used) and in white the data filled by the user.<BR>
 
-![01-meta-overview](https://github.com/user-attachments/assets/a7f8dadc-fa4c-40a3-b0ce-cc56fe750d3c)
+![01-meta-overview](01-meta-overview.png)
 
 <BR>
 
@@ -103,27 +102,27 @@ The first two settings listed in meta.txt are :<BR>
 Values ​​are in pixels and must strictly match the dimensions of the animation frames.<BR>
 Since the Flipper screen can display 128x64 pixels, these would therefore be the max values.<BR>
 
-![02-W H](https://github.com/user-attachments/assets/f9892422-3e27-40ff-b09f-e7b0d2f234d0)
+![02-W H](02-W&H.png)
 
 While most animations (from official Flipper Devices or custom makers) are made, for convenience mainly, on this frame size, one can choose to make an animation with smaller frames.<BR><BR>
 Official ***Flipper Devices*** firmware contains a bunch of animations that aren't 128x64px with values such as 128x51px or 128x49px.
 Most of those are stored in flash memory (***internal*** & ***blocked*** anims) which makes sense in saving as much octets as possible due to the very low internal storage capacity. But even within the official ***external*** animations (those saved on SD), we can notice 3 (as of Nov. 24) that also use a reduced frame format.<BR><BR>
 For instance, the first frame of [L1_Laptop_128x51](https://github.com/flipperdevices/flipperzero-firmware/tree/dev/assets/dolphin/external/L1_Laptop_128x51), is (as its name specifies) only 51px high and will leave a 13px high unanimated area on top of the screen (blue-colored here) :
 
-![03-Blue-Zone](https://github.com/user-attachments/assets/ded2b2fa-edc7-45f2-8540-a37ccc26ee9e)
+![03-Blue-Zone](03-Blue-Zone.png)
 
 Frames are aligned on the BOTTOM LEFT corner without option to change that.<BR>
 While it is not an issue at all when it comes to height (as the upper part of screen is mostly displaying the status bar and icons), it should be kept in mind when setting a width inferior to 128 as animation will be left-aligned.<BR><BR>
 For example, 64x32px frame position on screen :
 
-![04-64x32px_frame](https://github.com/user-attachments/assets/50dfa14c-9b05-4bf9-b879-925297cd26c2)
+![04-64x32px_frame](04-64x32px_frame.png)
 
 > [!WARNING]
 > Setting dimensions different from the actual bitmap image, while not causing the animation to fail, will result in a distorted display.<BR>
 > Note that this will occur when compiling an animation with faulty meta values, but also when later editing the meta of an animation previously compiled with correct values.<BR>
 > For instance, the very same 64x32px bitmap frame wrongly set to `Width:54` & `Height 22` and then to `Width:74` & `Height 42` :
 
-![05-64x32px_frame-wrong_meta_size](https://github.com/user-attachments/assets/6f6b0e91-e17b-4c1d-9457-ccff46bd910e)
+![05-64x32px_frame-wrong_meta_size](05-64x32px_frame-wrong_meta_size.png)
 
 > [!TIP]
 > Animation frame must be set up to 128x64px<BR>
@@ -162,14 +161,14 @@ As well, every listed input must refer to an existing bitmap file.<BR><BR>
 In the following example (simple passive/active animation with no frame repetition), we have 10 .bm frames numbered frame_0.bm to frame_9.bm.<BR>
 6 first frames (0 to 5) are set are the *passive* ones while the 4 remaining ones (6 to 9) are set to *active*.<BR>
 
-![06-Frames_order_1](https://github.com/user-attachments/assets/dbf06614-64a9-4e7c-8e3e-db579c21e53c)
+![06-Frames_order_1](06-Frames_order_1.png)
 
 A bitmap file can be listed multiple times, and be counted multiple times in passive and/or active frames.<BR>
 The frames order being the sequence(s) of bitmap displayed following maker's choice, it does **NOT** require to be a logical numerary suite (such as 1 2 3 4...) as long as it follows the requirements mentioned above.<BR><BR>
 Next example shows those. It uses frame repetitions in an animation built on only 5 .bm frames numbered frame_0.bm to frame_4.bm, without listing the frames in a "logical" numerical order.<BR>
 We emphasize here that the number of active/passive frames is not related to the number of bitmap images, but rather to the number of calls of these in their respective sequences.
 
-![07-Frames_order_2](https://github.com/user-attachments/assets/40a6b690-1ba1-4c4c-943f-52f074dfab6e)
+![07-Frames_order_2](07-Frames_order_2.png)
 
 Still, trying to stick as much as possible to numeral order when it comes to name the bitmap files, accordingly to the position they should play within the animation, will greatly help building the ***frames order*** or editing it later (especially on long *frames order* listing 100+ inputs).<BR><BR>
 Labelling of bitmap files requiring the first frame to be named ***frame_0.bm***, the minimum input value in `Frames order:` is ***0*** in the case of a 1 only passive frame animation.<BR><BR>
@@ -183,7 +182,7 @@ As well if animation contains active frames, `Active cycles:` should be set to a
 > [!WARNING]
 > If those values are not set accordingly, compiling the animation via `./fbt` (to make .png frames into .bm ones) **will definitely fail**.
 
-![08-FBT_error-Active_Cycles](https://github.com/user-attachments/assets/170fe3dd-2c72-42b6-ae49-a03acd18c822)
+![08-FBT_error-Active_Cycles](08-FBT_error-Active_Cycles.png)
 
 However, and against all odds (and logics), an already compiled animation ***should*** still be able to play on Flipper without failure.<BR>
 For instance, `Active frames: 1` while there is **no** active frames : no noticeable consequences.<BR>
@@ -228,7 +227,7 @@ As well if animation contains active frames, `Active cooldown:` should be set to
 > [!WARNING]
 > If those values are not set accordingly, compiling the animation via `./fbt` (to make .png frames into .bm ones) **will definitely fail**.
 
-![09-FBT_error-Active_Cooldown](https://github.com/user-attachments/assets/922ce0ad-ce15-4702-8686-7380331d3b58)
+![09-FBT_error-Active_Cooldown](09-FBT_error-Active_Cooldown.png)
 
 However, same as for ***Active cycles***, an already compiled animation ***should*** still be able to play on Flipper without failure.<BR>
 For instance, `Active cooldown: 1` while there is no active frames : no consequences.<BR>
@@ -243,7 +242,7 @@ If animation is not using any bubble, value must be set to `0`.<BR>
 > [!WARNING]
 > ⮚ `Bubble slots:` value **MUST** be set accordingly to the defined number of slots set below. Animation will fail otherwise and Flipper would most likely crash !
 
-Since ***Bubbles*** is a complex subject in itself, its aspects will be reviewed in detail in the [dedicated section](https://github.com/Kuronons/FZ_graphics/blob/main/Animations/Meta_settings_guide.md#-bubbles--in-depth-guide) below.<BR><BR>
+Since ***Bubbles*** is a complex subject in itself, its aspects will be reviewed in detail in the [dedicated section](#-bubbles--in-depth-guide) below.<BR><BR>
 
 ### 🔸  Animation design : insight samples
 * **The one-only frame "animation"**<BR>
@@ -251,21 +250,21 @@ Since ***Bubbles*** is a complex subject in itself, its aspects will be reviewed
 All active settings as well as bubble ones set to **0**. ***Frame rate*** set to minimum **1** as there is no meaning to have faster fps.<BR>
 As a result we get an *unanimated animation*.<BR>
 For those who want to have a static background image that will remain on screen as long as defined in ***Duration***.<BR><BR>
-![10-Sample_1_only_frame](https://github.com/user-attachments/assets/2c80ddcf-5b6c-4c19-bc1e-5026c81e254c)
+![10-Sample_1_only_frame](10-Sample_1_only_frame.gif)
 
 * **Passive-only animation**<BR>
 This format is probably the most used by those who make custom animations by converting existing gif, movie or anime excerpt.<BR>
 It will result in an only passive-framed animation that will play in loop until its ***duration*** ends.<BR>
 One of the clever uses of this design is to create a seamless looping animation.<BR>
 **Wr3nch**'s [X_X_F0Pattern](https://github.com/wrenchathome/flip0anims/tree/main/Animations/Flipper/X_X_F0Pattern) (inspired by the interior design of the Flipper Zero carton box) is a perfect example: it seamlessly plays 11 passive frames (numbered 0-10) in a loop.<BR><BR>
-![11-Sample_Passive_Only](https://github.com/user-attachments/assets/1d42e359-7228-47bc-baee-f7590cc6426a)
+![11-Sample_Passive_Only](11-Sample_Passive_Only.gif)
 
 * **Passive/active animation : simple design**<BR>
 Official [L1_Recording_128x51](https://github.com/flipperdevices/flipperzero-firmware/tree/dev/assets/dolphin/external/L1_Recording_128x51) is a good example of a basic passive/active animation.<BR>
 Here we have a total of 12 bitmap frames (numbered 0 to 11).<BR>
 They're listed in numerical order and only once in ***Frames order***.<BR>
 The 6 first ones (0-5) are set as passive and the 6 others (6-11) as active with only 1 active cycle.<BR><BR>
-![12-Sample_AP_simple](https://github.com/user-attachments/assets/4bf49e6a-e55f-4e3c-9457-905451a5b5c2)
+![12-Sample_AP_simple](12-Sample_AP_simple.gif)
 
 * **Passive/active animation : complex design**<BR>
 Official [L1_Painting_128x64](https://github.com/flipperdevices/flipperzero-firmware/tree/dev/assets/dolphin/external/L1_Painting_128x64) is a more sophisticated passive/active animation.<BR>
@@ -273,7 +272,7 @@ While still having only 1 ***active cycle***, this animation is however using **
 This design allows an animation to extend its duration by using single bitmaps more than once.<BR>
 With only 12 bitmap files, we end up with 22 inputs total in ***Frames order***.<BR>
 It may be noted that creators of OFW animations usually have dedicated bitmaps for active and passive frames (here, respectively 0-5 and 6-11). This is not at all mandatory and is more of a design choice.<BR><BR>
-![13-Sample_AP_complex](https://github.com/user-attachments/assets/e5cd1d8e-d441-448c-b0a0-6e41d273c717)
+![13-Sample_AP_complex](13-Sample_AP_complex.gif)
 
 <BR>
 
@@ -296,7 +295,7 @@ Having only 1 bubbles slot (that will be labelled as **0**) will logically cut t
 > Only bubbles listed in a row under the same slot will display.<BR>
 > ie. if you define Slot 0, first bubble, then Slot 1 first bubble and only then Slot 0, second bubble, this last one will not show up when Slot 0 will be randomly selected.
 
-![14-Slot_order](https://github.com/user-attachments/assets/ab971203-314c-4fbc-aad0-0397831f327e)
+![14-Slot_order](14-Bubble_Slot_order.png)
 
 <BR>
 
@@ -307,18 +306,18 @@ Coordinates will be set as :
 - `X: ` = horizontal coordinate (values range = `0` to `127`)
 - `Y: ` = vertical coordinate (values range = `0` to `63`)
 
-![14-Bubble_placement](https://github.com/user-attachments/assets/f31c01b3-08a3-4a09-bbbe-886e8162004a)
+![15-Bubble_placement](15-Bubble_placement.png)
 
 We will note that the bubble layer is not dependent of the animation frames size.<BR>
 Bubble sticks to its screen coordinates and won't be affected in any way when displayed out the animation frames area as the following test shows (64x32px frames anim) :<BR>
 
-![15-Bubble_out_of_frame](https://github.com/user-attachments/assets/cd90e360-88d5-4de1-9589-e5005e792b05)
+![16-Bubble_out_of_frame](16-Bubble_out_of_frame.png)
 
 > [!TIP]
 > The placement being only defined by the upper-left corner of the bubble, it must be thought in regards of those 3 factors :<BR>
 > ⮚ Lenght of the longest text line for the X value<BR>
 > ⮚ Number of text lines for the Y one<BR>
-> ⮚ Postion of the [bubble tail](Meta_settings_guide.md#--bubble-tail-positioning)
+> ⮚ Postion of the [bubble tail](#--bubble-tail-positioning)
 
 > [!WARNING]
 > A **negative value in X or Y** will result of a ***furi_hal error*** and would most likely put your Flipper in an **endless restart-loop !!**<BR>
@@ -331,7 +330,7 @@ Bubble sticks to its screen coordinates and won't be affected in any way when di
 The displayed text of the bubble is defined by the eponymous function :
 - `Text: ` followed by the text to display. Note that the part of the text lenght that would be out of the screen will not be visible anyhow.
 
-![16-Bubble_ABCD](https://github.com/user-attachments/assets/abc037ca-266e-4ea8-99fd-293fbaa73ac3)
+![17-Bubble_ABCD](17-Bubble_ABCD.png)
 
 We see that a bubble can barely fit the 26 lowercase letters of the alphabet.<BR>
 Depending on text input, it's a matter of testing to check if it fits or not.<BR><BR>
@@ -339,20 +338,20 @@ To have multiple lines within the same bubble, `\n` can be used to define **newl
 Next line first word should be written directly after the function. (no space in between).<BR><BR>
 An input such as `Text: First line\nSecond line\nThird line\nForth line\nFifth line` would render as :
 
-![17-Bubble_5LINES_1](https://github.com/user-attachments/assets/cd08eff6-fe49-45d1-b1dd-a7318b141b54)
+![18-Bubble_5LINES_1](18-Bubble_5LINES_1.png)
 
 We note that we can only have **up to 5 lines** that would properly show on screen.<BR>
 Of course, this will be dependent of the bubble placement and some lines can be displayed out of screen depending on `Y` value.<BR>
 (`Y` must be set between 0 and 5 to be able to have 5 lines of text as well as the bubble outline in its whole displayed)
 
-![18-Bubble_5LINES_2](https://github.com/user-attachments/assets/fa5c3f05-bebb-4025-a046-544cd7fe0367)
+![19-Bubble_5LINES_2](19-Bubble_5LINES_2.png)
 
 Same goes with too many lines. Only fully displayable lines are shown.<BR>
 If we set the `Y` at its minimum value (0) and set the text on 6 lines :<BR>
 `Text: First line\nSecond line\nThird line\nForth line\nFifth line\nSixth Line`<BR>
 we end up with this result :
 
-![19-Bubble_6LINES](https://github.com/user-attachments/assets/ec7ef2f0-6934-4591-99e7-ff9923850727)
+![20-Bubble_6LINES](20-Bubble_6LINES.png)
 
 > [!TIP]
 > A maximum of 5 lines of text in a bubble using the `\n` function.<BR>
@@ -366,12 +365,12 @@ The positioning of the tail (the bubble pointer) is set by those 2 functions and
 
 As a result we have 9 (3x3) possible placement of the tail : 
 
-![20-Bubble_Tails_POS](https://github.com/user-attachments/assets/fc5028f4-5f12-4799-ba20-7c7f42742750)
+![21-Bubble_Tails_POS](21-Bubble_Tails_POS.png)
 
 We note that having both `AlignH` & `AlignV` set to `Center` results in hiding the tail.<BR><BR>
 The coded outline of the bubble is not dependent of the animation background and will remain black even on top of a black background, and as consequence will not be visible :
 
-![21-Bubble_Tails_NEG](https://github.com/user-attachments/assets/6c0f0f8a-b3f5-4397-8764-86ace73f8491)
+![22-Bubble_Tails_NEG](22-Bubble_Tails_NEG.png)
 
 It then renders slightly more squared as the rounded-angles of the outline are not visible.
 
@@ -384,7 +383,7 @@ Here comes the tricky part :<BR>
 If you set a tail to be visible, in order to be correctly displayed on screen, its design ***in its whole*** must be set to fit on the screen. Otherwise, you will face some strange behaviours.<BR><BR>
 Tails are adding a 4 pixels design on the edge of the bubble they're placed on.
 
-![22-Tail_px_size](https://github.com/user-attachments/assets/a5af6311-464e-4b96-be3a-2d41726fdc6b)
+![23-Tail_px_size](23-Tail_px_size.png)
 
 To allow a tailed-bubble to be displayed on screen without issue, bubble coordinates values must be set taking into account those additionnal 4 pixels.<BR>
 > [!WARNING]
@@ -394,18 +393,18 @@ Since a picture is worth a thousand words, let's see how it behaves if we define
 In the following tests, we will set different bubble coordinates so that it lacks 1 single pixel to allow the tail to be fully displayed.<BR>
 Again we will test with both white (orange) and black backgrounds as it helps to understand what is drawn on screen.
 
-![23-Bubble Tails_POS](https://github.com/user-attachments/assets/127a7b7b-dbf2-402d-a640-99252903727a)
+![24-Bubble Tails_POS](24-Bubble&Tails_POS.png)
 
 It enlights that issues occur when there is not enough space on TOP and/or LEFT screen sides to display the tail, creating some *backdraft* tail that displays over the text.<BR>
 We note that, apart for just displaying what fits the screen, there is no particular issue with BOTTOM or RIGHT sides of the screen.<BR>
 We will also note that, despite there is no tail to be meant to be shown on middle screenshot (`AlignH` & `AlignV` both set to `Center`), it still creates, for some reason, a single and unwanted pixel dot in the upper-left corner.
 
-![24-Bubble Tails_NEG](https://github.com/user-attachments/assets/572e48e1-fc6a-4317-b6e7-87e975e29649)
+![25-Bubble Tails_NEG](25-Bubble&Tails_NEG.png)
 
 Black background allows to enlight that the tails themselves are correctly drawn and that the issue is only on their outlines.<BR><BR>
 Testing on a single-line bubble makes even weirder result 👀 :
 
-![25-Bubble Tails_singleline](https://github.com/user-attachments/assets/e8b56ed6-9af7-4317-ba3a-36b1bae0d564)
+![26-Bubble Tails_singleline](26-Bubble&Tails_singleline.png)
 
 > [!NOTE]
 > It's important to mention that those strange artifacts are just visual bugs and won't make Flipper to crash.<BR>
@@ -434,7 +433,7 @@ It means that it takes into consideration not only the frames listed in ***Frame
 > ⮚ It behaves exactly the same way on active cycle, bubble would play until last active frame.
 
 As example, following animation has 8 passive frames (0-7) followed by 8 active ones (8-15) with a *passive* bubble (slot 0) set to display beyond passive cycle and an *active* bubble (slot 1) set to play beyond active cycle : <BR><BR> 
-![27-Bubble_Out_of_range_Endframe](https://github.com/user-attachments/assets/d0369cee-cec1-456e-91d9-258aa6cdcf0a)
+![27-Bubble_Out_of_range_Endframe](27-Bubble_Out_of_range_Endframe.gif)
 
 
 > [!WARNING]
@@ -444,7 +443,4 @@ As example, following animation has 8 passive frames (0-7) followed by 8 active 
 > To have passive + active bubbles playing along, you must set those on different slots.<BR>
 > For instance you can use slots 0 & 1 for passive and slots 2 & 3 for active.<BR>
 > The limitation in this pattern is that you can't force a logical suite between passive and active cycle bubbles if you have more than one slot defined for each cycle.
-<BR>
-
-### 🔸  Bubble design : insight samples
-WIP
+<BR><BR>
