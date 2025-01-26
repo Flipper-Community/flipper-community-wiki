@@ -252,7 +252,7 @@ If animation is not using any bubble, value must be set to `0`.
 !!! warning
     `Bubble slots:` value **MUST** be set accordingly to the defined number of slots set below. Animation will fail otherwise and Flipper would most likely crash !
 
-Since ***Bubbles*** is a complex subject in itself, its aspects will be reviewed in detail in the [dedicated section](#bubbles--in-depth-guide) below.
+Since ***Bubbles*** is a complex subject in itself, its aspects will be reviewed in detail in the [dedicated section](#bubbles-in-depth-guide) below.
 
 
 ### 🔸  Animation design : insight samples
