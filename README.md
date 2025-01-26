@@ -92,7 +92,7 @@ This method uses a built in feature of Python called a *virtual environment*, wh
     - Linux/Mac: run `source venv/bin/activate`
 1. you should now see `(venv)` added in your terminal. This means that so long as this is active, anything installed will be contained entirely in the `venv` folder we created. 
 1. run `python -m pip install mkdocs-material` and wait for the install to finish. 
-1. cd into the `flip-wiki
+1. `cd` into the `flipper-community-wiki/flip-wiki` folder
 1. once complete, run `python -m mkdocs serve` to start
 1. MkDocs will begin running at `http://127.0.0.1:8000`, browse to this in your browser
 1. Verify the wiki appears and the changes you made to the wiki appear as expected. 
