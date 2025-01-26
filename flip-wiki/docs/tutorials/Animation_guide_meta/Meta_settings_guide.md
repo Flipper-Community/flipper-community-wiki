@@ -252,42 +252,42 @@ If animation is not using any bubble, value must be set to `0`.
 !!! warning
     `Bubble slots:` value **MUST** be set accordingly to the defined number of slots set below. Animation will fail otherwise and Flipper would most likely crash !
 
-Since ***Bubbles*** is a complex subject in itself, its aspects will be reviewed in detail in the [dedicated section](#-bubbles--in-depth-guide) below.
+Since ***Bubbles*** is a complex subject in itself, its aspects will be reviewed in detail in the [dedicated section](#bubbles--in-depth-guide) below.
 
 
 ### 🔸  Animation design : insight samples
-* **The one-only frame "animation"**
-1 bitmap frame (frame_0.bm) set as 1 passive with only its input once in ***Frames order***.
-All active settings as well as bubble ones set to **0**. ***Frame rate*** set to minimum **1** as there is no meaning to have faster fps.
-As a result we get an *unanimated animation*.
+* **The one-only frame "animation"**<BR>
+1 bitmap frame (frame_0.bm) set as 1 passive with only its input once in ***Frames order***.<BR>
+All active settings as well as bubble ones set to **0**. ***Frame rate*** set to minimum **1** as there is no meaning to have faster fps.<BR>
+As a result we get an *unanimated animation*.<BR>
 For those who want to have a static background image that will remain on screen as long as defined in ***Duration***.
 
 ![10-Sample_1_only_frame](10-Sample_1_only_frame.gif)
 
 
-* **Passive-only animation**
-This format is probably the most used by those who make custom animations by converting existing gif, movie or anime excerpt.
-It will result in an only passive-framed animation that will play in loop until its ***duration*** ends.
-One of the clever uses of this design is to create a seamless looping animation.
+* **Passive-only animation**<BR>
+This format is probably the most used by those who make custom animations by converting existing gif, movie or anime excerpt.<BR>
+It will result in an only passive-framed animation that will play in loop until its ***duration*** ends.<BR>
+One of the clever uses of this design is to create a seamless looping animation.<BR>
 **Wr3nch**'s [X_X_F0Pattern](https://github.com/wrenchathome/flip0anims/tree/main/Animations/Flipper/X_X_F0Pattern) (inspired by the interior design of the Flipper Zero carton box) is a perfect example: it seamlessly plays 11 passive frames (numbered 0-10) in a loop.
 
 ![11-Sample_Passive_Only](11-Sample_Passive_Only.gif)
 
 
-* **Passive/active animation : simple design**
-Official [L1_Recording_128x51](https://github.com/flipperdevices/flipperzero-firmware/tree/dev/assets/dolphin/external/L1_Recording_128x51) is a good example of a basic passive/active animation.
-Here we have a total of 12 bitmap frames (numbered 0 to 11).
-They're listed in numerical order and only once in ***Frames order***.
+* **Passive/active animation : simple design**<BR>
+Official [L1_Recording_128x51](https://github.com/flipperdevices/flipperzero-firmware/tree/dev/assets/dolphin/external/L1_Recording_128x51) is a good example of a basic passive/active animation.<BR>
+Here we have a total of 12 bitmap frames (numbered 0 to 11).<BR>
+They're listed in numerical order and only once in ***Frames order***.<BR>
 The 6 first ones (0-5) are set as passive and the 6 others (6-11) as active with only 1 active cycle.
 
 ![12-Sample_AP_simple](12-Sample_AP_simple.gif)
 
 
-* **Passive/active animation : complex design**
-Official [L1_Painting_128x64](https://github.com/flipperdevices/flipperzero-firmware/tree/dev/assets/dolphin/external/L1_Painting_128x64) is a more sophisticated passive/active animation.
-While still having only 1 ***active cycle***, this animation is however using ***bubbles*** (2 on one slot).
-This design allows an animation to extend its duration by using single bitmaps more than once.
-With only 12 bitmap files, we end up with 22 inputs total in ***Frames order***.
+* **Passive/active animation : complex design**<BR>
+Official [L1_Painting_128x64](https://github.com/flipperdevices/flipperzero-firmware/tree/dev/assets/dolphin/external/L1_Painting_128x64) is a more sophisticated passive/active animation.<BR>
+While still having only 1 ***active cycle***, this animation is however using ***bubbles*** (2 on one slot).<BR>
+This design allows an animation to extend its duration by using single bitmaps more than once.<BR>
+With only 12 bitmap files, we end up with 22 inputs total in ***Frames order***.<BR>
 It may be noted that creators of OFW animations usually have dedicated bitmaps for active and passive frames (here, respectively 0-5 and 6-11). This is not at all mandatory and is more of a design choice.
 
 ![13-Sample_AP_complex](13-Sample_AP_complex.gif)
@@ -296,19 +296,19 @@ It may be noted that creators of OFW animations usually have dedicated bitmaps f
 
 ## 💬 BUBBLES : in-depth guide
 ### 🔸  Bubbles : Definition
-Bubbles are text inputs that will display as an additional layer above an animation, enclosed in coded-drawn lines in the spirit of comic book speech bubble.
+Bubbles are text inputs that will display as an additional layer above an animation, enclosed in coded-drawn lines in the spirit of comic book speech bubble.<BR>
 It's important to mention that ***bubbles*** were originally designed to be used only in an active sequence.
 
 
 ### 🔸  Bubble slot
-As previously mentioned, slots are suites of bubbles meant to randomly play during the active sequence of the animation.
-`Slot:` value indicates which slot the bubble will be part of.
-For instance, if slot #2 is randomly selected, only the bubbles being set to `Slot: 2` will play in the actual active sequence.
+As previously mentioned, slots are suites of bubbles meant to randomly play during the active sequence of the animation.<BR>
+`Slot:` value indicates which slot the bubble will be part of.<BR>
+For instance, if slot #2 is randomly selected, only the bubbles being set to `Slot: 2` will play in the actual active sequence.<BR>
 Next time the active sequence will be triggered, another slot will be randomly chosen.
 
 As for frames, first slot is numbered `0`.
 
-A slot can have multiple bubbles within so every bubble of the same sequence must share the same `Slot:` value.
+A slot can have multiple bubbles within so every bubble of the same sequence must share the same `Slot:` value.<BR>
 Having only 1 bubbles slot (that will be labelled as **0**) will logically cut the random process and the bubbles sequence will always play when active one is triggered.
 !!! warning
     ⮚ All bubbles inside a same slot must be listed together in a row, one after another before listing the next slot bubbles.<BR>
@@ -319,15 +319,15 @@ Having only 1 bubbles slot (that will be labelled as **0**) will logically cut t
 
 
 ### 🔸  Bubble placement
-Bubble placement on screen is defined by its upper-left corner coordinates.
-Screen is  128x64px. First column (X - from left) as well as first line (Y - from top) are designed by **0**.
-Coordinates will be set as :
-- `X: ` = horizontal coordinate (values range = `0` to `127`)
+Bubble placement on screen is defined by its upper-left corner coordinates.<BR>
+Screen is  128x64px. First column (X - from left) as well as first line (Y - from top) are designed by **0**.<BR>
+Coordinates will be set as :<BR>
+- `X: ` = horizontal coordinate (values range = `0` to `127`)<BR>
 - `Y: ` = vertical coordinate (values range = `0` to `63`)
 
 ![15-Bubble_placement](15-Bubble_placement.png)
 
-We will note that the bubble layer is not dependent of the animation frames size.
+We will note that the bubble layer is not dependent of the animation frames size.<BR>
 Bubble sticks to its screen coordinates and won't be affected in any way when displayed out the animation frames area as the following test shows (64x32px frames anim) :
 
 ![16-Bubble_out_of_frame](16-Bubble_out_of_frame.png)
@@ -346,30 +346,30 @@ Bubble sticks to its screen coordinates and won't be affected in any way when di
 
 
 ### 🔸  Bubble text line
-The displayed text of the bubble is defined by the eponymous function :
+The displayed text of the bubble is defined by the eponymous function :<BR>
 - `Text: ` followed by the text to display. Note that the part of the text lenght that would be out of the screen will not be visible anyhow.
 
 ![17-Bubble_ABCD](17-Bubble_ABCD.png)
 
-We see that a bubble can barely fit the 26 lowercase letters of the alphabet.
+We see that a bubble can barely fit the 26 lowercase letters of the alphabet.<BR>
 Depending on text input, it's a matter of testing to check if it fits or not.
 
-To have multiple lines within the same bubble, `\n` can be used to define **newline**.
+To have multiple lines within the same bubble, `\n` can be used to define **newline**.<BR>
 Next line first word should be written directly after the function. (no space in between).
 
 An input such as `Text: First line\nSecond line\nThird line\nForth line\nFifth line` would render as :
 
 ![18-Bubble_5LINES_1](18-Bubble_5LINES_1.png)
 
-We note that we can only have **up to 5 lines** that would properly show on screen.
-Of course, this will be dependent of the bubble placement and some lines can be displayed out of screen depending on `Y` value.
+We note that we can only have **up to 5 lines** that would properly show on screen.<BR>
+Of course, this will be dependent of the bubble placement and some lines can be displayed out of screen depending on `Y` value.<BR>
 (`Y` must be set between 0 and 5 to be able to have 5 lines of text as well as the bubble outline in its whole displayed)
 
 ![19-Bubble_5LINES_2](19-Bubble_5LINES_2.png)
 
-Same goes with too many lines. Only fully displayable lines are shown.
-If we set the `Y` at its minimum value (0) and set the text on 6 lines :
-`Text: First line\nSecond line\nThird line\nForth line\nFifth line\nSixth Line`
+Same goes with too many lines. Only fully displayable lines are shown.<BR>
+If we set the `Y` at its minimum value (0) and set the text on 6 lines :<BR>
+`Text: First line\nSecond line\nThird line\nForth line\nFifth line\nSixth Line`<BR>
 we end up with this result :
 
 ![20-Bubble_6LINES](20-Bubble_6LINES.png)
@@ -380,8 +380,8 @@ we end up with this result :
 
 
 ### 🔸  Bubble tail positioning
-The positioning of the tail (the bubble pointer) is set by those 2 functions and their applicable options :
-- `AlignH: ` = **H**orizontal **Align**ment (Options = `Left`, `Center`, `Right`)
+The positioning of the tail (the bubble pointer) is set by those 2 functions and their applicable options :<BR>
+- `AlignH: ` = **H**orizontal **Align**ment (Options = `Left`, `Center`, `Right`)<BR>
 - `AlignV: ` = **V**ertical **Align**ment (Options = `Top`, `Center`, `Bottom`)
 
 As a result we have 9 (3x3) possible placement of the tail : 
@@ -401,7 +401,7 @@ It then renders slightly more squared as the rounded-angles of the outline are n
 
 
 ### 🔸  Bubble coordinates & Tail positioning issues
-Here comes the tricky part :
+Here comes the tricky part :<BR>
 If you set a tail to be visible, in order to be correctly displayed on screen, its design ***in its whole*** must be set to fit on the screen. Otherwise, you will face some strange behaviours.
 
 Tails are adding a 4 pixels design on the edge of the bubble they're placed on.
@@ -412,14 +412,14 @@ To allow a tailed-bubble to be displayed on screen without issue, bubble coordin
 !!! warning
     Issue will occur if there are less than 4 pixels between the screen's **left** or **top** border and the tail.
 
-Since a picture is worth a thousand words, let's see how it behaves if we define a bubble with insufficient space on the edges for its tail to be displayed correctly.
-In the following tests, we will set different bubble coordinates so that it lacks 1 single pixel to allow the tail to be fully displayed.
+Since a picture is worth a thousand words, let's see how it behaves if we define a bubble with insufficient space on the edges for its tail to be displayed correctly.<BR>
+In the following tests, we will set different bubble coordinates so that it lacks 1 single pixel to allow the tail to be fully displayed.<BR>
 Again we will test with both white (orange) and black backgrounds as it helps to understand what is drawn on screen.
 
 ![24-Bubble Tails_POS](24-Bubble&Tails_POS.png)
 
-It enlights that issues occur when there is not enough space on TOP and/or LEFT screen sides to display the tail, creating some *backdraft* tail that displays over the text.
-We note that, apart for just displaying what fits the screen, there is no particular issue with BOTTOM or RIGHT sides of the screen.
+It enlights that issues occur when there is not enough space on TOP and/or LEFT screen sides to display the tail, creating some *backdraft* tail that displays over the text.<BR>
+We note that, apart for just displaying what fits the screen, there is no particular issue with BOTTOM or RIGHT sides of the screen.<BR>
 We will also note that, despite there is no tail to be meant to be shown on middle screenshot (`AlignH` & `AlignV` both set to `Center`), it still creates, for some reason, a single and unwanted pixel dot in the upper-left corner.
 
 ![25-Bubble Tails_NEG](25-Bubble&Tails_NEG.png)
@@ -443,12 +443,12 @@ Testing on a single-line bubble makes even weirder result 👀 :
 
 
 ### 🔸  Start & End Frame
-To define when a particular bubble is meant to play within a slot sequence, the following functions are used :
-`StartFrame:` sets on which frame bubble starts playing
+To define when a particular bubble is meant to play within a slot sequence, the following functions are used :<BR>
+`StartFrame:` sets on which frame bubble starts playing<BR>
 `EndFrame:` sets the last frame bubble is playing
 
-Each value corresponds to the position of the frame on the total *Passive + Active cycles* sequence.
-It means that it takes into consideration not only the frames listed in ***Frames order*** but also counts the possible remaining ***Active cycle(s)*** that come after.
+Each value corresponds to the position of the frame on the total *Passive + Active cycles* sequence.<BR>
+It means that it takes into consideration not only the frames listed in ***Frames order*** but also counts the possible remaining ***Active cycle(s)*** that come after.<BR>
 ⮚ As consequence a bubble can be set starting on an active cycle and ending on another.
 !!! note
     While it wasn't designed for, a bubble can be set to play during the passive cycle.<BR>
