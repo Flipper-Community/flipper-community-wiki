@@ -6,7 +6,7 @@ Please be sure submissions meet the [contribution guidelines](https://flipper.wi
 # Technical Info
 This wiki is built using the python based mkdocs builder utilizing the material theme (mkdocs-material).
 
-It recommended, but not required, that contributors looking to add content run the wiki locally to verify formatting behaves as expected before submitting a pull request to verify the content looks as expected and ensure a smooth pull request process.
+It is recommended, but not required, that contributors looking to add content run the wiki locally to verify formatting behaves as expected before submitting a pull request to verify the content looks as expected and ensure a smooth pull request process.
 To do so, you will need either a copy of [Git](https://git-scm.com/downloads) or the [Github client](https://github.com/apps/desktop) installed to your PC. 
 
 You will then need to fork this repo using the fork button on this Github page to your own Github account, clone it to to your PC, make changes, then submit a Pull Request. 

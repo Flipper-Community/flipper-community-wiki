@@ -65,7 +65,7 @@ markdown_extensions:
       permalink: true
 
 
-### Navigation Heirarchy ###
+### Navigation Hierarchy ###
 ### Add your .md files in this section ###
 nav:
   - Home: index.md
