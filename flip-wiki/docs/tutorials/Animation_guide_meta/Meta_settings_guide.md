@@ -107,17 +107,17 @@ For example, 64x32px frame position on screen :
 ![04-64x32px_frame](04-64x32px_frame.png)
 
 !!! warning
-    Setting dimensions different from the actual bitmap image, while not causing the animation to fail, will result in a distorted display.
-    Note that this will occur when compiling an animation with faulty meta values, but also when later editing the meta of an animation previously compiled with correct values.
+    Setting dimensions different from the actual bitmap image, while not causing the animation to fail, will result in a distorted display.<BR>
+    Note that this will occur when compiling an animation with faulty meta values, but also when later editing the meta of an animation previously compiled with correct values.<BR>
     For instance, the very same 64x32px bitmap frame wrongly set to `Width:54` & `Height 22` and then to `Width:74` & `Height 42` :
 
 ![05-64x32px_frame-wrong_meta_size](05-64x32px_frame-wrong_meta_size.png)
 
 !!! tip
-    ⮚ Animation frame must be set up to 128x64px
-    ⮚ Width & Height values must match the pixel dimensions of the frames.
-    ⮚ Those being defined in the meta, all frames of one animation must have the same dimensions.
-    ⮚ Frames are bottom-left aligned.
+    ⮚ Animation frame must be set up to 128x64px.<BR>
+    ⮚ Width & Height values must match the pixel dimensions of the frames.<BR>
+    ⮚ Those being defined in the meta, all frames of one animation must have the same dimensions.<BR>
+    ⮚ Frames are bottom-left aligned.<BR>
     ⮚ Using frames of dimensions inferior to 128x64px makes only sense when editing an animation meant to be put in Flipper's internal memory. There would not be any significant impact for the ones stored on SD.
 
 
@@ -194,7 +194,7 @@ The number of frames that make up the ***active cycles*** above the first one ar
 `Frame rate:` is the well known ***fps*** : Frames Per Second.
 It defines how many frames will be played during 1 second.
 !!! note
-    Historically, theatre movie standard fps was set on 24.
+    Historically, theatre movie standard fps was set on 24.<BR>
     Drawn-animation however had usually a fps set to 12 and even lower (mainly due to production costs) such as 6 or 8 when it came to *Saturday Morning Cartoons* type animations.
 
 Flipper will not be able to handle very high fps mainly due to hardware limitation (RAM size and display capability).
@@ -293,8 +293,8 @@ It may be noted that creators of OFW animations usually have dedicated bitmaps f
 ![13-Sample_AP_complex](13-Sample_AP_complex.gif)
 
 
+
 ## 💬 BUBBLES : in-depth guide
-‎
 ### 🔸  Bubbles : Definition
 Bubbles are text inputs that will display as an additional layer above an animation, enclosed in coded-drawn lines in the spirit of comic book speech bubble.
 It's important to mention that ***bubbles*** were originally designed to be used only in an active sequence.
@@ -311,8 +311,8 @@ As for frames, first slot is numbered `0`.
 A slot can have multiple bubbles within so every bubble of the same sequence must share the same `Slot:` value.
 Having only 1 bubbles slot (that will be labelled as **0**) will logically cut the random process and the bubbles sequence will always play when active one is triggered.
 !!! warning
-    ⮚ All bubbles inside a same slot must be listed together in a row, one after another before listing the next slot bubbles.
-    ⮚ Only bubbles listed in a row under the same slot will display.
+    ⮚ All bubbles inside a same slot must be listed together in a row, one after another before listing the next slot bubbles.<BR>
+    ⮚ Only bubbles listed in a row under the same slot will display.<BR>
     ie. if you define Slot 0, first bubble, then Slot 1 first bubble and only then Slot 0, second bubble, this last one will not show up when Slot 0 will be randomly selected.
 
 ![14-Slot_order](14-Bubble_Slot_order.png)
@@ -333,15 +333,15 @@ Bubble sticks to its screen coordinates and won't be affected in any way when di
 ![16-Bubble_out_of_frame](16-Bubble_out_of_frame.png)
 
 !!! tip
-    The placement being only defined by the upper-left corner of the bubble, it must be thought in regards of those 3 factors :
-    ⮚ Lenght of the longest text line for the X value.
-    ⮚ Number of text lines for the Y one.
-    ⮚ Postion of the [bubble tail](#--bubble-tail-positioning)
+    The placement being only defined by the upper-left corner of the bubble, it must be thought in regards of those 3 factors :<BR>
+    ⮚ Lenght of the longest text line for the X value.<BR>
+    ⮚ Number of text lines for the Y one.<BR>
+    ⮚ Postion of the [bubble tail](#bubble-tail-positioning)
 
 !!! warning
-    A **negative value in X or Y** will result of a ***furi_hal error*** and would most likely put your Flipper in an **endless restart-loop !!**
-    If it happens, just get the SD out and fix the meta by entering a positive value.
-    If you don't have an SD card reader, take the SD card out and re-insert it again without passing the SD welcome splash-screen.
+    A **negative value in X or Y** will result of a ***furi_hal error*** and would most likely put your Flipper in an **endless restart-loop !!**<BR>
+    If it happens, just get the SD out and fix the meta by entering a positive value.<BR>
+    If you don't have an SD card reader, take the SD card out and re-insert it again without passing the SD welcome splash-screen.<BR>
     It will allow you to overwrite the non-functioning meta via qFlipper files management.
 
 
@@ -375,7 +375,7 @@ we end up with this result :
 ![20-Bubble_6LINES](20-Bubble_6LINES.png)
 
 !!! tip
-    ⮚ A maximum of 5 lines of text in a bubble using the `\n` function.
+    ⮚ A maximum of 5 lines of text in a bubble using the `\n` function.<BR>
     ⮚ A maximum of 20-30 characters (spaces included) on a line.
 
 
@@ -431,14 +431,14 @@ Testing on a single-line bubble makes even weirder result 👀 :
 ![26-Bubble Tails_singleline](26-Bubble&Tails_singleline.png)
 
 !!! note
-    It's important to mention that those strange artifacts are just visual bugs and won't make Flipper to crash.
+    It's important to mention that those strange artifacts are just visual bugs and won't make Flipper to crash.<BR>
     One could decide to use those strange tail behaviours in some artistic way... 
 
 !!! tip
-    When ***bubble*** is a layer above the ***animation*** one, main screen ***status bar*** and ***icons/battery*** are on layers above bubble one.
-    ⮚ That must be taken into consideration to avoid having text partially covered by those.
-    Ensure safe bubble coordinates and tail position accordingly.
-    ⮚ It's safer/easier to set your bubble `X: ` & `Y: ` to at least `4` to ensure avoiding issue with tail.
+    When ***bubble*** is a layer above the ***animation*** one, main screen ***status bar*** and ***icons/battery*** are on layers above bubble one.<BR>
+    ⮚ That must be taken into consideration to avoid having text partially covered by those.<BR>
+    Ensure safe bubble coordinates and tail position accordingly.<BR>
+    ⮚ It's safer/easier to set your bubble `X: ` & `Y: ` to at least `4` to ensure avoiding issue with tail.<BR>
     ⮚ If possible, set your tail position to the sides (or center) of the bubble that are furthest from the edge of the screen.
 
 
@@ -451,10 +451,10 @@ Each value corresponds to the position of the frame on the total *Passive + Acti
 It means that it takes into consideration not only the frames listed in ***Frames order*** but also counts the possible remaining ***Active cycle(s)*** that come after.
 ⮚ As consequence a bubble can be set starting on an active cycle and ending on another.
 !!! note
-    While it wasn't designed for, a bubble can be set to play during the passive cycle.
-    ⮚ However passive cycle will only play the first bubble of the slot and this one only even if additional ones have been set.
-    ⮚ If multiple slots, passive cycle bubble will randomly change slot only when active cycle is triggered. It would remain on the same slot in loop otherwise.
-    ⮚ If the `EndFrame` value is set incorrectly beyond the passive cycle last frame, it has no real consequence : bubble will stop playing on last passive frame. For instance if passive cycle contains 8 frames (0 to 7) and bubble is set to play from 5 to 12, it will only be played on frames 5 to 7.
+    While it wasn't designed for, a bubble can be set to play during the passive cycle.<BR>
+    ⮚ However passive cycle will only play the first bubble of the slot and this one only even if additional ones have been set.<BR>
+    ⮚ If multiple slots, passive cycle bubble will randomly change slot only when active cycle is triggered. It would remain on the same slot in loop otherwise.<BR>
+    ⮚ If the `EndFrame` value is set incorrectly beyond the passive cycle last frame, it has no real consequence : bubble will stop playing on last passive frame. For instance if passive cycle contains 8 frames (0 to 7) and bubble is set to play from 5 to 12, it will only be played on frames 5 to 7.<BR>
     ⮚ It behaves exactly the same way on active cycle, bubble would play until last active frame.
 
 As example, following animation has 8 passive frames (0-7) followed by 8 active ones (8-15) with a *passive* bubble (slot 0) set to display beyond passive cycle and an *active* bubble (slot 1) set to play beyond active cycle :
@@ -465,8 +465,8 @@ As example, following animation has 8 passive frames (0-7) followed by 8 active 
     A slot with a bubble set in passive cycle **will not** play the following bubbles even if set in active cycle.
 
 !!! tip
-    To have passive + active bubbles playing along, you must set those on different slots.
-    For instance you can use slots 0 & 1 for passive and slots 2 & 3 for active.
+    To have passive + active bubbles playing along, you must set those on different slots.<BR>
+    For instance you can use slots 0 & 1 for passive and slots 2 & 3 for active.<BR>
     The limitation in this pattern is that you can't force a logical suite between passive and active cycle bubbles if you have more than one slot defined for each cycle.
 
 **O_oV**
