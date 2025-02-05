@@ -1,5 +1,5 @@
 # Infrared Overview
-The Flipper Zero contains both an infrared receiver and 3 powerful infrared LED's that have a transmit range of 10 to 30 meters, depending on the environment. The infrared system is only half duplex, meaning it can only transmit or receive. It cannot do both at the same time. By default, the Flipper Zero can transmit at frequencies up to 56 kHz, but only receive frequencies at 38 kHz. 
+The Flipper Zero contains both an infrared receiver and 3 powerful infrared LED's that have a transmit range of about a maximum of 10 meters, depending on the environment. The infrared system is only half duplex, meaning it can only transmit or receive. It cannot do both at the same time. By default, the Flipper Zero can transmit at frequencies up to 56 kHz, but only receive frequencies at 38 kHz. 
 
 For general usage information, [see the official documentation page on infrared](https://docs.flipper.net/infrared).
 
