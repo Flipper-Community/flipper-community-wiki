@@ -7,7 +7,7 @@
     - Have we mentioned how ***great*** they are?!
     - Do you know how ***cool*** reading them makes you?!
 - Read our [**very cool FAQ!**](faq-general.md)
-
+- Having issues? Check out the [**Troubleshooting page!**](troubleshooting.md)
 ## What Not To Do
 
 ### Do Not Try Copying a Car Remote/Keyfob

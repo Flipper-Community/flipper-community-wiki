@@ -60,7 +60,7 @@ Requirements: Webserial capable browsers such as **Google Chrome** or **Microsof
     1. Wait 5 seconds, then release the **BOOT** button. 
 1. Navigate to the [FZEE Flasher site](https://fzeeflasher.com)
 1. Click **Connect**
-1. Depending on your connection style chosen above, you will see one of these two options to connect to in a new pop up window:
+1. Depending on your [connection style chosen above](#connection-methods), you will see one of these two options to connect to in a new pop up window:
     - ESP32-S2
     - Flipper *flipperNameHere*
 1. Click one of those two connections and hit the connect button
@@ -96,7 +96,7 @@ Requirements: Webserial capable browsers such as **Google Chrome** or **Microsof
     1. While continuing to hold the **BOOT** button, press and release the **RESET** button for one second
     1. Wait 5 seconds, then release the **BOOT** button 
 1. Click **Connect**
-1. Depending on your connection style chosen above, you will see one of these two options to connect to in a new pop up window:
+1. Depending on your [connection style chosen above](#connection-methods), you will see one of these two options to connect to in a new pop up window:
     - ESP32-S2
     - Flipper *flipperNameHere*
 1. Click one of those two connections and hit the connect button

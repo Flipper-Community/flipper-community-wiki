@@ -1,6 +1,9 @@
 # Troubleshooting
-For guides to troubleshoot some of the more obscure Flipper Zero issues, see the items below.
+It is recommended first that you check out the [^^Device Troubleshooting section of the official troubleshooting docs^^](https://support.flipper.net/hc/en-us) before proceeding below, as your question *may* be answered there. 
 
+For guides to troubleshoot some of the more obscure Flipper Zero issues, see the items below:
+
+[TOC]
 
 ## Flipper Zero
 
