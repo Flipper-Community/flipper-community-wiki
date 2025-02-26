@@ -1,5 +1,5 @@
 # Pull Request Guide
-This guide seeks to provide some information for those who may not have much experience with github, git, or pull requests but wish to add to the wiki.
+This guide seeks to provide some information for those who may not have much experience with Github, git, or pull requests but wish to add to the wiki.
 Instructions are intended to be followed on a personal computer. 
 
 ## Prerequisites
@@ -61,7 +61,7 @@ We will also only want to add files we have added or changed, and nothing else.
 1. Run `git commit -m "Your message here providing a short description of changes made"` to create a commit.
     - if this is your first time running git, it will prompt you about setting your name and email. You will need to set these to whatever you like (doesn't have to be real info if you do not desire it to be so). Just run the commands it provides to set your email and name, the re-run the commit command above. 
 1. We can now push this up to Github by running `git push origin master`
-    - This should prompt git to ask you for your github login username and password if it is your first time. Go ahead and enter this in.
+    - This should prompt git to ask you for your Github login username and password if it is your first time. Go ahead and enter this in.
 1. If all goes well, the command should complete without raising any errors.
 1. Verify your files are now on Github under your wiki repository on the website.
 

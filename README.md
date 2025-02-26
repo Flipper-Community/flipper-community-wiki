@@ -31,7 +31,7 @@ For this, we will use the awesome tiny [uv](https://astral.sh) utility to manage
 1. run `winget install astral-sh.uv`
 1. Hit yes on any prompts, and wait for the install to finish. 
 1. close and re-open Powershell. 
-1. Using git or the github client, clone your fork of the docs to your PC. 
+1. Using git or the Github client, clone your fork of the docs to your PC. 
 1. In Powershell, `cd` into the `flipper-community-wiki\flip-wiki` folder that you got from cloning your fork onto your PC. 
 1. simply run `uvx --from mkdocs-material mkdocs serve` to launch mkdocs seamlessly without installing anything to your PC.
     - Note: the tool will say `warning: An executable named mkdocs is not provided(...)`, you can safely disregard this, as mkdocs-material just looks odd the way its set up to this utility.  
@@ -104,8 +104,8 @@ When done, you can close out the virtual environment by typing `deactivate` in y
 
 
 ## Adding New Pages
-1. Fork this github repo and clone your copy to your PC. 
-1. Optionally install mkdocs using the above instructions if you dont have it to preview pages (strongly recommended)
+1. [Fork this Github repo and clone your copy to your PC](pull-request-guide.md). 
+1. Optionally install mkdocs using the above instructions if you don't have it to preview pages (strongly recommended)
 1. Enter the `flip-wiki/docs` folder
 1. Create whatever doc files you want in named `.md` files.
 1. Once done, add them to the `flip-wiki/mkdocs.yml` towards the bottom under the `Navigation Heirarchy` section, following the pattern of the other `.md` files.
