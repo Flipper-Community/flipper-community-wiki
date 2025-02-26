@@ -1,6 +1,6 @@
 # Flipper Community wiki
 This is the repo for the [Flipper community wiki](https://flipper.wiki).
-If you'd like to contribute to this wiki, you may fork the repo and offer your changes as a pull request.
+If you'd like to contribute to this wiki, you may [fork the repo and offer your changes as a pull request](pull-request-guide.md).
 Please be sure submissions meet the [contribution guidelines](https://flipper.wiki/contributing/).
 
 # Technical Info
