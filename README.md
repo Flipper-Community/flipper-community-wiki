@@ -11,6 +11,8 @@ To do so, you will need either a copy of [Git](https://git-scm.com/downloads) or
 
 You will then need to fork this repo using the fork button on this Github page to your own Github account, clone it to to your PC, make changes, then submit a Pull Request. 
 
+#### If you are unfamiliar with using git and making pull requests on Github, see the [Pull Request Guide](pull-request-guide.md)
+
 # Setup Guide: Running this Wiki Locally
 
 First, clone your forked copy to your local computer so that you can make changes to it.
