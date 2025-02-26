@@ -82,7 +82,7 @@ This method wil directly install MkDocs into whatever python version you are run
 ----
 
 ### Method 2: Install using a Python virtual environment
-This method uses a built in feature of Python called a *virtual environment*, which allows you to contain what you install to python inside of a single folder on your PC, so that is does not interfere with anything else on your computer, Allowing you to cleanly delete the folder when done and remove all trace of what you installed (in this case, MkDocs). 
+This method uses a built in feature of Python called a *virtual environment*, which allows you to contain what you install to python inside of a single folder on your PC, so that is does not interfere with anything else on your computer, allowing you to cleanly delete the folder when done and remove all trace of what you installed (in this case, MkDocs). 
 
 1. Using git or the Github Desktop app, clone your fork of the wiki to your desktop. 
 1. You should now have a `flipper-community-wiki` folder. 

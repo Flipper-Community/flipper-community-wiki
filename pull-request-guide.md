@@ -33,10 +33,10 @@ You should now have your own copy of the wiki in your own repository to change a
 
 ### Cloning to your PC
 1. Browse to your profile on Github
-1. Click Repositories
+1. Click **Repositories**
 1. Find the wiki fork you created in the [forking step](#forking-the-github-repository) and click to navigate to it
 1. Click the green `Code` button, then choose **HTTPS**
-1. Copy the URL that github provided
+1. Copy the URL that Github provided
 1. On your PC, decide on a easily accessible folder that you'd like to copy files into (I.E. a folder created on your desktop or something)
 1. Open up a terminal on your PC (typically this will be Powershell or Bash depending on OS)
 1. `cd` into the easily accessible folder you created in the earlier step. 
