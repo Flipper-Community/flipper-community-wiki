@@ -7,11 +7,11 @@ Please be sure submissions meet the [contribution guidelines](https://flipper.wi
 This wiki is built using the python based mkdocs builder utilizing the material theme (mkdocs-material).
 
 It is recommended, but not required, that contributors looking to add content run the wiki locally to verify formatting behaves as expected before submitting a pull request to verify the content looks as expected and ensure a smooth pull request process.
-To do so, you will need either a copy of [Git](https://git-scm.com/downloads) or the [Github client](https://github.com/apps/desktop) installed to your PC. 
+To do so, you will need either a copy of [Git](https://git-scm.com/downloads) or the [GitHub client](https://github.com/apps/desktop) installed to your PC. 
 
-You will then need to fork this repo using the fork button on this Github page to your own Github account, clone it to to your PC, make changes, then submit a Pull Request. 
+You will then need to fork this repo using the fork button on this GitHub page to your own GitHub account, clone it to to your PC, make changes, then submit a Pull Request. 
 
-#### If you are unfamiliar with using git and making pull requests on Github, see the [Pull Request Guide](pull-request-guide.md)
+#### If you are unfamiliar with using git and making pull requests on GitHub, see the [Pull Request Guide](pull-request-guide.md)
 
 # Setup Guide: Running this Wiki Locally
 
@@ -31,7 +31,7 @@ For this, we will use the awesome tiny [uv](https://astral.sh) utility to manage
 1. run `winget install astral-sh.uv`
 1. Hit yes on any prompts, and wait for the install to finish. 
 1. close and re-open Powershell. 
-1. Using git or the Github client, clone your fork of the docs to your PC. 
+1. Using git or the GitHub client, clone your fork of the docs to your PC. 
 1. In Powershell, `cd` into the `flipper-community-wiki\flip-wiki` folder that you got from cloning your fork onto your PC. 
 1. simply run `uvx --from mkdocs-material mkdocs serve` to launch mkdocs seamlessly without installing anything to your PC.
     - Note: the tool will say `warning: An executable named mkdocs is not provided(...)`, you can safely disregard this, as mkdocs-material just looks odd the way its set up to this utility.  
@@ -84,7 +84,7 @@ This method wil directly install MkDocs into whatever python version you are run
 ### Method 2: Install using a Python virtual environment
 This method uses a built in feature of Python called a *virtual environment*, which allows you to contain what you install to python inside of a single folder on your PC, so that is does not interfere with anything else on your computer, allowing you to cleanly delete the folder when done and remove all trace of what you installed (in this case, MkDocs). 
 
-1. Using git or the Github Desktop app, clone your fork of the wiki to your desktop. 
+1. Using git or the GitHub Desktop app, clone your fork of the wiki to your desktop. 
 1. You should now have a `flipper-community-wiki` folder. 
 1. open up Powershell or your preferred terminal and `cd` inside of this folder. 
 1. run `python -m venv venv` and wait for this to complete. 
@@ -104,7 +104,7 @@ When done, you can close out the virtual environment by typing `deactivate` in y
 
 
 ## Adding New Pages
-1. [Fork this Github repo and clone your copy to your PC](pull-request-guide.md). 
+1. [Fork this GitHub repo and clone your copy to your PC](pull-request-guide.md). 
 1. Optionally install mkdocs using the above instructions if you don't have it to preview pages (strongly recommended)
 1. Enter the `flip-wiki/docs` folder
 1. Create whatever doc files you want in named `.md` files.
