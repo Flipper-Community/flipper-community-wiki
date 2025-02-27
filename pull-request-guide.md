@@ -1,26 +1,26 @@
 # Pull Request Guide
-This guide seeks to provide some information for those who may not have much experience with Github, git, or pull requests but wish to add to the wiki.
+This guide seeks to provide some information for those who may not have much experience with GitHub, git, or pull requests but wish to add to the wiki.
 Instructions are intended to be followed on a personal computer. 
 
 ## Prerequisites
 To make a pull request, you'll need the following items:
 
 - An installed copy of [Git](https://git-scm.com/downloads)
-- A Github account that you have created and signed in to
+- A GitHub account that you have created and signed in to
 
 ## Pull Request Process
 Below is the general workflow that a pull request requires:
 
-1. [Fork the Github repository](#forking-the-github-repository)
+1. [Fork the GitHub repository](#forking-the-github-repository)
 1. [Clone to your local computer](#cloning-to-your-pc)
 1. [Make your changes](#make-your-changes)
-1. [Use git to commit changes back up to Github](#commit-changes-back-to-github)
-1. [Create a pull request on Github](#create-a-pull-request)
+1. [Use git to commit changes back up to GitHub](#commit-changes-back-to-github)
+1. [Create a pull request on GitHub](#create-a-pull-request)
 
 
-### Forking the Github Repository
+### Forking the GitHub Repository
 
-After one has signed into their Github account, you should now see a `Fork` button at the top right area on the [Flipper Community Wiki](https://github.com/Flipper-Community/flipper-community-wiki). 
+After one has signed into their GitHub account, you should now see a `Fork` button at the top right area on the [Flipper Community Wiki](https://github.com/Flipper-Community/flipper-community-wiki). 
 To fork the Flipper Community Wiki: do the following:
 
 1. Click the `Fork` button
@@ -32,11 +32,11 @@ To fork the Flipper Community Wiki: do the following:
 You should now have your own copy of the wiki in your own repository to change as you like. 
 
 ### Cloning to your PC
-1. Browse to your profile on Github
+1. Browse to your profile on GitHub
 1. Click **Repositories**
 1. Find the wiki fork you created in the [forking step](#forking-the-github-repository) and click to navigate to it
 1. Click the green `Code` button, then choose **HTTPS**
-1. Copy the URL that Github provided
+1. Copy the URL that GitHub provided
 1. On your PC, decide on a easily accessible folder that you'd like to copy files into (I.E. a folder created on your desktop or something)
 1. Open up a terminal on your PC (typically this will be Powershell or Bash depending on OS)
 1. `cd` into the easily accessible folder you created in the earlier step. 
@@ -48,7 +48,7 @@ You are now ready to add to the wiki.
 Refer to the [main readme for getting mkdocs set up and testing your changes](README.md).
 Then return to this guide once you have your changes in place. 
 
-### Commit changes back to Github
+### Commit changes back to GitHub
 Once you are done making changes to the wiki, we will then need to add our changes to git and create a commit to store them. 
 We will also only want to add files we have added or changed, and nothing else. 
 
@@ -60,15 +60,15 @@ We will also only want to add files we have added or changed, and nothing else.
 1. If everything looks correct, we are now ready to commit this. 
 1. Run `git commit -m "Your message here providing a short description of changes made"` to create a commit.
     - if this is your first time running git, it will prompt you about setting your name and email. You will need to set these to whatever you like (doesn't have to be real info if you do not desire it to be so). Just run the commands it provides to set your email and name, the re-run the commit command above. 
-1. We can now push this up to Github by running `git push origin master`
-    - This should prompt git to ask you for your Github login username and password if it is your first time. Go ahead and enter this in.
+1. We can now push this up to GitHub by running `git push origin master`
+    - This should prompt git to ask you for your GitHub login username and password if it is your first time. Go ahead and enter this in.
 1. If all goes well, the command should complete without raising any errors.
-1. Verify your files are now on Github under your wiki repository on the website.
+1. Verify your files are now on GitHub under your wiki repository on the website.
 
 ### Create a Pull Request
-After making any needed commits to Github, you are now ready to create a Pull Request on the Flipper Community Wiki. 
+After making any needed commits to GitHub, you are now ready to create a Pull Request on the Flipper Community Wiki. 
 
-1. Navigate to your copy of the community wiki on Github
+1. Navigate to your copy of the community wiki on GitHub
 1. In the top left area, click the **Pull requests** tab
 1. On the right upper side, click **New pull request**
 1. At the top of this page, you will have an area that describes how the data to flow
