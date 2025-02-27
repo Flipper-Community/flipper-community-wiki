@@ -2,19 +2,23 @@
 !!! warning "**WARNING**"
     *You __should not__ be using your Flipper Zero to emulate your arcade data card.*
 
-The five main arcade data cards are:
+The five main arcade data cards currently in use are:
 
-| Company | Card | Chip | FeliCa<br>AIC | Notable<br>Games |
+| Company | Card | Chip | FeliCa<br>AIC | Supported<br>Games |
 | ----------- | ---------- | ------------ | ----------- | ----------- |
-| **Andamiro**<br>*AM* | [AM.PASS](https://am-pass.net/) | ICODE SLI<br>ICODE SLIX<br>ICODE SLIX2 | - | [Chrono Circle](https://chrono-circle.com/)<br>[PIU](https://piugame.com/) |
-| **Bandai Namco**<br>*BN* | [Bandai Namco Passport](https://banapass.net/setlocale/en/)<br>*Banapass / BNP* | MIFARE Classic | X | [Taiko](https://donderhiroba.jp/login.php)<br>[WM6RR](https://wanganmaxi-official.com/wanganmaxi6rr/en/) |
-| **Konami** | [e-amusement pass](https://p.eagate.573.jp/index.html)<br>*e-amuse / eap*| ICODE SLI | X | [DDR](https://p.eagate.573.jp/game/ddr/ddrworld/top/index.html)<br>[SDVX](https://p.eagate.573.jp/game/sdvx/vi/) |
-| **Sega** | [Aime](https://my-aime.net/en/) | MIFARE Classic | X | [IDAC](https://initiald.sega.jp/inidac/)<br>[maimai](https://maimai.sega.com/) |
-| **Taito** | [NESiCA](https://nesica.net/) | MIFARE Ultralight | X | [MUSiCDiVER](https://musicdiver.jp/index.html)<br>[SF6TA](https://sf6ta.jp/) |
+| **Andamiro**<br>*AM* | [AM.PASS](https://am-pass.net/) | ICODE SLI<br>ICODE SLIX<br>ICODE SLIX2 | - | [Pump It Up](https://piugame.com/) |
+| **Bandai Namco**<br>*BN* | [Bandai Namco Passport](https://banapass.net/setlocale/en/)<br>*Banapass / BNP* | MIFARE Classic | X | [太鼓の達人](https://donderhiroba.jp/login.php)<br>*Taiko no Tatsujin*<br>[湾岸マキシ](https://wanganmaxi-official.com/wanganmaxi6rr/en/)<br>*Wangan Maxi* |
+| **Konami** | [e-amusement pass](https://p.eagate.573.jp/index.html)<br>*e-amuse / eap*| ICODE SLI | X | [DanceDanceRevolution](https://p.eagate.573.jp/game/ddr/ddrworld/top/index.html)<br>[SOUND VOLTEX](https://p.eagate.573.jp/game/sdvx/vi/) |
+| **Sega** | [Aime](https://my-aime.net/en/) | MIFARE Classic | X | [CHUNITHM](https://chunithm.sega.com)<br>[頭文字D](https://initiald.sega.jp/inidac/)<br>*InitialD*<br>[maimai](https://maimai.sega.com/) |
+| **Taito** | [NESiCA](https://nesica.net/) | MIFARE Ultralight | X | [MUSIC DIVER](https://musicdiver.jp/index.html)<br>[STREET FIGHTER](https://sf6ta.jp/) |
 
-The Flipper Zero includes the `Sega Aime` and `Bandai Namco Passport` access keys in the system dictionary as of OFW 0.98.2, with the `Sega Aime` parser for revealing the corresponding access code.
+The Flipper Zero includes the MFC `Sega Aime` and `Bandai Namco Passport` access keys in the system dictionary as of OFW 0.98.2.
 
-The latter four companies have FeliCa card variants endorsed with the `Amusement IC Card [AIC]` logo, with the Flipper Zero having expanded its `FeliCa` emulation support as of OFW 0.103.1, and emulation compatibility is listed below:
+The `Sega Aime` parser reveals its access code.
+
+The latter four companies have FeliCa card variants endorsed with the `Amusement IC Card [AIC]` logo.
+
+The Flipper Zero expanded its `FeliCa` emulation support as of OFW 0.103.1.
 
 ### Arcade Data Card Emulation Compatibility
 | Card | Chip | AM | BN | Konami | Sega | Taito |
@@ -27,19 +31,26 @@ The latter four companies have FeliCa card variants endorsed with the `Amusement
 | NESiCA | MFU | - | - | - | - | X |
 
 ### Arcade Data Card Emulation Compatibility Notes
-- If FeliCa emulation does not work, you may need to:
+- If FeliCa emulation does not work, you firstly need to:
     1. Back up your microSD card;
-    1. Synchronise your Flipper Zero with your Mobile App;
+    1. Reboot your Flipper Zero;
+    1. Synchronise your Flipper Zero with your [Mobile App / qFlipper](https://flipperzero.one/update);
+    1. Update to the latest OFW Version; then,
+    1. Update any installed Apps;
+- If FeliCa emulation *still* does not work, you then need to:       
+    1. Back up your microSD card;
+    1. Format your microSD card;
     1. Factory reset your Flipper Zero;
-    1. Format your microSD card; then,
-    1. Update to the latest OFW Version.
+    1. Re-connect your Flipper to your [Mobile App / qFlipper](https://flipperzero.one/update);
+    1. Re-update to the latest OFW Version; then,
+    1. Re-install any external Apps.
 - There is an issue that prevents the Flipper Zero from emulating:
     1. FeliCa `Amusement IC Cards` on `Sega` games;
     1. ICODE SLI `e-amusement pass` cards on `Konami` games;
     1. MFC `Aime` cards on `Sega` games; and,
     1. MFC `Bandai Namco Passport` cards on `Sega` games.
 - Emulation compatibility cannot be tested for `Taito` games without further assistance from Members located within Japan.
-- The ICODE SLI `e-amusement pass` cards are not compatible with `Andamiro` games.
+- The ICODE SLI `e-amusement pass` cards are not compatible with `Andamiro` games *and vice versa*.
 
 ## Arcade Payment Cards
 !!! warning "**WARNING**"
