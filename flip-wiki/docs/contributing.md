@@ -5,7 +5,7 @@ The underlying Github repo can be [located here](https://github.com/Flipper-Comm
 ## Contributer Guidelines
 The following guidelines should be kept in mind when submitting changes:
 
-- This wiki may grow to support other Flipper items beyond just the Flipper zero, so be precise about which device you reference. 
+- This wiki may grow to support other Flipper items beyond just the Flipper Zero, so be precise about which device you reference. 
 - Our audience is international based, so use clear and precise language, avoiding slang or acronyms without explanation.
 - Do not provide guides to facilitate illegal activity.
     - This includes but is not restricted to: jamming, illegal radio transmitting, defeating regional frequency locks, and fraud
