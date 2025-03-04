@@ -21,14 +21,14 @@ The latter four companies have FeliCa card variants endorsed with the `Amusement
 The Flipper Zero expanded its `FeliCa` emulation support as of OFW 0.103.1.
 
 ### Arcade Data Card Emulation Compatibility
-| Card | Chip | AM | BN | Konami | Sega | Taito |
-| ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- |
-| AIC | FeliCa | - | X | X | - | - | 
-| Aime | MFC | - | X | - | - | - |
-| AM.PASS | ICODE | X | - | - | - | - |  
-| Banapass | MFC | - | X | - | - | - |
-| e-amuse | ICODE | - | - | - | - | - |
-| NESiCA | MFU | - | - | - | - | X |
+| Card         | Chip   | AM | BN | Konami | Sega | Taito |
+| ------------ | ------ | -- | -- | ------ | ---- | ----- |
+| **AIC**      | FeliCa | -  | X  | X      | -    | -     | 
+| **Aime**     | MFC    | -  | X  | -      | -    | -     |
+| **AM.PASS**  | ICODE  | X  | -  | -      | -    | -     |  
+| **Banapass** | MFC    | -  | X  | -      | -    | -     |
+| **e-amuse**  | ICODE  | -  | -  | -      | -    | -     |
+| **NESiCA**   | MFU    | -  | -  | -      | -    | X     |
 
 ### Arcade Data Card Emulation Compatibility Notes
 - If FeliCa emulation does not work, you firstly need to:
