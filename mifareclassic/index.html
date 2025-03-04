@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
     
     
       
@@ -752,7 +752,7 @@
         <li class="md-nav__item">
   <a href="#reading-the-card" class="md-nav__link">
     <span class="md-ellipsis">
-      Reading the card
+      Reading the Card
     </span>
   </a>
   
@@ -1627,7 +1627,7 @@
         <li class="md-nav__item">
   <a href="#reading-the-card" class="md-nav__link">
     <span class="md-ellipsis">
-      Reading the card
+      Reading the Card
     </span>
   </a>
   
@@ -1673,27 +1673,27 @@
 <h1 id="mifare-classic">MIFARE Classic<a class="headerlink" href="#mifare-classic" title="Permanent link">&para;</a></h1>
 <p>Here are the steps to follow in order to read your cards. Your goal is to find as many keys as possible. The keys unlock sections of your card for the Flipper to read them - you must have a card. Once you read enough sections, you can use an emulated or cloned card at the original card reader to unlock it (sometimes even without finding all of the keys!).</p>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
-<p>You must update your firmware (<a href="https://docs.flipper.net/basics/firmware-update">how-to</a>) to the latest official firmware (OFW) release (version 1.1.2 or later). You must also install the <a href="https://lab.flipper.net/apps/mfkey">MFKey app</a> (version 3.0 or later).</p>
-<h2 id="reading-the-card">Reading the card<a class="headerlink" href="#reading-the-card" title="Permanent link">&para;</a></h2>
+<p>You must update your firmware (<a href="https://docs.flipper.net/basics/firmware-update"><strong>how-to</strong></a>) to the latest official firmware (OFW) release (version 1.1.2 or later). You must also install the <a href="https://lab.flipper.net/apps/mfkey"><strong>MFKey app</strong></a> (version 3.0 or later).</p>
+<h2 id="reading-the-card">Reading the Card<a class="headerlink" href="#reading-the-card" title="Permanent link">&para;</a></h2>
 <p>Steps:</p>
 <ol>
-<li><strong>Read from NFC app</strong>: Try to scan your MIFARE Classic card with NFC -&gt; Read. It will try a dictionary (and KDF) attack of default keys to unlock your card, as well as any keys you may have found through other methods. If it finds 32/32 keys (or 80/80) with 16/16 sectors (or 40/40), congratulations and <a href="./#emulation">proceed to "Emulation"</a>. If not, wait for nonce collection to complete (be patient!) and continue to step 2.</li>
-<li><strong>Crack with MFKey app</strong>: Navigate to Main Menu -&gt; Applications -&gt; NFC -&gt; MFKey, press OK to run. Do not interrupt the cracking process, it may take a while! When the cracking process is complete, the number of new user keys (or candidate keys) that are found will be shown. If more than zero keys are found, return to step 1 and repeat the process.</li>
+<li><strong>Read From NFC App</strong>:<br>Try to scan your MIFARE Classic card with NFC -&gt; Read. It will try a dictionary (and KDF) attack of default keys to unlock your card, as well as any keys you may have found through other methods. If it finds 32/32 keys (or 80/80) with 16/16 sectors (or 40/40), congratulations and <a href="./#emulation"><strong>proceed to "Emulation"</strong></a>. If not, wait for nonce collection to complete (be patient!) and continue to step 2.</li>
+<li><strong>Crack With MFKey App</strong>:<br>Navigate to Main Menu -&gt; Applications -&gt; NFC -&gt; MFKey, press OK to run. Do not interrupt the cracking process, it may take a while! When the cracking process is complete, the number of new user keys (or candidate keys) that are found will be shown. If more than zero keys are found, return to step 1 and repeat the process.</li>
 </ol>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
 <p>Q: <strong>I have zero keys, how do I find more?</strong></p>
 <p>A: You can find more keys from the card reader (the same one you would normally tap your card against) using the Mfkey32 attack. Navigate to NFC -&gt; Extract MF Keys and hold the Flipper Zero up to the reader. If the reader unlocks during this process, it is using the UID of the card and is highly insecure. Otherwise, it'll collect "nonces" from the reader. You can crack the nonces to find the reader keys by running MFKey following Extract MF Keys (navigate to Main Menu -&gt; Applications -&gt; NFC -&gt; MFKey, press OK to run).</p>
-<p>When the cracking process is complete, the number of new user keys (or candidate keys) that are found will be shown. If more than zero keys are found, return to step 1 of <a href="#reading-the-card">Reading the card</a> and repeat the process.</p>
+<p>When the cracking process is complete, the number of new user keys (or candidate keys) that are found will be shown. If more than zero keys are found, return to step 1 of <a href="#reading-the-card"><strong>Reading the Card</strong></a> and repeat the process.</p>
 <p>Q: <strong>When I read the card in the NFC app, it says "(Hard)" at the top, and when I use MFKey it errors with "No nonces found". How do I find new keys?</strong></p>
 <p>A: You need to perform a Hardnested attack using the nonces your Flipper Zero saved when reading the card. You have two options:</p>
 <ul>
-<li>Follow the guide to run HardnestedRecovery <a href="https://github.com/noproto/HardnestedRecovery#usage">here</a>.</li>
-<li>Upload the .nested.log from your device (nfc/.nested.log on your SD card) to <a href="https://flipperzero.club/hardnested/">this website</a> and copy any found keys back to your user dictionary (nfc/assets/mf_classic_dict_user.nfc on your SD card). You can also manually add new keys on the Flipper by navigating to Main Menu -&gt; NFC -&gt; Extra Actions -&gt; MIFARE Classic Keys -&gt; Add.</li>
+<li>Follow the guide to run HardnestedRecovery <a href="https://github.com/noproto/HardnestedRecovery#usage"><strong>here</strong></a>.</li>
+<li>Upload the .nested.log from your device (nfc/.nested.log on your SD card) to <a href="https://flipperzero.club/hardnested/"><strong>this website</strong></a> and copy any found keys back to your user dictionary (nfc/assets/mf_classic_dict_user.nfc on your SD card). You can also manually add new keys on the Flipper by navigating to Main Menu -&gt; NFC -&gt; Extra Actions -&gt; MIFARE Classic Keys -&gt; Add.</li>
 </ul>
 <h2 id="emulation">Emulation<a class="headerlink" href="#emulation" title="Permanent link">&para;</a></h2>
 <p><img alt="Emulation" src="https://gist.githubusercontent.com/noproto/2ee35c1916b358924c08f77645a46d81/raw/c4f19920a2ccbe4c66998476a3d4d76c2f98ad78/emulation.png" title="Emulation" /></p>
 <p>Go to NFC -&gt; Saved -&gt; (The name you assigned your card) -&gt; Emulate and hold it up to the reader. Try various angles to find the correct positioning.</p>
-<p>Even if you have all of the keys and try to emulate your card, you may find the reader still does not accept the emulated card (<a href="https://flp.wiki/nfc/mfc/emulation/">https://flp.wiki/nfc/mfc/emulation/</a>). This is often a timing issue (slow emulation on the Flipper Zero). You have three options:</p>
+<p>Even if you have all of the keys and try to emulate your card, you may find the reader still does not accept the emulated card (<strong><a href="https://flp.wiki/nfc/mfc/emulation/">https://flp.wiki/nfc/mfc/emulation/</a></strong>). This is often a timing issue (slow emulation on the Flipper Zero). You have three options:</p>
 <ul>
 <li>Update your Flipper Zero to the latest firmware (0.94.0 or above). Flipper Devices rewrote the NFC stack, which improved MIFARE Classic dictionary attacks and emulation.</li>
 <li>
@@ -1702,12 +1702,16 @@
 <li>4 byte UID (e.g. <code>AA BB CC DD</code>): Gen1a Magic Card (💲), Gen2 Magic Card - 4 byte UID variant (💲💲)</li>
 <li>7 byte UID (e.g. <code>AA BB CC DD EE FF 00</code>): Gen2 Magic Card - 7 byte UID variant (💲💲), Gen4/Ultimate Magic Card (💲💲💲)</li>
 </ul>
-<p>Follow the official guide to write the card data to a magic card: (<a href="https://docs.flipper.net/nfc/magic-cards">https://docs.flipper.net/nfc/magic-cards</a>).</p>
+<p>Follow the official guide to write the card data to a magic card: (<strong><a href="https://docs.flipper.net/nfc/magic-cards">https://docs.flipper.net/nfc/magic-cards</a></strong>).</p>
 </li>
 <li>
-<p>If you have a spare identical MIFARE Classic card (1K for 1K, 4K for 4K, EV1 for EV1, etc.), have all of the keys to the spare card, and the access conditions on the spare card allow: you can duplicate the data from the initial card to the spare card and it could possibly work (if the reader is indifferent to the UID of the card, and if the keys are <em>diversified</em> - you will need the diversified keys from the reader using Mfkey32/KDF provided they are not already present on the card). ⚠️ IMPORTANT: Save the data stored on the spare card before overwriting it, otherwise it will be irrecoverably erased. This is less reliable than using a magic card, but an option if you are unable to obtain a magic card.</p>
+<p>If you have a spare identical MIFARE Classic card (1K for 1K, 4K for 4K, EV1 for EV1, etc.), have all of the keys to the spare card, and the access conditions on the spare card allow: you can duplicate the data from the initial card to the spare card and it could possibly work (if the reader is indifferent to the UID of the card, and if the keys are <em>diversified</em> - you will need the diversified keys from the reader using Mfkey32/KDF provided they are not already present on the card).</p>
 </li>
 </ul>
+<div class="admonition warning">
+<p class="admonition-title"><strong>WARNING</strong></p>
+<p><em>Save the data stored on the spare card before overwriting it, otherwise it will be irrecoverably erased. This is less reliable than using a magic card, but an option if you are unable to obtain a magic card.</em></p>
+</div>
 
 
 
@@ -1761,7 +1765,7 @@
     <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
       
     
   </body>

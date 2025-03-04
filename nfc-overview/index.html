@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
     
     
       
@@ -719,18 +719,45 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#mifare-classic" class="md-nav__link">
+  <a href="#hid-iclass" class="md-nav__link">
     <span class="md-ellipsis">
-      Mifare Classic
+      HID iCLASS
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#hid-seosdesfire" class="md-nav__link">
+  <a href="#hid-seos" class="md-nav__link">
     <span class="md-ellipsis">
-      HID Seos/Desfire
+      HID Seos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#felica" class="md-nav__link">
+    <span class="md-ellipsis">
+      FeliCa
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nxp-mifare-classic" class="md-nav__link">
+    <span class="md-ellipsis">
+      NXP MIFARE Classic
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nxp-mifare-desfire-nxp-mifare-plus-nxp-mifare-ultralight" class="md-nav__link">
+    <span class="md-ellipsis">
+      NXP MIFARE DESFire / NXP MIFARE Plus / NXP MIFARE Ultralight
     </span>
   </a>
   
@@ -1598,18 +1625,45 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#mifare-classic" class="md-nav__link">
+  <a href="#hid-iclass" class="md-nav__link">
     <span class="md-ellipsis">
-      Mifare Classic
+      HID iCLASS
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#hid-seosdesfire" class="md-nav__link">
+  <a href="#hid-seos" class="md-nav__link">
     <span class="md-ellipsis">
-      HID Seos/Desfire
+      HID Seos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#felica" class="md-nav__link">
+    <span class="md-ellipsis">
+      FeliCa
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nxp-mifare-classic" class="md-nav__link">
+    <span class="md-ellipsis">
+      NXP MIFARE Classic
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nxp-mifare-desfire-nxp-mifare-plus-nxp-mifare-ultralight" class="md-nav__link">
+    <span class="md-ellipsis">
+      NXP MIFARE DESFire / NXP MIFARE Plus / NXP MIFARE Ultralight
     </span>
   </a>
   
@@ -1635,16 +1689,46 @@
 
 
 <h1 id="nfc-overview">NFC Overview<a class="headerlink" href="#nfc-overview" title="Permanent link">&para;</a></h1>
-<p>The Flipper Zero can read and emulate a number of NFC tags. Keep in mind however that NFC RFID technology is a complex topic with <em>many</em> tag types of varying security, and not all can be read by the device. 
-The official <a href="https://docs.flipper.net/nfc/read">Flipper Zero docs</a> detail what types of cards can and cannot be used with the device. Additionally, while the device can read these cards, not all of them can be saved or emulated due to the higher security design of select NFC formats. </p>
-<h2 id="mifare-classic">Mifare Classic<a class="headerlink" href="#mifare-classic" title="Permanent link">&para;</a></h2>
+<p>The official <a href="https://docs.flipper.net/nfc"><strong>Flipper Zero NFC docs</strong></a> detail what type of NFC tags can be used with the Flipper Zero, and whether it can:
+- Read the NFC tag;
+- Write to the NFC tag;
+- Save the NFC tag as an <code>.nfc</code> file; and/or,
+- Emulate the saved NFC tag.</p>
+<hr />
+<h2 id="hid-iclass">HID iCLASS<a class="headerlink" href="#hid-iclass" title="Permanent link">&para;</a></h2>
 <ul>
-<li>See our <a href="../mifareclassic/"><strong>MIFARE Classic guide</strong></a></li>
-<li>For making copies of mifare classic, refer to the <a href="https://docs.flipper.net/nfc/magic-cards">documentation</a></li>
+<li>Use <a href="https://lab.flipper.net/apps/picopass"><strong>PicoPass</strong></a> to read standard-keyed iCLASS and some elite-keyed iCLASS.</li>
+<li>Use <a href="https://lab.flipper.net/apps/seader"><strong>Seader</strong></a> <em>with a compatible NARD and SAM</em> to read some iCLASS SE credentials.</li>
 </ul>
-<h2 id="hid-seosdesfire">HID Seos/Desfire<a class="headerlink" href="#hid-seosdesfire" title="Permanent link">&para;</a></h2>
+<hr />
+<h2 id="hid-seos">HID Seos<a class="headerlink" href="#hid-seos" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Standard keyed can be read with <a href="https://lab.flipper.net/apps/seader">Seader</a></li>
+<li>Use <a href="https://lab.flipper.net/apps/seader"><strong>Seader</strong></a> <em>with a compatible NARD and SAM</em> to read standard-keyed Seos.</li>
+</ul>
+<hr />
+<h2 id="felica">FeliCa<a class="headerlink" href="#felica" title="Permanent link">&para;</a></h2>
+<ul>
+<li><em>Also known as Felicity Card</em></li>
+<li>If applicable:</li>
+<li>See our <a href="../arcadecards/"><strong>Arcade guide</strong></a>.</li>
+<li>See our <a href="../publictransport/"><strong>Public Transport guide</strong></a>.</li>
+</ul>
+<hr />
+<h2 id="nxp-mifare-classic">NXP MIFARE Classic<a class="headerlink" href="#nxp-mifare-classic" title="Permanent link">&para;</a></h2>
+<ul>
+<li>See our <a href="../mifareclassic/"><strong>MIFARE Classic guide</strong></a>.</li>
+<li>See <a href="https://docs.flipper.net/nfc/magic-cards"><strong>Flipper Zero's Magic Cards doc</strong></a> for making copies of a MIFARE Classic.</li>
+<li>If applicable:</li>
+<li>See our <a href="../arcadecards/"><strong>Arcade guide</strong></a>.</li>
+<li>See our <a href="../publictransport/"><strong>Public Transport guide</strong></a>.</li>
+</ul>
+<hr />
+<h2 id="nxp-mifare-desfire-nxp-mifare-plus-nxp-mifare-ultralight">NXP MIFARE DESFire / NXP MIFARE Plus / NXP MIFARE Ultralight<a class="headerlink" href="#nxp-mifare-desfire-nxp-mifare-plus-nxp-mifare-ultralight" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Use the <code>NFC</code> App to read basic information about a MIFARE.</li>
+<li>If applicable:</li>
+<li>See our <a href="../arcadecards/"><strong>Arcade guide</strong></a>.</li>
+<li>See our <a href="../publictransport/"><strong>Public Transport guide</strong></a>.</li>
 </ul>
 
 
@@ -1699,7 +1783,7 @@ The official <a href="https://docs.flipper.net/nfc/read">Flipper Zero docs</a> d
     <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
       
     
   </body>

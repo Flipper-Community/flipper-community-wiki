@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
     
     
       
@@ -1683,7 +1683,7 @@
 <p class="admonition-title"><strong>WARNING</strong></p>
 <p><em>You <strong>should not</strong> be using your Flipper Zero to emulate your arcade data card.</em></p>
 </div>
-<p>The five main arcade data cards are:</p>
+<p>The five main arcade data cards currently in use are:</p>
 <table>
 <thead>
 <tr>
@@ -1691,7 +1691,7 @@
 <th>Card</th>
 <th>Chip</th>
 <th>FeliCa<br>AIC</th>
-<th>Notable<br>Games</th>
+<th>Supported<br>Games</th>
 </tr>
 </thead>
 <tbody>
@@ -1700,40 +1700,42 @@
 <td><a href="https://am-pass.net/">AM.PASS</a></td>
 <td>ICODE SLI<br>ICODE SLIX<br>ICODE SLIX2</td>
 <td>-</td>
-<td><a href="https://chrono-circle.com/">Chrono Circle</a><br><a href="https://piugame.com/">PIU</a></td>
+<td><a href="https://piugame.com/">Pump It Up</a></td>
 </tr>
 <tr>
 <td><strong>Bandai Namco</strong><br><em>BN</em></td>
 <td><a href="https://banapass.net/setlocale/en/">Bandai Namco Passport</a><br><em>Banapass / BNP</em></td>
 <td>MIFARE Classic</td>
 <td>X</td>
-<td><a href="https://donderhiroba.jp/login.php">Taiko</a><br><a href="https://wanganmaxi-official.com/wanganmaxi6rr/en/">WM6RR</a></td>
+<td><a href="https://donderhiroba.jp/login.php">太鼓の達人</a><br><em>Taiko no Tatsujin</em><br><a href="https://wanganmaxi-official.com/wanganmaxi6rr/en/">湾岸マキシ</a><br><em>Wangan Maxi</em></td>
 </tr>
 <tr>
 <td><strong>Konami</strong></td>
 <td><a href="https://p.eagate.573.jp/index.html">e-amusement pass</a><br><em>e-amuse / eap</em></td>
 <td>ICODE SLI</td>
 <td>X</td>
-<td><a href="https://p.eagate.573.jp/game/ddr/ddrworld/top/index.html">DDR</a><br><a href="https://p.eagate.573.jp/game/sdvx/vi/">SDVX</a></td>
+<td><a href="https://p.eagate.573.jp/game/ddr/ddrworld/top/index.html">DanceDanceRevolution</a><br><a href="https://p.eagate.573.jp/game/sdvx/vi/">SOUND VOLTEX</a></td>
 </tr>
 <tr>
 <td><strong>Sega</strong></td>
 <td><a href="https://my-aime.net/en/">Aime</a></td>
 <td>MIFARE Classic</td>
 <td>X</td>
-<td><a href="https://initiald.sega.jp/inidac/">IDAC</a><br><a href="https://maimai.sega.com/">maimai</a></td>
+<td><a href="https://chunithm.sega.com">CHUNITHM</a><br><a href="https://initiald.sega.jp/inidac/">頭文字D</a><br><em>InitialD</em><br><a href="https://maimai.sega.com/">maimai</a></td>
 </tr>
 <tr>
 <td><strong>Taito</strong></td>
 <td><a href="https://nesica.net/">NESiCA</a></td>
 <td>MIFARE Ultralight</td>
 <td>X</td>
-<td><a href="https://musicdiver.jp/index.html">MUSiCDiVER</a><br><a href="https://sf6ta.jp/">SF6TA</a></td>
+<td><a href="https://musicdiver.jp/index.html">MUSIC DIVER</a><br><a href="https://sf6ta.jp/">STREET FIGHTER</a></td>
 </tr>
 </tbody>
 </table>
-<p>The Flipper Zero includes the <code>Sega Aime</code> and <code>Bandai Namco Passport</code> access keys in the system dictionary as of OFW 0.98.2, with the <code>Sega Aime</code> parser for revealing the corresponding access code.</p>
-<p>The latter four companies have FeliCa card variants endorsed with the <code>Amusement IC Card [AIC]</code> logo, with the Flipper Zero having expanded its <code>FeliCa</code> emulation support as of OFW 0.103.1, and emulation compatibility is listed below:</p>
+<p>The Flipper Zero includes the MFC <code>Sega Aime</code> and <code>Bandai Namco Passport</code> access keys in the system dictionary as of OFW 0.98.2.</p>
+<p>The <code>Sega Aime</code> parser reveals its access code.</p>
+<p>The latter four companies have FeliCa card variants endorsed with the <code>Amusement IC Card [AIC]</code> logo.</p>
+<p>The Flipper Zero expanded its <code>FeliCa</code> emulation support as of OFW 0.103.1.</p>
 <h3 id="arcade-data-card-emulation-compatibility">Arcade Data Card Emulation Compatibility<a class="headerlink" href="#arcade-data-card-emulation-compatibility" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -1806,12 +1808,21 @@
 </table>
 <h3 id="arcade-data-card-emulation-compatibility-notes">Arcade Data Card Emulation Compatibility Notes<a class="headerlink" href="#arcade-data-card-emulation-compatibility-notes" title="Permanent link">&para;</a></h3>
 <ul>
-<li>If FeliCa emulation does not work, you may need to:<ol>
+<li>If FeliCa emulation does not work, you firstly need to:<ol>
 <li>Back up your microSD card;</li>
-<li>Synchronise your Flipper Zero with your Mobile App;</li>
+<li>Reboot your Flipper Zero;</li>
+<li>Synchronise your Flipper Zero with your <a href="https://flipperzero.one/update">Mobile App / qFlipper</a>;</li>
+<li>Update to the latest OFW Version; then,</li>
+<li>Update any installed Apps;</li>
+</ol>
+</li>
+<li>If FeliCa emulation <em>still</em> does not work, you then need to:       <ol>
+<li>Back up your microSD card;</li>
+<li>Format your microSD card;</li>
 <li>Factory reset your Flipper Zero;</li>
-<li>Format your microSD card; then,</li>
-<li>Update to the latest OFW Version.</li>
+<li>Re-connect your Flipper to your <a href="https://flipperzero.one/update">Mobile App / qFlipper</a>;</li>
+<li>Re-update to the latest OFW Version; then,</li>
+<li>Re-install any external Apps.</li>
 </ol>
 </li>
 <li>There is an issue that prevents the Flipper Zero from emulating:<ol>
@@ -1822,7 +1833,7 @@
 </ol>
 </li>
 <li>Emulation compatibility cannot be tested for <code>Taito</code> games without further assistance from Members located within Japan.</li>
-<li>The ICODE SLI <code>e-amusement pass</code> cards are not compatible with <code>Andamiro</code> games.</li>
+<li>The ICODE SLI <code>e-amusement pass</code> cards are not compatible with <code>Andamiro</code> games <em>and vice versa</em>.</li>
 </ul>
 <h2 id="arcade-payment-cards">Arcade Payment Cards<a class="headerlink" href="#arcade-payment-cards" title="Permanent link">&para;</a></h2>
 <div class="admonition warning">
@@ -1897,7 +1908,7 @@
     <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
       
     
   </body>
