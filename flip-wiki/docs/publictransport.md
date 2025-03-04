@@ -10,7 +10,7 @@
 
 ## FeliCa
 If you have a Japan Rail IC Card, then you can use either `MetroDroid` or the Android version of `NFC TagInfo by NXP` to view some information relating to the card.
-`Metroflip` is currently adding support for Japan Rail IC Cards, and this page will be updated when that is released.
+`Metroflip` is currently adding support for HKG Octopus and Japan Rail IC Cards, and this page will be updated when `Metroflip`'s author releases that update.
 
 ## MIFARE Classic
 If your transit agency is using MIFARE Classic, then follow [the MIFARE Classic guide](mifareclassic.md).
