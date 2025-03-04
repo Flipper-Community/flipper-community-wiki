@@ -1677,34 +1677,155 @@
 </div>
 <h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://github.com/metrodroid/metrodroid">MetroDroid</a></li>
-<li><a href="https://lab.flipper.net/apps/metroflip">Metroflip</a></li>
-<li><a href="https://play.google.com/store/apps/details?id=com.nxp.taginfolite">NFC TagInfo by NXP: Google Play</a></li>
-<li><a href="https://apps.apple.com/us/app/nfc-taginfo-by-nxp/id1246143596">NFC TagInfo by NXP: App Store</a></li>
+<li><a href="https://github.com/metrodroid/metrodroid"><strong>MetroDroid</strong></a></li>
+<li><a href="https://lab.flipper.net/apps/metroflip"><strong>Metroflip</strong></a></li>
+<li><a href="https://play.google.com/store/apps/details?id=com.nxp.taginfolite"><strong>NFC TagInfo by NXP: Google Play</strong></a></li>
+<li><a href="https://apps.apple.com/us/app/nfc-taginfo-by-nxp/id1246143596"><strong>NFC TagInfo by NXP: App Store</strong></a></li>
 </ul>
 <h2 id="felica">FeliCa<a class="headerlink" href="#felica" title="Permanent link">&para;</a></h2>
 <p>If you have a Japan Rail IC Card, then you can use either <code>MetroDroid</code> or the Android version of <code>NFC TagInfo by NXP</code> to view some information relating to the card.
 <code>Metroflip</code> is currently adding support for HKG Octopus and Japan Rail IC Cards, and this page will be updated when <code>Metroflip</code>'s author releases that update.</p>
 <h2 id="mifare-classic">MIFARE Classic<a class="headerlink" href="#mifare-classic" title="Permanent link">&para;</a></h2>
-<p>If your transit agency is using MIFARE Classic, then follow <a href="../mifareclassic/">the MIFARE Classic guide</a>.</p>
+<p>If your transit agency is using MIFARE Classic, then follow <a href="../mifareclassic/"><strong>the MIFARE Classic guide</strong></a>.</p>
 <h2 id="mifare-desfire">MIFARE DESFire<a class="headerlink" href="#mifare-desfire" title="Permanent link">&para;</a></h2>
-<p>If your transit agency is using MIFARE DESFire, then use either your Flipper Zero's <code>Metroflip</code> and <code>NFC</code> apps, and the <code>MetroDroid</code> app to see if your transit card has any unlocked applications/files that reveal information such as:
-| Category            | Example 1           | Example 2           | Example 3             |<br />
-| ------------------- | ------------------- |-------------------- |---------------------- |
-| Card Name           | Opal (SYD)          | myki (MEL)          | metroCARD (ADL)       |
-| Card Number         | 3085 2212 3456 7890 | 3 08425 1337 4206 9 | 01-141 2345 6789 0123 |
-| Fare Type           | Full Fare           |                     | Regular               |
-| Transaction Type    | Tap off             |                     |                       |
-| Current Balance     | $10.00              |                     |                       |
-| Last Txn Date/Time  | 31 Dec 24 at 23:59  |                     |                       |
-| Vehicle Yype        | Bus                 |                     |                       |
-| Weekly Journeys     | 1                   |                     |                       |
-| Transaction Counter | 42                  |                     |                       |
-| Issue Date          |                     |                     | 1 Jan 25              |
-| Expiry Date         |                     |                     | 30 Jun 45             |
-| Machine Code        |                     |                     | 619                   |</p>
+<p>If your transit agency is using MIFARE DESFire, then use either your Flipper Zero's <code>Metroflip</code> and <code>NFC</code> apps, and the <code>MetroDroid</code> app to see if your transit card has any unlocked applications/files that reveal information such as:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Example 1</th>
+<th>Example 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Card Name</strong></td>
+<td>Opal (SYD)</td>
+<td>metroCARD (ADL)</td>
+</tr>
+<tr>
+<td><strong>Card Number</strong></td>
+<td>3085 2212 3456 7890</td>
+<td>01-141 2345 6789 0123</td>
+</tr>
+<tr>
+<td><strong>Fare Type</strong></td>
+<td>Full Fare</td>
+<td>Regular</td>
+</tr>
+<tr>
+<td><strong>Transaction Type</strong></td>
+<td>Tap off</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Current Balance</strong></td>
+<td>$10.00</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Last Txn Date/Time</strong></td>
+<td>Wed 5th Jul 4:20pm</td>
+<td>31 May 2024 at 06:19</td>
+</tr>
+<tr>
+<td><strong>Balance Updated</strong></td>
+<td>12:34 10/01/2025</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Vehicle Type</strong></td>
+<td>Bus</td>
+<td>Bus 1234</td>
+</tr>
+<tr>
+<td><strong>Weekly Journeys</strong></td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Transaction Counter</strong></td>
+<td>12</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Issue Date</strong></td>
+<td></td>
+<td>1 January 2024</td>
+</tr>
+<tr>
+<td><strong>Expiry Date</strong></td>
+<td></td>
+<td>30 June 2044</td>
+</tr>
+<tr>
+<td><strong>Machine Code</strong></td>
+<td></td>
+<td>123</td>
+</tr>
+</tbody>
+</table>
+<p>Some transit agencies allow you to scan your card via their mobile app, which may provide additional information such as:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Example 3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Card Name</strong></td>
+<td>Leap (DUB)</td>
+</tr>
+<tr>
+<td><strong>App</strong></td>
+<td><a href="https://about.leapcard.ie/leap-top-up-app"><strong>Leap Top-Up</strong></a></td>
+</tr>
+<tr>
+<td><strong>Current Balance</strong></td>
+<td>€0.00</td>
+</tr>
+<tr>
+<td><strong>Card Number</strong></td>
+<td>10123 45678</td>
+</tr>
+<tr>
+<td><strong>Status</strong></td>
+<td>Unblocked</td>
+</tr>
+<tr>
+<td><strong>Auto Top-Up Status</strong></td>
+<td>Disabled (€0.00)</td>
+</tr>
+<tr>
+<td><strong>Issue Date</strong></td>
+<td>6/9/23</td>
+</tr>
+<tr>
+<td><strong>Expiry Date</strong></td>
+<td>20/4/43</td>
+</tr>
+<tr>
+<td><strong>Fare Type</strong></td>
+<td>Adult</td>
+</tr>
+<tr>
+<td><strong>Last Txn Date/Time</strong></td>
+<td>19 Jun 13:37 Dublin Bus -€2.00</td>
+</tr>
+<tr>
+<td><strong>Daily Cap</strong></td>
+<td>€0.00 / €8.00</td>
+</tr>
+<tr>
+<td><strong>Weekly Cap</strong></td>
+<td>€0.00 / €32.00</td>
+</tr>
+</tbody>
+</table>
 <p>If the card is fully-locked, then the only valuable piece of information would be the six hexadecimal Application IDs; these may be found by looking at the Flipper Zero <code>.nfc</code> file or by scanning your card via the <code>NFC TagInfo by NXP</code> app.</p>
-<p>Feel free to discuss public transport in <a href="https://discord.com/channels/740930220399525928/95442271613867625">#nfc</a>.</p>
+<p>Feel free to discuss public transport in <a href="https://discord.com/channels/740930220399525928/95442271613867625"><strong>#nfc</strong></a>.</p>
 
 
 
