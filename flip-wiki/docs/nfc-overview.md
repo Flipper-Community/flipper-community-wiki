@@ -1,25 +1,38 @@
 # NFC Overview
 
-The Flipper Zero can read and emulate a number of NFC tags. Keep in mind however that NFC RFID technology is a complex topic with *many* tag types of varying security, and not all can be read by the device. 
-The official [Flipper Zero docs](https://docs.flipper.net/nfc/read) detail what types of cards can and cannot be used with the device. Additionally, while the device can read these cards, not all of them can be saved or emulated due to the higher security design of select NFC formats. 
-
----
-## MIFARE Classic
-- See our [**MIFARE Classic guide**](mifareclassic.md).
-- For making copies of MIFARE Classic, refer to the [documentation](https://docs.flipper.net/nfc/magic-cards).
-
----
-## MIFARE DESFire
-- Use the `NFC` App to read the DESFire credential.
+The official [**Flipper Zero NFC docs**](https://docs.flipper.net/nfc) detail what type of NFC tags can be used with the Flipper Zero, and whether it can:
+- Read the NFC tag;
+- Write to the NFC tag;
+- Save the NFC tag as an `.nfc` file; and/or,
+- Emulate the saved NFC tag.
 
 ---
 ## HID iCLASS
-- Standard-keyed iCLASS can be read via [PicoPass](https://lab.flipper.net/apps/picopass).
-- Certain elite-keyed iCLASS can also be read via `PicoPass` via the `Elite System Dictionary`.
-- Some iCLASS SE credentials can be read via [Seader](https://lab.flipper.net/apps/seader).
-  - *You will require a compatible NARD and SAM to use the `Seader` app.*
+- Use [**PicoPass**](https://lab.flipper.net/apps/picopass) to read standard-keyed iCLASS and some elite-keyed iCLASS.
+- Use [**Seader**](https://lab.flipper.net/apps/seader) *with a compatible NARD and SAM* to read some iCLASS SE credentials.
 
 ---
-## HID SEOS
-- Standard-keyed Seos can be read with [Seader](https://lab.flipper.net/apps/seader).
-   - *You will require a compatible NARD and SAM to use the `Seader` app.*
+## HID Seos
+- Use [**Seader**](https://lab.flipper.net/apps/seader) *with a compatible NARD and SAM* to read standard-keyed Seos.
+
+---
+## FeliCa
+- *Also known as Felicity Card*
+- If applicable:
+  - See our [**Arcade guide**](arcadecards.md).
+  - See our [**Public Transport guide**](publictransport.md).
+
+---
+## NXP MIFARE Classic
+- See our [**MIFARE Classic guide**](mifareclassic.md).
+  - See [**Flipper Zero's Magic Cards doc**](https://docs.flipper.net/nfc/magic-cards) for making copies of a MIFARE Classic.
+- If applicable:
+  - See our [**Arcade guide**](arcadecards.md).
+  - See our [**Public Transport guide**](publictransport.md).
+
+---
+## NXP MIFARE DESFire / NXP MIFARE Plus / NXP MIFARE Ultralight
+- Use the `NFC` App to read basic information about a MIFARE.
+- If applicable:
+  - See our [**Arcade guide**](arcadecards.md).
+  - See our [**Public Transport guide**](publictransport.md).
