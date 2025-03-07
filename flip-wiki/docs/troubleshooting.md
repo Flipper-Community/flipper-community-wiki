@@ -7,6 +7,10 @@ For guides to troubleshoot some of the more obscure Flipper Zero issues, see the
 
 ## Flipper Zero
 
+### Error code on updating
+If you are experiencing an error code when updating, you can look at the error code list from the [OTA update process docs](https://github.com/flipperdevices/flipperzero-firmware/blob/dev/documentation/OTA.md#ota-update-error-codes) to narrow down your issue. 
+In most cases, errors are typically caused by an improperly formatted or failing MicroSD card and will correspond to the `Updating resources` error code section. 
+
 ### Forgotten/unknown Flipper Zero PIN
 [See the official docs page for PIN reset instructions.](https://docs.flipper.net/basics/control#c_9ya)
 
