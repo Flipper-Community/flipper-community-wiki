@@ -109,7 +109,7 @@ nav:
       - Basics of Building Firmware & Apps: tutorials/beginner_guide_fw/guide.md
       - Animation - Meta.txt in-depth Guide: tutorials/Animation_guide_meta/Meta_settings_guide.md
       - Designing Custom Fonts: tutorials/f0_fonts_guide/guide.md
-      - Creating Animations: tutorials/asset_creation/asset_creation_guide.md
+      - Tools for Creating Animations: tutorials/asset_creation/asset_creation_guide.md
 
   - Site Info:
     - About: about.md
