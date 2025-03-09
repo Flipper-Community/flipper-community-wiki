@@ -1,5 +1,5 @@
-# Flipper Zero Asset Creation Guide  
-A guide of all time that focuses on making animations by [pr3](https://github.com/the1anonlypr3)!
+# Flipper Zero Asset Creation Tools Guide  
+A guide of all time that focuses on animation tools by [pr3](https://github.com/the1anonlypr3)!
 ## I Need Software! 
 The real truth about Flipper animation is that you can use just about any software to create pixelart! No joke, I started with Microsoft Paint. Many people use many different softwares, however the usefulness those softwares are only depends on whether they have certain features.  It cannot be stressed enough that you can use **anything!** Find your preference!
 
