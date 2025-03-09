@@ -19,3 +19,8 @@
   font-weight: normal;
   font-style: normal;
 }
+
+::selection {
+  background-color: #FF8200;
+  color: white;
+}
