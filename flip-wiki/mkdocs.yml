@@ -103,6 +103,8 @@ nav:
       - Overview: javascript-overview.md
 
   - Guides & Tutorials:
+    - General Tutorials:
+      - Installing Marauder: tutorials/Marauder_guide/guide.md
     - Development Tutorials:
       - Basics of Building Firmware & Apps: tutorials/beginner_guide_fw/guide.md
       - Animation - Meta.txt in-depth Guide: tutorials/Animation_guide_meta/Meta_settings_guide.md
