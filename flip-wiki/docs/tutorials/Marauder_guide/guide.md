@@ -48,7 +48,7 @@ Once you've decided on one of the above connection styles, proceed to [Flashing 
 The methods listed below are ranked from least to most complex.
 Choose only ^^**one**^^ method from the list below: 
 
-- [Method 1: FZEE Flasher](#method-1-fzee-flasher)
+- [Method 1: FZEE Web Flasher](#method-1-fzee-flasher)
 - [Method 2: ESP Web Flasher](#method-2-esp-web-flasher)
 - [Method 3: ESPtool](#method-3-esptool)
 
