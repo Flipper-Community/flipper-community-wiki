@@ -15,8 +15,11 @@ The general steps are:
 ## Prerequisites
 
 ### Windows
-- install the [USB-Uart drivers from SiliconLabs](https://www.silabs.com/developer-tools/usb-to-uart-bridge-vcp-drivers)
-    1. Extract the zip file you downloaded
+- install the USB-Uart drivers from SiliconLabs by following the below steps:
+    1. navigate to the [USB-UART driver page](https://www.silabs.com/developer-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads)
+    1. click the item titled __CP210x VCP Windows__
+    1. save the file to somewhere you can easily find it
+    1. extract the zip file you downloaded
     1. click the CP210x VCP Windows item
     1. Run and Install *CP210xVCPInstaller_x64.exe*
 
