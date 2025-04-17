@@ -67,7 +67,7 @@ Requirements: Webserial capable browsers such as **Google Chrome** or **Microsof
     - ESP32-S2
     - Flipper *flipperNameHere*
 1. Click one of those two connections and hit the connect button
-1. The text log should identify you board, in this case the official board should be detected as `Chip type ESP32-S2`
+1. The text log should identify your board, in this case the official board should be detected as `Chip type ESP32-S2`
 1. At the top of the site under `--- Select Board ---`, choose `Flipper Dev Board` if you are using the official Wi-Fi board
 1. Under `--- Firmware ---`, choose `Marauder`
 1. Under `--- Version ---`, choose `latest`
