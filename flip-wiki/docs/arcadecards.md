@@ -68,5 +68,16 @@ flowchart TD
     F -->|Add Card to Wallet| G{Emulate Card via Wallet.}
     E -->|Other System| H
 ```
-!!! note "**LIST OF OTHER CASHLESS PRE-PAID ARCADE PAYMENT CARDS**"
-    <li>Amusement Connect</li><li>intercard</li><li>Parafait</li><li>RFpay</li><li>Sacoa</li><li>Tigapo</li> 
+
+### Mobile Wallet
+[**Dave and Buster's**](https://www.daveandbusters.com/us/en/rewards)<br>Download the D&B Rewards<sup>®️</sup> app and sign up for an account to add your digital Power Card<sup>®️</sup> to your mobile wallet.<br>
+- [**D&B Rewards: App Store**](https://apps.apple.com/us/app/d-b-rewards/id1465097956)
+- [**D&B Rewards: Google Play**](https://play.google.com/store/apps/details?id=com.DB.playinstore)
+
+
+[**Timezone**](https://portal.timezonegames.com/) / [**Kingpin**](https://portal.kingpinplay.com)<br>Download the Timezone Rewards App and sign up for an account to add your digital Powercard to your mobile wallet.
+- [**Timezone Rewards App: App Store**](https://apps.apple.com/au/app/timezone-fun-app/id1571103348)
+- [**Timezone Rewards App: Google Play**](https://play.google.com/store/apps/details?id=com.teegloyalty.timezone)
+
+!!! note "**LIST OF CASHLESS PRE-PAID ARCADE PAYMENT CARDS**"
+    <li>[**Amusement Connect**](https://amusementconnect.com)</li><li>[**ArcadePilot**](https://arcade-pilot.de/en/)</li><li>[**Embed**](https://www.embedcard.com/en/)</li><li>[**intercard**](https://www.intercardinc.com)</li><li>[**Parafait**](https://parafait.com)</li><li>[**RFpay**](https://rfpay.org)</li><li>[**Sacoa**](https://sacoacard.com)</li><li>[**Tigapo**](https://tigapo.nayax.com)</li><li>[**YUTO Games**](https://www.yutogames.com/card-system/)</li>
