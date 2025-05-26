@@ -10,6 +10,7 @@ site_author: Flipwiki Unofficial Community
 ### Theme settings ###
 theme:
   name: material
+  custom_dir: overrides # Needed for the overrides folder to take effect
   logo: assets/images/white_dolph_transparent.png
   palette:
     - media: "(prefers-color-scheme)"
@@ -36,6 +37,10 @@ theme:
 extra_css:
   - stylesheets/extra.css
 
+### Set up custom site analytics in the overrides/partials/integrations/analytics folder in custom.html
+extra:
+  analytics:
+    provider: custom
 
 ### Copyright footer info ###
 copyright: The content of this wiki is created and maintained by the community and does not represent the official views, statements, or endorsements of Flipper Devices.
@@ -115,3 +120,4 @@ nav:
     - About: about.md
     - Contributing: contributing.md
     - Report An Issue!: 'https://github.com/Flipper-Community/flipper-community-wiki/issues'
+    - Privacy Policy: privacy-policy.md
