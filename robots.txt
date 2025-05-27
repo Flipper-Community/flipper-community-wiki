@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://flipper.wiki/sitemap.xml
+Crawl-delay: 2
