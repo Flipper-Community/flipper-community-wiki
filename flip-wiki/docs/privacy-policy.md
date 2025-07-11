@@ -15,7 +15,7 @@ When you visit our website, we may automatically collect the following **non-per
 - **IP address** (anonymized)  
 - **Browser type and version**  
 - **Device type and technical details** (e.g., operating system, screen size)  
-- **Approximate geographic location (country level only)**  
+- **Approximate geographic location**  
 - **Page interactions** (e.g., pages visited, time on page, clicks)
 
 > **Note:** This data is collected in a way that does **not** allow us to identify you personally.
