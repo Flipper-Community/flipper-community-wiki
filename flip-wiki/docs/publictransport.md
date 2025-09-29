@@ -7,10 +7,13 @@
 - [**Metroflip**](https://lab.flipper.net/apps/metroflip)
 - [**NFC TagInfo by NXP: Google Play**](https://play.google.com/store/apps/details?id=com.nxp.taginfolite)
 - [**NFC TagInfo by NXP: App Store**](https://apps.apple.com/us/app/nfc-taginfo-by-nxp/id1246143596)
+- [**PTDex**](https://github.com/ry4000/ptdex)
 
 ## FeliCa
-If you have a Japan Rail IC Card, then you can use either `MetroDroid` or the Android version of `NFC TagInfo by NXP` to view some information relating to the card.
-`Metroflip` is currently adding support for HKG Octopus and Japan Rail IC Cards, and this page will be updated when `Metroflip`'s author releases that update.
+If you have either a HKG Octopus Card or a Japan Transit IC Card *using FeliCa*, then you can use either `MetroDroid` or the Android version of `NFC TagInfo by NXP` to view some information relating to the card.
+`Metroflip` is currently adding support for HKG Octopus and Japan Transit IC Cards *using FeliCa* in preparation for the next OFW update.
+
+It is also possible to use FeliCa *Standard* cards/tags/fobs/charms as an [**arcade data card**](arcadecards.md) for use on some `Konami` games.
 
 ## MIFARE Classic
 If your transit agency is using MIFARE Classic, then follow [**the MIFARE Classic guide**](mifareclassic.md).
@@ -51,6 +54,8 @@ Some transit agencies allow you to scan your card via their mobile app, which ma
 | **Daily Cap**          | €0.00 / €8.00                                                |
 | **Weekly Cap**         | €0.00 / €32.00                                               |
 
-If the card is fully-locked, then the only valuable piece of information would be the six hexadecimal Application IDs; these may be found by looking at the Flipper Zero `.nfc` file or by scanning your card via the `NFC TagInfo by NXP` app.
+If the card is fully-locked, then the only valuable piece of information would be the six hexadecimal Application IDs; these may be found by looking at the Flipper Zero `.nfc` file or by scanning your card via the `NFC TagInfo by NXP` app. 
+
+Little-endian is used for Flipper Devices' purposes. `Clipper (SFO)`'s AID in big-endian, for example, is `F21190`; converting it to little-endian, it then becomes `0x9011F2`.
 
 Feel free to discuss public transport in [**#nfc**](https://discord.com/channels/740930220399525928/95442271613867625).
