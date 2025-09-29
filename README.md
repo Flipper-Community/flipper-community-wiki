@@ -1,31 +1,32 @@
 # Flipper Community wiki
-This is the repo for the [Flipper community wiki](https://flipper.wiki).
-If you'd like to contribute to this wiki, you may [fork the repo and offer your changes as a pull request](pull-request-guide.md).
-Please be sure submissions meet the [contribution guidelines](https://flipper.wiki/contributing/).
+This is the repo for the [**Flipper Community Wiki**](https://flipper.wiki).
+
+If you'd like to contribute to this wiki, you may [**fork the Repo and offer your changes as a Pull Request**](pull-request-guide.md).
+Please be sure submissions meet the [**Contribution Guidelines**](https://flipper.wiki/contributing/).
 
 # Technical Info
 This wiki is built using the python based mkdocs builder utilizing the material theme (mkdocs-material).
 
 It is recommended, but not required, that contributors looking to add content run the wiki locally to verify formatting behaves as expected before submitting a pull request to verify the content looks as expected and ensure a smooth pull request process.
-To do so, you will need either a copy of [Git](https://git-scm.com/downloads) or the [GitHub client](https://github.com/apps/desktop) installed to your PC. 
+To do so, you will need either a copy of [**Git**](https://git-scm.com/downloads) or the [**GitHub client**](https://github.com/apps/desktop) installed to your PC. 
 
 You will then need to fork this repo using the fork button on this GitHub page to your own GitHub account, clone it to to your PC, make changes, then submit a Pull Request. 
 
-#### If you are unfamiliar with using git and making pull requests on GitHub, see the [Pull Request Guide](pull-request-guide.md)
+#### If you are unfamiliar with using git and making pull requests on GitHub, see the [**Pull Request Guide**](pull-request-guide.md).
 
 # Setup Guide: Running this Wiki Locally
 
 First, clone your forked copy to your local computer so that you can make changes to it.
 Once you have completed that, you can move to setting up MkDocs-Material locally using one of the options below for your platform. 
 
-The [Python virtual environment method](#Method-2-Install-using-a-Python-virtual-environment) is HIGHLY recommended, however not everyone will feel comfortable with using python directly to install things. For that, alternate instructions are provided for convenience. 
+The [**Python virtual environment method**](#Method-2-Install-using-a-Python-virtual-environment) is HIGHLY recommended, however not everyone will feel comfortable with using python directly to install things. For that, alternate instructions are provided for convenience. 
 
 
 ## Operating system install directions
 These options are for those who are less comfortable with messing around with python and would prefer to just install something on their system. 
 
 ### Windows 11
-For this, we will use the awesome tiny [uv](https://astral.sh) utility to manage pulling in stuff from python without needing to install python or risking your existing python setup.
+For this, we will use the awesome tiny [**uv**](https://astral.sh) utility to manage pulling in stuff from python without needing to install python or risking your existing python setup.
 
 1. Open up Powershell
 1. run `winget install astral-sh.uv`
@@ -56,7 +57,7 @@ Once installed, `cd` into the `flipper-community-wiki/flip-wiki` folder and run 
 ----
 
 ### Mac
-MkDocs can be installed via [Brew](https://brew.sh):
+MkDocs can be installed via [**Brew**](https://brew.sh):
 `brew install mkdocs-material`
 
 Once installed, `cd` into the `flipper-community-wiki/flip-wiki` folder and run `mkdocs serve`
@@ -104,11 +105,11 @@ When done, you can close out the virtual environment by typing `deactivate` in y
 
 
 ## Adding New Pages
-1. [Fork this GitHub repo and clone your copy to your PC](pull-request-guide.md). 
+1. [**Fork this GitHub Repo and clone your copy to your PC**](pull-request-guide.md). 
 1. Optionally install mkdocs using the above instructions if you don't have it to preview pages (strongly recommended)
 1. Enter the `flip-wiki/docs` folder
 1. Create whatever doc files you want in named `.md` files.
 1. Once done, add them to the `flip-wiki/mkdocs.yml` towards the bottom under the `Navigation Heirarchy` section, following the pattern of the other `.md` files.
 1. If the preview looks good when using mkdocs to preview them, submit a pull request. 
 
-For more in depth features, see the [MkDocs-material guide](https://squidfunk.github.io/mkdocs-material/reference/)
+For more in depth features, see the [**MkDocs-material guide**](https://squidfunk.github.io/mkdocs-material/reference/).
