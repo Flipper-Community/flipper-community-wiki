@@ -12,23 +12,23 @@ The five main arcade data cards currently in use are:
 | **Sega** | [**Aime**](https://my-aime.net/en/) | MIFARE Classic | X | [**CHUNITHM**](https://chunithm.sega.com)<br>[**頭文字D**](https://initiald.sega.jp/inidac/)<br>*InitialD*<br>[**maimai**](https://maimai.sega.com/) |
 | **Taito** | [**NESiCA**](https://nesica.net/) | MIFARE Ultralight | X | [**MUSIC DIVER**](https://musicdiver.jp/index.html)<br>[**STREET FIGHTER**](https://sf6ta.jp/) |
 
-The Flipper Zero includes the MFC `Sega Aime` and `Bandai Namco Passport` access keys in the system dictionary as of OFW 0.98.2.
+The Flipper Zero includes the MFC `Sega Aime` and `Bandai Namco Passport` access keys in the system dictionary as of OFW 0.98.2.<br>The Flipper Zero expanded its `FeliCa` emulation support as of OFW 0.103.1.
 
-The `Sega Aime` parser reveals its access code.
+The `Sega Aime` parser reveals the card's access code.<br>The `Bandai Namco Passport` parser reveals the card's access code *if any*, and will be made available in a future OFW update.
 
 The latter four companies have FeliCa card variants endorsed with the `Amusement IC Card [AIC]` logo.
 
-The Flipper Zero expanded its `FeliCa` emulation support as of OFW 0.103.1.
-
 ### Arcade Data Card Emulation Compatibility
-| Card         | Chip   | AM | BN | Konami | Sega | Taito |
-| ------------ | ------ | -- | -- | ------ | ---- | ----- |
-| **AIC**      | FeliCa | -  | X  | X      | -    | -     | 
-| **Aime**     | MFC    | -  | X  | -      | -    | -     |
-| **AM.PASS**  | ICODE  | X  | -  | -      | -    | -     |  
-| **Banapass** | MFC    | -  | X  | -      | -    | -     |
-| **e-amuse**  | ICODE  | -  | -  | -      | -    | -     |
-| **NESiCA**   | MFU    | -  | -  | -      | -    | X     |
+| Card                 | Chip   | AM | BN | Konami | Sega | Taito |
+| -------------------- | ------ | -- | -- | ------ | ---- | ----- |
+| **AIC**              | FeliCa | -  | X  | X      | -    | -     |
+| **Aime**             | MFC    | -  | X  | -      | -    | -     |
+| **AM.PASS**          | ICODE  | X  | -  | -      | -    | -     |  
+| **Banapass**         | MFC    | -  | X  | -      | -    | -     |
+| **e-amuse**          | ICODE  | -  | -  | -      | -    | -     |
+| **HKG Octopus**      | FeliCa | -  | -  | X      | -    | -     | 
+| **Japan Transit IC** | FeliCa | -  | -  | X      | -    | -     | 
+| **NESiCA**           | MFU    | -  | -  | -      | -    | X     |
 
 ### Arcade Data Card Emulation Compatibility Notes
 - If FeliCa emulation does not work, you firstly need to:
@@ -47,10 +47,14 @@ The Flipper Zero expanded its `FeliCa` emulation support as of OFW 0.103.1.
 - There is an issue that prevents the Flipper Zero from emulating:
     1. FeliCa `Amusement IC Cards` on `Sega` games;
     1. ICODE SLI `e-amusement pass` cards on `Konami` games;
+    1. ICODE SLI/SLIX/SLIX2 `AM.PASS` cards on some `Pump It Up` Cabinets. 
     1. MFC `Aime` cards on `Sega` games; and,
     1. MFC `Bandai Namco Passport` cards on `Sega` games.
 - Emulation compatibility cannot be tested for `Taito` games without further assistance from Members located within Japan.
 - The ICODE SLI `e-amusement pass` cards are not compatible with `Andamiro` games *and vice versa*.
+- Japan Transit IC Cards must be using `FeliCa Standard`.
+- Transport cards are currently only able to be registered for initial play via `DANCERUSH STARDOM` and `SOUND VOLTEX`.
+
 
 ## Arcade Payment Cards
 !!! warning "**WARNING**"
@@ -68,5 +72,18 @@ flowchart TD
     F -->|Add Card to Wallet| G{Emulate Card via Wallet.}
     E -->|Other System| H
 ```
-!!! note "**LIST OF OTHER CASHLESS PRE-PAID ARCADE PAYMENT CARDS**"
-    <li>Amusement Connect</li><li>intercard</li><li>Parafait</li><li>RFpay</li><li>Sacoa</li><li>Tigapo</li> 
+
+### Mobile Wallet
+[**Dave and Buster's**](https://www.daveandbusters.com/us/en/rewards)<br>Download the D&B Rewards<sup>®️</sup> app and sign up for an account to add your digital Power Card<sup>®️</sup> to your mobile wallet.<br>
+
+1. [**D&B Rewards: App Store**](https://apps.apple.com/us/app/d-b-rewards/id1465097956)
+1. [**D&B Rewards: Google Play**](https://play.google.com/store/apps/details?id=com.DB.playinstore)
+
+
+[**Timezone**](https://portal.timezonegames.com/) / [**Kingpin**](https://portal.kingpinplay.com)<br>Download the Timezone Rewards App and sign up for an account to add your digital Powercard to your mobile wallet.
+
+1. [**Timezone Rewards App: App Store**](https://apps.apple.com/au/app/timezone-fun-app/id1571103348)
+1. [**Timezone Rewards App: Google Play**](https://play.google.com/store/apps/details?id=com.teegloyalty.timezone)
+
+!!! note "**LIST OF CASHLESS PRE-PAID ARCADE PAYMENT CARDS**"
+    <li>[**Amusement Connect**](https://amusementconnect.com)</li><li>[**ArcadePilot**](https://arcade-pilot.de/en/)</li><li>[**Embed**](https://www.embedcard.com/en/)</li><li>[**intercard**](https://www.intercardinc.com)</li><li>[**Parafait**](https://parafait.com)</li><li>[**RFpay**](https://rfpay.org)</li><li>[**Sacoa**](https://sacoacard.com)</li><li>[**Tigapo**](https://tigapo.nayax.com)</li><li>[**YUTO Games**](https://www.yutogames.com/card-system/)</li>

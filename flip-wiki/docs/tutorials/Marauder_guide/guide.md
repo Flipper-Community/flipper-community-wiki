@@ -15,8 +15,11 @@ The general steps are:
 ## Prerequisites
 
 ### Windows
-- install the [USB-Uart drivers from SiliconLabs](https://www.silabs.com/developer-tools/usb-to-uart-bridge-vcp-drivers)
-    1. Extract the zip file you downloaded
+- install the USB-Uart drivers from SiliconLabs by following the below steps:
+    1. navigate to the [USB-UART driver page](https://www.silabs.com/developer-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads)
+    1. click the item titled __CP210x VCP Windows__
+    1. save the file to somewhere you can easily find it
+    1. extract the zip file you downloaded
     1. click the CP210x VCP Windows item
     1. Run and Install *CP210xVCPInstaller_x64.exe*
 
@@ -45,7 +48,7 @@ Once you've decided on one of the above connection styles, proceed to [Flashing 
 The methods listed below are ranked from least to most complex.
 Choose only ^^**one**^^ method from the list below: 
 
-- [Method 1: FZEE Flasher](#method-1-fzee-flasher)
+- [Method 1: FZEE Web Flasher](#method-1-fzee-flasher)
 - [Method 2: ESP Web Flasher](#method-2-esp-web-flasher)
 - [Method 3: ESPtool](#method-3-esptool)
 
@@ -64,7 +67,7 @@ Requirements: Webserial capable browsers such as **Google Chrome** or **Microsof
     - ESP32-S2
     - Flipper *flipperNameHere*
 1. Click one of those two connections and hit the connect button
-1. The text log should identify you board, in this case the official board should be detected as `Chip type ESP32-S2`
+1. The text log should identify your board, in this case the official board should be detected as `Chip type ESP32-S2`
 1. At the top of the site under `--- Select Board ---`, choose `Flipper Dev Board` if you are using the official Wi-Fi board
 1. Under `--- Firmware ---`, choose `Marauder`
 1. Under `--- Version ---`, choose `latest`
