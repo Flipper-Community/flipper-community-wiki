@@ -11,7 +11,7 @@
 
 ## FeliCa
 If you have either a HKG Octopus Card or a Japan Transit IC Card *using FeliCa*, then you can use either `MetroDroid` or the Android version of `NFC TagInfo by NXP` to view some information relating to the card.
-`Metroflip` is currently adding support for HKG Octopus and Japan Transit IC Cards *using FeliCa* in preparation for the next OFW update.
+`Metroflip` added support for HKG Octopus and Japan Transit IC Cards *using FeliCa* as of OFW 1.4.2.
 
 It is also possible to use FeliCa *Standard* cards/tags/fobs/charms as an [**arcade data card**](arcadecards.md) for use on some `Konami` games.
 
