@@ -178,7 +178,7 @@ Version: 1                              *
 
 Width: 128                              *
 Height: 64                              * 
-Passive frames: 5                       /
+Passive frames: 5                       *
 Active frames: 0                        /
 Frames order: 0 1 2 3 4                 *
 Active cycles: 0                        /
@@ -189,7 +189,7 @@ Active cooldown: 0                      /
 Bubble slots: 0                         /
 ```
 !!! note
-    You'll be using passive frames more often than active frames, but technically they're not required. [Kuronons' guide](https://flipper.wiki/tutorials/Animation_guide_meta/Meta_settings_guide/) does a significantly better job at explaining passive vs. active frames than I do, and you should read up on it before creating a `meta.txt`. 
+    You'll be using passive frames more often than active frames, but technically they're not required. [Kuronons' guide](https://flipper.wiki/tutorials/Animation_guide_meta/Meta_settings_guide/) does a significantly better job at explaining passive vs. active frames than I do, and you should read up on it before creating a `meta.txt`. Additionally, you need at least one passive frame no matter what.
 
  - `manifest.txt` 
 ```
