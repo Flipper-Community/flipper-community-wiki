@@ -2002,6 +2002,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#difference-between-compilers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Difference Between Compilers
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2429,6 +2440,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#difference-between-compilers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Difference Between Compilers
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2658,7 +2680,7 @@ Version: 1                              *
 
 Width: 128                              *
 Height: 64                              * 
-Passive frames: 5                       /
+Passive frames: 5                       *
 Active frames: 0                        /
 Frames order: 0 1 2 3 4                 *
 Active cycles: 0                        /
@@ -2671,7 +2693,7 @@ Bubble slots: 0                         /
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You'll be using passive frames more often than active frames, but technically they're not required. <a href="https://flipper.wiki/tutorials/Animation_guide_meta/Meta_settings_guide/">Kuronons' guide</a> does a significantly better job at explaining passive vs. active frames than I do, and you should read up on it before creating a <code>meta.txt</code>. </p>
+<p>Anything listed as <code>Optional</code> should be defined as <code>0</code>; <strong>do not</strong> remove the line. Passive frames are <strong>required</strong> - have at least one in your animation, or else it'll error. <a href="https://flipper.wiki/tutorials/Animation_guide_meta/Meta_settings_guide/">Kuronons' guide</a> does a significantly better job at explaining <code>meta.txt</code>s than I do, and you should read up on it before creating one. </p>
 </div>
 <ul>
 <li><code>manifest.txt</code> 
@@ -2801,6 +2823,25 @@ Press [Enter] if you wish to continue
 <li>Make sure you clone the OFW repo with <code>git clone https://github.com/flipperdevices/flipperzero-firmware</code> to use FBT. </li>
 </ul>
 </details>
+<h2 id="difference-between-compilers">Difference Between Compilers<a class="headerlink" href="#difference-between-compilers" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Different compilers compile frames differently. Hence, for clarity, you should only be drawing using black and white pixels. </p>
+</div>
+<ul>
+<li>Uncompiled gradient:
+<img alt="test)" src="../Gradient_uncompiled.png" /></li>
+</ul>
+<p><br><br></p>
+<ul>
+<li>Gradient compiled with <code>asset_packer.py</code>:
+<img alt="test)" src="../Gradient_asset_packer.png" /></li>
+</ul>
+<p><br><br></p>
+<ul>
+<li>Gradient compiled with FlipperAM:
+<img alt="test)" src="../Gradient_FlipperAM.png" /></li>
+</ul>
 <p><br></p>
 <p style="text-align:center;">made with ❤️ and 🔥 by <a href="https://github.com/the1anonlypr3">pr3</a>. thank you so much for reading!</p>
 
