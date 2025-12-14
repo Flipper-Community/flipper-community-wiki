@@ -178,7 +178,7 @@ Version: 1                              *
 
 Width: 128                              *
 Height: 64                              * 
-Passive frames: 5                       /
+Passive frames: 5                       *
 Active frames: 0                        /
 Frames order: 0 1 2 3 4                 *
 Active cycles: 0                        /
@@ -189,7 +189,7 @@ Active cooldown: 0                      /
 Bubble slots: 0                         /
 ```
 !!! note
-    You'll be using passive frames more often than active frames, but technically they're not required. [Kuronons' guide](https://flipper.wiki/tutorials/Animation_guide_meta/Meta_settings_guide/) does a significantly better job at explaining passive vs. active frames than I do, and you should read up on it before creating a `meta.txt`. 
+    Anything listed as `Optional` should be defined as `0`; **do not** remove the line. Passive frames are **required** - have at least one in your animation, or else it'll error. [Kuronons' guide](https://flipper.wiki/tutorials/Animation_guide_meta/Meta_settings_guide/) does a significantly better job at explaining `meta.txt`s than I do, and you should read up on it before creating one. 
 
  - `manifest.txt` 
 ```
@@ -300,6 +300,22 @@ Weight: 8	                            *
     <br>
     - Make sure you clone the OFW repo with `git clone https://github.com/flipperdevices/flipperzero-firmware` to use FBT. 
 
+## Difference Between Compilers
+!!! note
+    Different compilers compile frames differently. Hence, for clarity, you should only be drawing using black and white pixels. 
+
+- Uncompiled gradient:
+![test)](Gradient_uncompiled.png)
+
+<br><br>
+
+- Gradient compiled with `asset_packer.py`:
+![test)](Gradient_asset_packer.png)
+
+<br><br>
+
+- Gradient compiled with FlipperAM:
+![test)](Gradient_FlipperAM.png)
 
 <br>
 
