@@ -616,6 +616,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#arch-linux-qflipper-not-detecting-flipper-zero" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arch Linux qFlipper not detecting Flipper Zero
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#fedora-qflipper-not-detecting-flipper-zero" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2351,6 +2362,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#arch-linux-qflipper-not-detecting-flipper-zero" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arch Linux qFlipper not detecting Flipper Zero
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#fedora-qflipper-not-detecting-flipper-zero" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2447,6 +2469,7 @@
 <li><a href="#linux">Linux</a><ul>
 <li><a href="#error-while-loading-shared-libraries-libopenglso0">Error while loading shared libraries: libOpenGL.so.0</a></li>
 <li><a href="#flipper-zero-not-recognized-by-qflipper">Flipper Zero not recognized by qFlipper</a></li>
+<li><a href="#arch-linux-qflipper-not-detecting-flipper-zero">Arch Linux qFlipper not detecting Flipper Zero</a></li>
 <li><a href="#fedora-qflipper-not-detecting-flipper-zero">Fedora qFlipper not detecting Flipper Zero</a></li>
 <li><a href="#ubuntu-cannot-run-the-appimage">Ubuntu cannot run the appimage</a></li>
 </ul>
@@ -2540,6 +2563,29 @@ To fix this, you will need to install the <code>libopengl0</code> package.</p>
 <li>once this reports it installed successfully, reboot your pc</li>
 </ol>
 <p>Alternatively, you may try running qFlipper with <code>sudo</code>, however this is not ideal and has security implications. </p>
+<h3 id="arch-linux-qflipper-not-detecting-flipper-zero">Arch Linux qFlipper not detecting Flipper Zero<a class="headerlink" href="#arch-linux-qflipper-not-detecting-flipper-zero" title="Permanent link">&para;</a></h3>
+<p>Arch uses the uucp group for serial connections instead of dialout, so some changes will need to be made</p>
+<ol>
+<li>run <code>sudo usermod -aG uucp YourUserNameHere</code> replacing YourUserNameHere with your actual login username to add yourself to the <code>uucp</code> group</li>
+<li>ensure the udev rules are correct:</li>
+<li>If you <strong>DID</strong> install the udev rules from qflipper:<ol>
+<li>open the rules files located in <code>/etc/udev/rules.d/42-flipperzero.rules</code></li>
+<li>replace all instances of <code>dialout</code> with <code>uucp</code></li>
+<li>save the file, then run <code>sudo udevadm control --reload-rules &amp;&amp; sudo udevadm trigger</code></li>
+</ol>
+</li>
+<li>if you <strong>DID NOT</strong> install the udev rules fom qflipper:<ol>
+<li>create the udev rules file by doing <code>sudo touch /etc/udev/rules.d/42-flipperzero.rules</code></li>
+<li>add the following as contents to the <code>42-flipperzero.rules</code> file and save it:
+  <div class="highlight"><pre><span></span><code>#Flipper Zero serial port
+SUBSYSTEMS==&quot;usb&quot;, ATTRS{idVendor}==&quot;0483&quot;, ATTRS{idProduct}==&quot;5740&quot;, ATTRS{manufacturer}==&quot;Flipper Devices Inc.&quot;, TAG+=&quot;uaccess&quot;
+#Flipper Zero DFU
+SUBSYSTEMS==&quot;usb&quot;, ATTRS{idVendor}==&quot;0483&quot;, ATTRS{idProduct}==&quot;df11&quot;, ATTRS{manufacturer}==&quot;STMicroelectronics&quot;, TAG+=&quot;uaccess&quot;
+</code></pre></div></li>
+<li>run <code>sudo udevadm control --reload-rules &amp;&amp; sudo udevadm trigger</code></li>
+</ol>
+</li>
+</ol>
 <h3 id="fedora-qflipper-not-detecting-flipper-zero">Fedora qFlipper not detecting Flipper Zero<a class="headerlink" href="#fedora-qflipper-not-detecting-flipper-zero" title="Permanent link">&para;</a></h3>
 <p>First, verify you installed the udev rules from the steps detailed in this page.
 If it still is not detected, you may be experiencing a known conflict between the udev rules of Flipper Zero and the udev rules of the <code>sysdemd-udev</code>package.

@@ -2072,13 +2072,14 @@
 
 
 <h1 id="badusb-overview">BadUSB Overview<a class="headerlink" href="#badusb-overview" title="Permanent link">&para;</a></h1>
-<p>BadUSB is an <a href="https://docs.flipper.net/bad-usb">official feature of the Flipper Zero</a> that can allow the device to act as a high speed keyboard to automatically type just about anything you would be able to do on a normal keyboard, just significantly faster via USB or Bluetooth. </p>
+<p>BadUSB is an <a href="https://docs.flipper.net/bad-usb">official feature of the Flipper Zero</a> that can allow the device to act as a high speed keyboard to automatically type just about anything you would be able to do on a normal keyboard, just significantly faster via USB or Bluetooth. BadUSB now also supports mouse movement and click commands. </p>
 <p>The BadUSB scripting language is based on <a href="https://web.archive.org/web/20220816200129/http://github.com/hak5darren/USB-Rubber-Ducky/wiki/Duckyscript">Duckyscript 1.0</a>. Unlike later version of Duckyscript, this version only supports sending keys to a PC, not receiving any files or info back to the Flipper Zero itself. The Flipper Zero's version of Duckyscript also supports changing the USB ID presented to the computer in the event one wishes to make the devices appear as a specific brand of keyboard. </p>
 <p>On a fresh firmware install of the official firmware, several non-destructive fun sample scripts will be placed in the <code>badusb</code> folder of your device. These are simple text files and can be read with notepad to see what they do prior to running them. </p>
 <h2 id="supported-keys">Supported Keys<a class="headerlink" href="#supported-keys" title="Permanent link">&para;</a></h2>
-<p>Currently supported keys and other useful BadUSB script commands can be found at the <a href="https://developer.flipper.net/flipperzero/doxygen/badusb_file_format.html">Official BadUSB developer documentation site</a>. </p>
+<p>Current up to date supported keys and other useful BadUSB script commands can be found at the <a href="https://developer.flipper.net/flipperzero/doxygen/badusb_file_format.html">Official BadUSB developer documentation site</a>. </p>
 <p>For convenience, a basic list of supported keys can be found below:</p>
 <ul>
+<li>Mouse click, move, and scroll</li>
 <li>Standard alphanumeric typing keys</li>
 <li>Special characters</li>
 <li>CTRL, ALT, SHIFT, WIN, SYSRQ keys</li>
