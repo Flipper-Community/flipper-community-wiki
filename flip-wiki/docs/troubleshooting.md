@@ -97,6 +97,26 @@ Typically this issues is the result of not installing the udev rules. To fix thi
 
 Alternatively, you may try running qFlipper with `sudo`, however this is not ideal and has security implications. 
 
+### Arch Linux qFlipper not detecting Flipper Zero
+Arch uses the uucp group for serial connections instead of dialout, so some changes will need to be made
+
+1. run `sudo usermod -aG uucp YourUserNameHere` replacing YourUserNameHere with your actual login username to add yourself to the `uucp` group
+2. ensure the udev rules are correct:
+  * If you __DID__ install the udev rules from qflipper:
+    1. open the rules files located in `/etc/udev/rules.d/42-flipperzero.rules`
+    1. replace all instances of `dialout` with `uucp`
+    1. save the file, then run `sudo udevadm control --reload-rules && sudo udevadm trigger`
+  - if you __DID NOT__ install the udev rules fom qflipper:
+    1. create the udev rules file by doing `sudo touch /etc/udev/rules.d/42-flipperzero.rules`
+    1. add the following as contents to the `42-flipperzero.rules` file and save it:
+      ```
+      #Flipper Zero serial port
+      SUBSYSTEMS=="usb", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="5740", ATTRS{manufacturer}=="Flipper Devices Inc.", TAG+="uaccess"
+      #Flipper Zero DFU
+      SUBSYSTEMS=="usb", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="df11", ATTRS{manufacturer}=="STMicroelectronics", TAG+="uaccess"
+      ```
+    1. run `sudo udevadm control --reload-rules && sudo udevadm trigger`
+
 ### Fedora qFlipper not detecting Flipper Zero
 First, verify you installed the udev rules from the steps detailed in this page.
 If it still is not detected, you may be experiencing a known conflict between the udev rules of Flipper Zero and the udev rules of the `sysdemd-udev`package.
