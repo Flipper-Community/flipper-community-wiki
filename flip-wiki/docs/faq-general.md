@@ -32,6 +32,9 @@ Also keep this in mind:
 
 ![CFAA Law Image](assets/images/CFAA.jpg){ width="600" }
 
+### What order does the Flipper Zero store files on the MicroSD card?
+The Flipper Zero uses simple features of the filesystem, and displays them in the order the Filesystem presents them. Most often this is purely the order that you added/modified files on the MicroSD card. There is no option to sort alphabetically, as this would take extra memory that the flipper simply does not have. 
+
 ### Can I use a Flipper Zero if I have a Chromebook?
 Yes, however you will be limited to only using [Flipper Lab](https://lab.flipper.net) due to the security restrictions chromebooks have. qFlipper, and by extension the DFU recovery process, will *not* be avaliable on a chromebook. 
 See this [troubleshooting article](troubleshooting.md#qflipper-returns-permission-denied) for more info. 
