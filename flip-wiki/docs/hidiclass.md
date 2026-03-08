@@ -1,11 +1,11 @@
 # HID iClass Guide
 This is a guide to **reading & writing to HID iClass cards** with your Flipper Zero.
 
-# Download Apps
+## Download Apps
 - [**PicoPass App:**](https://lab.flipper.net/apps/picopass/) - Use this application to read iClass cards, and preform NR-MAC attacks for iClass SE 
 - [**Seader App:**](https://lab.flipper.net/apps/seader/) - Use this application to read iClass SE and SEOS if you have a HID SAM or a SAMAdams
 
-# Which card type do I have?
+## Which card type do I have?
 
 Use the chart below to determine which card type you have.
 
@@ -30,7 +30,7 @@ Use the chart below to determine which card type you have.
       - If it says 26 bits/any other length (eg 36, 42) *and* +SIO under, and "Key: Standard" you have a iClass SR credential with standard keys.
   - If it says "Read Failed; Auth Failed" and *not* SE enabled above, you have a Elite Key locked Legacy or SR credential. The only way to tell the difference between them is preform a NR-MAC or Loclass attack.
 
-# How To Read Cards
+## How To Read Cards
  - For iClass Legacy:
     - Open the [**PicoPass**](https://lab.flipper.net/apps/picopass/) app on your Flipper Zero. Click *Read* and present your iClass credential to the back of the flipper.
  - For iClass SR:
@@ -55,17 +55,17 @@ Depending on your card type (either iClass SE or SEOS), you might be able to pre
     - iClass SE/Seos -> iClass (legacy): Check out this [information](<https://github.com/RfidResearchGroup/proxmark3/blob/master/doc/hid_downgrade.md#verfiy-reader-has-iclass-legacy-enabled>) for how to determine if this might work on GitHub.
     - iClass (legacy) -> LF RFID (t5577): Test if the reader has 125khz enabled with [RFID detector](<https://lab.flipper.net/apps/nfc_rfid_detector>) and use [picopass](<https://lab.flipper.net/apps/picopass>) to "Save as lfrfid".
 
-# Writing
+## Writing
 
  - To write to iClass cards, you must have the following:
       - A iClass card of the same type to write to with standard keys/Elite keys the Flipper has saved
       - *Disclaimer: You **CANNOT** write to iClass SE cards*
       - PicoPass will *only* work with genuine iClass cards, and not Mifare Classic or any other 13.56 mHz cards. They **must** be iClass.
 
-# More iClass Info
+## More iClass Info
 
 If you'd like to learn more about HID cards and iClass, check out [**this markdown file**](https://gist.github.com/bettse/36f25f9a2fcca74d773587cc8e780766)
 
-# Any Questions?
+## Any Questions?
 
 Feel free to ask in **#nfc** in the Flipper Devices Discord Server, or the **#iClass** channel in Iceman's RFID server.
