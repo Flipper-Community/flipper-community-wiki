@@ -92,6 +92,7 @@ nav:
       - MIFARE Classic: mifareclassic.md
       - Arcade Cards: arcadecards.md
       - Public Transport: publictransport.md
+      - HID iClass: hidiclass.md
     - SubGHz:
       - Overview: subghz-overview.md
     - GPIO: 
