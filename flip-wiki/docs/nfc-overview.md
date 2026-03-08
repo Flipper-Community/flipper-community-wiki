@@ -8,8 +8,7 @@ The official [**Flipper Zero NFC docs**](https://docs.flipper.net/nfc) detail wh
 
 ---
 ## HID iCLASS
-- Use [**PicoPass**](https://lab.flipper.net/apps/picopass) to read standard-keyed iCLASS and some elite-keyed iCLASS.
-- Use [**Seader**](https://lab.flipper.net/apps/seader) *with a compatible NARD and SAM* to read some iCLASS SE credentials.
+- See the [**HID iClass Guide**](hidiclass.md)
 
 ---
 ## HID Seos
