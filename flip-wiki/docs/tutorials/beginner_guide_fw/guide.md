@@ -16,7 +16,7 @@ This guide assumes you have the following:
 1. Open up command prompt or powershell and `cd` into this directory
 1. Clone the firmware down to this folder using `git clone --recursive https://github.com/flipperdevices/flipperzero-firmware.git` (this will take a few minutes)
 1. `cd` into the resulting `flipperzero-firmware` directory git created.
-1. Once git has finished, we can now select a firmware version to check out. As of writing, 1.1.2 is the latest, so we can do `git checkout 1.1.2`. This will switch the code to the point 1.1.2 was released.
+1. Once git has finished, we can now select a firmware version to check out. As of writing, 1.4.3 is the latest, so we can do `git checkout 1.4.3`. This will switch the code to the point 1.4.3 was released.
 
     **Note:** *Should you need to see what list of version tags are available, you can do `git tag --list` and scroll to the bottom by holding the Page Down key.*
 
