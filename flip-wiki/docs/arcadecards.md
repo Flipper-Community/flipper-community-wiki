@@ -6,7 +6,7 @@ The five main arcade data cards currently in use are:
 
 | Company | Card | Chip | FeliCa<br>AIC | Supported<br>Games |
 | ----------- | ---------- | ------------ | ----------- | ----------- |
-| **Andamiro**<br>*AM* | [**AM.PASS**](https://am-pass.net/) | ICODE SLI<br>ICODE SLIX<br>ICODE SLIX2 | - | [**Pump It Up**](https://piugame.com/) |
+| **Andamiro**<br>*AM* | [**AM.PASS**](https://am-pass.net/)<br>*AMP* | ICODE SLI<br>ICODE SLIX<br>ICODE SLIX2 | - | [**Pump It Up**](https://piugame.com/) |
 | **Bandai Namco**<br>*BN* | [**Bandai Namco Passport**](https://banapass.net/setlocale/en/)<br>*Banapass / BNP* | MIFARE Classic | X | [**太鼓の達人**](https://donderhiroba.jp/login.php)<br>*Taiko no Tatsujin*<br>[**湾岸マキシ**](https://wanganmaxi-official.com/wanganmaxi6rr/en/)<br>*Wangan Maxi* |
 | **Konami** | [**e-amusement pass**](https://p.eagate.573.jp/index.html)<br>*e-amuse / eap*| ICODE SLI | X | [**DanceDanceRevolution**](https://p.eagate.573.jp/game/ddr/ddrworld/top/index.html)<br>[**SOUND VOLTEX**](https://p.eagate.573.jp/game/sdvx/vi/) |
 | **Sega** | [**Aime**](https://my-aime.net/en/) | MIFARE Classic | X | [**CHUNITHM**](https://chunithm.sega.com)<br>[**頭文字D**](https://initiald.sega.jp/inidac/)<br>*InitialD*<br>[**maimai**](https://maimai.sega.com/) |
@@ -14,7 +14,7 @@ The five main arcade data cards currently in use are:
 
 The Flipper Zero includes the MFC `Sega Aime` and `Bandai Namco Passport` access keys in the system dictionary as of OFW 0.98.2.<br>The Flipper Zero expanded its `FeliCa` emulation support as of OFW 0.103.1.
 
-The `Sega Aime` parser reveals the card's access code.<br>The `Bandai Namco Passport` parser reveals the card's access code *if any*, and will be made available in a future OFW update.
+The `Sega Aime` parser reveals the card's access code.<br>The `Bandai Namco Passport` parser reveals the card's access code as of OFW 1.4.2 *provided it is correctly encoded in Sector 0 Block 2*.
 
 The latter four companies have FeliCa card variants endorsed with the `Amusement IC Card [AIC]` logo.
 
