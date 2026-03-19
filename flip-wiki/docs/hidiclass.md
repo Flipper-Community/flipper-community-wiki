@@ -14,11 +14,13 @@ Use the chart below to determine which card type you have.
 **Card Types**
 
  - **Card 1**: Legacy iClass (note the lack SE or SR after the numbers)
- - **Card 2**: iClass SE (SE after the numbers)
+ - **Card 2**: iClass SE (note the SE after the numbers)
  - **Card 3**: iClass SE - Crescendo (note the SE after the numbers and the Crecendo before iClass)
  - **Card 4**: SEOS - **NOT** iClass at all, newer type of card than PicoPass supports. See [**HID SEOS**](https://flipper.wiki/nfc-overview/#hid-seos) for more information. 
  - **Card 5**: HID DESFire - **NOT** a iClass credential, this is a HID Mifare DESFire card.
  - **Card 6**: HID iClass UHF SR Variant (note the SR after the numbers and the UHF after iClass)
+
+ - **Note**: There is another card type that's not listed in the photo above. Instead of SE/SR, it has **ER**. These cards are iClass SE & custom programmed.
 
 - If you have a fob, the metal tag on the back might have letters to the right of the numbers.
 
