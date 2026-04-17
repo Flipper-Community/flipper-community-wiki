@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -2213,7 +2213,7 @@
 
 <h1 id="infrared-overview">Infrared Overview<a class="headerlink" href="#infrared-overview" title="Permanent link">&para;</a></h1>
 <p>The Flipper Zero contains both an infrared receiver and 3 powerful infrared LED's that have a transmit range of about a maximum of 10 meters, depending on the environment. The infrared system is only half duplex, meaning it can only transmit or receive. It cannot do both at the same time. By default, the Flipper Zero can transmit at frequencies up to 56 kHz, but only receive frequencies at 38 kHz. </p>
-<p>For general usage information, <a href="https://docs.flipper.net/infrared">see the official documentation page on infrared</a>.</p>
+<p>For general usage information, <a href="https://docs.flipper.net/zero/infrared">see the official documentation page on infrared</a>.</p>
 <h2 id="hardware">Hardware<a class="headerlink" href="#hardware" title="Permanent link">&para;</a></h2>
 <h3 id="transmitter">Transmitter<a class="headerlink" href="#transmitter" title="Permanent link">&para;</a></h3>
 <p>The infrared LED's are driven directly by the underlying hardware <a href="https://github.com/flipperdevices/flipperzero-firmware/blob/7291e6bd46c564400cdd3e9e7434f2c6e3a5ff28/targets/f7/furi_hal/furi_hal_infrared.c#L30">using several hardware timers and DMA</a> and is set in the fimware to allow up to 1 MHz (which is the theoretical limit of what the MCU can handle) for carrier frequency. </p>
