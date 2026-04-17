@@ -1,6 +1,6 @@
 # NFC Overview
 
-The official [**Flipper Zero NFC docs**](https://docs.flipper.net/nfc) detail what type of NFC tags can be used with the Flipper Zero, and whether it can:
+The official [**Flipper Zero NFC docs**](https://docs.flipper.net/zero/nfc) detail what type of NFC tags can be used with the Flipper Zero, and whether it can:
 - Read the NFC tag;
 - Write to the NFC tag;
 - Save the NFC tag as an `.nfc` file; and/or,
@@ -24,7 +24,7 @@ The official [**Flipper Zero NFC docs**](https://docs.flipper.net/nfc) detail wh
 ---
 ## NXP MIFARE Classic
 - See our [**MIFARE Classic guide**](mifareclassic.md).
-  - See [**Flipper Zero's Magic Cards doc**](https://docs.flipper.net/nfc/magic-cards) for making copies of a MIFARE Classic.
+  - See [**Flipper Zero's Magic Cards doc**](https://docs.flipper.net/zero/nfc/magic-cards) for making copies of a MIFARE Classic.
 - If applicable:
   - See our [**Arcade guide**](arcadecards.md).
   - See our [**Public Transport guide**](publictransport.md).

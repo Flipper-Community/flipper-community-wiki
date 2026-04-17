@@ -1,5 +1,5 @@
 # GPIO Modules Overview
-Per the [Flipper official documentation](https://docs.flipper.net/gpio-and-modules), GPIO modules allow you to extend the Flipper Zero's capabilities with addon modules. 
+Per the [Flipper official documentation](https://docs.flipper.net/zero/gpio-and-modules), GPIO modules allow you to extend the Flipper Zero's capabilities with addon modules. 
 
 ## Popular modules
 The below is NOT a complete list, and only lists a few of the popular available modules for the Flipper Zero.
@@ -13,7 +13,7 @@ CC1101 modules allow you potentially increase the range of both transmitting and
 ### ESP32
 ESP32's are a microcontroller that can include Wi-Fi as well as Bluetooth or Zigbee and come in a variety of different form factors. Some popular ones are:
 
-- [Official Flipper Wi-Fi Development Board](https://docs.flipper.net/development/hardware/Wi-Fi-developer-board) (based on ESP32-S2)
+- [Official Flipper Wi-Fi Development Board](https://docs.flipper.net/zero/development/hardware/Wi-Fi-developer-board) (based on ESP32-S2)
 - ESP32-WROOM
 - ESP32-S2-WROVER
 - ESP32-S3

@@ -25,4 +25,4 @@ Changes have been made that can now cause weirdness on previous firmware version
 ## Getting Help
 - Check out the [troubleshoot guide](troubleshooting.md)
 - Read through [the FAQ](faq-general.md)
-- Join the [**Flipper Discord**](https://flipperzero.one/discord)
+- Join the [**Flipper Discord**](https://flipper.net/pages/community)

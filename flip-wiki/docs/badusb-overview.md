@@ -1,5 +1,5 @@
 # BadUSB Overview
-BadUSB is an [official feature of the Flipper Zero](https://docs.flipper.net/bad-usb) that can allow the device to act as a high speed keyboard to automatically type just about anything you would be able to do on a normal keyboard, just significantly faster via USB or Bluetooth. BadUSB now also supports mouse movement and click commands. 
+BadUSB is an [official feature of the Flipper Zero](https://docs.flipper.net/zero/bad-usb) that can allow the device to act as a high speed keyboard to automatically type just about anything you would be able to do on a normal keyboard, just significantly faster via USB or Bluetooth. BadUSB now also supports mouse movement and click commands. 
 
 The BadUSB scripting language is based on [Duckyscript 1.0](https://web.archive.org/web/20220816200129/http://github.com/hak5darren/USB-Rubber-Ducky/wiki/Duckyscript). Unlike later version of Duckyscript, this version only supports sending keys to a PC, not receiving any files or info back to the Flipper Zero itself. The Flipper Zero's version of Duckyscript also supports changing the USB ID presented to the computer in the event one wishes to make the devices appear as a specific brand of keyboard. 
 

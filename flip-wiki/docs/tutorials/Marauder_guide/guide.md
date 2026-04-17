@@ -182,4 +182,4 @@ The board should now be ready to use with the [Marauder companion app](#installi
 The Marauder companion app is avaliable both on the Flipper mobile app and on Flipper Lab. 
 It can be added to your Flipper Zero here: [https://lab.flipper.net/apps/esp32_wifi_marauder](https://lab.flipper.net/apps/esp32_wifi_marauder)
 
-If you are unsure how to install applications on your Flipper Zero, see the [Official Documentation](https://docs.flipper.net/apps) on how to manage apps. 
+If you are unsure how to install applications on your Flipper Zero, see the [Official Documentation](https://docs.flipper.net/zero/apps) on how to manage apps. 

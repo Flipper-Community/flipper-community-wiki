@@ -34,14 +34,14 @@ The latter four companies have FeliCa card variants endorsed with the `Amusement
 - If FeliCa emulation does not work, you firstly need to:
     1. Back up your microSD card;
     1. Reboot your Flipper Zero;
-    1. Synchronise your Flipper Zero with your [**Mobile App / qFlipper**](https://flipperzero.one/update);
+    1. Synchronise your Flipper Zero with your [**Mobile App / qFlipper**](https://flipper.net/pages/downloads);
     1. Update to the latest OFW Version; then,
     1. Update any installed Apps;
 - If FeliCa emulation *still* does not work, you then need to:       
     1. Back up your microSD card;
     1. Format your microSD card;
     1. Factory reset your Flipper Zero;
-    1. Re-connect your Flipper to your [**Mobile App / qFlipper**](https://flipperzero.one/update);
+    1. Re-connect your Flipper to your [**Mobile App / qFlipper**](https://flipper.net/pages/downloads);
     1. Re-update to the latest OFW Version; then,
     1. Re-install any external Apps.
 - There is an issue that prevents the Flipper Zero from emulating:

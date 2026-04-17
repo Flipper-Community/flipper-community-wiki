@@ -12,13 +12,13 @@ This page aims to collect frequent or common questions people may have related t
 
 Additionally, you **will lose your device's warranty** by buying from these shops. 
 
-See the **[offical Flipper Zero how to buy site](https://flipperzero.one/how-to-buy)** for trusted sellers. 
+See the **[offical Flipper Zero how to buy site](https://flipper.net/pages/resellers)** for trusted sellers. 
 
 ### What can the Flipper Zero do?
 All of the cool things the device can do are nicely laid out in the [**official docs**](https://docs.flipper.net)!
 
 ### Should I ask ChatGPT or other AI tools about Flipper Zero?
-**Please do not ask AI tools about the Flipper Zero or development on it**. Due to the fact that the Flipper zero is such a unique device, these tools ^^***almost always are guaranteed to get the information wrong***^^. In our extensive testing it ***CANNOT*** be relied on for any information, whether thats seller information or development information or code. Please instead seek information from the [official product site](https://flipperzero.one).
+**Please do not ask AI tools about the Flipper Zero or development on it**. Due to the fact that the Flipper zero is such a unique device, these tools ^^***almost always are guaranteed to get the information wrong***^^. In our extensive testing it ***CANNOT*** be relied on for any information, whether thats seller information or development information or code. Please instead seek information from the [official product site](https://flipper.net).
 
 ??? tip "protip" 
     chatgpt is cringe bro. Do your own research fr.
@@ -56,8 +56,8 @@ No. NFC/RFID is a broad and more complex topic. There are different card/tag typ
 
 The supported types and what can be read can be found in the docs: 
 
-  - [https://docs.flipper.net/nfc/](https://docs.flipper.net/nfc/)
-  - [https://docs.flipper.net/rfid](https://docs.flipper.net/rfid)
+  - [https://docs.flipper.net/zero/nfc/](https://docs.flipper.net/zero/nfc/)
+  - [https://docs.flipper.net/zero/rfid](https://docs.flipper.net/zero/rfid)
 
 ### How can I make NFC files with links or other things?
 You have three options to create a NTAG type card with this info:
@@ -127,8 +127,8 @@ graph LR
   E --> |Yes| G[You can possibly create and pair a new remote! ***];
   E --> |No| D;
 ```
-* [Supported Frequencies](https://docs.flipper.net/sub-ghz/frequencies)
+* [Supported Frequencies](https://docs.flipper.net/zero/sub-ghz/frequencies)
 
-** [Supported Rolling Codes](https://docs.flipper.net/sub-ghz/add-new-remote#3iGlU)
+** [Supported Rolling Codes](https://docs.flipper.net/zero/sub-ghz/add-new-remote#3iGlU)
 
-*** [Creating and pairing a new remote](https://docs.flipper.net/sub-ghz/add-new-remote)
+*** [Creating and pairing a new remote](https://docs.flipper.net/zero/sub-ghz/add-new-remote)

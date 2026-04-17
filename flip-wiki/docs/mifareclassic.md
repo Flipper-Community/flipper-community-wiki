@@ -3,7 +3,7 @@ Here are the steps to follow in order to read your cards. Your goal is to find a
 
 ## Prerequisites
 
-You must update your firmware ([**how-to**](https://docs.flipper.net/basics/firmware-update)) to the latest official firmware (OFW) release (version 1.1.2 or later). You must also install the [**MFKey app**](https://lab.flipper.net/apps/mfkey) (version 3.0 or later).
+You must update your firmware ([**how-to**](https://docs.flipper.net/zero/basics/firmware-update)) to the latest official firmware (OFW) release (version 1.1.2 or later). You must also install the [**MFKey app**](https://lab.flipper.net/apps/mfkey) (version 3.0 or later).
 
 
 ## Reading the Card
@@ -41,7 +41,7 @@ Even if you have all of the keys and try to emulate your card, you may find the 
     - 4 byte UID (e.g. `AA BB CC DD`): Gen1a Magic Card (💲), Gen2 Magic Card - 4 byte UID variant (💲💲)
     - 7 byte UID (e.g. `AA BB CC DD EE FF 00`): Gen2 Magic Card - 7 byte UID variant (💲💲), Gen4/Ultimate Magic Card (💲💲💲)
 
-    Follow the official guide to write the card data to a magic card: (**<https://docs.flipper.net/nfc/magic-cards>**).
+    Follow the official guide to write the card data to a magic card: (**<https://docs.flipper.net/zero/nfc/magic-cards>**).
 
 * If you have a spare identical MIFARE Classic card (1K for 1K, 4K for 4K, EV1 for EV1, etc.), have all of the keys to the spare card, and the access conditions on the spare card allow: you can duplicate the data from the initial card to the spare card and it could possibly work (if the reader is indifferent to the UID of the card, and if the keys are *diversified* - you will need the diversified keys from the reader using Mfkey32/KDF provided they are not already present on the card).
 

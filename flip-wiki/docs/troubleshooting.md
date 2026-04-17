@@ -12,7 +12,7 @@ If you are experiencing an error code when updating, you can look at the error c
 In most cases, errors are typically caused by an improperly formatted or failing MicroSD card and will correspond to the `Updating resources` error code section. 
 
 ### Forgotten/unknown Flipper Zero PIN
-[See the official docs page for PIN reset instructions.](https://docs.flipper.net/basics/control#c_9ya)
+[See the official docs page for PIN reset instructions.](https://docs.flipper.net/zero/basics/control#c_9ya)
 
 If you are still having problems, browse your MicroSD card and delete the hidden `.int` folder and try the above steps in the docs again. 
 
@@ -53,7 +53,7 @@ It is recommended [that you do not downgrade below version 1.1.2](https://github
 ## Windows
 
 !!! Note
-    Before trying Windows troubleshooting, try the [Official qFlipper Troubleshooting Guide](https://docs.flipper.net/qFlipper/windows-debug) **FIRST!**
+    Before trying Windows troubleshooting, try the [Official qFlipper Troubleshooting Guide](https://docs.flipper.net/zero/qflipper/windows-debug) **FIRST!**
     
     If those steps did not help, you may continue below.
 
