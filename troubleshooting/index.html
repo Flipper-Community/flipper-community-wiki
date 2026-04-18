@@ -2515,7 +2515,7 @@
 <p>If you are experiencing an error code when updating, you can look at the error code list from the <a href="https://github.com/flipperdevices/flipperzero-firmware/blob/dev/documentation/OTA.md#ota-update-error-codes">OTA update process docs</a> to narrow down your issue. 
 In most cases, errors are typically caused by an improperly formatted or failing MicroSD card and will correspond to the <code>Updating resources</code> error code section. </p>
 <h3 id="forgottenunknown-flipper-zero-pin">Forgotten/unknown Flipper Zero PIN<a class="headerlink" href="#forgottenunknown-flipper-zero-pin" title="Permanent link">&para;</a></h3>
-<p><a href="https://docs.flipper.net/zero/basics/control#c_9ya">See the official docs page for PIN reset instructions.</a></p>
+<p><a href="https://docs.flipper.net/zero/basics/settings#how-to-reset-your-pin-code">See the official docs page for PIN reset instructions.</a></p>
 <p>If you are still having problems, browse your MicroSD card and delete the hidden <code>.int</code> folder and try the above steps in the docs again. </p>
 <h3 id="flipper-zero-is-experiencing-lag-or-behaving-slow">Flipper Zero is experiencing lag or behaving slow<a class="headerlink" href="#flipper-zero-is-experiencing-lag-or-behaving-slow" title="Permanent link">&para;</a></h3>
 <p>This is an issue that is most commonly caused by certain development features being enabled and putting strain on the CPU of the flipper. 
@@ -2632,7 +2632,7 @@ This will require you to manually apply a fix related to one of the udev rules.<
 <p>ChromeOS users will have to only utilize <a href="https://lab.flipper.net">Flipper Lab</a>, no other option is currently possible for ChromeOS. </p>
 <p>While ChromeOS does allow USB devices to access Linux environments via <code>Settings &gt; Linux &gt; USB preferences</code>, the security hardening features of ChromeOS 
 prevent udev scripts from applying the <code>uaccess</code> property to the device within the context of the secure linux container, which is needed for qFlipper to properly access the Flipper Zero. Attempting to run qFlipper with <code>sudo -E</code> is also fruitless.
-This roadblock lies firmly on the ChromeOS side for the time being. While Flipper Labs is nearly at feature parity with qFlipper, it cannot perform a DFU recovery. Should such a need arise, you will need temporary access to a non ChromeOS based PC. </p>
+This roadblock lies firmly on the ChromeOS side for the time being. While Flipper Labs is nearly at feature parity with qFlipper, it cannot perform a DFU recovery. Should such a need arise, you will need temporary access to a non ChromeOS based PC.</p>
 
 
 
