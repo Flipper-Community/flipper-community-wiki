@@ -12,7 +12,7 @@ If you are experiencing an error code when updating, you can look at the error c
 In most cases, errors are typically caused by an improperly formatted or failing MicroSD card and will correspond to the `Updating resources` error code section. 
 
 ### Forgotten/unknown Flipper Zero PIN
-[See the official docs page for PIN reset instructions.](https://docs.flipper.net/zero/basics/control#c_9ya)
+[See the official docs page for PIN reset instructions.](https://docs.flipper.net/zero/basics/settings#how-to-reset-your-pin-code)
 
 If you are still having problems, browse your MicroSD card and delete the hidden `.int` folder and try the above steps in the docs again. 
 
@@ -140,4 +140,4 @@ ChromeOS users will have to only utilize [Flipper Lab](https://lab.flipper.net),
 
 While ChromeOS does allow USB devices to access Linux environments via `Settings > Linux > USB preferences`, the security hardening features of ChromeOS 
 prevent udev scripts from applying the `uaccess` property to the device within the context of the secure linux container, which is needed for qFlipper to properly access the Flipper Zero. Attempting to run qFlipper with `sudo -E` is also fruitless.
-This roadblock lies firmly on the ChromeOS side for the time being. While Flipper Labs is nearly at feature parity with qFlipper, it cannot perform a DFU recovery. Should such a need arise, you will need temporary access to a non ChromeOS based PC. 
+This roadblock lies firmly on the ChromeOS side for the time being. While Flipper Labs is nearly at feature parity with qFlipper, it cannot perform a DFU recovery. Should such a need arise, you will need temporary access to a non ChromeOS based PC.

@@ -47,7 +47,7 @@ Nearly anything for the device is available on GitHub.
 * The [IRDB repo](https://github.com/Lucaslhm/Flipper-IRDB) contains a large assortment of infrared remotes.
 
 ### How do the Flipper Zero levels work?
-From the [Official Documentation](https://docs.flipper.net/zero/basics/dolphin#fi-EA):
+From the [Official Documentation](https://docs.flipper.net/zero/basics/dolphin#how-scoring-works):
 > Your digital pet earns XP every time you use your Flipper Zero. The amount of XP earned depends on the features you use. Keep in mind that you can only collect a maximum of 20 XP per day for each application, and a total of 140 XP overall per day. Collect 300 XP to reach Level 2, and 1800 XP to reach Level 3.
 
 ### Can the Flipper Zero copy any RFID card?
@@ -129,6 +129,6 @@ graph LR
 ```
 * [Supported Frequencies](https://docs.flipper.net/zero/sub-ghz/frequencies)
 
-** [Supported Rolling Codes](https://docs.flipper.net/zero/sub-ghz/add-new-remote#3iGlU)
+** [Supported Rolling Codes](https://docs.flipper.net/zero/sub-ghz/add-new-remote#list-of-supported-protocols)
 
 *** [Creating and pairing a new remote](https://docs.flipper.net/zero/sub-ghz/add-new-remote)
