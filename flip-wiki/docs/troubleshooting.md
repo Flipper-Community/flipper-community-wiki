@@ -117,10 +117,46 @@ Arch uses the uucp group for serial connections instead of dialout, so some chan
       ```
     1. run `sudo udevadm control --reload-rules && sudo udevadm trigger`
 
+### Bazzite not detecting Flipper Zero
+For Bazzite installations, the [Flathub version of Flipper zero is preferred](https://flathub.org/en/apps/one.flipperzero.qFlipper).
+
+1. Install the Flathub version of qFlipper by opening Bazaar and searching for "qFlipper", it should be the first result
+1. Install the needed system udev rules following **ONLY ONE** of the options below: *The Automatic Script Method* OR *The Manual Method*
+
+####The Automatic Script Method:
+
+1. Navigate to [**this github page**](https://github.com/ase1590/qFlipper/blob/dev/setup_rules.sh), and hit the small down arrow button located to the right of the *Raw* button, when hovered over it should says "download raw file"
+1. Save this script somewhere easy to find, such as your downloads folder
+1. navigate to your downloads folder, right click the file, and choose **Permissions** tab
+1. Check the box that says "Allow executing file as a program"
+1. Click "Ok" at the bottom
+1. In the file browser, right click on empty space near the `setup_rule.sh` file, and choose **Open Terminal Here**
+1. type in `./setup_rules.sh` and hit enter
+1. Following the prompts, just type `I` for install and hit enter
+1. You will be prompted for your sudo password, this is typically the same password you log in with. Type this and press enter. Don't worry if you dont see any characters in the terminal, this is normal.
+1. If done correctly, you should get the message "Device rules have been installed successfully. You're good to go!"
+1. Reboot your PC and then launch qFlipper. It should now be able to access your Flipper Zero without issue!
+
+#### The Manual Method:
+
+1. Be sure qFlipper is closed, then open a terminal
+1. run the following to get an elevated permissions text editor: `sudo nano /etc/udev/rules.d/42-flipperzero.rules`
+1. Paste the following into the text editor:
+      ```
+      #Flipper Zero serial port
+      SUBSYSTEMS=="usb", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="5740", ATTRS{manufacturer}=="Flipper Devices Inc.", TAG+="uaccess"
+      #Flipper Zero DFU
+      SUBSYSTEMS=="usb", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="df11", ATTRS{manufacturer}=="STMicroelectronics", TAG+="uaccess"
+      ```
+1. Save the file by pressing **ctrl+s**, then close the editor using **ctrl+x**
+1. run `sudo udevadm control --reload-rules && sudo udevadm trigger`
+1. Open qFlipper, and it should now detect your Flipper Zero
+
+
 ### Fedora qFlipper not detecting Flipper Zero
-First, verify you installed the udev rules from the steps detailed in this page.
-If it still is not detected, you may be experiencing a known conflict between the udev rules of Flipper Zero and the udev rules of the `sysdemd-udev`package.
-This will require you to manually apply a fix related to one of the udev rules.
+First, verify you installed the udev rules from the steps detailed in this page. 
+**If and only if** it still is not detected, you may be experiencing a known conflict between the udev rules of Flipper Zero and the udev rules of the `sysdemd-udev`package
+This will require you to manually apply a fix related to one of the udev rules
 
 See [this Github issue](https://github.com/flipperdevices/qFlipper/issues/154#issuecomment-1371038376) for further details. 
 
@@ -128,7 +164,7 @@ See [this Github issue](https://github.com/flipperdevices/qFlipper/issues/154#is
 This is likely due to a missing library. 
 
 1. Verify you have enabled the `Universe` repo, and updated your local apt database using `apt update` 
-1. run `sudo apt install libfuse2` to install the missing libfuse2 library. 
+1. run `sudo apt install libfuse2` to install the missing libfuse2 library
 1. make sure your appimage is set as executable
 
 The appimage should now run. 
