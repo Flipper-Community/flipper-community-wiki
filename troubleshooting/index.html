@@ -627,6 +627,45 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#bazzite-not-detecting-flipper-zero" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bazzite not detecting Flipper Zero
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bazzite not detecting Flipper Zero">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-automatic-script-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Automatic Script Method:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-manual-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Manual Method:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#fedora-qflipper-not-detecting-flipper-zero" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2401,6 +2440,45 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#bazzite-not-detecting-flipper-zero" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bazzite not detecting Flipper Zero
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bazzite not detecting Flipper Zero">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-automatic-script-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Automatic Script Method:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-manual-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Manual Method:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#fedora-qflipper-not-detecting-flipper-zero" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2498,6 +2576,11 @@
 <li><a href="#error-while-loading-shared-libraries-libopenglso0">Error while loading shared libraries: libOpenGL.so.0</a></li>
 <li><a href="#flipper-zero-not-recognized-by-qflipper">Flipper Zero not recognized by qFlipper</a></li>
 <li><a href="#arch-linux-qflipper-not-detecting-flipper-zero">Arch Linux qFlipper not detecting Flipper Zero</a></li>
+<li><a href="#bazzite-not-detecting-flipper-zero">Bazzite not detecting Flipper Zero</a><ul>
+<li><a href="#the-automatic-script-method">The Automatic Script Method:</a></li>
+<li><a href="#the-manual-method">The Manual Method:</a></li>
+</ul>
+</li>
 <li><a href="#fedora-qflipper-not-detecting-flipper-zero">Fedora qFlipper not detecting Flipper Zero</a></li>
 <li><a href="#ubuntu-cannot-run-the-appimage">Ubuntu cannot run the appimage</a></li>
 </ul>
@@ -2614,16 +2697,50 @@ SUBSYSTEMS==&quot;usb&quot;, ATTRS{idVendor}==&quot;0483&quot;, ATTRS{idProduct}
 </ol>
 </li>
 </ol>
+<h3 id="bazzite-not-detecting-flipper-zero">Bazzite not detecting Flipper Zero<a class="headerlink" href="#bazzite-not-detecting-flipper-zero" title="Permanent link">&para;</a></h3>
+<p>For Bazzite installations, the <a href="https://flathub.org/en/apps/one.flipperzero.qFlipper">Flathub version of Flipper zero is preferred</a>.</p>
+<ol>
+<li>Install the Flathub version of qFlipper by opening Bazaar and searching for "qFlipper", it should be the first result</li>
+<li>Install the needed system udev rules following <strong>ONLY ONE</strong> of the options below: <em>The Automatic Script Method</em> OR <em>The Manual Method</em></li>
+</ol>
+<h4 id="the-automatic-script-method">The Automatic Script Method:<a class="headerlink" href="#the-automatic-script-method" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Navigate to <a href="https://github.com/ase1590/qFlipper/blob/dev/setup_rules.sh"><strong>this github page</strong></a>, and hit the small down arrow button located to the right of the <em>Raw</em> button, when hovered over it should says "download raw file"</li>
+<li>Save this script somewhere easy to find, such as your downloads folder</li>
+<li>navigate to your downloads folder, right click the file, and choose <strong>Permissions</strong> tab</li>
+<li>Check the box that says "Allow executing file as a program"</li>
+<li>Click "Ok" at the bottom</li>
+<li>In the file browser, right click on empty space near the <code>setup_rule.sh</code> file, and choose <strong>Open Terminal Here</strong></li>
+<li>type in <code>./setup_rules.sh</code> and hit enter</li>
+<li>Following the prompts, just type <code>I</code> for install and hit enter</li>
+<li>You will be prompted for your sudo password, this is typically the same password you log in with. Type this and press enter. Don't worry if you dont see any characters in the terminal, this is normal.</li>
+<li>If done correctly, you should get the message "Device rules have been installed successfully. You're good to go!"</li>
+<li>Reboot your PC and then launch qFlipper. It should now be able to access your Flipper Zero without issue!</li>
+</ol>
+<h4 id="the-manual-method">The Manual Method:<a class="headerlink" href="#the-manual-method" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Be sure qFlipper is closed, then open a terminal</li>
+<li>run the following to get an elevated permissions text editor: <code>sudo nano /etc/udev/rules.d/42-flipperzero.rules</code></li>
+<li>Paste the following into the text editor:
+      <div class="highlight"><pre><span></span><code>#Flipper Zero serial port
+SUBSYSTEMS==&quot;usb&quot;, ATTRS{idVendor}==&quot;0483&quot;, ATTRS{idProduct}==&quot;5740&quot;, ATTRS{manufacturer}==&quot;Flipper Devices Inc.&quot;, TAG+=&quot;uaccess&quot;
+#Flipper Zero DFU
+SUBSYSTEMS==&quot;usb&quot;, ATTRS{idVendor}==&quot;0483&quot;, ATTRS{idProduct}==&quot;df11&quot;, ATTRS{manufacturer}==&quot;STMicroelectronics&quot;, TAG+=&quot;uaccess&quot;
+</code></pre></div></li>
+<li>Save the file by pressing <strong>ctrl+s</strong>, then close the editor using <strong>ctrl+x</strong></li>
+<li>run <code>sudo udevadm control --reload-rules &amp;&amp; sudo udevadm trigger</code></li>
+<li>Open qFlipper, and it should now detect your Flipper Zero</li>
+</ol>
 <h3 id="fedora-qflipper-not-detecting-flipper-zero">Fedora qFlipper not detecting Flipper Zero<a class="headerlink" href="#fedora-qflipper-not-detecting-flipper-zero" title="Permanent link">&para;</a></h3>
-<p>First, verify you installed the udev rules from the steps detailed in this page.
-If it still is not detected, you may be experiencing a known conflict between the udev rules of Flipper Zero and the udev rules of the <code>sysdemd-udev</code>package.
-This will require you to manually apply a fix related to one of the udev rules.</p>
+<p>First, verify you installed the udev rules from the steps detailed in this page. 
+<strong>If and only if</strong> it still is not detected, you may be experiencing a known conflict between the udev rules of Flipper Zero and the udev rules of the <code>sysdemd-udev</code>package
+This will require you to manually apply a fix related to one of the udev rules</p>
 <p>See <a href="https://github.com/flipperdevices/qFlipper/issues/154#issuecomment-1371038376">this Github issue</a> for further details. </p>
 <h3 id="ubuntu-cannot-run-the-appimage">Ubuntu cannot run the appimage<a class="headerlink" href="#ubuntu-cannot-run-the-appimage" title="Permanent link">&para;</a></h3>
 <p>This is likely due to a missing library. </p>
 <ol>
 <li>Verify you have enabled the <code>Universe</code> repo, and updated your local apt database using <code>apt update</code> </li>
-<li>run <code>sudo apt install libfuse2</code> to install the missing libfuse2 library. </li>
+<li>run <code>sudo apt install libfuse2</code> to install the missing libfuse2 library</li>
 <li>make sure your appimage is set as executable</li>
 </ol>
 <p>The appimage should now run. </p>
