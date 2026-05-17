@@ -8,6 +8,7 @@
     - Do you know how ***cool*** reading them makes you?!
 - Read our [**very cool FAQ!**](faq-general.md)
 - Having issues? Check out the [**Troubleshooting page!**](troubleshooting.md)
+- Check out this very cool qflipper alternative program, [FlipperUI!](https://github.com/fuckmaz/FlipperUI/releases)
 ## What Not To Do
 
 ### Do Not Try Copying a Car Remote/Keyfob
