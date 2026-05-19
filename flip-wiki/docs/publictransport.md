@@ -3,6 +3,7 @@
     *The below information is for educational purposes only, and is* ***__NOT__*** *designed to facilitate fare evasion.*
 
 ## Resources
+- [**FeliCa Tool**](https://github.com/kormax/felica-tool)
 - [**MetroDroid**](https://github.com/metrodroid/metrodroid)
 - [**Metroflip**](https://lab.flipper.net/apps/metroflip)
 - [**NFC TagInfo by NXP: Google Play**](https://play.google.com/store/apps/details?id=com.nxp.taginfolite)
@@ -10,7 +11,7 @@
 - [**PTDex**](https://github.com/ry4000/ptdex)
 
 ## FeliCa
-If you have either a HKG Octopus Card or a Japan Transit IC Card *using FeliCa*, then you can use either `MetroDroid` or the Android version of `NFC TagInfo by NXP` to view some information relating to the card.
+If you have either a HKG Octopus Card or a Japan Transit IC Card *using FeliCa*, then you can use either `FeliCa Tool`, `MetroDroid`, or the Android version of `NFC TagInfo by NXP` to view some information relating to the card.
 `Metroflip` added support for HKG Octopus and Japan Transit IC Cards *using FeliCa* as of OFW 1.4.2.
 
 It is also possible to use FeliCa *Standard* cards/tags/fobs/charms as an [**arcade data card**](arcadecards.md) for use on some `Konami` games.
