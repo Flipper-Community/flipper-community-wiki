@@ -27,6 +27,7 @@ The latter four companies have FeliCa card variants endorsed with the `Amusement
 | **Banapass**         | MFC    | -  | X  | -      | -    | -     |
 | **e-amuse**          | ICODE  | -  | -  | -      | -    | -     |
 | **HKG Octopus**      | FeliCa | -  | -  | X      | -    | -     | 
+| **Japan e-money IC** | FeliCa | -  | -  | X      | -    | -     |
 | **Japan Transit IC** | FeliCa | -  | -  | X      | -    | -     | 
 | **NESiCA**           | MFU    | -  | -  | -      | -    | X     |
 
@@ -52,8 +53,8 @@ The latter four companies have FeliCa card variants endorsed with the `Amusement
     1. MFC `Bandai Namco Passport` cards on `Sega` games.
 - Emulation compatibility cannot be tested for `Taito` games without further assistance from Members located within Japan.
 - The ICODE SLI `e-amusement pass` cards are not compatible with `Andamiro` games *and vice versa*.
-- Japan Transit IC Cards must be using `FeliCa Standard`.
-- Transport cards are currently only able to be registered for initial play via `DANCERUSH STARDOM` and `SOUND VOLTEX`.
+- Japan e-money/Transit IC Cards must be using `FeliCa Standard`.
+- e-money/transit cards are currently only able to be registered for initial play via `DANCERUSH STARDOM` and `SOUND VOLTEX`.
 
 
 ## Arcade Payment Cards
