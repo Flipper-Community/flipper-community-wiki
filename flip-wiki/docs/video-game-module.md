@@ -1,6 +1,6 @@
 # Video Game Module
 
-The [Video Game Module](https://docs.flipper.net/video-game-module), developed and sold by [Flipper Devices](https://shop.flipperzero.one/products/video-game-module-for-flipper-zero), is an exciting gaming GPIO attachment that takes your Flipper Zero to the next level. Here’s what it offers:
+The [Video Game Module](https://docs.flipper.net/zero/video-game-module), developed and sold by [Flipper Devices](https://flipper.net/products/video-game-module-for-flipper-zero), is an exciting gaming GPIO attachment that takes your Flipper Zero to the next level. Here’s what it offers:
 
 - **Motion Sensor**: Adds a new dimension of interactivity by detecting motion for games or creative projects.  
 - **USB-C Port**: Connect to external devices or power up with ease.  

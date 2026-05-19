@@ -8,6 +8,7 @@
     - Do you know how ***cool*** reading them makes you?!
 - Read our [**very cool FAQ!**](faq-general.md)
 - Having issues? Check out the [**Troubleshooting page!**](troubleshooting.md)
+- Check out this very cool qflipper alternative program, [FlipperUI!](https://github.com/fuckmaz/FlipperUI/releases)
 ## What Not To Do
 
 ### Do Not Try Copying a Car Remote/Keyfob
@@ -25,4 +26,4 @@ Changes have been made that can now cause weirdness on previous firmware version
 ## Getting Help
 - Check out the [troubleshoot guide](troubleshooting.md)
 - Read through [the FAQ](faq-general.md)
-- Join the [**Flipper Discord**](https://flipperzero.one/discord)
+- Join the [**Flipper Discord**](https://flipper.net/pages/community)

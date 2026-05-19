@@ -1,6 +1,6 @@
 # Overview
 The Flipper Zero supports reading a limited number of 125 kHz RFID protocols.
-The [official Flipper Zero docs](https://docs.flipper.net/rfid/read) detail what protocols are supported. 
+The [official Flipper Zero docs](https://docs.flipper.net/zero/rfid/read) detail what protocols are supported. 
 
 
 ## Low Frequency (RFID)

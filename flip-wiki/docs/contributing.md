@@ -68,7 +68,7 @@ Local Image Embed
 
 Remote Image Embed with scaling
 
-![Flipper logo black](https://flipperzero.one/img/tild6562-3063-4231-b864-663634333031__black.svg){ width="200" }
+![Flipper logo black](https://cdn.flipper.net/black.svg){ width="200" }
 
 [comment]: <> (This is a hidden markdown comment that will not visibly show on the site)
 

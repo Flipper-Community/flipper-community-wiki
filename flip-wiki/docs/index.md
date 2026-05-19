@@ -1,5 +1,5 @@
 # Welcome to the Flipper Community Wiki
-This site contains the unofficial community driven knowledge base for the [Flipper Zero](https://flipperzero.one). 
+This site contains the unofficial community driven knowledge base for the [Flipper Zero](https://flipper.net). 
 
 **Ready to continue onwards?**
 
