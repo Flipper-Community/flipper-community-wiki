@@ -8,7 +8,7 @@ The five main arcade data cards currently in use are:
 | ----------- | ---------- | ------------ | ----------- | ----------- |
 | **Andamiro**<br>*AM* | [**AM.PASS**](https://am-pass.net/)<br>*AMP* | ICODE SLI<br>ICODE SLIX<br>ICODE SLIX2 | - | [**Pump It Up**](https://piugame.com/) |
 | **Bandai Namco**<br>*BN* | [**Bandai Namco Passport**](https://banapass.net/setlocale/en/)<br>*Banapass / BNP* | MIFARE Classic | X | [**太鼓の達人**](https://donderhiroba.jp/login.php)<br>*Taiko no Tatsujin*<br>[**湾岸マキシ**](https://wanganmaxi-official.com/wanganmaxi6rr/en/)<br>*Wangan Maxi* |
-| **Konami** | [**e-amusement pass**](https://p.eagate.573.jp/index.html)<br>*e-amuse / eap*| ICODE SLI | X | [**DanceDanceRevolution**](https://p.eagate.573.jp/game/ddr/ddrworld/top/index.html)<br>[**SOUND VOLTEX**](https://p.eagate.573.jp/game/sdvx/vi/) |
+| **Konami** | [**e-amusement pass**](https://p.eagate.573.jp/index.html)<br>*e-amuse / eap*| ICODE SLI | X | [**DanceDanceRevolution**](https://p.eagate.573.jp/game/ddr/)<br>[**pop'n music**](https://p.eagate.573.jp/game/popn/)<br>[**SOUND VOLTEX**](https://p.eagate.573.jp/game/sdvx/) |
 | **Sega** | [**Aime**](https://my-aime.net/en/) | MIFARE Classic | X | [**CHUNITHM**](https://chunithm.sega.com)<br>[**頭文字D**](https://initiald.sega.jp/inidac/)<br>*InitialD*<br>[**maimai**](https://maimai.sega.com/) |
 | **Taito** | [**NESiCA**](https://nesica.net/) | MIFARE Ultralight | X | [**MUSIC DIVER**](https://musicdiver.jp/index.html)<br>[**STREET FIGHTER**](https://sf6ta.jp/) |
 
