@@ -3,13 +3,28 @@
   /* --md-primary-bg-color:        #800505; */
 }
 
+
+/* Set the topbar color directly */
+.md-header {
+  background-color: #FF8200;
+  color: #FFFFFF; /* Adjust for contrast: white or black */
+}
+
+/* Set the topbar font directly */
 .md-header__topic {
   font-family: "Gravity8";
   /* letter-spacing:0.4em; */
 }
 
+/* Set the topbar flipper logo scale */
 .md-header__button.md-logo img, .md-header__button.md-logo svg {
   transform: scale(2);
+}
+
+/* Set the searchbar color and font color */
+.md-search__inner .md-search__input {
+  background-color: #d16900; /* Example: White background for contrast */
+  color: #FFFFFF;           /* Example: Dark text inside the search bar */
 }
 
 
@@ -20,6 +35,7 @@
   font-style: normal;
 }
 
+/* set the highlight colors for highlighting text */
 ::selection {
   background-color: #FF8200;
   color: white;
