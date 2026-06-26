@@ -93,4 +93,4 @@ When done, you can close out the virtual environment by typing `deactivate` in y
 1. Once done, add them to the `flip-wiki/mkdocs.yml` towards the bottom under the `Navigation Heirarchy` section, following the pattern of the other `.md` files.
 1. If the preview looks good when using mkdocs to preview them, submit a pull request. 
 
-For more in depth features, see the [**MkDocs-material guide**](https://squidfunk.github.io/mkdocs-material/reference/).
+For more in depth features, see the [**MkDocs-materialx guide**](https://jaywhj.github.io/mkdocs-materialx/index.html).
