@@ -34,7 +34,7 @@ For this, we will use the awesome tiny [**uv**](https://astral.sh) utility to ma
 1. close and re-open Powershell. 
 1. Using git or the GitHub client, clone your fork of the docs to your PC. 
 1. In Powershell, `cd` into the `flipper-community-wiki\flip-wiki` folder that you got from cloning your fork onto your PC. 
-1. simply run `uvx --from mkdocs-material mkdocs serve` to launch mkdocs seamlessly without installing anything to your PC.
+1. simply run `uvx --from mkdocs-materialx mkdocs serve` to launch mkdocs seamlessly without installing anything to your PC.
     - Note: the tool will say `warning: An executable named mkdocs is not provided(...)`, you can safely disregard this, as mkdocs-material just looks odd the way its set up to this utility.  
 1. when done running mkdocs, simply press **Ctrl+c** to stop.
 
@@ -42,25 +42,6 @@ Like a browser, `uv` keeps a cache around for items you've used before to reduce
 
 After this, you can optionally uninstall `uv` when done if you have no further need of it by simply doing `winget uninstall astral-sh.uv`, which will return your system to the state it was in prior to installing it. 
 
-----
-
-### Linux
-MkDocs is available directly through the package manager for most common distros. 
-
-- Ubuntu 24.04 and newer: `# apt install mkdocs-material`
-- Debian 12 and newer: `# apt install mkdocs-material`
-- Fedora 41 and newer: `# dnf install mkdocs-material`
-- Arch: `# pacman -S mkdocs-material`
-
-Once installed, `cd` into the `flipper-community-wiki/flip-wiki` folder and run `mkdocs serve`
-
-----
-
-### Mac
-MkDocs can be installed via [**Brew**](https://brew.sh):
-`brew install mkdocs-material`
-
-Once installed, `cd` into the `flipper-community-wiki/flip-wiki` folder and run `mkdocs serve`
 
 ----
 
@@ -72,7 +53,7 @@ MkDocs-Material is built entirely on the Python platform, and can be installed o
 ### Method 1: Install Directly using Python
 This method wil directly install MkDocs into whatever python version you are running. It is not the cleanest way to do this, but it is the simplest. 
 
-1. run `pip install mkdocs-material`
+1. run `pip install mkdocs-materialx`
 1. wait for the setup to complete. 
 1. `cd` to the directory you cloned the `flipper-community-wiki` folder and enter it. 
 1. `cd` into the `flip-wiki` folder
@@ -94,7 +75,7 @@ This method uses a built in feature of Python called a *virtual environment*, wh
     - Windows: run `venv\scripts\activate.ps1`
     - Linux/Mac: run `source venv/bin/activate`
 1. you should now see `(venv)` added in your terminal. This means that so long as this is active, anything installed will be contained entirely in the `venv` folder we created. 
-1. run `python -m pip install mkdocs-material` and wait for the install to finish. 
+1. run `python -m pip install mkdocs-materialx` and wait for the install to finish. 
 1. `cd` into the `flipper-community-wiki/flip-wiki` folder
 1. once complete, run `python -m mkdocs serve` to start
 1. MkDocs will begin running at `http://127.0.0.1:8000`, browse to this in your browser
