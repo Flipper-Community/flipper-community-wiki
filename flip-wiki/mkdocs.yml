@@ -9,9 +9,10 @@ site_author: Flipwiki Unofficial Community
 
 ### Theme settings ###
 theme:
-  name: material
+  name: materialx
   custom_dir: overrides # Needed for the overrides folder to take effect
   logo: assets/images/white_dolph_transparent.png
+  topbar_style: primary
   palette:
     - media: "(prefers-color-scheme)"
       toggle:
@@ -44,11 +45,19 @@ extra:
 
 ### Copyright footer info ###
 copyright: The content of this wiki is created and maintained by the community and does not represent the official views, statements, or endorsements of Flipper Devices.
-  <div>All Flipper artwork is attributed to <a href="https://flipperdevices.com">Flipper Devices</a> unless otherwise stated. 
+  <div>All Flipper artwork is attributed to <a href="https://flipperdevices.com">Flipper Devices</a> unless otherwise stated.
   <div>All trademarks are the property of their respective owners and are used in this document for descriptive purposes only, without any intention of infringement.
 
 ### Plugin loading
-# plugins:
+plugins:
+  - search
+  - document-dates:
+      show_author: false
+      recently-updated:
+        limit: 5
+        exclude:
+          - index.md
+
 #### social plugin disabled for now, revisit if the free version ever gets better customizability
 #   - social:
 
@@ -95,7 +104,7 @@ nav:
       - HID iClass: hidiclass.md
     - SubGHz:
       - Overview: subghz-overview.md
-    - GPIO: 
+    - GPIO:
       - Overview: gpio-overview.md
       - Wi-Fi Devboard: wifi-devboard.md
       - Video Game Module: video-game-module.md
