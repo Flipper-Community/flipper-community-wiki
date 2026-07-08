@@ -63,7 +63,6 @@ Now we are ready to begin making our basic python script to set up and call our 
 At the top of your `main.py` file, put the following lines:
 ```python
 import serial, sys, time
-import serial.tools.list_ports # pyserial has some stuff to help us detect things like the flipper automatically
 sys.path.append('pythonproto/') # add the compiled proto python files to the path so it can easily see them and you dont have import errors
 import flipper_pb2
 import gui_pb2
@@ -73,15 +72,14 @@ This imports the .py files from the pythonproto folder we created and moved earl
 
 For the next section, we can leverage pyserial's power of finding serial ports by their description:
 ```python
-# use pyserial's port listing power to scan through all serial ports and look for "flipper"
 def find_flipper():
-    ports = serial.tools.list_ports.comports()
-    for port in ports:
-        if "Flipper" in port.description:
-            print(f"Found it! Port: {port.device}")
-            return port.device
-    # if we dont find anything, raise an error.
-    raise ConnectionError("Can't find flipper on a serial port.\nIs it plugged in?")
+    try:
+        # scan all serial device info for anything containing "FLIP_"
+        flipper_location = serial.serial_for_url('hwgrep://FLIP_')
+        print(f"Found Flipper Zero at {flipper_location.name}") # .name property gives us the exact port
+        return flipper_location.name
+    except serial.SerialException: #if we dont find anything, raise an error
+        print("Couldn't find the Flipper.\nIs it plugged in?")
 ```
 
 We follow this up with two small lines to set a variable to hold our serial port attributes, then turn on serial Request-To-Send mode:
@@ -157,20 +155,18 @@ send_message(ser, create_button_message(2, gui_pb2.UP, gui_pb2.SHORT)) # tell it
 Putting it all together to handle sending a button press:
 ```python
 import serial, sys, time
-import serial.tools.list_ports # pyserial has some stuff to help us detect things like the flipper automatically
 sys.path.append('pythonproto/') # add the compiled proto python files to the path so it can easily see them and you dont have import errors
 import flipper_pb2
 import gui_pb2
 
-# use pyserial's port listing power to scan through all serial ports and look for "flipper"
+# use pyserial's port listing power to scan through all serial ports and look for "FLIP_"
 def find_flipper():
-    ports = serial.tools.list_ports.comports()
-    for port in ports:
-        if "Flipper" in port.description:
-            print(f"Found it! Port: {port.device}")
-            return port.device
-    # if we dont find anything, raise an error.
-    raise ConnectionError("Can't find flipper on a serial port.\nIs it plugged in?")
+    try:
+        flipper_location = serial.serial_for_url('hwgrep://FLIP_')
+        print(f"Found Flipper Zero at {flipper_location.name}")
+        return flipper_location.name
+    except serial.SerialException:
+        print("Couldn't find the Flipper.\nIs it plugged in?")
 
 flipper_port = find_flipper() # set the port variable to wherever it found the flipper
 
