@@ -2266,7 +2266,7 @@
 
 
 <h1 id="flipper-zero-python-protobuf-guide">Flipper Zero Python Protobuf guide<a class="headerlink" href="#flipper-zero-python-protobuf-guide" title="Permanent link">&para;</a></h1>
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2026-07-08'><span class='material-icons' data-icon='doc_created'></span><time datetime='2026-07-08T03:21:33+00:00'>2026-07-08</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2026-07-08'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2026-07-08T03:21:33+00:00'>2026-07-08</time></span></div></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2026-07-08'><span class='material-icons' data-icon='doc_created'></span><time datetime='2026-07-08T03:21:33+00:00'>2026-07-08</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2026-07-08'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2026-07-08T15:59:22+00:00'>2026-07-08</time></span></div></div></div>
 <p>The Flipper Zero supports receiving commands via protobuf encoded communications via both USB and GPIO. Protobuf communication allows you to do a number of different items via external controls such as:</p>
 <ul>
 <li>press buttons</li>
@@ -2328,22 +2328,20 @@ Our generated files rely on the <code>protobuf</code> library being installed an
 <p>Now we are ready to begin making our basic python script to set up and call our new shiny RPC commands we generated with protobuf. </p>
 <p>At the top of your <code>main.py</code> file, put the following lines:
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">serial</span><span class="o">,</span><span class="w"> </span><span class="nn">sys</span><span class="o">,</span><span class="w"> </span><span class="nn">time</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">serial.tools.list_ports</span> <span class="c1"># pyserial has some stuff to help us detect things like the flipper automatically</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;pythonproto/&#39;</span><span class="p">)</span> <span class="c1"># add the compiled proto python files to the path so it can easily see them and you dont have import errors</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">flipper_pb2</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">gui_pb2</span>
 </code></pre></div>
 This imports the .py files from the pythonproto folder we created and moved earlier. </p>
 <p>For the next section, we can leverage pyserial's power of finding serial ports by their description:
-<div class="highlight"><pre><span></span><code><span class="c1"># use pyserial&#39;s port listing power to scan through all serial ports and look for &quot;flipper&quot;</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">find_flipper</span><span class="p">():</span>
-    <span class="n">ports</span> <span class="o">=</span> <span class="n">serial</span><span class="o">.</span><span class="n">tools</span><span class="o">.</span><span class="n">list_ports</span><span class="o">.</span><span class="n">comports</span><span class="p">()</span>
-    <span class="k">for</span> <span class="n">port</span> <span class="ow">in</span> <span class="n">ports</span><span class="p">:</span>
-        <span class="k">if</span> <span class="s2">&quot;Flipper&quot;</span> <span class="ow">in</span> <span class="n">port</span><span class="o">.</span><span class="n">description</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Found it! Port: </span><span class="si">{</span><span class="n">port</span><span class="o">.</span><span class="n">device</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-            <span class="k">return</span> <span class="n">port</span><span class="o">.</span><span class="n">device</span>
-    <span class="c1"># if we dont find anything, raise an error.</span>
-    <span class="k">raise</span> <span class="ne">ConnectionError</span><span class="p">(</span><span class="s2">&quot;Can&#39;t find flipper on a serial port.</span><span class="se">\n</span><span class="s2">Is it plugged in?&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">find_flipper</span><span class="p">():</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># scan all serial device info for anything containing &quot;FLIP_&quot;</span>
+        <span class="n">flipper_location</span> <span class="o">=</span> <span class="n">serial</span><span class="o">.</span><span class="n">serial_for_url</span><span class="p">(</span><span class="s1">&#39;hwgrep://FLIP_&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Found Flipper Zero at </span><span class="si">{</span><span class="n">flipper_location</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span> <span class="c1"># .name property gives us the exact port</span>
+        <span class="k">return</span> <span class="n">flipper_location</span><span class="o">.</span><span class="n">name</span>
+    <span class="k">except</span> <span class="n">serial</span><span class="o">.</span><span class="n">SerialException</span><span class="p">:</span> <span class="c1">#if we dont find anything, raise an error</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Couldn&#39;t find the Flipper.</span><span class="se">\n</span><span class="s2">Is it plugged in?&quot;</span><span class="p">)</span>
 </code></pre></div></p>
 <p>We follow this up with two small lines to set a variable to hold our serial port attributes, then turn on serial Request-To-Send mode:
 <div class="highlight"><pre><span></span><code><span class="n">ser</span> <span class="o">=</span> <span class="n">serial</span><span class="o">.</span><span class="n">Serial</span> <span class="p">(</span><span class="n">flipper_port</span><span class="p">,</span> <span class="mi">115200</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">dsrdtr</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># set up our serial connection options.</span>
@@ -2399,20 +2397,18 @@ If you want to read about the logic behind it, check out <a href="https://victor
 <h3 id="the-completed-python-file">The completed python file<a class="headerlink" href="#the-completed-python-file" title="Permanent link">&para;</a></h3>
 <p>Putting it all together to handle sending a button press:
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">serial</span><span class="o">,</span><span class="w"> </span><span class="nn">sys</span><span class="o">,</span><span class="w"> </span><span class="nn">time</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">serial.tools.list_ports</span> <span class="c1"># pyserial has some stuff to help us detect things like the flipper automatically</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;pythonproto/&#39;</span><span class="p">)</span> <span class="c1"># add the compiled proto python files to the path so it can easily see them and you dont have import errors</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">flipper_pb2</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">gui_pb2</span>
 
-<span class="c1"># use pyserial&#39;s port listing power to scan through all serial ports and look for &quot;flipper&quot;</span>
+<span class="c1"># use pyserial&#39;s port listing power to scan through all serial ports and look for &quot;FLIP_&quot;</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">find_flipper</span><span class="p">():</span>
-    <span class="n">ports</span> <span class="o">=</span> <span class="n">serial</span><span class="o">.</span><span class="n">tools</span><span class="o">.</span><span class="n">list_ports</span><span class="o">.</span><span class="n">comports</span><span class="p">()</span>
-    <span class="k">for</span> <span class="n">port</span> <span class="ow">in</span> <span class="n">ports</span><span class="p">:</span>
-        <span class="k">if</span> <span class="s2">&quot;Flipper&quot;</span> <span class="ow">in</span> <span class="n">port</span><span class="o">.</span><span class="n">description</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Found it! Port: </span><span class="si">{</span><span class="n">port</span><span class="o">.</span><span class="n">device</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-            <span class="k">return</span> <span class="n">port</span><span class="o">.</span><span class="n">device</span>
-    <span class="c1"># if we dont find anything, raise an error.</span>
-    <span class="k">raise</span> <span class="ne">ConnectionError</span><span class="p">(</span><span class="s2">&quot;Can&#39;t find flipper on a serial port.</span><span class="se">\n</span><span class="s2">Is it plugged in?&quot;</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">flipper_location</span> <span class="o">=</span> <span class="n">serial</span><span class="o">.</span><span class="n">serial_for_url</span><span class="p">(</span><span class="s1">&#39;hwgrep://FLIP_&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Found Flipper Zero at </span><span class="si">{</span><span class="n">flipper_location</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">flipper_location</span><span class="o">.</span><span class="n">name</span>
+    <span class="k">except</span> <span class="n">serial</span><span class="o">.</span><span class="n">SerialException</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Couldn&#39;t find the Flipper.</span><span class="se">\n</span><span class="s2">Is it plugged in?&quot;</span><span class="p">)</span>
 
 <span class="n">flipper_port</span> <span class="o">=</span> <span class="n">find_flipper</span><span class="p">()</span> <span class="c1"># set the port variable to wherever it found the flipper</span>
 
