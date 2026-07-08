@@ -84,7 +84,7 @@ def find_flipper():
 
 We follow this up with two small lines to set a variable to hold our serial port attributes, then turn on serial Request-To-Send mode:
 ```python
-ser = serial.Serial (flipper_port, 115200, timeout=1, dsrdtr=True) # set up our serial connection options.
+ser = serial.Serial (flipper_port, 115200, timeout=1, dsrdtr=False, write_timeout=5)
 ser.rts = True # turn on rts
 ```
 
@@ -96,7 +96,7 @@ Next we add a function to create our protobuf message layout. Protobuf expects t
 
 ```python
 def create_button_message(command_id, input_key, input_type):
-    """Creates the proper format of how our button press message should look"""
+    # Creates the proper format of how our button press message should look
     main_msg = flipper_pb2.Main() # the main class for flipper_pb2 has a lot of error checking stuff if one wants to use it (we arent here) and also a settable attribute for command_id, which we will need.
     main_msg.command_id = command_id # Assign a unique ID, protobuf expects each command to be labeled with a unique ID, preferable sequention, so it knows that a given command is not just being repeated.
     main_msg.gui_send_input_event_request.key = input_key # the key we want to press
@@ -142,6 +142,7 @@ After ALL of this, we can finally add the last two lines to send off our button 
 ```python
 send_message(ser, create_button_message(1, gui_pb2.UP, gui_pb2.PRESS)) # send the pressing of the UP key
 send_message(ser, create_button_message(2, gui_pb2.UP, gui_pb2.SHORT)) # tell it to press and release that key for a SHORT
+ser.close() # cleanly close out our serial port to mark we are done with it to the OS.
 ```
 
 
@@ -170,13 +171,13 @@ def find_flipper():
 
 flipper_port = find_flipper() # set the port variable to wherever it found the flipper
 
-ser = serial.Serial (flipper_port, 115200, timeout=1, dsrdtr=True) #set up our serial connection options.
-ser.rts = True #flip on rts
+ser = serial.Serial (flipper_port, 115200, timeout=1, dsrdtr=False, write_timeout=5) # set up our serial connection options.
+ser.rts = True # turn on rts
 
 # we need to set up a button message the flipper would understand.
 # for this function, we have 3 variables we can feed it: the command ID, the input key we want to press, and the input type (press, release, short, long, etc.)
 def create_button_message(command_id, input_key, input_type):
-    """Creates the proper format of how our button press message should look"""
+    # Creates the proper format of how our button press message should look
     main_msg = flipper_pb2.Main() #the main class for flipper_pb2 has a lot of error checking stuff if one wants to use it (we arent here) and also a settable attribute for command_id, which we will need.
     main_msg.command_id = command_id # Assign a unique ID, protobuf expects each command to be labeled with a unique ID, preferable sequention, so it knows that a given command is not just being repeated.
     main_msg.gui_send_input_event_request.key = input_key #the key we want to press
@@ -216,5 +217,6 @@ ser.reset_input_buffer() # clean out anything sitting in ther serial buffer that
 # we tell send_message to use our serial attributes stored in 'ser', and give it to the send_message to send
 send_message(ser, create_button_message(1, gui_pb2.UP, gui_pb2.PRESS)) # send the pressing of the UP key
 send_message(ser, create_button_message(2, gui_pb2.UP, gui_pb2.SHORT)) # tell it to press and release that key for a SHORT amount of time.
+ser.close() # cleanly close out our serial port to mark we are done with it to the OS.
 ```
 
