@@ -123,6 +123,7 @@ nav:
       - Installing Custom Animations: tutorials/how2anim/guide.md
     - Development Tutorials:
       - Basics of Building Firmware & Apps: tutorials/beginner_guide_fw/guide.md
+      - Beginner's Guide to Protobuf via python: tutorials/python-protobuf-guide/guide.md
       - Animation - Meta.txt in-depth Guide: tutorials/Animation_guide_meta/Meta_settings_guide.md
       - Designing Custom Fonts: tutorials/f0_fonts_guide/guide.md
       - Tools for Creating Animations: tutorials/asset_creation/asset_creation_guide.md
