@@ -59,4 +59,4 @@ If the card is fully-locked, then the only valuable piece of information would b
 
 Little-endian is used for Flipper Devices' purposes. `Clipper (SFO)`'s AID in big-endian, for example, is `F21190`; converting it to little-endian, it then becomes `0x9011F2`.
 
-Feel free to discuss public transport in [**Flipper Devices > #nfc**](https://discord.com/channels/740930220399525928/95442271613867625) and [**Marine Biologist Lab > #nfc**](https://discord.com/channels/1499456013294764175/1515074631277740032/).
+Feel free to discuss public transport in [**Flipper Devices > #nfc**](https://discord.com/channels/740930220399525928/954422716138676254) and/or [**Marine Biologist Lab > #nfc**](https://discord.com/channels/1499456013294764175/1515074631277740032/).
