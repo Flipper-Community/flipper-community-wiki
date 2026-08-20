@@ -67,17 +67,17 @@
     
       <link rel="stylesheet" href="../assets/document_dates/fonts/material-icons.css">
     
-      <link rel="stylesheet" href="../assets/document_dates/tippy/material.css">
+      <link rel="stylesheet" href="../assets/document_dates/tippy/scale.css">
     
-      <link rel="stylesheet" href="../assets/document_dates/tippy/light.css">
+      <link rel="stylesheet" href="../assets/document_dates/tippy/tippy.css">
+    
+      <link rel="stylesheet" href="../assets/document_dates/tippy/material.css">
     
       <link rel="stylesheet" href="../assets/document_dates/tippy/backdrop.css">
     
-      <link rel="stylesheet" href="../assets/document_dates/tippy/scale.css">
-    
       <link rel="stylesheet" href="../assets/document_dates/tippy/shift-away.css">
     
-      <link rel="stylesheet" href="../assets/document_dates/tippy/tippy.css">
+      <link rel="stylesheet" href="../assets/document_dates/tippy/light.css">
     
       <link rel="stylesheet" href="../assets/document_dates/core/core.css">
     
@@ -2746,9 +2746,9 @@ To fix this, you will need to install the <code>libopengl0</code> package.</p>
 <li>create the udev rules file by doing <code>sudo touch /etc/udev/rules.d/42-flipperzero.rules</code></li>
 <li>add the following as contents to the <code>42-flipperzero.rules</code> file and save it:
   <div class="highlight"><pre><span></span><code>#Flipper Zero serial port
-SUBSYSTEMS==&quot;usb&quot;, ATTRS{idVendor}==&quot;0483&quot;, ATTRS{idProduct}==&quot;5740&quot;, ATTRS{manufacturer}==&quot;Flipper Devices Inc.&quot;, TAG+=&quot;uaccess&quot;
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="5740", ATTRS{manufacturer}=="Flipper Devices Inc.", TAG+="uaccess"
 #Flipper Zero DFU
-SUBSYSTEMS==&quot;usb&quot;, ATTRS{idVendor}==&quot;0483&quot;, ATTRS{idProduct}==&quot;df11&quot;, ATTRS{manufacturer}==&quot;STMicroelectronics&quot;, TAG+=&quot;uaccess&quot;
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="df11", ATTRS{manufacturer}=="STMicroelectronics", TAG+="uaccess"
 </code></pre></div></li>
 <li>run <code>sudo udevadm control --reload-rules &amp;&amp; sudo udevadm trigger</code></li>
 </ol>
@@ -2780,9 +2780,9 @@ SUBSYSTEMS==&quot;usb&quot;, ATTRS{idVendor}==&quot;0483&quot;, ATTRS{idProduct}
 <li>run the following to get an elevated permissions text editor: <code>sudo nano /etc/udev/rules.d/42-flipperzero.rules</code></li>
 <li>Paste the following into the text editor:
       <div class="highlight"><pre><span></span><code>#Flipper Zero serial port
-SUBSYSTEMS==&quot;usb&quot;, ATTRS{idVendor}==&quot;0483&quot;, ATTRS{idProduct}==&quot;5740&quot;, ATTRS{manufacturer}==&quot;Flipper Devices Inc.&quot;, TAG+=&quot;uaccess&quot;
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="5740", ATTRS{manufacturer}=="Flipper Devices Inc.", TAG+="uaccess"
 #Flipper Zero DFU
-SUBSYSTEMS==&quot;usb&quot;, ATTRS{idVendor}==&quot;0483&quot;, ATTRS{idProduct}==&quot;df11&quot;, ATTRS{manufacturer}==&quot;STMicroelectronics&quot;, TAG+=&quot;uaccess&quot;
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="df11", ATTRS{manufacturer}=="STMicroelectronics", TAG+="uaccess"
 </code></pre></div></li>
 <li>Save the file by pressing <strong>ctrl+s</strong>, then close the editor using <strong>ctrl+x</strong></li>
 <li>run <code>sudo udevadm control --reload-rules &amp;&amp; sudo udevadm trigger</code></li>
