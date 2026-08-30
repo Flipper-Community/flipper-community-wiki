@@ -159,7 +159,7 @@ Fedora has made the decision to remove the old libfuse2 libraries in a default i
 - Traditional Fedora: `sudo dnf install fuse fuse-devel`
 - Kinoite/silverblue: `rpm-ostree install fuse fuse-devel`
 
-You will then need install the needed system udev rules following **ONLY ONE** of the options below: *The Automatic Script Method* OR *The Manual Method*
+You will then need install the needed system udev rules following **ONLY ONE** of the options below: *[The Automatic Script Method](#the-automatic-script-method)* OR *[The Manual Method](#the-manual-method)*
 
 ### Fedora 36 qFlipper not detecting Flipper Zero
 First, verify you installed the udev rules from the steps detailed in this page. 
