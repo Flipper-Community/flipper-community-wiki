@@ -694,10 +694,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#fedora-qflipper-not-detecting-flipper-zero" class="md-nav__link">
+  <a href="#fedora-44-qflipper-fails-to-run" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fedora qFlipper not detecting Flipper Zero
+        Fedora 44+ qFlipper fails to run
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fedora-36-qflipper-not-detecting-flipper-zero" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fedora 36 qFlipper not detecting Flipper Zero
       
     </span>
   </a>
@@ -2535,10 +2546,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#fedora-qflipper-not-detecting-flipper-zero" class="md-nav__link">
+  <a href="#fedora-44-qflipper-fails-to-run" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fedora qFlipper not detecting Flipper Zero
+        Fedora 44+ qFlipper fails to run
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fedora-36-qflipper-not-detecting-flipper-zero" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fedora 36 qFlipper not detecting Flipper Zero
       
     </span>
   </a>
@@ -2610,7 +2632,7 @@
 
 
 <h1 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h1>
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2024-09-16'><span class='material-icons' data-icon='doc_created'></span><time datetime='2024-09-16T23:17:04+00:00'>2024-09-16</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2026-05-03'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2026-05-03T23:52:23+00:00'>2026-05-03</time></span></div></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><div class='dd-left'><span class='dd-item' data-tippy-content data-tippy-raw='2024-09-16'><span class='material-icons' data-icon='doc_created'></span><time datetime='2024-09-16T23:17:04+00:00'>2024-09-16</time></span><span class='dd-item' data-tippy-content data-tippy-raw='2026-08-30'><span class='material-icons' data-icon='doc_updated'></span><time datetime='2026-08-30T19:30:04+00:00'>2026-08-30</time></span></div></div></div>
 <p>It is recommended first that you check out the <a href="https://support.flipper.net/hc/en-us"><ins>Device Troubleshooting section of the official troubleshooting docs</ins></a> before proceeding below, as your question <em>may</em> be answered there. </p>
 <p>For guides to troubleshoot some of the more obscure Flipper Zero issues, see the items below:</p>
 <div class="toc">
@@ -2638,7 +2660,8 @@
 <li><a href="#the-manual-method">The Manual Method:</a></li>
 </ul>
 </li>
-<li><a href="#fedora-qflipper-not-detecting-flipper-zero">Fedora qFlipper not detecting Flipper Zero</a></li>
+<li><a href="#fedora-44-qflipper-fails-to-run">Fedora 44+ qFlipper fails to run</a></li>
+<li><a href="#fedora-36-qflipper-not-detecting-flipper-zero">Fedora 36 qFlipper not detecting Flipper Zero</a></li>
 <li><a href="#ubuntu-cannot-run-the-appimage">Ubuntu cannot run the appimage</a></li>
 </ul>
 </li>
@@ -2788,7 +2811,14 @@ SUBSYSTEMS=="usb", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="df11", ATTRS{manu
 <li>run <code>sudo udevadm control --reload-rules &amp;&amp; sudo udevadm trigger</code></li>
 <li>Open qFlipper, and it should now detect your Flipper Zero</li>
 </ol>
-<h3 id="fedora-qflipper-not-detecting-flipper-zero">Fedora qFlipper not detecting Flipper Zero<a class="headerlink" href="#fedora-qflipper-not-detecting-flipper-zero" title="Permanent link">&para;</a></h3>
+<h3 id="fedora-44-qflipper-fails-to-run">Fedora 44+ qFlipper fails to run<a class="headerlink" href="#fedora-44-qflipper-fails-to-run" title="Permanent link">&para;</a></h3>
+<p>Fedora has made the decision to remove the old libfuse2 libraries in a default install, which legacy appimages need to run. However, it is straightforward to install them. </p>
+<ul>
+<li>Traditional Fedora: <code>sudo dnf install fuse fuse-devel</code></li>
+<li>Kinoite/silverblue: <code>rpm-ostree install fuse fuse-devel</code></li>
+</ul>
+<p>You will then need install the needed system udev rules following <strong>ONLY ONE</strong> of the options below: <em>The Automatic Script Method</em> OR <em>The Manual Method</em></p>
+<h3 id="fedora-36-qflipper-not-detecting-flipper-zero">Fedora 36 qFlipper not detecting Flipper Zero<a class="headerlink" href="#fedora-36-qflipper-not-detecting-flipper-zero" title="Permanent link">&para;</a></h3>
 <p>First, verify you installed the udev rules from the steps detailed in this page. 
 <strong>If and only if</strong> it still is not detected, you may be experiencing a known conflict between the udev rules of Flipper Zero and the udev rules of the <code>sysdemd-udev</code>package
 This will require you to manually apply a fix related to one of the udev rules</p>
