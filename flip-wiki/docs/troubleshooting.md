@@ -153,7 +153,15 @@ For Bazzite installations, the [Flathub version of Flipper zero is preferred](ht
 1. Open qFlipper, and it should now detect your Flipper Zero
 
 
-### Fedora qFlipper not detecting Flipper Zero
+### Fedora 44+ qFlipper fails to run
+Fedora has made the decision to remove the old libfuse2 libraries in a default install, which legacy appimages need to run. However, it is straightforward to install them. 
+
+- Traditional Fedora: `sudo dnf install fuse fuse-devel`
+- Kinoite/silverblue: `rpm-ostree install fuse fuse-devel`
+
+You will then need install the needed system udev rules following **ONLY ONE** of the options below: *The Automatic Script Method* OR *The Manual Method*
+
+### Fedora 36 qFlipper not detecting Flipper Zero
 First, verify you installed the udev rules from the steps detailed in this page. 
 **If and only if** it still is not detected, you may be experiencing a known conflict between the udev rules of Flipper Zero and the udev rules of the `sysdemd-udev`package
 This will require you to manually apply a fix related to one of the udev rules
