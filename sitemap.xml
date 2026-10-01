@@ -107,12 +107,17 @@
     </url>
     <url>
         <loc>https://flipper.wiki/wifi-devboard/</loc>
-        <lastmod>2025-01-22</lastmod>
+        <lastmod>2026-10-01</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
         <loc>https://flipper.wiki/tutorials/Animation_guide_meta/Meta_settings_guide/</loc>
         <lastmod>2025-01-26</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://flipper.wiki/tutorials/GhostESP_guide/guide/</loc>
+        <lastmod>2026-10-01</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
