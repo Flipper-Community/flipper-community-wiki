@@ -60,3 +60,6 @@ To demonstrate building an application, we will use the [Fortune Cookie app.](ht
 
 !!! note "Protip"
     If you grab the `appid` from the `application.fam` file, you can build, upload, and launch this app to the Flipper Zero all in one step! Simply do `./fbt launch APPSRC=fortune_cookie`
+
+## Going Further With App Development
+If you are interested in developing your own app for the Flipper Zero, you may wish to take a look at some of the resources on the [app development section on the official development documentation](https://developer.flipper.net/flipperzero/doxygen/applications.html). It provides info such as a sample app and and overview and technical documentation on GUI resources and the FURI API. 

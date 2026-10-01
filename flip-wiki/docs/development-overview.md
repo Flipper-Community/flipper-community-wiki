@@ -10,6 +10,8 @@ Both of these tool currently provide a command in their respective documentation
 ## Development Documentation
 The official documentation for development [**can be found here**](https://developer.flipper.net/flipperzero/doxygen/).
 
+App development resources can also be [found here within the same site](https://developer.flipper.net/flipperzero/doxygen/applications.html). 
+
 Work is ongoing to continue to add more information to the official development docs, and the source code is still currently the best way to study how things work.
 
 As linked in the official development docs, a few sample applications can be found [here](https://github.com/flipperdevices/flipperzero-firmware/tree/dev/applications/examples).
