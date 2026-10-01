@@ -13,7 +13,7 @@ The following is a partial list of a few popular community firmware that one may
 
 - [Marauder](https://github.com/justcallmekoko/ESP32Marauder/wiki/flipper-zero), an offensive security testing platform for ESP32 based devices, featuring both Wi-Fi tools and Bluetooth tools for hardware supporting bluetooth. 
 - [FlipperHTTP](https://github.com/jblanked/FlipperHTTP), a multi-purpose firmware that uses HTTP requests to retrieve information from websites, download applications from the catalog, connect with users on social media platforms, and extract data from APIs.
-- [GhostESP](https://github.com/Spooks4576/Ghost_ESP), a firmware that provides tools to perform comprehensive Wi-Fi and Bluetooth Low Energy (BLE) analysis, execute targeted wireless tests, and explore dynamic wireless environments.
+- [GhostESP](https://github.com/GhostESP-Revival/GhostESP), a firmware that provides tools to perform comprehensive Wi-Fi and Bluetooth Low Energy (BLE) analysis, execute targeted wireless tests, and explore dynamic wireless environments.
 
 
 ## Useful Links
